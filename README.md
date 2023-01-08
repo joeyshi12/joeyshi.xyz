@@ -1,1 +1,3 @@
-# joeyshi.com
+# joeyshi.xyz
+
+Personal portfolio written in Hugo
