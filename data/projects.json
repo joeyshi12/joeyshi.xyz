@@ -1,0 +1,26 @@
+[
+    {
+        "title": "diff-eq-solver",
+        "href": "https://github.com/joeyshi12/diff-eq-solver",
+        "description": "A desktop application that uses the finite difference method to solve differential equations",
+        "language": "Python"
+    },
+    {
+        "title": "platform-party",
+        "href": "https://github.com/joeyshi12/platform-party",
+        "description": "Real-time multiplayer browser platformer made with p5",
+        "language": "Typescript"
+    },
+    {
+        "title": "platform-party",
+        "href": "https://github.com/joeyshi12/dotfiles",
+        "description": "Personal configuration files for running a stylish Arch Linux desktop environment",
+        "language": "Vim Script"
+    },
+    {
+        "title": "trivia-train",
+        "href": "https://github.com/joeyshi12/trivia-train",
+        "description": "A mobile trivia game app for Android on the Google Play Store",
+        "language": "Java"
+    }
+]

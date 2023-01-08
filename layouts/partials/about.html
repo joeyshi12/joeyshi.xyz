@@ -1,0 +1,39 @@
+<div class="page-body">
+    <section id="about">
+        <div class="header">
+            <div class="header-text">
+                <h1 class="title">Joey Shi</h1>
+                <p>Software Developer / Student / Linux Enthusiast</p>
+            </div>
+            <img src="assets/profile.webp" class="profile-picture" alt="profile-picture"/>
+        </div>
+        <h2 class="section-header">About Me</h2>
+        <div>
+            <p class="about-paragraph">Hello! I'm a software developer and BSc student majoring in Computer Science and Math at the University of British Columbia.</p>
+            <p class="about-paragraph">As a developer of many projects, I tackle challenging problems head-on. My experiences with using unfamiliar tools have made me a versatile problem-solver. I consider myself to be a reliable and efficient team member.</p>
+            <p class="about-paragraph">I interned as a Full-Stack Software Developer at Visier from January 2021 to December 2021. During  my time here, I contributed in feature-development and fixed bugs following Agile principles. I focused on test-driven development, communicated across different teams, hooked up demos for company-wide presentations, and mentored new interns.</p>
+            <p class="about-paragraph">Academically, I am committed to my education and excel in my studies with an A+ average. Outside of class, I enjoy finding new ways to optimize my Arch Linux developer environment dotfiles.</p>
+        </div>
+        <div class="button-group">
+            <a class="button" target="_blank" href="resume/resume.pdf">Resume</a>
+        </div>
+    </section>
+    <section id="projects">
+        <h2 class="section-header">Projects</h2>
+        <ul class="repo-cards">
+        {{ range .Site.Data.projects }}
+            <li class="repo-card">
+                <div class="repo-header">
+                    <i class="fa fa-github-alt"></i>
+                    <a class="repo-link" href="https://github.com/joeyshi12/diff-eq-solver" target="_blank">{{ .title }}</a>
+                </div>
+                <p>{{ .description }}</p>
+                <div class="repo-language">
+                    <span class="repo-language-color" style="background: #3572a5;"></span>
+                    <span>{{ .language }}</span>
+                </div>
+            </li>
+        {{ end }}
+        </ul>
+    </section>
+</div>

@@ -1,0 +1,232 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeScholarshipHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-12pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Joey Shi} \\ \vspace{1pt}
+    \small
+    \href{https://joeyshi.com}{\raisebox{-0.1\height}\faUser\ \underline{joeyshi.com}} ~
+    \href{mailto:root@joeyshi.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{root@joeyshi.com}} ~
+    \href{https://linkedin.com/in/joeyshi12/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/joeyshi12}}  ~
+    \href{https://github.com/joeyshi12}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/joeyshi12}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, TypeScript, C, C++, Bash, Scala, Java, HTML, CSS, SQL} \\
+     \textbf{Frameworks/Libraries}{: Angular, Express, Socket.IO, React, Flask, Numpy, Matplotlib, ScalaTest, Jasmine, PyTest} \\
+     \textbf{Tools/Technologies}{: Git, Linux, Vim, Android Studio, MATLAB, Microsoft Excel, Docker} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Visier Inc.}{Jan 2021 -- Dec 2021}
+      {Software Developer Intern}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Worked in full-stack web development using tools, such as Scala and Angular.}
+        \resumeItem{Implemented Angular UI components for listing and configuring hierarchical tenant content packages.}
+        \resumeItem{Built a Scala backend API with a partner for reporting and correcting data issues in tenant data versions.}
+        \resumeItem{Mentored other co-op students on debugging and traversing large code repositories.}
+        \resumeItem{Wrote and fixed extensive unit tests in ScalaTest and Jasmine.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of British Columbia}{Jul 2020 -- Dec 2020}
+      {WeBWorK Content Developer}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Implemented WeBWorK questions in Perl for UBC calculus assignments and exams.}
+        \resumeItem{Collaborated with multiple professors to improve exam length, difficulty, and clarity.}
+        \resumeItem{Explored new ways of incorporating visuals and animations into questions using JavaScript and the Desmos API.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Differential Equation Solver} $|$ \emph{Python, Matplotlib, Tkinter}}{Dec 2019 -- Present}
+          \resumeItemListStart
+            \resumeItem{Implemented efficient finite difference algorithms to solve ordinary and partial differential equations.}
+            \resumeItem{Designed a graphical user interface in Tkinter and added animated plots for visualizing the generated solutions.}
+            \resumeItem{Built a CI/CD pipeline with PyTest, Tox, and Github Actions.}
+            \resumeItem{Published the application on the Python Package Index.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{Multiplayer Browser Platformer} $|$ \emph{Angular, p5, Node, Socket.IO}}{Dec 2021 -- Present}
+          \resumeItemListStart
+            \resumeItem{Designed and deployed a real-time multiplayer browser platformer on Heroku.}
+            \resumeItem{Built a backend web socket API to update and broadcast player data.}
+            \resumeItem{Implemented logic for player movement, animation, 2D physics, map design, and tile collision.}
+            \resumeItem{Packaged the application into a Docker container and pushed an image to the Docker Hub registry.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          \resumeProjectHeading
+          {\textbf{Linux Desktop Environment} $|$ \emph{Arch Linux, Zsh, Vim}}{Mar 2021 -- Present}
+          \resumeItemListStart
+            \resumeItem{Configured an efficient keyboard-based tiling desktop environment from scratch using Xorg and bspwm.}
+            \resumeItem{Wrote shell scripts for automating installing assets and linking dotfiles.}
+            \resumeItem{Automated complex multistep desktop actions by writing shell scripts for sxhkd hotkeys.}
+            \resumeItem{Researched and documented how to set up network, bluetooth, speakers, and display monitors in the Github repo.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          \resumeProjectHeading
+          {\textbf{Trivia Train} $|$ \emph{Java, Android Studio}}{Dec 2019}
+          \resumeItemListStart
+            \resumeItem{Requests and processes JSON data from the Open Trivia API to run a high-score based quiz game.}
+            \resumeItem{Wrote simple layouts in xml for user interactions.}
+            \resumeItem{Implemented local high score caching.}
+            \resumeItem{Packaged and released the application on Google Play.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of British Columbia}{Sep 2018 -- May 2023}
+      {Bachelor of Science $|$ Combined Major in Computer Science and Math}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Cumulative GPA: 91.1\%}
+        \resumeItem{Dean's Honour List (2018 -- 2021); Science Scholar (2019)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%---------SCHOLARSHIPS---------
+\section{Scholarships}
+  \resumeSubHeadingListStart
+    \resumeScholarshipHeading
+      {\textbf{Stanley M. Grant Scholarship in Mathematics}}{Jan 2021}
+    \resumeScholarshipHeading
+      {\textbf{Charles and Jane Banks Scholarship}}{Sep 2020}
+    \resumeScholarshipHeading
+      {\textbf{Trek Excellence Scholarship}}{Aug 2020}
+  \resumeSubHeadingListEnd
+
+\end{document}
+
