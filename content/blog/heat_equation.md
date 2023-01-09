@@ -1,7 +1,7 @@
 ---
 title: "The Heat Equation"
 date: 2023-01-07T22:58:20-08:00
-tags: []
+tags: ["diff-eq", "calculus"]
 ---
 
 The heat equation is given by $$u_{t} = \alpha^2 \nabla^2 u$$.

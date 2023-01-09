@@ -1,1 +1,8 @@
-{{ .Content }}
+{{ define "main" }}
+    {{ partial "navbar.html" . }}
+    <div class="page-body">
+        <section>
+            <p>{{ .Content }}</p>
+        </section>
+    </div>
+{{ end }}

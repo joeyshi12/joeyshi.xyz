@@ -1,9 +1,13 @@
-<ul>
-    {{ .Title }}
-{{ .Content }}
-{{ range .Pages }}
-<li>
-    <a href="{{ .Permalink }}">{{ .Params.Title }}</a>
-</li>
+{{ define "main" }}
+    {{ partial "navbar.html" . }}
+    <div class="page-body">
+        <section>
+            <p>{{ .Content }}</p>
+            <ul>
+            {{ range .Pages }}
+                <li><a href="{{ .Permalink }}">{{ .Params.Title }}</a></li>
+            {{ end }}
+            <ul>
+        <section>
+    </div>
 {{ end }}
-<ul>

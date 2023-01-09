@@ -1,1 +1,47 @@
-TODO: implement baseof.html
+<!DOCTYPE HTML>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <title>{{ .Title }}</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content="{{ .Site.Params.author }}"/>
+    <meta name="description" content="{{ .Site.Params.description }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    {{- /* Linkedin */}}
+    <meta name="description" property="og:description" content="{{ .Site.Params.description }}">
+    <meta name="image" property="og:image" content="/images/linux_rice.jpg">
+
+    {{- /* Google / Search Engine Tags */}}
+    <meta itemprop="name" content="{{ .Site.Params.author }}">
+    <meta itemprop="description" content="{{ .Site.Params.description }}">
+    <meta itemprop="image" content="/images/linux_rice.jpg">
+
+    {{- /* Facebook Meta Tags */}}
+    <meta property="og:url" content="{{ .Site.BaseURL }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ .Site.Params.author }}">
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:image" content="/images/linux_rice.jpg">
+
+    {{- /* Twitter Meta Tags */}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Site.Params.author }}">
+    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:image" content="/images/linux_rice.jpg">
+
+    {{- $commonCSS := resources.Get "css/common.css" }}
+    {{- $aboutCSS := resources.Get "css/about.css" }}
+    {{- $listCSS := resources.Get "css/list.css" }}
+    {{- $singleCSS := resources.Get "css/single.css" }}
+    {{- $notFoundCSS := resources.Get "css/404.css" }}
+    {{- $styleSheets := slice $commonCSS $aboutCSS $listCSS $singleCSS $notFoundCSS }}
+    {{- $bundleCSS := $styleSheets | resources.Concat "css/styles.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $bundleCSS.RelPermalink }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+    {{ block "main" . }}
+    {{ end }}
+</body>
+</html>
