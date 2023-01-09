@@ -1,3 +1,7 @@
-baseURL = 'https://joeyshi.com/'
-languageCode = 'en-us'
-title = 'Joey Shi'
+baseURL = "https://joeyshi.xyz/"
+languageCode = "en"
+title = "Joey Shi"
+
+[params]
+author = "Joey Shi"
+description = "Software developer and enjoyer of all things math and Linux."

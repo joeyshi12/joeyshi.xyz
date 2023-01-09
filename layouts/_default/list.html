@@ -1,1 +1,9 @@
-hello :)
+<ul>
+    {{ .Title }}
+{{ .Content }}
+{{ range .Pages }}
+<li>
+    <a href="{{ .Permalink }}">{{ .Params.Title }}</a>
+</li>
+{{ end }}
+<ul>

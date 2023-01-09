@@ -2,10 +2,10 @@
     <section id="about">
         <div class="header">
             <div class="header-text">
-                <h1 class="title">Joey Shi</h1>
+                <h1 class="title">{{ .Site.Params.author }}</h1>
                 <p>Software Developer / Student / Linux Enthusiast</p>
             </div>
-            <img src="assets/profile.webp" class="profile-picture" alt="profile-picture"/>
+            <img src="/assets/profile.webp" class="profile-picture" alt="profile-picture"/>
         </div>
         <h2 class="section-header">About Me</h2>
         <div>
@@ -15,13 +15,15 @@
             <p class="about-paragraph">Academically, I am committed to my education and excel in my studies with an A+ average. Outside of class, I enjoy finding new ways to optimize my Arch Linux developer environment dotfiles.</p>
         </div>
         <div class="button-group">
-            <a class="button" target="_blank" href="resume/resume.pdf">Resume</a>
+            <a class="button" target="_blank" href="/resume/resume.pdf">Resume</a>
         </div>
     </section>
     <section id="projects">
         <h2 class="section-header">Projects</h2>
         <ul class="repo-cards">
-        {{ range .Site.Data.projects }}
+        {{ $repositories := index .Site.Data.github "repositories" }}
+        {{ $languageColours := index .Site.Data.github "languageColours" }}
+        {{ range $repositories }}
             <li class="repo-card">
                 <div class="repo-header">
                     <i class="fa fa-github-alt"></i>
@@ -29,7 +31,7 @@
                 </div>
                 <p>{{ .description }}</p>
                 <div class="repo-language">
-                    <span class="repo-language-color" style="background: #3572a5;"></span>
+                    <span class="repo-language-color" style="background: {{ index $languageColours .language | safeCSS }}"></span>
                     <span>{{ .language }}</span>
                 </div>
             </li>
