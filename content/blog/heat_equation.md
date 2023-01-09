@@ -4,7 +4,7 @@ date: 2023-01-07T22:58:20-08:00
 tags: ["diff-eq", "calculus"]
 ---
 
-The heat equation is given by $$u_{t} = \alpha^2 \nabla^2 u$$.
+The heat equation is given by $u_{t} = \alpha^2 \nabla^2 u$.
 
 Let's first understand how exactly this equation models heat.
 Consider the one dimensional case of the heat equation
