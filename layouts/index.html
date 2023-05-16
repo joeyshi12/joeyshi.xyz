@@ -1,44 +1,77 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/common.css"/>
+{{ end }}
+
 {{ define "main" }}
-    {{ partial "navbar.html" . }}
-    <div class="page-body">
-        <section id="about">
-            <div class="header">
-                <div class="header-text">
-                    <h1 class="title">{{ .Site.Params.author }}</h1>
-                    <p>Software Developer / Student / Linux Enthusiast</p>
+<section id="about">
+    <div class="header">
+        <div class="header-text">
+            <div >
+                <h1 class="title">{{ .Site.Params.author }}</h1>
+                <div>
+                    <i class="fa fa-github icon"></i>
+                    <i class="fa fa-linkedin icon"></i>
+                    <i class="fa fa-envelope icon"></i>
                 </div>
-                <img src="/images/profile.webp" class="profile-picture" alt="profile-picture"/>
             </div>
-            <h2 class="section-header">About Me</h2>
-            <div>
-                <p class="about-paragraph">Hello! I'm a software developer and BSc student majoring in Computer Science and Math at the University of British Columbia.</p>
-                <p class="about-paragraph">As a developer of many projects, I tackle challenging problems head-on. My experiences with using unfamiliar tools have made me a versatile problem-solver. I consider myself to be a reliable and efficient team member.</p>
-                <p class="about-paragraph">I interned as a Full-Stack Software Developer at Visier from January 2021 to December 2021. During  my time here, I contributed in feature-development and fixed bugs following Agile principles. I focused on test-driven development, communicated across different teams, hooked up demos for company-wide presentations, and mentored new interns.</p>
-                <p class="about-paragraph">Academically, I am committed to my education and excel in my studies with an A+ average. Outside of class, I enjoy finding new ways to optimize my Arch Linux developer environment dotfiles.</p>
-            </div>
-            <div class="button-group">
-                <a class="button" target="_blank" href="/resume/resume.pdf">Resume</a>
-            </div>
-        </section>
-        <section id="projects">
-            <h2 class="section-header">Projects</h2>
-            <ul class="repo-cards">
-            {{ $repositories := index .Site.Data.github "repositories" }}
-            {{ $languageColours := index .Site.Data.github "languageColours" }}
-            {{ range $repositories }}
-                <li class="repo-card">
-                    <div class="repo-header">
-                        <i class="fa fa-github-alt"></i>
-                        <a class="repo-link" href="https://github.com/joeyshi12/diff-eq-solver" target="_blank">{{ .title }}</a>
-                    </div>
-                    <p>{{ .description }}</p>
-                    <div class="repo-language">
-                        <span class="repo-language-color" style="background: {{ index $languageColours .language | safeCSS }}"></span>
-                        <span>{{ .language }}</span>
-                    </div>
-                </li>
-            {{ end }}
-            </ul>
-        </section>
+            <p>Software Developer / Student / Linux Enthusiast</p>
+        </div>
+        <img src="/images/profile.webp" class="profile-picture" alt="profile-picture"/>
     </div>
+    <div id="content">
+        {{ .Content }}
+    </div>
+    <div class="button-group">
+        <a class="button" target="_blank" href="/resume/resume.pdf">Resume</a>
+    </div>
+</section>
+<section id="projects">
+    <h2 class="section-header">Projects</h2>
+    <ul class="repo-cards">
+        <li class="repo-card">
+            <div class="repo-header">
+                <i class="fa fa-github-alt"></i>
+                <a class="repo-link" href="https://github.com/joeyshi12/diff-eq-solver" target="_blank">diff-eq-solver</a>
+            </div>
+            <p>A desktop application that uses the finite difference method to solve differential equations</p>
+            <div class="repo-language">
+                <span class="repo-language-color" style="background: #3572a5;"></span>
+                <span>Python</span>
+            </div>
+        </li>
+        <li class="repo-card">
+            <div class="repo-header">
+                <i class="fa fa-github-alt"></i>
+                <a class="repo-link" href="https://github.com/joeyshi12/platform-party" target="_blank">platform-party</a>
+            </div>
+            <p>Real-time multiplayer browser platformer made with p5</p>
+            <div class="repo-language">
+                <span class="repo-language-color" style="background: #2b7489;"></span>
+                <span>Typescript</span>
+            </div>
+        </li>
+        <li class="repo-card">
+            <div class="repo-header">
+                <i class="fa fa-github-alt"></i>
+                <a class="repo-link" href="https://github.com/joeyshi12/bspwm-dotfiles" target="_blank">bspwm-dotfiles</a>
+            </div>
+            <p>Personal configuration files for running a stylish Arch Linux desktop environment</p>
+            <div class="repo-language">
+                <span class="repo-language-color" style="background: #1a9f4b;"></span>
+                <span>Vim Script</span>
+            </div>
+        </li>
+        <li class="repo-card">
+            <div class="repo-header">
+                <i class="fa fa-github-alt"></i>
+                <a class="repo-link" href="https://github.com/joeyshi12/trivia-train" target="_blank">trivia-train</a>
+            </div>
+            <p>A mobile trivia game app for Android on the Google Play Store</p>
+            <div class="repo-language">
+                <span class="repo-language-color" style="background: #b07218;"></span>
+                <span>Java</span>
+            </div>
+        </li>
+    </ul>
+</section>
 {{ end }}

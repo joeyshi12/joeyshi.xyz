@@ -1,8 +1,17 @@
+{{ define "head" }}
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+{{ end }}
+
 {{ define "main" }}
-    {{ partial "navbar.html" . }}
-    <div class="page-body">
-        <section>
-            <p>{{ .Content }}</p>
-        </section>
-    </div>
+<section>
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Content }}</p>
+</section>
 {{ end }}

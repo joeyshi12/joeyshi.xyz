@@ -1,5 +1,5 @@
 ---
-title: "Blog - Joey Shi"
+title: "Blog"
 ---
 
 Welcome to my blog! I like tinkering with Linux programs and doing math and programming exercises,

@@ -29,28 +29,47 @@
     <meta name="twitter:description" content="{{ .Site.Params.description }}">
     <meta name="twitter:image" content="/images/linux_rice.jpg">
 
-    {{- $commonCSS := resources.Get "css/common.css" }}
-    {{- $aboutCSS := resources.Get "css/about.css" }}
-    {{- $listCSS := resources.Get "css/list.css" }}
-    {{- $singleCSS := resources.Get "css/single.css" }}
-    {{- $notFoundCSS := resources.Get "css/404.css" }}
-    {{- $styleSheets := slice $commonCSS $aboutCSS $listCSS $singleCSS $notFoundCSS }}
-    {{- $bundleCSS := $styleSheets | resources.Concat "css/styles.css" | resources.Minify }}
-    <link rel="stylesheet" href="{{ $bundleCSS.RelPermalink }}"/>
+    {{ block "head" . }}
+    {{ end }}
+    <link rel="stylesheet" href="/css/common.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="/favicon.ico">
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            }
-        };
-    </script>
 </head>
 <body>
-    {{ block "main" . }}
-    {{ end }}
+    <div class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/" class="nav-link">
+                    <i class="fa fa-file-text icon"></i>
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/projects" class="nav-link">
+                    <i class="fa fa-file-text icon"></i>
+                    <span class="link-text">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/blog" class="nav-link">
+                    <i class="fa fa-file-text icon"></i>
+                    <span class="link-text">Blog</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/tags" class="nav-link">
+                    <i class="fa fa-file-text icon"></i>
+                    <span class="link-text">Tags</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <span>© 2022 {{ .Site.Params.author }}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="page-body">
+        {{ block "main" . }}
+        {{ end }}
+    </div>
 </body>
 </html>
