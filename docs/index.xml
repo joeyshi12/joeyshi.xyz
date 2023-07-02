@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joey Shi</title>
+    <link>https://joeyshi.xyz/</link>
+    <description>Recent content on Joey Shi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Jul 2023 10:49:38 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ComputerMag</title>
+      <link>https://joeyshi.xyz/projects/computer_mag/</link>
+      <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/projects/computer_mag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cool Wiki</title>
+      <link>https://joeyshi.xyz/projects/cool_wiki/</link>
+      <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/projects/cool_wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Differential Equation Solver</title>
+      <link>https://joeyshi.xyz/projects/diff_eq_solver/</link>
+      <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/projects/diff_eq_solver/</guid>
+      <description>While learning about methods of solving PDEs (partial differential equations), my professor at the time showed the class a novel way of using Excel to compute the solution of 1D time-dependent PDE systems and animating them with a slider feature.
+Computing PDE solutions numerically We start with defining the PDE problem. Typically, this will include the PDE itself, a boundary condition, and the initial condition. I&amp;rsquo;ll use the 1D heat equation to serve as an example:</description>
+    </item>
+    
+    <item>
+      <title>Platform Party</title>
+      <link>https://joeyshi.xyz/projects/platform_party/</link>
+      <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/projects/platform_party/</guid>
+      <description>Real-time multiplayer browser platformer made with p5</description>
+    </item>
+    
+    <item>
+      <title>Unix Dotfiles</title>
+      <link>https://joeyshi.xyz/projects/unix_dotfiles/</link>
+      <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/projects/unix_dotfiles/</guid>
+      <description>Last year I switched to primarily run Arch Linux on my PC instead of Windows. This came with some challenges lmao</description>
+    </item>
+    
+    <item>
+      <title>Visualizing Tech Salaries</title>
+      <link>https://joeyshi.xyz/projects/visualizing_tech_salaries/</link>
+      <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/projects/visualizing_tech_salaries/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analytic continuation of the Fibonacci sequence</title>
+      <link>https://joeyshi.xyz/blog/analytic_continuation_of_fibonacci/</link>
+      <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
+      
+      <guid>https://joeyshi.xyz/blog/analytic_continuation_of_fibonacci/</guid>
+      <description>The Fibonacci sequence is often presented as $0, 1, 1, 2, 3,\dots$, where the next term is defined by the sum of the 2 previous terms. This property can be written as $f(n+2) = f(n+1) + f(n)$, where the $n$-th term of the sequence is given by $f(n)$. Note that we also must define some initial condition $f(0) = 0$ and $f(1) = 1$.
+To reach a closed-form solution for this function, we may observe that $f(n+2) - f(n+1) - f(n) = 0$ is a linear equation.</description>
+    </item>
+    
+    <item>
+      <title>Self-hosting websites with Raspberry Pi</title>
+      <link>https://joeyshi.xyz/blog/self_hosting_websites/</link>
+      <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
+      
+      <guid>https://joeyshi.xyz/blog/self_hosting_websites/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+.header {
+    margin-bottom: 2rem;
+}
+
+.listing {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.list-item {
+    padding: 1rem 0;
+    border-top: 1px solid #eaecef;
+}
+
+.list-item:last-child {
+    border-bottom: 1px solid #eaecef;
+}
+
+.entry-description {
+    font-size: 0.9rem;
+}
+
+.entry-footer {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.entry-date {
+    margin-right: 1rem;
+}
+
+.entry-tag {
+    margin: 0 0.1rem;
+}

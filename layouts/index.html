@@ -1,77 +1,52 @@
-{{ define "head" }}
-<link rel="stylesheet" href="/css/common.css"/>
+{{ define "styles" }}
+    <link rel="stylesheet" href="/css/common.css"/>
 {{ end }}
 
 {{ define "main" }}
-<section id="about">
-    <div class="header">
-        <div class="header-text">
-            <div >
-                <h1 class="title">{{ .Site.Params.author }}</h1>
-                <div>
-                    <i class="fa fa-github icon"></i>
-                    <i class="fa fa-linkedin icon"></i>
-                    <i class="fa fa-envelope icon"></i>
-                </div>
-            </div>
-            <p>Software Developer / Student / Linux Enthusiast</p>
-        </div>
-        <img src="/images/profile.webp" class="profile-picture" alt="profile-picture"/>
+<div class="header">
+    <div class="header-text">
+        <h1 class="title">{{ .Site.Params.author }}</h1>
+        <p>Software Developer / Student / Linux Enthusiast</p>
     </div>
-    <div id="content">
+    <img src="/images/profile.webp" class="profile-picture" alt="profile-picture"/>
+</div>
+<section>
+    <h2 class="section-header">About</h2>
+    <div class="about-content">
         {{ .Content }}
     </div>
     <div class="button-group">
         <a class="button" target="_blank" href="/resume/resume.pdf">Resume</a>
     </div>
 </section>
-<section id="projects">
+<section>
     <h2 class="section-header">Projects</h2>
     <ul class="repo-cards">
+    {{ range first 4 (where .Site.RegularPages "Section" "projects") }}
         <li class="repo-card">
             <div class="repo-header">
-                <i class="fa fa-github-alt"></i>
-                <a class="repo-link" href="https://github.com/joeyshi12/diff-eq-solver" target="_blank">diff-eq-solver</a>
+                <i class="fa-brands fa-github-alt icon"></i>
+                <a class="repo-link" href="{{ .Permalink }}" target="_blank">{{ .Params.repoName }}</a>
             </div>
-            <p>A desktop application that uses the finite difference method to solve differential equations</p>
+            <p>{{ .Description }}</p>
             <div class="repo-language">
-                <span class="repo-language-color" style="background: #3572a5;"></span>
-                <span>Python</span>
+                <span class="repo-language-color" lang="{{ .Params.language }}"></span>
+                <span>{{ .Params.language }}</span>
             </div>
         </li>
-        <li class="repo-card">
-            <div class="repo-header">
-                <i class="fa fa-github-alt"></i>
-                <a class="repo-link" href="https://github.com/joeyshi12/platform-party" target="_blank">platform-party</a>
-            </div>
-            <p>Real-time multiplayer browser platformer made with p5</p>
-            <div class="repo-language">
-                <span class="repo-language-color" style="background: #2b7489;"></span>
-                <span>Typescript</span>
-            </div>
+    {{ end }}
+    </ul>
+</section>
+<section>
+    <h2 class="section-header">Blog</h2>
+    <ul class="blog-posts">
+    {{ range first 4 (where .Site.RegularPages "Section" "blog") }}
+        <li class="blog-post">
+            <a class="blog-post-link" href="{{ .Permalink }}">{{ .Title }}</a>
+            <p>{{ .Description }}</p>
+            <span class="blog-post-date">{{ .Date.Format "January 2, 2006" }}</span>
         </li>
-        <li class="repo-card">
-            <div class="repo-header">
-                <i class="fa fa-github-alt"></i>
-                <a class="repo-link" href="https://github.com/joeyshi12/bspwm-dotfiles" target="_blank">bspwm-dotfiles</a>
-            </div>
-            <p>Personal configuration files for running a stylish Arch Linux desktop environment</p>
-            <div class="repo-language">
-                <span class="repo-language-color" style="background: #1a9f4b;"></span>
-                <span>Vim Script</span>
-            </div>
-        </li>
-        <li class="repo-card">
-            <div class="repo-header">
-                <i class="fa fa-github-alt"></i>
-                <a class="repo-link" href="https://github.com/joeyshi12/trivia-train" target="_blank">trivia-train</a>
-            </div>
-            <p>A mobile trivia game app for Android on the Google Play Store</p>
-            <div class="repo-language">
-                <span class="repo-language-color" style="background: #b07218;"></span>
-                <span>Java</span>
-            </div>
-        </li>
+    {{ end }}
     </ul>
 </section>
 {{ end }}

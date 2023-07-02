@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Joey Shi</title>
+    <link>https://joeyshi.xyz/blog/</link>
+    <description>Recent content in Blog on Joey Shi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 07 Jan 2023 22:58:20 -0800</lastBuildDate><atom:link href="https://joeyshi.xyz/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analytic continuation of the Fibonacci sequence</title>
+      <link>https://joeyshi.xyz/blog/analytic_continuation_of_fibonacci/</link>
+      <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
+      
+      <guid>https://joeyshi.xyz/blog/analytic_continuation_of_fibonacci/</guid>
+      <description>The Fibonacci sequence is often presented as $0, 1, 1, 2, 3,\dots$, where the next term is defined by the sum of the 2 previous terms. This property can be written as $f(n+2) = f(n+1) + f(n)$, where the $n$-th term of the sequence is given by $f(n)$. Note that we also must define some initial condition $f(0) = 0$ and $f(1) = 1$.
+To reach a closed-form solution for this function, we may observe that $f(n+2) - f(n+1) - f(n) = 0$ is a linear equation.</description>
+    </item>
+    
+    <item>
+      <title>Self-hosting websites with Raspberry Pi</title>
+      <link>https://joeyshi.xyz/blog/self_hosting_websites/</link>
+      <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
+      
+      <guid>https://joeyshi.xyz/blog/self_hosting_websites/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

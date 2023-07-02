@@ -1,7 +1,9 @@
 ---
-title: "Analytic continuation of the Fibonacci sequence"
+title: Analytic continuation of the Fibonacci sequence
+description: A look into how the Fibonacci sequence can be extended to the real domain.
 date: 2023-01-07T22:58:20-08:00
-tags: ["Desmos", "Calculus"]
+tags: ["Math", "Desmos"]
+scripts: ["https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"]
 ---
 
 The Fibonacci sequence is often presented as $0, 1, 1, 2, 3,\dots$,

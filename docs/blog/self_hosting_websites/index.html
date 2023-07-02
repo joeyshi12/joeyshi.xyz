@@ -1,41 +1,33 @@
 <!DOCTYPE HTML>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="en">
 <head>
-    <title>{{ .Title }}</title>
+    <title>Self-hosting websites with Raspberry Pi</title>
     <meta charset="utf-8"/>
-    <meta name="author" content="{{ .Site.Params.author }}"/>
-    <meta name="description" content="{{ .Site.Params.description }}"/>
+    <meta name="author" content="Joey Shi"/>
+    <meta name="description" content="Software developer and enjoyer of all things math and Linux."/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    {{- /* Linkedin */}}
-    <meta name="description" property="og:description" content="{{ .Site.Params.description }}">
+    <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux.">
     <meta name="image" property="og:image" content="/images/linux_rice.jpg">
-
-    {{- /* Google / Search Engine Tags */}}
-    <meta itemprop="name" content="{{ .Site.Params.author }}">
-    <meta itemprop="description" content="{{ .Site.Params.description }}">
+    <meta itemprop="name" content="Joey Shi">
+    <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux.">
     <meta itemprop="image" content="/images/linux_rice.jpg">
-
-    {{- /* Facebook Meta Tags */}}
-    <meta property="og:url" content="{{ .Site.BaseURL }}">
+    <meta property="og:url" content="https://joeyshi.xyz/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ .Site.Params.author }}">
-    <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:title" content="Joey Shi">
+    <meta property="og:description" content="Software developer and enjoyer of all things math and Linux.">
     <meta property="og:image" content="/images/linux_rice.jpg">
-
-    {{- /* Twitter Meta Tags */}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ .Site.Params.author }}">
-    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:title" content="Joey Shi">
+    <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux.">
     <meta name="twitter:image" content="/images/linux_rice.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    {{- block "styles" . }}
-    {{ end }}
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/single.css"/>
+
     <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-{{- block "body" . }}
     <div class="navbar">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -63,16 +55,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <span>© 2022 {{ .Site.Params.author }}</span>
+                <span>© 2022 Joey Shi</span>
             </li>
         </ul>
     </div>
     <div class="page-body">
-    {{- block "main" . }}
-    {{ end }}
+<h2 class="title">Self-hosting websites with Raspberry Pi</h2>
+<div class="content"></div>
+
     </div>
-{{ end }}
-{{- block "scripts" . }}
-{{ end }}
+
 </body>
 </html>
