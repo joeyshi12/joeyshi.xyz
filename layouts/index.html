@@ -55,9 +55,9 @@
     </ul>
 </section>
 <section>
-    <h2 class="section-title">Blog</h2>
+    <h2 class="section-title">Posts</h2>
     <ul class="blog-posts">
-    {{ range first 4 (where .Site.RegularPages "Section" "blog") }}
+    {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
         <li class="blog-post">
             <a class="blog-post-link" href="{{ .Permalink }}">{{ .Title }}</a>
             <p>{{ .Description }}</p>

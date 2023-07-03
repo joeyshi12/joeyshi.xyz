@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Joey Shi</title>
+    <title>Posts on Joey Shi</title>
     <link>https://joeyshi.xyz/blog/</link>
-    <description>Recent content in Blog on Joey Shi</description>
+    <description>Recent content in Posts on Joey Shi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 07 Jan 2023 22:58:20 -0800</lastBuildDate><atom:link href="https://joeyshi.xyz/blog/index.xml" rel="self" type="application/rss+xml" />
