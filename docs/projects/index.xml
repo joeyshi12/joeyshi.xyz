@@ -22,7 +22,8 @@
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
       
       <guid>https://joeyshi.xyz/projects/cool_wiki/</guid>
-      <description></description>
+      <description>wiki.joeyshi.xyz Source code In my final year at UBC, I decided to typeset notes for some of my courses. To make some of these notes publicly available, I used the following workflow to convert a collection of markdown notes into HTML pages using Pandoc.
+Organization . ├── Makefile ├── content │ ├── cpsc406 │ │ ├── convexity.md │ │ ├── duality.md │ │ ├── gradient_descent.md │ │ ├── linear_contraints.md │ │ ├── linear_programming.</description>
     </item>
     
     <item>

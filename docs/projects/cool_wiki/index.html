@@ -22,8 +22,8 @@
     <meta name="twitter:image" content="/images/linux_rice.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/common.css"/>
-    <link rel="stylesheet" href="/css/single.css"/>
+<link rel="stylesheet" href="/css/common.css"/>
+<link rel="stylesheet" href="/css/single.css"/>
 
     <link rel="icon" href="/favicon.ico">
 </head>
@@ -61,9 +61,87 @@
     </div>
     <div class="page-body">
 <h2 class="title">Cool Wiki</h2>
-<div class="content"></div>
+<div class="content"><ul>
+<li><a href="https://wiki.joeyshi.xyz">wiki.joeyshi.xyz</a></li>
+<li><a href="https://github.com/joeyshi12/cool-wiki">Source code</a></li>
+</ul>
+<p>In my final year at UBC, I decided to typeset notes for some of my courses.
+To make some of these notes publicly available,
+I used the following workflow to convert a collection of markdown
+notes into HTML pages using <a href="https://pandoc.org/index.html">Pandoc</a>.</p>
+<h2 id="organization">Organization</h2>
+<pre tabindex="0"><code>.
+├── Makefile
+├── content
+│   ├── cpsc406
+│   │   ├── convexity.md
+│   │   ├── duality.md
+│   │   ├── gradient_descent.md
+│   │   ├── linear_contraints.md
+│   │   ├── linear_programming.md
+│   │   ├── projected_grad_descent.md
+│   │   └── zero_sum_game.md
+│   ├── exam
+│   │   ├── index.md
+│   │   ├── math303_2015WT2.md
+│   │   ├── math303_2016WT2.md
+│   │   └── math303_2022WT2.md
+│   ├── math303
+│   │   ├── bd_process.md
+│   │   ├── branching_process.md
+│   │   ├── ctmc.md
+│   │   ├── distributions.md
+│   │   ├── markov_chain.md
+│   │   ├── poisson_process.md
+│   │   └── stationary_distribution.md
+│   └── math316
+│       ├── heat_equation.md
+│       └── series_solutions.md
+└── templates
+    └── basic.md
+</code></pre><p>I first organize all my markdown files within the <code>/content</code> folder.
+I further group my files by different courses I am taking.</p>
+<p>I use Pandoc to transcompile each markdown file as a separate HTML page
+whose relative path in the target folder is the same as the markdown file in the content folder.</p>
+<h2 id="makefile">Makefile</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span>MD_FILES<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>shell find ./content -name <span style="color:#ae81ff">\*</span>.md<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>HTML_FILES<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>MD_FILES:.md<span style="color:#f92672">=</span>.html<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>BUILD_HTML_FILES<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>HTML_FILES:%<span style="color:#f92672">=</span>docs/%<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">all</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">$(</span>BUILD_HTML_FILES<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">docs/%.html</span><span style="color:#f92672">:</span> %.md
+</span></span><span style="display:flex;"><span>	@mkdir -p $$<span style="color:#f92672">(</span>dirname $@<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	pandoc -s --mathjax -o $@ $&lt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">new</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">$(if</span> <span style="color:#66d9ef">$(</span>path<span style="color:#66d9ef">)</span>,<span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		@mkdir -p content/$$<span style="color:#f92672">(</span>dirname <span style="color:#66d9ef">$(</span>path<span style="color:#66d9ef">))</span>;<span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		cp -i templates/basic.md content/<span style="color:#66d9ef">$(</span>path<span style="color:#66d9ef">)</span>,<span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		<span style="color:#66d9ef">$(</span>error syntax: make new path<span style="color:#f92672">=</span>&lt;content-path&gt;<span style="color:#66d9ef">)</span><span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">clean</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	-rm -rf docs/content
+</span></span></code></pre></div></div>
 
     </div>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$','$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </body>
 </html>

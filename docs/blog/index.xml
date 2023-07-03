@@ -13,8 +13,8 @@
       <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
       
       <guid>https://joeyshi.xyz/blog/analytic_continuation_of_fibonacci/</guid>
-      <description>The Fibonacci sequence is often presented as $0, 1, 1, 2, 3,\dots$, where the next term is defined by the sum of the 2 previous terms. This property can be written as $f(n+2) = f(n+1) + f(n)$, where the $n$-th term of the sequence is given by $f(n)$. Note that we also must define some initial condition $f(0) = 0$ and $f(1) = 1$.
-To reach a closed-form solution for this function, we may observe that $f(n+2) - f(n+1) - f(n) = 0$ is a linear equation.</description>
+      <description>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.
+Finding a closed formula To find a closed formula for this sequence, we can use the classic Characteristic Root Technique from discrete mathematics.</description>
     </item>
     
     <item>
