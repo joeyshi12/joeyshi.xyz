@@ -41,6 +41,7 @@ html body {
 a {
     text-decoration: none;
     color: var(--link-color);
+    font-weight: 500;
 }
 
 a:hover {
@@ -94,6 +95,7 @@ a:hover {
     text-decoration: none;
     color: var(--fg);
     padding: 1rem 0 1rem 2rem;
+    border-radius: 25px;
 }
 
 .nav-link:hover {
@@ -140,10 +142,12 @@ section {
     justify-content: center;
     width: 100%;
     height: 100%;
+    margin: 0.5rem 0;
 }
 
-.section-header {
+.section-title {
     font-family: "M Plus Rounded 1c", serif;
+    margin: 0.5rem 0;
 }
 
 .button {
@@ -163,6 +167,21 @@ section {
 .button-group {
     display: flex;
     justify-content: center;
+}
+
+.ext-links {
+    list-style: none;
+    list-style-position: inside;
+    padding: 0 0 0 1rem;
+}
+
+.ext-link {
+    padding: 0.2rem;
+    margin: 0;
+}
+
+.brand-icon {
+    width: 1.4rem;
 }
 
 .repo-cards {

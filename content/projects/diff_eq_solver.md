@@ -3,7 +3,6 @@ title: Differential Equation Solver
 description: A desktop application that uses the finite difference method to solve differential equations.
 date: 2023-07-02T10:49:38-07:00
 tags: ["Python", "Math"]
-scripts: ["https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"]
 repoName: diff-eq-solver
 language: Python
 ---

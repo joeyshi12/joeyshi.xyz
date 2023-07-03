@@ -11,7 +11,7 @@
     <img src="/images/profile.webp" class="profile-picture" alt="profile-picture"/>
 </div>
 <section>
-    <h2 class="section-header">About</h2>
+    <h2 class="section-title">About</h2>
     <div class="about-content">
         {{ .Content }}
     </div>
@@ -20,13 +20,30 @@
     </div>
 </section>
 <section>
-    <h2 class="section-header">Projects</h2>
+    <h2 class="section-title">Where to find me</h2>
+    <ul class="ext-links">
+        <li class="ext-link">
+            <i class="fa-brands fa-github brand-icon"></i>
+            <a href="https://github.com/joeyshi12" target="_blank">@joeyshi12</a>
+        </li>
+        <li class="ext-link">
+            <i class="fa-brands fa-linkedin brand-icon"></i>
+            <a href="https://linkedin.com/in/joeyshi12" target="_blank">@joeyshi12</a>
+        </li>
+        <li class="ext-link">
+            <i class="fa-solid fa-envelope brand-icon"></i>
+            <a href="mailto://joeyshi12@gmail.com">@root@joeyshi.xyz</a>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2 class="section-title">Projects</h2>
     <ul class="repo-cards">
     {{ range first 4 (where .Site.RegularPages "Section" "projects") }}
         <li class="repo-card">
             <div class="repo-header">
                 <i class="fa-brands fa-github-alt icon"></i>
-                <a class="repo-link" href="{{ .Permalink }}" target="_blank">{{ .Params.repoName }}</a>
+                <a class="repo-link" href="{{ .Permalink }}">{{ .Params.repoName }}</a>
             </div>
             <p>{{ .Description }}</p>
             <div class="repo-language">
@@ -38,7 +55,7 @@
     </ul>
 </section>
 <section>
-    <h2 class="section-header">Blog</h2>
+    <h2 class="section-title">Blog</h2>
     <ul class="blog-posts">
     {{ range first 4 (where .Site.RegularPages "Section" "blog") }}
         <li class="blog-post">
