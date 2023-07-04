@@ -1,29 +1,35 @@
-{{ define "styles" }}
-<link rel="stylesheet" href="/css/common.css"/>
-<link rel="stylesheet" href="/css/single.css"/>
-{{ end }}
+{{- define "styles" }}
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/single.css"/>
+{{- end }}
 
-{{ define "scripts" }}
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script>
-    MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$','$$'], ['\\[', '\\]']],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        options: {
-            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-        }
-    };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-{{ end }}
+{{- define "scripts" }}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$','$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+{{- end }}
 
-{{ define "main" }}
-<h2 class="title">{{ .Title }}</h2>
-<div class="content">
-{{- .Content -}}
-</div>
-{{ end }}
+{{- define "main" }}
+    <div class="breadcrumbs">
+        {{- with .Parent }}
+        <a class="parent-link" href="{{ .Permalink }}">{{ .Title }}</a>
+        {{- end }}
+        <span><i class="fa-solid fa-caret-right"></i></span>
+        <h2 class="single-title">{{ .Title }}</h3>
+    </div>
+    <div class="content">
+    {{ .Content }}
+    </div>
+{{- end }}

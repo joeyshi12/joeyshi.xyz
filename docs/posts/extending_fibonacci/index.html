@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Differential Equation Solver</title>
+    <title>Extending the Fibonacci sequence to the Real Domain</title>
     <meta charset="utf-8"/>
     <meta name="author" content="Joey Shi"/>
     <meta name="description" content="Software developer and enjoyer of all things math and Linux."/>
@@ -60,56 +60,37 @@
     </div>
     <div class="page-body">
     <div class="breadcrumbs">
-        <a class="parent-link" href="https://joeyshi.xyz/projects/">Projects</a>
+        <a class="parent-link" href="https://joeyshi.xyz/posts/">Posts</a>
         <span><i class="fa-solid fa-caret-right"></i></span>
-        <h2 class="single-title">Differential Equation Solver</h3>
+        <h2 class="single-title">Extending the Fibonacci sequence to the Real Domain</h3>
     </div>
     <div class="content">
-    <p>A desktop application that uses the finite difference method
-to solve differential equations.</p>
-<ul>
-<li><a href="https://github.com/joeyshi12/diff-eq-solver">Source code</a></li>
-</ul>
-<p>This application uses techniques from these
-<a href="https://personal.math.ubc.ca/~peirce/M257_316_2012_Lecture_8.pdf">lecture notes</a>
-to compute the solution of PDEs numerically.</p>
-<h2 id="numerical-algorithm-for-solving-the-heat-equation">Numerical algorithm for solving the heat equation</h2>
-<p>We let $u(t, x)$ be the solution function for the differential equation defined by</p>
-<ul>
-<li>$u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, $0 &lt; x \leq L$, $0 &lt; t \leq T$</li>
-<li>$u(t, 0) = \Phi_1(t)$</li>
-<li>$u_{t}(t, L) = \Phi_2(t)$</li>
-<li>$u(0, x) = f(x)$</li>
-</ul>
-<p>Let $u[i][j] = u(i \Delta t, j \Delta x)$ for $i = 0$ to $i = K - 1$
-and $j = 0$ to $j = N - 1$ for $\Delta t = T / (K - 1)$
-and $\Delta x = L / (N - 1)$.
-For $\Delta t$ small enough, we can approximate $u_{t}(t, x)$ with
-the forward difference:</p>
+    <p>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$,
+where the following terms is defined by the sum of the 2 previous terms.
+Letting $f(n)$ denote the $n$-th term of the sequence,
+we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values
+$f(0) = 0$ and $f(1) = 1$.</p>
+<h2 id="finding-a-closed-formula">Finding a closed formula</h2>
+<p>To find a closed formula for this sequence,
+we can use the classic <a href="https://discrete.openmathbooks.org/dmoi3/sec_recurrence.html#Hke">Characteristic Root Technique</a> from discrete mathematics.</p>
+<p>The characteristic polynomial for the Fibonacci sequence is given by
+$r^2 - r - 1 = 0$, so the roots of this quadratic are</p>
 <p>$$
-u_{t}(t, x) = (u(t + \Delta t, x) - u(t, x)) / \Delta t
+r_1, r_2 = \frac{1 \pm \sqrt{5}}{2} = \phi, -\frac{1}{\phi}.
 $$</p>
-<p>For $\Delta x$ small enough, we can approximate $u_{xx}(t, x)$ with the second order central difference:</p>
+<p>The characteristic root technique tells us that the closed formula is of the form
+$f(n) = c_1 \phi^n + c_2 (-1/\phi)^n$.
+Plugging in the initial values, we get $0 = f(0) = c_1 + c_2$
+and $1 = f(1) = c_1\phi - c_2/\phi$.</p>
+<p>Solving this system gives us</p>
 <p>$$
-u_{xx}(t, x) = (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) / (\Delta x 2)
+c_1 = \frac{1}{\sqrt{5}},\quad c_2 = -\frac{1}{\sqrt{5}}
 $$</p>
-<p>So after substituting and rearranging $u_{xx}$, $u_{t}$ in
-$u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, we get</p>
 <p>$$
-u(t + \Delta t, x) = u(t, x) + (\alpha \Delta t / \Delta x 2) (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) + S(t, x) \Delta t
+f(n) = \frac{\phi^n - (-\frac{1}{\phi})^n}{\sqrt{5}}
 $$</p>
-<p>Thus, we can compute all values of $u[i][j]$ with the following:</p>
-<p>$$
-u[i][j] = \begin{cases}
-u[i - 1, j] + \frac{\alpha \Delta t}{2 \Delta x} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &amp;\text{if } 0 &lt; i \leq K - 1, 0 &lt; j &lt; N - 1 \\
-\Phi_1(i \Delta t), &amp;\text{if } j = N - 1 \\
-u[i, j - 2] + \Phi_2(i \Delta t) \Delta t, &amp;\text{if } j = 0 \\
-f(j \Delta x), &amp;\text{if } i = 0
-\end{cases}
-$$</p>
-<ul>
-<li><a href="https://github.com/joeyshi12/diff-eq-solver/blob/main/src/diffeq_solver_tk/finite_difference.py">Implementation</a></li>
-</ul>
+<h2 id="extending-the-closed-formula-to-mathbbr">Extending the closed formula to $\mathbb{R}$</h2>
+<p>TODO</p>
 
     </div>
     </div>

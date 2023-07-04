@@ -7,24 +7,23 @@
     <meta name="description" content="Software developer and enjoyer of all things math and Linux."/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux.">
-    <meta name="image" property="og:image" content="/images/linux_rice.jpg">
+    <meta name="image" property="og:image" content="/images/preview.jpg">
     <meta itemprop="name" content="Joey Shi">
     <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux.">
-    <meta itemprop="image" content="/images/linux_rice.jpg">
+    <meta itemprop="image" content="/images/preview.jpg">
     <meta property="og:url" content="https://joeyshi.xyz/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Joey Shi">
     <meta property="og:description" content="Software developer and enjoyer of all things math and Linux.">
-    <meta property="og:image" content="/images/linux_rice.jpg">
+    <meta property="og:image" content="/images/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Joey Shi">
     <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux.">
-    <meta name="twitter:image" content="/images/linux_rice.jpg">
+    <meta name="twitter:image" content="/images/preview.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="/css/common.css"/>
-<link rel="stylesheet" href="/css/single.css"/>
-
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/single.css"/>
     <link rel="icon" href="/favicon.ico">
 </head>
 <body>
@@ -43,9 +42,9 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/blog" class="nav-link">
+                <a href="/posts" class="nav-link">
                     <i class="fa-solid fa-blog icon"></i>
-                    <span class="link-text">Blog</span>
+                    <span class="link-text">Posts</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -60,88 +59,151 @@
         </ul>
     </div>
     <div class="page-body">
-<h2 class="title">Cool Wiki</h2>
-<div class="content"><ul>
-<li><a href="https://wiki.joeyshi.xyz">wiki.joeyshi.xyz</a></li>
+    <div class="breadcrumbs">
+        <a class="parent-link" href="https://joeyshi.xyz/projects/">Projects</a>
+        <span><i class="fa-solid fa-caret-right"></i></span>
+        <h2 class="single-title">Cool Wiki</h3>
+    </div>
+    <div class="content">
+    <p>In my final year at UBC, I decided to typeset notes for some of my courses.
+To make some of these notes publicly available.</p>
+<ul>
+<li><a href="https://wiki.joeyshi.xyz">Website</a></li>
 <li><a href="https://github.com/joeyshi12/cool-wiki">Source code</a></li>
 </ul>
-<p>In my final year at UBC, I decided to typeset notes for some of my courses.
-To make some of these notes publicly available,
-I used the following workflow to convert a collection of markdown
+<p>I used the following workflow to convert a collection of markdown
 notes into HTML pages using <a href="https://pandoc.org/index.html">Pandoc</a>.</p>
 <h2 id="organization">Organization</h2>
-<pre tabindex="0"><code>.
-├── Makefile
-├── content
-│   ├── cpsc406
-│   │   ├── convexity.md
-│   │   ├── duality.md
-│   │   ├── gradient_descent.md
-│   │   ├── linear_contraints.md
-│   │   ├── linear_programming.md
-│   │   ├── projected_grad_descent.md
-│   │   └── zero_sum_game.md
-│   ├── exam
-│   │   ├── index.md
-│   │   ├── math303_2015WT2.md
-│   │   ├── math303_2016WT2.md
-│   │   └── math303_2022WT2.md
-│   ├── math303
-│   │   ├── bd_process.md
-│   │   ├── branching_process.md
-│   │   ├── ctmc.md
-│   │   ├── distributions.md
-│   │   ├── markov_chain.md
-│   │   ├── poisson_process.md
-│   │   └── stationary_distribution.md
-│   └── math316
-│       ├── heat_equation.md
-│       └── series_solutions.md
-└── templates
-    └── basic.md
-</code></pre><p>I first organize all my markdown files within the <code>/content</code> folder.
+<div class="highlight"><div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">29
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── Makefile
+</span></span><span style="display:flex;"><span>├── content
+</span></span><span style="display:flex;"><span>│   ├── cpsc406
+</span></span><span style="display:flex;"><span>│   │   ├── convexity.md
+</span></span><span style="display:flex;"><span>│   │   ├── duality.md
+</span></span><span style="display:flex;"><span>│   │   ├── gradient_descent.md
+</span></span><span style="display:flex;"><span>│   │   ├── linear_contraints.md
+</span></span><span style="display:flex;"><span>│   │   ├── linear_programming.md
+</span></span><span style="display:flex;"><span>│   │   ├── projected_grad_descent.md
+</span></span><span style="display:flex;"><span>│   │   └── zero_sum_game.md
+</span></span><span style="display:flex;"><span>│   ├── exam
+</span></span><span style="display:flex;"><span>│   │   ├── index.md
+</span></span><span style="display:flex;"><span>│   │   ├── math303_2015WT2.md
+</span></span><span style="display:flex;"><span>│   │   ├── math303_2016WT2.md
+</span></span><span style="display:flex;"><span>│   │   └── math303_2022WT2.md
+</span></span><span style="display:flex;"><span>│   ├── math303
+</span></span><span style="display:flex;"><span>│   │   ├── bd_process.md
+</span></span><span style="display:flex;"><span>│   │   ├── branching_process.md
+</span></span><span style="display:flex;"><span>│   │   ├── ctmc.md
+</span></span><span style="display:flex;"><span>│   │   ├── distributions.md
+</span></span><span style="display:flex;"><span>│   │   ├── markov_chain.md
+</span></span><span style="display:flex;"><span>│   │   ├── poisson_process.md
+</span></span><span style="display:flex;"><span>│   │   └── stationary_distribution.md
+</span></span><span style="display:flex;"><span>│   └── math316
+</span></span><span style="display:flex;"><span>│       ├── heat_equation.md
+</span></span><span style="display:flex;"><span>│       └── series_solutions.md
+</span></span><span style="display:flex;"><span>└── templates
+</span></span><span style="display:flex;"><span>    └── basic.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>I first organize all my markdown files within the <code>/content</code> folder.
 I further group my files by different courses I am taking.</p>
 <p>I use Pandoc to transcompile each markdown file as a separate HTML page
 whose relative path in the target folder is the same as the markdown file in the content folder.</p>
 <h2 id="makefile">Makefile</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span>MD_FILES<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>shell find ./content -name <span style="color:#ae81ff">\*</span>.md<span style="color:#66d9ef">)</span>
-</span></span><span style="display:flex;"><span>HTML_FILES<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>MD_FILES:.md<span style="color:#f92672">=</span>.html<span style="color:#66d9ef">)</span>
-</span></span><span style="display:flex;"><span>BUILD_HTML_FILES<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>HTML_FILES:%<span style="color:#f92672">=</span>docs/%<span style="color:#66d9ef">)</span>
+<div class="highlight"><div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span>MD_FILES<span style="color:#81a1c1">=</span><span style="color:#81a1c1;font-weight:bold">$(</span>shell find ./content -name <span style="color:#ebcb8b">\*</span>.md<span style="color:#81a1c1;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>HTML_FILES<span style="color:#81a1c1">=</span><span style="color:#81a1c1;font-weight:bold">$(</span>MD_FILES:.md<span style="color:#81a1c1">=</span>.html<span style="color:#81a1c1;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>BUILD_HTML_FILES<span style="color:#81a1c1">=</span><span style="color:#81a1c1;font-weight:bold">$(</span>HTML_FILES:%<span style="color:#81a1c1">=</span>docs/%<span style="color:#81a1c1;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">all</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">$(</span>BUILD_HTML_FILES<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#88c0d0">all</span><span style="color:#81a1c1">:</span> <span style="color:#81a1c1;font-weight:bold">$(</span>BUILD_HTML_FILES<span style="color:#81a1c1;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">docs/%.html</span><span style="color:#f92672">:</span> %.md
-</span></span><span style="display:flex;"><span>	@mkdir -p $$<span style="color:#f92672">(</span>dirname $@<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#88c0d0">docs/%.html</span><span style="color:#81a1c1">:</span> %.md
+</span></span><span style="display:flex;"><span>	@mkdir -p $$<span style="color:#81a1c1">(</span>dirname $@<span style="color:#81a1c1">)</span>
 </span></span><span style="display:flex;"><span>	pandoc -s --mathjax -o $@ $&lt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">new</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">$(if</span> <span style="color:#66d9ef">$(</span>path<span style="color:#66d9ef">)</span>,<span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		@mkdir -p content/$$<span style="color:#f92672">(</span>dirname <span style="color:#66d9ef">$(</span>path<span style="color:#66d9ef">))</span>;<span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		cp -i templates/basic.md content/<span style="color:#66d9ef">$(</span>path<span style="color:#66d9ef">)</span>,<span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		<span style="color:#66d9ef">$(</span>error syntax: make new path<span style="color:#f92672">=</span>&lt;content-path&gt;<span style="color:#66d9ef">)</span><span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#88c0d0">new</span><span style="color:#81a1c1">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#81a1c1;font-weight:bold">$(if</span> <span style="color:#81a1c1;font-weight:bold">$(</span>path<span style="color:#81a1c1;font-weight:bold">)</span>,<span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>		@mkdir -p content/$$<span style="color:#81a1c1">(</span>dirname <span style="color:#81a1c1;font-weight:bold">$(</span>path<span style="color:#81a1c1;font-weight:bold">))</span><span style="color:#eceff4">;</span><span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>		cp -i templates/basic.md content/<span style="color:#81a1c1;font-weight:bold">$(</span>path<span style="color:#81a1c1;font-weight:bold">)</span>,<span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>		<span style="color:#81a1c1;font-weight:bold">$(</span>error syntax: make new path<span style="color:#81a1c1">=</span>&lt;content-path&gt;<span style="color:#81a1c1;font-weight:bold">)</span><span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>	<span style="color:#81a1c1">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">clean</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span><span style="color:#88c0d0">clean</span><span style="color:#81a1c1">:</span>
 </span></span><span style="display:flex;"><span>	-rm -rf docs/content
-</span></span></code></pre></div></div>
-
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
     </div>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script>
-    MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$','$$'], ['\\[', '\\]']],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        options: {
-            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-        }
-    };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
+    </div>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$','$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 </body>
 </html>

@@ -9,29 +9,29 @@
 
     {{- /* Linkedin */}}
     <meta name="description" property="og:description" content="{{ .Site.Params.description }}">
-    <meta name="image" property="og:image" content="/images/linux_rice.jpg">
+    <meta name="image" property="og:image" content="/images/preview.jpg">
 
     {{- /* Google / Search Engine Tags */}}
     <meta itemprop="name" content="{{ .Site.Params.author }}">
     <meta itemprop="description" content="{{ .Site.Params.description }}">
-    <meta itemprop="image" content="/images/linux_rice.jpg">
+    <meta itemprop="image" content="/images/preview.jpg">
 
     {{- /* Facebook Meta Tags */}}
     <meta property="og:url" content="{{ .Site.BaseURL }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ .Site.Params.author }}">
     <meta property="og:description" content="{{ .Site.Params.description }}">
-    <meta property="og:image" content="/images/linux_rice.jpg">
+    <meta property="og:image" content="/images/preview.jpg">
 
     {{- /* Twitter Meta Tags */}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Site.Params.author }}">
     <meta name="twitter:description" content="{{ .Site.Params.description }}">
-    <meta name="twitter:image" content="/images/linux_rice.jpg">
+    <meta name="twitter:image" content="/images/preview.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     {{- block "styles" . }}
-    {{ end }}
+    {{- end }}
     <link rel="icon" href="/favicon.ico">
 </head>
 <body>
@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/blog" class="nav-link">
+                <a href="/posts" class="nav-link">
                     <i class="fa-solid fa-blog icon"></i>
                     <span class="link-text">Posts</span>
                 </a>
@@ -69,10 +69,10 @@
     </div>
     <div class="page-body">
     {{- block "main" . }}
-    {{ end }}
+    {{- end }}
     </div>
-{{ end }}
+{{- end }}
 {{- block "scripts" . }}
-{{ end }}
+{{- end }}
 </body>
 </html>

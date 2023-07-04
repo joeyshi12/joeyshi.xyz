@@ -1,45 +1,9 @@
-{{ define "styles" }}
+{{- define "styles" }}
     <link rel="stylesheet" href="/css/common.css"/>
-    <style>
-        html body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            max-width: 18rem;
-            padding: 1rem;
-            margin-bottom: 4rem;
-        }
-        .title {
-            padding: 0;
-            margin: 0 0 1rem 0;
-        }
-        .not-found-img {
-            border-radius: 16px;
-            width: 100%;
-        }
-        #url {
-            color: var(--fg);
-            background-color: #e2e6ea;
-            padding: .2em .4em;
-            border-radius: 6px;
-            font-size: 85%;
-            font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
-        }
-        @media (prefers-color-scheme: dark) {
-            #url {
-                background-color: #26292b;
-            }
-        }
-    </style>
-{{ end }}
+    <link rel="stylesheet" href="/css/404.css"/>
+{{- end }}
 
-{{ define "body" }}
+{{- define "body" }}
 <div class="container">
     <h2 class=title>404</h2>
     <img class="not-found-img" src="/images/crying_penguin.jpg" alt="crying_penguin"/>
@@ -51,4 +15,4 @@
 <script>
     document.getElementById("url").textContent = window.location.pathname;
 </script>
-{{ end }}
+{{- end }}

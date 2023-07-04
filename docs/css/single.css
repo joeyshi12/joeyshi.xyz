@@ -1,4 +1,37 @@
-.content h2 {
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.breadcrumbs {
+    margin: 0.5rem 0;
+    padding: 1.2rem;
+    background: var(--bg-secondary);
+    border-radius: 25px;
+}
+
+.parent-link {
+    font-family: "M Plus Rounded 1c", serif;
+}
+
+.single-title {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
     font-family: "M Plus Rounded 1c", serif;
     font-size: 1.2rem;
+}
+
+.highlight {
+    font-size: 14px;
+}
+
+mjx-container {
+  display: inline-grid;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
 }

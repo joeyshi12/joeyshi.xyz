@@ -1,12 +1,13 @@
-{{ define "styles" }}
+{{- define "styles" }}
     <link rel="stylesheet" href="/css/common.css"/>
     <link rel="stylesheet" href="/css/list.css"/>
-{{ end }}
+{{- end }}
 
-{{ define "main" }}
+{{- define "main" }}
     <div class="header header-text">
         <h2 class="title">{{ .Title }}</h2>
     </div>
+    <p>Subscribe to my <i class="fa-solid fa-rss"></i> <a href="{{ .Permalink }}/index.xml">RSS feed</a> for updates!</p>
     <ul class="listing">
     {{- range .Pages }}
         <li class="list-item">
@@ -14,15 +15,15 @@
             <p class="entry-description">{{ .Params.Description }}</p>
             <footer class="entry-footer">
                 <span class="entry-date">{{ .Date | time.Format ":date_long" }}</span>
-                {{ if isset .Params "tags" }}
+                {{- if isset .Params "tags" }}
                 <div>
-                {{ range .Params.tags }}
+                {{- range .Params.tags }}
                     <a class="entry-tag" href="/tags/{{ . | urlize }}">#{{ . }}</a>
-                {{ end }}
+                {{- end }}
                 </div>
-                {{ end }}
+                {{- end }}
             </footer>
         </li>
-    {{ end }}
+    {{- end }}
     </ul>
-{{ end }}
+{{- end }}

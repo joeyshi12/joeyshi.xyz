@@ -5,19 +5,21 @@ date: 2023-07-02T10:49:38-07:00
 tags: ["Web", "School"]
 repoName: cool-wiki
 language: HTML
+featured: true
 ---
 
-- [wiki.joeyshi.xyz](https://wiki.joeyshi.xyz)
+In my final year at UBC, I decided to typeset notes for some of my courses.
+To make some of these notes publicly available.
+
+- [Website](https://wiki.joeyshi.xyz)
 - [Source code](https://github.com/joeyshi12/cool-wiki)
 
-In my final year at UBC, I decided to typeset notes for some of my courses.
-To make some of these notes publicly available,
 I used the following workflow to convert a collection of markdown
 notes into HTML pages using [Pandoc](https://pandoc.org/index.html).
 
 ## Organization
 
-```
+```sh
 .
 ├── Makefile
 ├── content
