@@ -30,8 +30,14 @@ h2 {
 }
 
 mjx-container {
-  display: inline-grid;
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-width: 100%;
+    display: inline-grid;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+mjx-container::-webkit-scrollbar {
+    display: none;
 }

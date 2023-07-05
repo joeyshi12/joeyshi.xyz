@@ -1,25 +1,25 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Extending the Fibonacci sequence to the Real Domain</title>
+    <title>Extending the Fibonacci sequence to the Complex Domain</title>
     <meta charset="utf-8"/>
     <meta name="author" content="Joey Shi"/>
     <meta name="description" content="Software developer and enjoyer of all things math and Linux."/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux.">
-    <meta name="image" property="og:image" content="/images/preview.jpg">
+    <meta name="image" property="og:image" content="/img/preview.jpg">
     <meta itemprop="name" content="Joey Shi">
     <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux.">
-    <meta itemprop="image" content="/images/preview.jpg">
-    <meta property="og:url" content="https://joeyshi.xyz/">
+    <meta itemprop="image" content="/img/preview.jpg">
+    <meta property="og:url" content="https://joeyshi.xyz">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Joey Shi">
     <meta property="og:description" content="Software developer and enjoyer of all things math and Linux.">
-    <meta property="og:image" content="/images/preview.jpg">
+    <meta property="og:image" content="/img/preview.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Joey Shi">
     <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux.">
-    <meta name="twitter:image" content="/images/preview.jpg">
+    <meta name="twitter:image" content="/img/preview.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/common.css"/>
@@ -62,7 +62,7 @@
     <div class="breadcrumbs">
         <a class="parent-link" href="https://joeyshi.xyz/posts/">Posts</a>
         <span><i class="fa-solid fa-caret-right"></i></span>
-        <h2 class="single-title">Extending the Fibonacci sequence to the Real Domain</h3>
+        <h2 class="single-title">Extending the Fibonacci sequence to the Complex Domain</h3>
     </div>
     <div class="content">
     <p>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$,
@@ -76,7 +76,7 @@ we can use the classic <a href="https://discrete.openmathbooks.org/dmoi3/sec_rec
 <p>The characteristic polynomial for the Fibonacci sequence is given by
 $r^2 - r - 1 = 0$, so the roots of this quadratic are</p>
 <p>$$
-r_1, r_2 = \frac{1 \pm \sqrt{5}}{2} = \phi, -\frac{1}{\phi}.
+r_1, r_2 = \frac{1 \pm \sqrt{5}}{2} = \phi, -\frac{1}{\phi},\quad \phi = \frac{1 + \sqrt{5}}{2}.
 $$</p>
 <p>The characteristic root technique tells us that the closed formula is of the form
 $f(n) = c_1 \phi^n + c_2 (-1/\phi)^n$.
@@ -89,8 +89,24 @@ $$</p>
 <p>$$
 f(n) = \frac{\phi^n - (-\frac{1}{\phi})^n}{\sqrt{5}}
 $$</p>
-<h2 id="extending-the-closed-formula-to-mathbbr">Extending the closed formula to $\mathbb{R}$</h2>
-<p>TODO</p>
+<h2 id="extending-the-closed-formula-to-mathbbc">Extending the closed formula to $\mathbb{C}$</h2>
+<p>From previous, we found 2 linearly independent solutions to the recursive equation $f(n+2) = f(n+1) + f(n)$:</p>
+<p>$$
+f_1(n) = \phi^{n},\quad f_2(n) = (-1/\phi)^{n}.
+$$</p>
+<p>Let $z = x + yi$ be complex-valued.
+We proceed to express $f_1(z), f_2(z)$ in standard form.</p>
+<p>\begin{align}
+f_1(z) &amp;= \phi^{x + yi} \\
+&amp;= \phi^x(\cos(\log(\phi)y) + i\sin(\log(\phi)y)) \\
+f_2(z) &amp;= (-1/\phi)^{x + yi} \\
+&amp;= (e^{-\log(\phi) + (\pi + 2\pi n)i})^{x + yi},\quad n\in\mathbb{N} \\
+&amp;= e^{-\log(\phi)x - (1 + 2n)\pi y + ((1 + 2n)\pi x - \log(\phi)y)i} \\
+&amp;= \phi^{-x}e^{-(1 + 2n)\pi y}(\cos((1 + 2n)\pi x - \log(\phi)y) + i\sin((1 + 2n)\pi x - \log(\phi)y))
+\end{align}</p>
+<p>Thus, the general form of $f(z)$ is a linear combination of the functions listed above.
+Then, plugging in the initial values will yield the general solution of the system.</p>
+<p>[More added soon]</p>
 
     </div>
     </div>

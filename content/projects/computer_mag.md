@@ -11,7 +11,7 @@ Wiki for laptops and desktops with technical details and reviews.
 This was a group project done for a UBC computer science course: CPSC 304.
 
 - [Website](https://computer-mag.joeyshi.xyz/)
-- [ER Diagram](/images/er_diagram.png)
+- [ER Diagram](/img/er_diagram.png)
 
 This is a fullstack web application made with Java, MySQL, and
 vanilla HTML/CSS/JavaScript.

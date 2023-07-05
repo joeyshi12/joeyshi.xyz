@@ -1,4 +1,4 @@
-baseURL = "https://joeyshi.xyz/"
+baseURL = "https://joeyshi.xyz"
 languageCode = "en"
 title = "Joey Shi"
 publishDir = "docs"
