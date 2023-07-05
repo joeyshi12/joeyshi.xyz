@@ -1,3 +1,3 @@
 # joeyshi.xyz
 
-Personal portfolio written in Hugo
+Personal website that highlights my skills and experience
