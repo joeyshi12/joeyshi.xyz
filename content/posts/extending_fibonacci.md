@@ -3,6 +3,7 @@ title: Extending the Fibonacci sequence to the Complex Domain
 description: A look into how the Fibonacci sequence can be extended to the complex domain.
 date: 2023-01-07T22:58:20-08:00
 tags: ["Math", "Desmos"]
+mathjax: true
 ---
 
 The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$,

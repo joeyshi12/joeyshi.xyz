@@ -6,6 +6,7 @@ tags: ["Python", "Math"]
 repoName: diff-eq-solver
 language: Python
 featured: true
+mathjax: true
 ---
 
 A desktop application that uses the finite difference method

@@ -1,3 +1,7 @@
+---
+title: "Joey Shi"
+---
+
 Hello! I'm a software developer and BSc student majoring in Computer Science and Math at the University of British Columbia.
 
 As a developer of many projects, I tackle challenging problems head-on.

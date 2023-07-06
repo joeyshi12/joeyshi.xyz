@@ -4,6 +4,7 @@
 {{- end }}
 
 {{- define "scripts" }}
+    {{- if .Params.mathjax }}
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script>
         MathJax = {
@@ -19,6 +20,7 @@
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+    {{- end }}
 {{- end }}
 
 {{- define "main" }}

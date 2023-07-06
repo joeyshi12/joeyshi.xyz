@@ -27,6 +27,8 @@ h2 {
 
 .highlight {
     font-size: 14px;
+    overflow-x: auto;
+    background: #2e3440;
 }
 
 mjx-container {
