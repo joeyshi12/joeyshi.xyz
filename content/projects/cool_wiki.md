@@ -9,11 +9,11 @@ featured: true
 ---
 
 In my final year at UBC, I decided to typeset notes for some of my courses.
-To make some of these notes publicly available.
 
 - [Website](https://wiki.joeyshi.xyz)
 - [Source code](https://github.com/joeyshi12/cool-wiki)
 
+To make some of these notes publicly available,
 I used the following workflow to convert a collection of markdown
 notes into HTML pages using [Pandoc](https://pandoc.org/index.html).
 
