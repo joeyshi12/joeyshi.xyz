@@ -1,5 +1,5 @@
-var elt = document.getElementById('calculator');
-var calculator = Desmos.GraphingCalculator(elt, { expressionsCollapsed: true, settingsMenu: false });
+const elt = document.getElementById('calculator');
+const calculator = Desmos.GraphingCalculator(elt, { expressionsCollapsed: true, settingsMenu: false });
 const expressions = [
     { id: 'ints', latex: 'N = [-20...100]' },
     { id: 'golden_ratio', latex: '\\phi = \\frac{1 + \\sqrt{5}}{2}' },
