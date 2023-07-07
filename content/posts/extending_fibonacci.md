@@ -1,9 +1,11 @@
 ---
-title: Extending the Fibonacci sequence to the Complex Domain
-description: A look into how the Fibonacci sequence can be extended to the complex domain.
+title: Extending the Fibonacci sequence to the Real Domain
+description: A look into how the Fibonacci sequence can be extended to the real domain.
 date: 2023-01-07T22:58:20-08:00
 tags: ["Math", "Desmos"]
 mathjax: true
+desmos: true
+scripts: ["/js/extending_fibonacci.js"]
 ---
 
 The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$,
@@ -31,15 +33,12 @@ and $1 = f(1) = c_1\phi - c_2/\phi$.
 
 Solving this system gives us
 
-$$
-c_1 = \frac{1}{\sqrt{5}},\quad c_2 = -\frac{1}{\sqrt{5}}
-$$
+\begin{align}
+c_1 &= -c_2 = \frac{1}{\sqrt{5}} \\\\
+f(n) &= \frac{\phi^n - (-\frac{1}{\phi})^n}{\sqrt{5}}
+\end{align}
 
-$$
-f(n) = \frac{\phi^n - (-\frac{1}{\phi})^n}{\sqrt{5}}
-$$
-
-## Extending the closed formula to $\mathbb{C}$
+## Extending the closed formula to $\mathbb{R}$
 
 From previous, we found 2 linearly independent solutions to the recursive equation $f(n+2) = f(n+1) + f(n)$:
 
@@ -47,19 +46,48 @@ $$
 f_1(n) = \phi^{n},\quad f_2(n) = (-1/\phi)^{n}.
 $$
 
-Let $z = x + yi$ be complex-valued.
-We proceed to express $f_1(z), f_2(z)$ in standard form.
+To extend the Fibonacci sequence to the real numbers,
+we will find solutions to the following system:
+
+\begin{cases}
+    f(x + 2) = f(x + 1) + f(x),\quad x\in\mathbb{R} \\\\
+    f(0) = 0,\quad f(1) = 1
+\end{cases}
+
+Let $x\in\mathbb{R}$. We proceed to express $f_2(x)$ in polar form.
 
 \begin{align}
-f_1(z) &= \phi^{x + yi} \\\\
-&= \phi^x(\cos(\log(\phi)y) + i\sin(\log(\phi)y)) \\\\
-f_2(z) &= (-1/\phi)^{x + yi} \\\\
-&= (e^{-\log(\phi) + (\pi + 2\pi n)i})^{x + yi},\quad n\in\mathbb{N} \\\\
-&= e^{-\log(\phi)x - (1 + 2n)\pi y + ((1 + 2n)\pi x - \log(\phi)y)i} \\\\
-&= \phi^{-x}e^{-(1 + 2n)\pi y}(\cos((1 + 2n)\pi x - \log(\phi)y) + i\sin((1 + 2n)\pi x - \log(\phi)y))
+    f_2(x) &= (-1/\phi)^{x} \\\\
+    &= (e^{-\log(\phi) + (\pi + 2\pi n)i})^{x},\quad n\in\mathbb{Z} \\\\
+    &= \phi^{-x}e^{i(1 + 2n)\pi x}
 \end{align}
 
-Thus, the general form of $f(z)$ is a linear combination of the functions listed above.
-Then, plugging in the initial values will yield the general solution of the system.
+This implies $g_n(x) = \phi^{-x}e^{i(1 + 2n)\pi x}$ are all linearly independent solutions.
+Thus, the general solution is of the form
 
-\[More added soon\]
+$$
+f(x) = c_1\phi^n + \phi^{-x}\sum_{n=0}^{\infty} a_n\cos((1 + 2n)\pi x) + b_n\sin((1 + 2n)\pi x)
+$$
+
+Plugging in the initial conditions, we get
+
+$$
+c_1 = -\sum_{n=1}^{\infty} a_n = \frac{1}{\sqrt{5}}.
+$$
+
+Thus, the solution is
+
+$$
+f(x) = \frac{\phi^n}{\sqrt{5}} - \frac{\phi^{-x}}{\sqrt{5}}\sum_{n=0}^{\infty} a_n\cos((1 + 2n)\pi x) + b_n\sin((1 + 2n)\pi x),
+$$
+
+where $\sum_{n=0}^{\infty} a_n = 1$ and $\\{b_n\\}$ is arbitrary.
+This method can be extended to other recursion relations
+and we can similarly extend the domain of the solutions to the complex domain.
+
+## Example
+
+The plot below depicts the case of $a_n = \frac{1}{2^{n + 1}}$ and $b_n = 0$.
+
+{{< div "calculator" >}}
+

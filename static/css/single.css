@@ -25,6 +25,10 @@ h2 {
     font-size: 1.2rem;
 }
 
+.content h2 {
+    margin-top: 2.4rem;
+}
+
 .highlight {
     font-size: 14px;
     overflow-x: auto;
@@ -36,10 +40,8 @@ mjx-container {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
-mjx-container::-webkit-scrollbar {
-    display: none;
+mjx-container[jax="CHTML"][display="true"] {
+    padding: 1em 0;
 }
