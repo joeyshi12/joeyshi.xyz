@@ -48,18 +48,6 @@ a:hover {
     text-decoration: underline;
 }
 
-*::-webkit-scrollbar {
-    width: 0.25rem;
-}
-
-*::-webkit-scrollbar-track {
-    background: #1e1e24;
-}
-
-*::-webkit-scrollbar-thumb {
-    background: #6649b8;
-}
-
 .navbar {
     width: 16rem;
     position: fixed;

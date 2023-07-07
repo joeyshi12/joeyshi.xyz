@@ -23,8 +23,8 @@ Website ER Diagram This is a fullstack web application made with Java, MySQL, an
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
       
       <guid>https://joeyshi.xyz/projects/cool_wiki/</guid>
-      <description>In my final year at UBC, I decided to typeset notes for some of my courses. To make some of these notes publicly available.
-Website Source code I used the following workflow to convert a collection of markdown notes into HTML pages using Pandoc.
+      <description>In my final year at UBC, I decided to typeset notes for some of my courses.
+Website Source code To make some of these notes publicly available, I used the following workflow to convert a collection of markdown notes into HTML pages using Pandoc.
 Organization 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 .</description>
     </item>
     
