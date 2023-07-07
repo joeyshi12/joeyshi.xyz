@@ -35,13 +35,8 @@ h2 {
     background: #2e3440;
 }
 
-mjx-container {
-    display: inline-grid;
-    overflow-x: auto;
-    overflow-y: hidden;
-    max-width: 100%;
-}
-
 mjx-container[jax="CHTML"][display="true"] {
     padding: 1em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
