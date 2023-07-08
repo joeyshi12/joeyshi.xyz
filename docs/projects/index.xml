@@ -6,7 +6,18 @@
     <description>Recent content in Projects on Joey Shi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Jul 2023 10:49:38 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 19:19:43 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devtools</title>
+      <link>https://joeyshi.xyz/projects/devtools/</link>
+      <pubDate>Fri, 07 Jul 2023 19:19:43 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/projects/devtools/</guid>
+      <description>A collection of custom made tools for programming tasks or challenges I&amp;rsquo;ve encountered.
+Website Source code Webhook debugger The webhook debugger page lists the contents of requests captured from the /webhook/capture endpoint. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is also useful for inspecting request contents from webhook service providers, such as Discord or Github.
+JSON Schema Transcompiler This service is a wrapper for a Python library I wrote: jdtt.</description>
+    </item>
+    
     <item>
       <title>ComputerMag</title>
       <link>https://joeyshi.xyz/projects/computer_mag/</link>
@@ -14,7 +25,7 @@
       
       <guid>https://joeyshi.xyz/projects/computer_mag/</guid>
       <description>Wiki for laptops and desktops with technical details and reviews. This was a group project done for a UBC computer science course: CPSC 304.
-Website ER Diagram This is a fullstack web application made with Java, MySQL, and vanilla HTML/CSS/JavaScript.</description>
+Website ER Diagram This is a fullstack web application made with Java, MySQL, and vanilla HTML/CSS/JavaScript. The web server was implemented using Javalin. We originally used an Oracle JDBC to make database queries with servers on UBC&amp;rsquo;s undergraduate Linux machines. However, I have migrated to MariaDB instead since Oracle is not compatible with Raspberry Pi, which is what I use to host this app.</description>
     </item>
     
     <item>
@@ -35,9 +46,9 @@ Organization 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 2
       
       <guid>https://joeyshi.xyz/projects/diff_eq_solver/</guid>
       <description>A desktop application that uses the finite difference method to solve differential equations.
-Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.
+PyPI Page Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.
 Numerical algorithm for solving the heat equation We let $u(t, x)$ be the solution function for the differential equation defined by
-$u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, $0 &amp;lt; x \leq L$, $0 &amp;lt; t \leq T$ $u(t, 0) = \Phi_1(t)$ $u_{t}(t, L) = \Phi_2(t)$ $u(0, x) = f(x)$ Let $u[i][j] = u(i \Delta t, j \Delta x)$ for $i = 0$ to $i = K - 1$ and $j = 0$ to $j = N - 1$ for $\Delta t = T / (K - 1)$ and $\Delta x = L / (N - 1)$.</description>
+$$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\ \text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;amp;u(0, x) = f(x) \end{align} $$</description>
     </item>
     
     <item>

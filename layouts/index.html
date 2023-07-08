@@ -39,7 +39,7 @@
     <section>
         <h2 class="section-title">Projects</h2>
         <ul class="repo-cards">
-        {{- range first 4 (where (where .Site.RegularPages "Section" "projects") "Params.featured" "=" true) }}
+        {{- range where (where .Site.RegularPages "Section" "projects") "Params.featured" "=" true }}
         <li class="repo-card">
             <div class="repo-header">
                 <i class="fa-brands fa-github-alt icon"></i>

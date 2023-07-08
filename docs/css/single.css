@@ -40,3 +40,35 @@ mjx-container[jax="CHTML"][display="true"] {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+details {
+    margin: 1rem 0;
+}
+
+details > summary {
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+    padding: .5rem 1rem;
+}
+
+details > summary > * {
+    display: inline;
+}
+
+details > div {
+    border: 2px solid var(--bg-secondary);
+    margin-top: 0;
+}
+
+details > div > p {
+    padding: 0 0.5rem;
+}
+
+p > code {
+    color: var(--fg);
+    background-color: #e2e6ea;
+    padding: .2em .4em;
+    border-radius: 6px;
+    font-size: 85%;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+}

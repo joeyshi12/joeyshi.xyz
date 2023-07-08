@@ -12,6 +12,7 @@ mathjax: true
 A desktop application that uses the finite difference method
 to solve differential equations.
 
+- [PyPI Page](https://pypi.org/project/diffeq-solver-tk/)
 - [Source code](https://github.com/joeyshi12/diff-eq-solver)
 
 This application uses techniques from these
@@ -22,10 +23,13 @@ to compute the solution of PDEs numerically.
 
 We let $u(t, x)$ be the solution function for the differential equation defined by
 
-- $u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, $0 < x \leq L$, $0 < t \leq T$
-- $u(t, 0) = \Phi_1(t)$
-- $u_{t}(t, L) = \Phi_2(t)$
-- $u(0, x) = f(x)$
+$$
+\begin{align}
+\text{PDE}:\quad &u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 < x \leq L, 0 < t \leq T \\\\
+\text{BC}:\quad &u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\\\
+\text{IC}:\quad &u(0, x) = f(x)
+\end{align}
+$$
 
 Let $u[i][j] = u(i \Delta t, j \Delta x)$ for $i = 0$ to $i = K - 1$
 and $j = 0$ to $j = N - 1$ for $\Delta t = T / (K - 1)$
@@ -40,21 +44,21 @@ $$
 For $\Delta x$ small enough, we can approximate $u_{xx}(t, x)$ with the second order central difference:
 
 $$
-u_{xx}(t, x) = (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) / (\Delta x 2)
+u_{xx}(t, x) = \frac{u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)}{(\Delta x)^2}
 $$
 
 So after substituting and rearranging $u_{xx}$, $u_{t}$ in
 $u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, we get
 
 $$
-u(t + \Delta t, x) = u(t, x) + (\alpha \Delta t / \Delta x 2) (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) + S(t, x) \Delta t
+u(t + \Delta t, x) = u(t, x) + \frac{\alpha \Delta t}{(\Delta x)^2} (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) + S(t, x) \Delta t
 $$
 
 Thus, we can compute all values of $u[i][j]$ with the following:
 
 $$
 u[i][j] = \begin{cases}
-u[i - 1, j] + \frac{\alpha \Delta t}{2 \Delta x} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &\text{if } 0 < i \leq K - 1, 0 < j < N - 1 \\\\
+u[i - 1, j] + \frac{\alpha \Delta t}{(\Delta x)^2} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &\text{if } 0 < i \leq K - 1, 0 < j < N - 1 \\\\
 \Phi_1(i \Delta t), &\text{if } j = N - 1 \\\\
 u[i, j - 2] + \Phi_2(i \Delta t) \Delta t, &\text{if } j = 0 \\\\
 f(j \Delta x), &\text{if } i = 0

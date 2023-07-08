@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>School</title>
+    <title>Devtools</title>
     <meta charset="utf-8"/>
     <meta name="author" content="Joey Shi"/>
     <meta name="description" content="Software developer and enjoyer of all things math and Linux."/>
@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/common.css"/>
-    <link rel="stylesheet" href="/css/list.css"/>
+    <link rel="stylesheet" href="/css/single.css"/>
     <link rel="icon" href="/favicon.ico">
 </head>
 <body>
@@ -59,46 +59,26 @@
         </ul>
     </div>
     <div class="page-body">
-    <div class="header header-text">
-        <h2 class="title">School</h2>
+    <div class="breadcrumbs">
+        <a class="parent-link" href="https://joeyshi.xyz/projects/">Projects</a>
+        <span><i class="fa-solid fa-caret-right"></i></span>
+        <h2 class="single-title">Devtools</h3>
     </div>
-    <p>Subscribe to my <i class="fa-solid fa-rss"></i> <a href="https://joeyshi.xyz/tags/school/index.xml">RSS feed</a> for updates!</p>
-    <ul class="listing">
-        <li class="list-item">
-            <a href="https://joeyshi.xyz/projects/computer_mag/">ComputerMag</a>
-            <p class="entry-description">Wiki for laptops and desktops with technical details and reviews.</p>
-            <footer class="entry-footer">
-                <span class="entry-date">July 2, 2023</span>
-                <div>
-                    <a class="entry-tag" href="/tags/web">#Web</a>
-                    <a class="entry-tag" href="/tags/school">#School</a>
-                </div>
-            </footer>
-        </li>
-        <li class="list-item">
-            <a href="https://joeyshi.xyz/projects/cool_wiki/">Cool Wiki</a>
-            <p class="entry-description">A collection of notes I&#39;ve made publicly available while attending courses at UBC.</p>
-            <footer class="entry-footer">
-                <span class="entry-date">July 2, 2023</span>
-                <div>
-                    <a class="entry-tag" href="/tags/web">#Web</a>
-                    <a class="entry-tag" href="/tags/school">#School</a>
-                </div>
-            </footer>
-        </li>
-        <li class="list-item">
-            <a href="https://joeyshi.xyz/projects/visualizing_tech_salaries/">Visualizing Tech Salaries</a>
-            <p class="entry-description">Visualization for tech salaries in America made with d3</p>
-            <footer class="entry-footer">
-                <span class="entry-date">July 2, 2023</span>
-                <div>
-                    <a class="entry-tag" href="/tags/d3">#D3</a>
-                    <a class="entry-tag" href="/tags/web">#Web</a>
-                    <a class="entry-tag" href="/tags/school">#School</a>
-                </div>
-            </footer>
-        </li>
-    </ul>
+    <div class="content"><p>A collection of custom made tools for programming tasks or challenges I&rsquo;ve encountered.</p>
+<ul>
+<li><a href="https://devtools.joeyshi.xyz">Website</a></li>
+<li><a href="https://github.com/joeyshi12/devtools">Source code</a></li>
+</ul>
+<h2 id="webhook-debugger">Webhook debugger</h2>
+<p>The webhook debugger page lists the contents of requests captured from the <code>/webhook/capture</code> endpoint.
+This feature was inspired by a cross-site scripting CTF challenge I attempted.
+This tool is also useful for inspecting request contents from webhook service providers, such as Discord or Github.</p>
+<h2 id="json-schema-transcompiler">JSON Schema Transcompiler</h2>
+<p>This service is a wrapper for a Python library I wrote: <a href="https://pypi.org/project/jdtt/">jdtt</a>.
+This feature was made to aid in tasks involving serializing the JSON payload from
+API requests to standard container classes for different programming languages.</p>
+
+    </div>
     </div>
 </body>
 </html>

@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Joey Shi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Jul 2023 10:49:38 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 19:19:43 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web</title>
+      <link>https://joeyshi.xyz/tags/web/</link>
+      <pubDate>Fri, 07 Jul 2023 19:19:43 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/tags/web/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>D3</title>
       <link>https://joeyshi.xyz/tags/d3/</link>
@@ -40,15 +49,6 @@
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
       
       <guid>https://joeyshi.xyz/tags/school/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>https://joeyshi.xyz/tags/web/</link>
-      <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      
-      <guid>https://joeyshi.xyz/tags/web/</guid>
       <description></description>
     </item>
     

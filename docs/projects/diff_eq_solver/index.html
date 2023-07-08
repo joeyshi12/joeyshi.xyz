@@ -82,6 +82,7 @@
     <div class="content"><p>A desktop application that uses the finite difference method
 to solve differential equations.</p>
 <ul>
+<li><a href="https://pypi.org/project/diffeq-solver-tk/">PyPI Page</a></li>
 <li><a href="https://github.com/joeyshi12/diff-eq-solver">Source code</a></li>
 </ul>
 <p>This application uses techniques from these
@@ -89,12 +90,13 @@ to solve differential equations.</p>
 to compute the solution of PDEs numerically.</p>
 <h2 id="numerical-algorithm-for-solving-the-heat-equation">Numerical algorithm for solving the heat equation</h2>
 <p>We let $u(t, x)$ be the solution function for the differential equation defined by</p>
-<ul>
-<li>$u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, $0 &lt; x \leq L$, $0 &lt; t \leq T$</li>
-<li>$u(t, 0) = \Phi_1(t)$</li>
-<li>$u_{t}(t, L) = \Phi_2(t)$</li>
-<li>$u(0, x) = f(x)$</li>
-</ul>
+<p>$$
+\begin{align}
+\text{PDE}:\quad &amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &lt; x \leq L, 0 &lt; t \leq T \\
+\text{BC}:\quad &amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\
+\text{IC}:\quad &amp;u(0, x) = f(x)
+\end{align}
+$$</p>
 <p>Let $u[i][j] = u(i \Delta t, j \Delta x)$ for $i = 0$ to $i = K - 1$
 and $j = 0$ to $j = N - 1$ for $\Delta t = T / (K - 1)$
 and $\Delta x = L / (N - 1)$.
@@ -105,17 +107,17 @@ u_{t}(t, x) = (u(t + \Delta t, x) - u(t, x)) / \Delta t
 $$</p>
 <p>For $\Delta x$ small enough, we can approximate $u_{xx}(t, x)$ with the second order central difference:</p>
 <p>$$
-u_{xx}(t, x) = (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) / (\Delta x 2)
+u_{xx}(t, x) = \frac{u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)}{(\Delta x)^2}
 $$</p>
 <p>So after substituting and rearranging $u_{xx}$, $u_{t}$ in
 $u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, we get</p>
 <p>$$
-u(t + \Delta t, x) = u(t, x) + (\alpha \Delta t / \Delta x 2) (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) + S(t, x) \Delta t
+u(t + \Delta t, x) = u(t, x) + \frac{\alpha \Delta t}{(\Delta x)^2} (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) + S(t, x) \Delta t
 $$</p>
 <p>Thus, we can compute all values of $u[i][j]$ with the following:</p>
 <p>$$
 u[i][j] = \begin{cases}
-u[i - 1, j] + \frac{\alpha \Delta t}{2 \Delta x} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &amp;\text{if } 0 &lt; i \leq K - 1, 0 &lt; j &lt; N - 1 \\
+u[i - 1, j] + \frac{\alpha \Delta t}{(\Delta x)^2} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &amp;\text{if } 0 &lt; i \leq K - 1, 0 &lt; j &lt; N - 1 \\
 \Phi_1(i \Delta t), &amp;\text{if } j = N - 1 \\
 u[i, j - 2] + \Phi_2(i \Delta t) \Delta t, &amp;\text{if } j = 0 \\
 f(j \Delta x), &amp;\text{if } i = 0

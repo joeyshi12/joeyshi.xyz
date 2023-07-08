@@ -14,9 +14,9 @@
       
       <guid>https://joeyshi.xyz/projects/diff_eq_solver/</guid>
       <description>A desktop application that uses the finite difference method to solve differential equations.
-Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.
+PyPI Page Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.
 Numerical algorithm for solving the heat equation We let $u(t, x)$ be the solution function for the differential equation defined by
-$u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, $0 &amp;lt; x \leq L$, $0 &amp;lt; t \leq T$ $u(t, 0) = \Phi_1(t)$ $u_{t}(t, L) = \Phi_2(t)$ $u(0, x) = f(x)$ Let $u[i][j] = u(i \Delta t, j \Delta x)$ for $i = 0$ to $i = K - 1$ and $j = 0$ to $j = N - 1$ for $\Delta t = T / (K - 1)$ and $\Delta x = L / (N - 1)$.</description>
+$$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\ \text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;amp;u(0, x) = f(x) \end{align} $$</description>
     </item>
     
     <item>

@@ -71,7 +71,423 @@ This was a group project done for a UBC computer science course: CPSC 304.</p>
 <li><a href="/img/er_diagram.png">ER Diagram</a></li>
 </ul>
 <p>This is a fullstack web application made with Java, MySQL, and
-vanilla HTML/CSS/JavaScript.</p>
+vanilla HTML/CSS/JavaScript.
+The web server was implemented using <a href="https://javalin.io">Javalin</a>.
+We originally used an Oracle JDBC to make database queries
+with servers on UBC&rsquo;s undergraduate Linux machines.
+However, I have migrated to MariaDB instead since Oracle
+is not compatible with Raspberry Pi, which is what I use to host this app.</p>
+<h2 id="api-reference">API Reference</h2>
+<details>
+    <summary>
+        <h4>POST /review<h4>
+    </summary>
+    <div><p>First creates new reviewer with passed reviewerID and reviewerName if reviewer does not exist in the database.</p>
+<ul>
+<li>Headers
+<ul>
+<li>reviewerID: number</li>
+</ul>
+</li>
+<li>Body
+<ul>
+<li>computerModelNumber: string</li>
+<li>reviewText: string</li>
+<li>reviewScore: number</li>
+<li>reviewerName: string</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl <span style="color:#a3be8c">&#39;https://computer-mag.joeyshi.xyz/review&#39;</span>
+</span></span><span style="display:flex;"><span>     -H <span style="color:#a3be8c">&#39;Content-Type: application/json&#39;</span><span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>     -H <span style="color:#a3be8c">&#39;reviewerID: -885519634&#39;</span><span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>     -d <span style="color:#a3be8c">&#39;{ &#34;computerModelNumber&#34;: &#34;A2438&#34;, &#34;reviewText&#34;: &#34;SUPER NICE YEAH&#34;, &#34;reviewScore&#34;: 10, &#34;reviewerName&#34;: &#34;Anon512&#34; }&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a3be8c">&#34;reviewerName&#34;</span>: <span style="color:#a3be8c">&#34;Anon512&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a3be8c">&#34;reviewScore&#34;</span>: 10,
+</span></span><span style="display:flex;"><span>    <span style="color:#a3be8c">&#34;reviewDate&#34;</span>: <span style="color:#a3be8c">&#34;2022-11-21&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a3be8c">&#34;computerModelNumber&#34;</span>: <span style="color:#a3be8c">&#34;A2438&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a3be8c">&#34;reviewID&#34;</span>: 8855,
+</span></span><span style="display:flex;"><span>    <span style="color:#a3be8c">&#34;reviewText&#34;</span>: <span style="color:#a3be8c">&#34;SUPER NICE YEAH&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+</details>
+
+<details>
+    <summary>
+        <h4>DELETE /review/{id}<h4>
+    </summary>
+    <div><p>Deletes existing review.</p>
+<ul>
+<li>Params
+<ul>
+<li>id</li>
+</ul>
+</li>
+<li>Headers
+<ul>
+<li>reviewerID: number</li>
+</ul>
+</li>
+</ul>
+</div>
+</details>
+
+<details>
+    <summary>
+        <h4>PATCH /review/{id}<h4>
+    </summary>
+    <div><p>Updates existing review.</p>
+<ul>
+<li>Params
+<ul>
+<li>id</li>
+</ul>
+</li>
+<li>Headers
+<ul>
+<li>reviewerID: number</li>
+</ul>
+</li>
+<li>Body
+<ul>
+<li>(optional) reviewText: string</li>
+<li>(optional) reviewScore: number</li>
+</ul>
+</li>
+</ul>
+</div>
+</details>
+
+<details>
+    <summary>
+        <h4>GET /reviews/{computerModelNumber}<h4>
+    </summary>
+    <div><p>Get reviews of specified computer model.</p>
+<ul>
+<li>Params
+<ul>
+<li>computerModelNumber</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">21
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl <span style="color:#a3be8c">&#39;https://computer-mag.joeyshi.xyz/reviews/A2179&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewID&#34;</span>: 128405987,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewScore&#34;</span>: 10,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewText&#34;</span>: <span style="color:#a3be8c">&#34;Superb&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewDate&#34;</span>: -61539667200000,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewerName&#34;</span>: <span style="color:#a3be8c">&#34;Mary Banks&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;yearsOfExperience&#34;</span>: 3,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewerID&#34;</span>: <span style="color:#b48ead">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewID&#34;</span>: -885519634,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewScore&#34;</span>: 10,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewText&#34;</span>: <span style="color:#a3be8c">&#34;SUPER NICE YEAH&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewDate&#34;</span>: -61476508800000,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewerName&#34;</span>: <span style="color:#a3be8c">&#34;Mary Banks&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;yearsOfExperience&#34;</span>: 3,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;reviewerID&#34;</span>: <span style="color:#b48ead">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+</details>
+
+<details>
+    <summary>
+        <h4>GET /components<h4>
+    </summary>
+    <div><p>Searches components of <code>componentType</code> with a <code>componentModelNumber</code> containing the string <code>search</code>.
+Returns specified <code>attributes</code> of matching components.</p>
+<ul>
+<li>Params
+<ul>
+<li>contentType</li>
+<li>attributes</li>
+<li>search</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl <span style="color:#a3be8c">&#39;https://computer-mag.joeyshi.xyz/components?componentType=ram&amp;attributes=componentModelNumber&amp;attributes=memory&amp;search=16&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;memory&#34;</span>: 16,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;componentModelNumber&#34;</span>: <span style="color:#a3be8c">&#34;CMK16GX4M2B3200C16&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;memory&#34;</span>: 32,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;componentModelNumber&#34;</span>: <span style="color:#a3be8c">&#34;CMK32GX4M2B3200C16&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;memory&#34;</span>: 64,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;componentModelNumber&#34;</span>: <span style="color:#a3be8c">&#34;CMK64GX4M2D3000C16&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;memory&#34;</span>: 16,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;componentModelNumber&#34;</span>: <span style="color:#a3be8c">&#34;KSM24RS46MEI&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+</details>
+
+<details>
+    <summary>
+        <h4>GET /models<h4>
+    </summary>
+    <div><p>Returns only the models reviewed by all verified reviewers if <code>onlyReviewedByAllVerified</code> is set to True.
+Otherwise, returns <code>attributes</code> of models with a &lsquo;brandName&rsquo; containing the string <code>search</code>.</p>
+<p>If <code>onlyReviwedByAllVerified</code> is set to True, <code>attributes</code> and <code>search</code> must not be specified.</p>
+<p>If <code>onlyReviwedByAllVerified</code> is not specified or set to False, <code>attributes</code> is required and <code>search</code> is optional.</p>
+<ul>
+<li>Params
+<ul>
+<li>attributes xor onlyReviwedByAllVerified=True</li>
+<li>(optional) search (only allowed if onlyReviwedByAllVerified != True)</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">20
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl <span style="color:#a3be8c">&#39;https://computer-mag.joeyshi.xyz/models?attributes=brandName&amp;attributes=listPrice&amp;search=Surface&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;brandName&#34;</span>: <span style="color:#a3be8c">&#34;Surface Pro 8&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;listPrice&#34;</span>: <span style="color:#b48ead">1099</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;brandName&#34;</span>: <span style="color:#a3be8c">&#34;Microsoft Surface Studio&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;listPrice&#34;</span>: <span style="color:#b48ead">3949</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl <span style="color:#a3be8c">&#39;https://computer-mag.joeyshi.xyz/models?onlyReviewedByAllVerified=True&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;computerModelNumber&#34;</span>: <span style="color:#a3be8c">&#34;A2179&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;brandName&#34;</span>: <span style="color:#a3be8c">&#34;MacBook Air&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;listPrice&#34;</span>: 1299.0
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+</details>
+
+<details>
+    <summary>
+        <h4>GET /models/avg-scores<h4>
+    </summary>
+    <div><p>Returns average review scores of models.</p>
+<p>Models must have at least <code>count</code> number of reviews, if defined.</p>
+<ul>
+<li>Body
+<ul>
+<li>onlyAboveAvg: boolean</li>
+<li>(optional) count: number</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">21
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl https://computer-mag.joeyshi.xyz/models/avg-scores
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;name&#34;</span>: <span style="color:#a3be8c">&#34;AWAUR13-7143WHT-PUS&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;price&#34;</span>: 1499.99,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;score&#34;</span>: 93,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;scoreType&#34;</span>: <span style="color:#a3be8c">&#34;AVG&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;name&#34;</span>: <span style="color:#a3be8c">&#34;A2179&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;price&#34;</span>: 1299.0,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;score&#34;</span>: 72,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;scoreType&#34;</span>: <span style="color:#a3be8c">&#34;AVG&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;name&#34;</span>: <span style="color:#a3be8c">&#34;A2438&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;price&#34;</span>: 1599.99,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;score&#34;</span>: 17,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;scoreType&#34;</span>: <span style="color:#a3be8c">&#34;AVG&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+</details>
+
+<details>
+    <summary>
+        <h4>GET /models/min-scores<h4>
+    </summary>
+    <div><p>Returns minimum review scores of models.</p>
+<div class="highlight"><div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">21
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl https://computer-mag.joeyshi.xyz/models/min-scores
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;name&#34;</span>: <span style="color:#a3be8c">&#34;AWAUR13-7143WHT-PUS&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;price&#34;</span>: 1499.99,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;score&#34;</span>: 93,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;scoreType&#34;</span>: <span style="color:#a3be8c">&#34;MIN&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;name&#34;</span>: <span style="color:#a3be8c">&#34;A2179&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;price&#34;</span>: 1299.0,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;score&#34;</span>: 58,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;scoreType&#34;</span>: <span style="color:#a3be8c">&#34;MIN&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;name&#34;</span>: <span style="color:#a3be8c">&#34;A2338&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;price&#34;</span>: 1699.0,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;score&#34;</span>: 80,
+</span></span><span style="display:flex;"><span>        <span style="color:#a3be8c">&#34;scoreType&#34;</span>: <span style="color:#a3be8c">&#34;MIN&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+</details>
+
 
     </div>
     </div>

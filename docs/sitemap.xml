@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://joeyshi.xyz/projects/devtools/</loc>
+    <lastmod>2023-07-07T19:19:43-07:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/</loc>
+    <lastmod>2023-07-07T19:19:43-07:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/projects/</loc>
+    <lastmod>2023-07-07T19:19:43-07:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/tags/</loc>
+    <lastmod>2023-07-07T19:19:43-07:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/tags/web/</loc>
+    <lastmod>2023-07-07T19:19:43-07:00</lastmod>
+  </url><url>
     <loc>https://joeyshi.xyz/projects/computer_mag/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
@@ -14,16 +29,10 @@
     <loc>https://joeyshi.xyz/projects/diff_eq_solver/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>https://joeyshi.xyz/</loc>
-    <lastmod>2023-07-02T10:49:38-07:00</lastmod>
-  </url><url>
     <loc>https://joeyshi.xyz/tags/math/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/projects/platform_party/</loc>
-    <lastmod>2023-07-02T10:49:38-07:00</lastmod>
-  </url><url>
-    <loc>https://joeyshi.xyz/projects/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/tags/python/</loc>
@@ -32,13 +41,7 @@
     <loc>https://joeyshi.xyz/tags/school/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>https://joeyshi.xyz/tags/</loc>
-    <lastmod>2023-07-02T10:49:38-07:00</lastmod>
-  </url><url>
     <loc>https://joeyshi.xyz/projects/visualizing_tech_salaries/</loc>
-    <lastmod>2023-07-02T10:49:38-07:00</lastmod>
-  </url><url>
-    <loc>https://joeyshi.xyz/tags/web/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/tags/desmos/</loc>
