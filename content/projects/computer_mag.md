@@ -36,7 +36,7 @@ First creates new reviewer with passed reviewerID and reviewerName if reviewer d
     - reviewerName: string
 
 ```sh
-curl 'https://computer-mag.joeyshi.xyz/review'
+curl 'https://computer-mag.joeyshi.xyz/review'\
      -H 'Content-Type: application/json'\
      -H 'reviewerID: -885519634'\
      -d '{ "computerModelNumber": "A2438", "reviewText": "SUPER NICE YEAH", "reviewScore": 10, "reviewerName": "Anon512" }'
@@ -181,7 +181,7 @@ Models must have at least `count` number of reviews, if defined.
     - (optional) count: number
 
 ```sh
-curl https://computer-mag.joeyshi.xyz/models/avg-scores
+curl 'https://computer-mag.joeyshi.xyz/models/avg-scores'
 [
     {
         "name": "AWAUR13-7143WHT-PUS",
@@ -209,7 +209,7 @@ curl https://computer-mag.joeyshi.xyz/models/avg-scores
 Returns minimum review scores of models.
 
 ```sh
-curl https://computer-mag.joeyshi.xyz/models/min-scores
+curl 'https://computer-mag.joeyshi.xyz/models/min-scores'
 [
     {
         "name": "AWAUR13-7143WHT-PUS",

@@ -72,7 +72,7 @@ $$
 Plugging in the initial conditions, we get
 
 $$
-c_1 = -\sum_{n=1}^{\infty} a_n = \frac{1}{\sqrt{5}}.
+c_1 = -\sum_{n=0}^{\infty} a_n = \frac{1}{\sqrt{5}}.
 $$
 
 Thus, the solution is

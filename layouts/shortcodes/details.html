@@ -2,5 +2,7 @@
     <summary>
         <h4>{{ .Get 0 }}<h4>
     </summary>
-    <div>{{ .Inner | markdownify }}</div>
+    <div>
+        {{ .Inner | markdownify }}
+    </div>
 </details>
