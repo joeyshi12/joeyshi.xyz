@@ -48,6 +48,21 @@ a:hover {
     text-decoration: underline;
 }
 
+p > code {
+    color: var(--fg);
+    background-color: #e2e6ea;
+    padding: .2em .4em;
+    border-radius: 6px;
+    font-size: 85%;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    p > code {
+        background-color: #26292b;
+    }
+}
+
 .navbar {
     width: 16rem;
     position: fixed;

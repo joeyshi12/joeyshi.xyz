@@ -63,12 +63,3 @@ details > div {
 details > div > p {
     padding: 0 0.5rem;
 }
-
-p > code {
-    color: var(--fg);
-    background-color: #e2e6ea;
-    padding: .2em .4em;
-    border-radius: 6px;
-    font-size: 85%;
-    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
-}
