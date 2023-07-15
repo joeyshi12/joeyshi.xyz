@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Joey Shi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Jul 2023 19:19:43 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Jul 2023 23:14:41 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://joeyshi.xyz/tags/linux/</link>
+      <pubDate>Mon, 10 Jul 2023 23:14:41 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/tags/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Web</title>
       <link>https://joeyshi.xyz/tags/web/</link>

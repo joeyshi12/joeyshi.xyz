@@ -7,30 +7,25 @@ tags: ["Linux"]
 
 I spent the past few days attempting to convert
 an old Aspire One mini laptop and Lenovo laptop into usable Linux servers.
-This post documents the troubleshooting steps I faced during the process.
+This post documents the troubleshooting steps I took for each system.
 
 ## Aspire One
 
-The important things to note about this system is that it has a 32 bit architecture
-and has a i686 processor. I needed a Linux distro that was compatible with these
-specs. Some distros I considered were Arch Linux, Debian, and Linux Mint.
+The important things to note about this system is that it has a 32-bit architecture and a i686 processor.
+Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.
 
 During the installation process during Arch Linux and Debian, I noticed
 that my network interface was not detected, which made it impossible
 to discover available networks to connect to.
-This was because there were legacy firmware that did not come
-with most Linux installers.
+This was because there were legacy firmware that did not come with most Linux installers.
 
 Luckily, Linux Mint does manage to be able to discover available networks
 during the live-USB installation process.
-However, after the installation, I noticed that my network connection was unstable:
-the connection would die after a few minutes of usage and my available networks
-would no longer be discoverable.
-The fix for this was to install the necessary firmware for broadcom after the installation finishes.
+Discovering wifi networks after installing mint showed no results,
+so it was necessary to use a wired connection temporarily and
+install the necessary drivers for my network card.
+The following guide was useful in this process:
 
-**Useful Links**
-
-- [Mint Forums: WiFi Fails Following Restart](https://forums.linuxmint.com/viewtopic.php?t=339223).
 - [How to solve internet connection problems ](https://easylinuxtipsproject.blogspot.com/p/internet.html#ID1.2)
 
 
