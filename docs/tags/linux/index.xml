@@ -15,7 +15,7 @@
       <guid>https://joeyshi.xyz/posts/installing_linux/</guid>
       <description>I spent the past few days attempting to convert an old Aspire One mini laptop and Lenovo laptop into usable Linux servers. This post documents the troubleshooting steps I took for each system.
 Aspire One The important things to note about this system is that it has a 32-bit architecture and a i686 processor. Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.
-During the installation process during Arch Linux and Debian, I noticed that my network interface was not detected, which made it impossible to discover available networks to connect to.</description>
+During the installation process for Arch Linux and Debian, my network interface was not detected, which made it impossible to discover available networks to connect to.</description>
     </item>
     
   </channel>

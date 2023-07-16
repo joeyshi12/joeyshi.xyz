@@ -84,6 +84,8 @@ $$
 where $\sum_{n=0}^{\infty} a_n = 1$ and $\\{b_n\\}$ is arbitrary.
 This method can be extended to other recursion relations
 and we can similarly extend the domain of the solutions to the complex domain.
+Note that this solution can be generalized further as for any function $h(x)$
+with $h(n) = 1$ for any integer $n$, $f(x)h(x)$ also satisfies the system.
 
 ## Example
 

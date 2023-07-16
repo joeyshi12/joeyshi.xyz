@@ -119,7 +119,7 @@ $$</p>
 u[i][j] = \begin{cases}
 u[i - 1, j] + \frac{\alpha \Delta t}{(\Delta x)^2} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &amp;\text{if } 0 &lt; i \leq K - 1, 0 &lt; j &lt; N - 1 \\
 \Phi_1(i \Delta t), &amp;\text{if } j = N - 1 \\
-u[i, j - 2] + \Phi_2(i \Delta t) \Delta t, &amp;\text{if } j = 0 \\
+u[i, N - 2] + \Phi_2(i \Delta t) \Delta t, &amp;\text{if } j = 0 \\
 f(j \Delta x), &amp;\text{if } i = 0
 \end{cases}
 $$</p>

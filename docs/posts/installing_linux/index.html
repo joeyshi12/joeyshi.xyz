@@ -70,19 +70,20 @@ This post documents the troubleshooting steps I took for each system.</p>
 <h2 id="aspire-one">Aspire One</h2>
 <p>The important things to note about this system is that it has a 32-bit architecture and a i686 processor.
 Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.</p>
-<p>During the installation process during Arch Linux and Debian, I noticed
-that my network interface was not detected, which made it impossible
+<p>During the installation process for Arch Linux and Debian,
+my network interface was not detected, which made it impossible
 to discover available networks to connect to.
-This was because there were legacy firmware that did not come with most Linux installers.</p>
+This was because there were legacy firmware that did not come with these Linux installers.</p>
 <p>Luckily, Linux Mint does manage to be able to discover available networks
 during the live-USB installation process.
 Discovering wifi networks after installing mint showed no results,
 so it was necessary to use a wired connection temporarily and
 install the necessary drivers for my network card.
 The following guide was useful in this process:</p>
-<ul>
-<li><a href="https://easylinuxtipsproject.blogspot.com/p/internet.html#ID1.2">How to solve internet connection problems </a></li>
-</ul>
+<p><a href="https://easylinuxtipsproject.blogspot.com/p/internet.html#ID1.2">how to solve internet connection problems.</a></p>
+<p>Note that this also solves the issues during the Arch Linux and Debian
+installation process as one could establish a wired ethernet connection
+and install any missing firmware.</p>
 <h2 id="lenovo">Lenovo</h2>
 <p>This computer is much newer compared to the Aspire One I had.
 I first tried to install Ubuntu version 22.04 on the computer,

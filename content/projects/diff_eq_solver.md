@@ -60,7 +60,7 @@ $$
 u[i][j] = \begin{cases}
 u[i - 1, j] + \frac{\alpha \Delta t}{(\Delta x)^2} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &\text{if } 0 < i \leq K - 1, 0 < j < N - 1 \\\\
 \Phi_1(i \Delta t), &\text{if } j = N - 1 \\\\
-u[i, j - 2] + \Phi_2(i \Delta t) \Delta t, &\text{if } j = 0 \\\\
+u[i, N - 2] + \Phi_2(i \Delta t) \Delta t, &\text{if } j = 0 \\\\
 f(j \Delta x), &\text{if } i = 0
 \end{cases}
 $$
