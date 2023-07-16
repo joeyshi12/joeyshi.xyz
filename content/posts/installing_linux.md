@@ -25,9 +25,7 @@ Discovering wifi networks after installing mint showed no results,
 so it was necessary to use a wired connection temporarily and
 install the necessary drivers for my network card.
 The following guide was useful in this process:
-
-[how to solve internet connection problems.](https://easylinuxtipsproject.blogspot.com/p/internet.html#ID1.2)
-
+[how to solve internet connection problems](https://easylinuxtipsproject.blogspot.com/p/internet.html#ID1.2).
 Note that this also solves the issues during the Arch Linux and Debian
 installation process as one could establish a wired ethernet connection
 and install any missing firmware.
