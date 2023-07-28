@@ -50,7 +50,7 @@ a:hover {
     text-decoration: underline;
 }
 
-p > code {
+p > code, li > code {
     color: var(--fg);
     background-color: var(--bg-code);
     padding: .2em .4em;

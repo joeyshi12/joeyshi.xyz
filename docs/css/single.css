@@ -25,6 +25,10 @@ h2 {
     font-size: 1.2rem;
 }
 
+.content {
+    margin: 1rem 0;
+}
+
 .content h2 {
     margin-top: 2.4rem;
 }
