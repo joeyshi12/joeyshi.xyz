@@ -82,10 +82,11 @@ f(x) = \frac{\phi^n}{\sqrt{5}} - \frac{\phi^{-x}}{\sqrt{5}}\sum_{n=0}^{\infty} a
 $$
 
 where $\sum_{n=0}^{\infty} a_n = 1$ and $\\{b_n\\}$ is arbitrary.
-This method can be extended to other recursion relations
-and we can similarly extend the domain of the solutions to the complex domain.
-Note that this solution can be generalized further as for any function $h(x)$
-with $h(n) = 1$ for any integer $n$, $f(x)h(x)$ also satisfies the system.
+Although this approach seemed novel initially,
+one could have also simply observed that any function of the form
+$h_1(x)\phi^{x} - h_2(x)\phi^{-x}$ with $h_1(n) = 1$ and $h_2(n) = (-1)^n$ for any integer $n$ also works.
+However, we arrived at a nice function that generates nice curves
+which also depicts the Fibonacci numbers and that's all that matters 🙂.
 
 ## Example
 
