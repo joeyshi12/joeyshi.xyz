@@ -10,7 +10,7 @@ featured: true
 
 Real-time multiplayer browser platformer made with p5.
 
-- [Website](https://platform-party.joeyshi.xyz)
+- [Game Website](https://platform-party.joeyshi.xyz)
 - [Source code](https://github.com/joeyshi12/platform-party)
 
 This was primarily made using TypeScript and various browser APIs.

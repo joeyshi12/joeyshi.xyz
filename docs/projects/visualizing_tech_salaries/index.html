@@ -64,14 +64,69 @@
         <span><i class="fa-solid fa-caret-right"></i></span>
         <h2 class="single-title">Visualizing Tech Salaries</h2>
     </div>
-    <div class="content"><p>A visualization for tech salaries in America made with d3.
-This was a group project done for a UBC computer science course: CPSC 447.</p>
+    <div class="content"><p>A visualization for understanding the distribution of salaries of workers in the tech industry.
+This project was something I worked on with a group while taking CPSC 447 at UBC.</p>
 <ul>
-<li><a href="https://joeyshi.xyz/tech-salaries-vis/">Website</a></li>
+<li><a href="https://joeyshi.xyz/tech-salaries-vis/">Visualization</a></li>
 <li><a href="https://raw.githubusercontent.com/joeyshi12/tech-salaries-vis/main/documentation/M3_Final_Project_Submission.pdf">Write-up</a></li>
 <li><a href="https://github.com/joeyshi12/tech-salaries-vis">Source code</a></li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/joeyshi12/tech-salaries-vis/main/thumbnail.png" alt="Visualiation"></p>
+<h2 id="data-dictionary">Data Dictionary</h2>
+<p>The following data was processed from <a href="https://www.kaggle.com/datasets/jackogozaly/data-science-and-stem-salaries">Salaries for Jobs in Data Science and Tech</a>:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Cardinality/Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>company</td>
+<td>Categorical</td>
+<td>1631</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Categorical</td>
+<td>15</td>
+</tr>
+<tr>
+<td>basesalary</td>
+<td>Quantitative</td>
+<td>[0, 1659870]</td>
+</tr>
+<tr>
+<td>yearsofexperience</td>
+<td>Quantitative</td>
+<td>[0, 69]</td>
+</tr>
+<tr>
+<td>yearsatcompany</td>
+<td>Quantitative</td>
+<td>[0, 69]</td>
+</tr>
+<tr>
+<td>location</td>
+<td>Categorical</td>
+<td>1050</td>
+</tr>
+</tbody>
+</table>
+<p>This dataset consists of tech salary information from North America
+recorded in the time between January 1st, 2019 and September 9th, 2020.</p>
+<h2 id="views">Views</h2>
+<p><strong>Geographic distribution of workers</strong></p>
+<p><img src="https://raw.githubusercontent.com/joeyshi12/tech-salaries-vis/main/img/count_map.png" alt="Geographic distribution of workers"></p>
+<p><strong>Geographic distribution of worker salaries</strong></p>
+<p><img src="https://raw.githubusercontent.com/joeyshi12/tech-salaries-vis/main/img/salary_map.png" alt="Geographic distribution of worker salaries"></p>
+<p><strong>Histograms of worker salary, years of experience, and tenure</strong></p>
+<p><img src="https://raw.githubusercontent.com/joeyshi12/tech-salaries-vis/main/img/histogram_1.png" alt="Histogram 1"></p>
+<p><img src="https://raw.githubusercontent.com/joeyshi12/tech-salaries-vis/main/img/histogram_2.png" alt="Histogram 2"></p>
+<p><img src="https://raw.githubusercontent.com/joeyshi12/tech-salaries-vis/main/img/histogram_3.png" alt="Histogram 3"></p>
+<p><strong>Bar chart of the companies with the most amount of salary records</strong></p>
+<p><img src="https://raw.githubusercontent.com/joeyshi12/tech-salaries-vis/main/img/barchart.png" alt="Bar chart"></p>
 
     </div>
     </div>

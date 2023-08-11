@@ -58,7 +58,7 @@ $$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S
       
       <guid>https://joeyshi.xyz/projects/platform_party/</guid>
       <description>Real-time multiplayer browser platformer made with p5.
-Website Source code This was primarily made using TypeScript and various browser APIs.
+Game Website Source code This was primarily made using TypeScript and various browser APIs.
 Image processing The first API I leveraged was the canvas scripting API, which offered useful image processing functions. To start using this feature, I added a canvas element in my main HTML template file
 1 &amp;lt;canvas id=&amp;#34;game&amp;#34;&amp;gt;&amp;lt;/canvas&amp;gt; Then, I get the CanvasRenderingContext2D interface from this element in a separate script.</description>
     </item>
@@ -69,8 +69,9 @@ Image processing The first API I leveraged was the canvas scripting API, which o
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
       
       <guid>https://joeyshi.xyz/projects/visualizing_tech_salaries/</guid>
-      <description>A visualization for tech salaries in America made with d3. This was a group project done for a UBC computer science course: CPSC 447.
-Website Write-up Source code </description>
+      <description>A visualization for understanding the distribution of salaries of workers in the tech industry. This project was something I worked on with a group while taking CPSC 447 at UBC.
+Visualization Write-up Source code Data Dictionary The following data was processed from Salaries for Jobs in Data Science and Tech:
+Attribute Type Cardinality/Range company Categorical 1631 title Categorical 15 basesalary Quantitative [0, 1659870] yearsofexperience Quantitative [0, 69] yearsatcompany Quantitative [0, 69] location Categorical 1050 This dataset consists of tech salary information from North America recorded in the time between January 1st, 2019 and September 9th, 2020.</description>
     </item>
     
   </channel>

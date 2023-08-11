@@ -33,6 +33,29 @@ h2 {
     margin-top: 2.4rem;
 }
 
+table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table th {
+    padding: 6px 13px;
+    border: 1px solid
+}
+
+table tr {
+    border-top: 1px solid;
+}
+
+table td {
+    padding: 6px 13px;
+    border: 1px solid;
+}
+
 .highlight {
     font-size: 14px;
     overflow-x: auto;

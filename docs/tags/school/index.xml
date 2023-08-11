@@ -34,8 +34,9 @@ Organization 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 2
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
       
       <guid>https://joeyshi.xyz/projects/visualizing_tech_salaries/</guid>
-      <description>A visualization for tech salaries in America made with d3. This was a group project done for a UBC computer science course: CPSC 447.
-Website Write-up Source code </description>
+      <description>A visualization for understanding the distribution of salaries of workers in the tech industry. This project was something I worked on with a group while taking CPSC 447 at UBC.
+Visualization Write-up Source code Data Dictionary The following data was processed from Salaries for Jobs in Data Science and Tech:
+Attribute Type Cardinality/Range company Categorical 1631 title Categorical 15 basesalary Quantitative [0, 1659870] yearsofexperience Quantitative [0, 69] yearsatcompany Quantitative [0, 69] location Categorical 1050 This dataset consists of tech salary information from North America recorded in the time between January 1st, 2019 and September 9th, 2020.</description>
     </item>
     
   </channel>
