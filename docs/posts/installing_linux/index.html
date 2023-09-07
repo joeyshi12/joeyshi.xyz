@@ -68,26 +68,23 @@
 an old Aspire One mini laptop and Lenovo laptop into usable Linux servers.
 This post documents the troubleshooting steps I took for each system.</p>
 <h2 id="aspire-one">Aspire One</h2>
-<p>The important things to note about this system is that it has a 32-bit architecture and a i686 processor.
+<p>The important things to note about this system is that it has a 32-bit architecture and an i686 processor.
 Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.</p>
 <p>During the installation process for Arch Linux and Debian,
-my network interface was not detected, which made it impossible
+my network interface was not detected, which made it annoying
 to discover available networks to connect to.
 This was because there were legacy firmware that did not come with these Linux installers.</p>
 <p>Luckily, Linux Mint does manage to be able to discover available networks
 during the live-USB installation process.
-Discovering wifi networks after installing mint showed no results,
+Discovering Wi-Fi networks after installing mint showed no results,
 so it was necessary to use a wired connection temporarily and
 install the necessary drivers for my network card.
 The following guide was useful in this process:
-<a href="https://easylinuxtipsproject.blogspot.com/p/internet.html#ID1.2">how to solve internet connection problems</a>.
-Note that this also solves the issues during the Arch Linux and Debian
-installation process as one could establish a wired ethernet connection
-and install any missing firmware.</p>
+<a href="https://easylinuxtipsproject.blogspot.com/p/internet.html#ID1.2">how to solve internet connection problems</a>.</p>
 <h2 id="lenovo">Lenovo</h2>
 <p>This computer is much newer compared to the Aspire One I had.
 I first tried to install Ubuntu version 22.04 on the computer,
-but came across an <code>grub-install failed</code> error during installation.</p>
+but came across a <code>grub-install failed</code> error during installation.</p>
 <p>This turns out to be a well-known bug.
 The solution I came across was to</p>
 <ol>

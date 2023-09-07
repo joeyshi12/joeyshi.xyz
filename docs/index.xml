@@ -14,8 +14,8 @@
       
       <guid>https://joeyshi.xyz/posts/installing_linux/</guid>
       <description>I spent the past few days attempting to convert an old Aspire One mini laptop and Lenovo laptop into usable Linux servers. This post documents the troubleshooting steps I took for each system.
-Aspire One The important things to note about this system is that it has a 32-bit architecture and a i686 processor. Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.
-During the installation process for Arch Linux and Debian, my network interface was not detected, which made it impossible to discover available networks to connect to.</description>
+Aspire One The important things to note about this system is that it has a 32-bit architecture and an i686 processor. Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.
+During the installation process for Arch Linux and Debian, my network interface was not detected, which made it annoying to discover available networks to connect to.</description>
     </item>
     
     <item>
@@ -36,7 +36,8 @@ JSON Schema Transcompiler This service is a wrapper for a Python library I wrote
       
       <guid>https://joeyshi.xyz/projects/computer_mag/</guid>
       <description>Wiki for laptops and desktops with technical details and reviews. This was a group project done for a UBC computer science course: CPSC 304.
-Website ER Diagram This is a fullstack web application made with Java, MySQL, and vanilla HTML/CSS/JavaScript. The web server was implemented using Javalin. We originally used an Oracle JDBC to make database queries with servers on UBC&amp;rsquo;s undergraduate Linux machines. However, I have migrated to MariaDB instead since Oracle is not compatible with Raspberry Pi, which is what I use to host this app.</description>
+Website ER Diagram This is a fullstack web application that was originally made with Java, MySQL, and vanilla HTML/CSS/JavaScript. The web server was implemented using Javalin.
+I later redesigned the frontend to use Angular and setup my Raspberry Pi to be able to run this application in a Docker container.</description>
     </item>
     
     <item>

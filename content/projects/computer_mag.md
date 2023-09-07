@@ -14,220 +14,185 @@ This was a group project done for a UBC computer science course: CPSC 304.
 - [Website](https://computer-mag.joeyshi.xyz/)
 - [ER Diagram](/img/er_diagram.png)
 
-This is a fullstack web application made with Java, MySQL, and
-vanilla HTML/CSS/JavaScript.
+This is a fullstack web application that was originally made with
+Java, MySQL, and vanilla HTML/CSS/JavaScript.
 The web server was implemented using [Javalin](https://javalin.io).
-We originally used an Oracle JDBC to make database queries
-with servers on UBC's undergraduate Linux machines.
-However, I have migrated to MariaDB instead since Oracle
-is not compatible with Raspberry Pi, which is what I use to host this app.
+
+I later redesigned the frontend to use [Angular](https://angular.io/)
+and setup my Raspberry Pi to be able to run this application in a Docker container.
+The database system also needed to switch from Oracle to MariaDB
+because no Docker image for Oracle DB was compatible with my Raspberry Pi (an armv7 system).
 
 ## API Reference
 
-{{< details "POST /review" >}}
-First creates new reviewer with passed reviewerID and reviewerName if reviewer does not exist in the database.
+{{< details "POST /reviews" >}}
+Creates a new review for a user with id `reviewerId` if review `uuid` is empty;
+otherwise, updates the existing review with id `uuid`.
 
-- Headers
-    - reviewerID: number
 - Body
+    - uuid: string
+    - textContent: string
+    - score: int
+    - reviewerId: string
+    - creationDate: int
     - computerModelNumber: string
-    - reviewText: string
-    - reviewScore: number
-    - reviewerName: string
 
 ```sh
-curl 'https://computer-mag.joeyshi.xyz/review'\
-     -H 'Content-Type: application/json'\
-     -H 'reviewerID: -885519634'\
-     -d '{ "computerModelNumber": "A2438", "reviewText": "SUPER NICE YEAH", "reviewScore": 10, "reviewerName": "Anon512" }'
+curl 'https://computer-mag.joeyshi.xyz/reviews'\
+    -H 'Content-Type: application/json'\
+    -d '{"uuid":"","textContent":"wow","score":100,"reviewerId":"0c79e350-bb99-4bfe-9a7e-17dd5a1ed8fc","creationDate":0,"computerModelNumber":"A2338"}'
 {
-    "reviewerName": "Anon512",
-    "reviewScore": 10,
-    "reviewDate": "2022-11-21",
-    "computerModelNumber": "A2438",
-    "reviewID": 8855,
-    "reviewText": "SUPER NICE YEAH"
+    "uuid": "9bacda64-4ebf-413b-a562-96cfcc6df4f3",
+    "textContent": "wow",
+    "score": 100,
+    "reviewerId": "0c79e350-bb99-4bfe-9a7e-17dd5a1ed8fc",
+    "creationDate": 1694064693078,
+    "computerModelNumber": "A2338"
 }
 ```
 {{< /details >}}
 
-{{< details "DELETE /review/{id}" >}}
+{{< details "DELETE /reviews/{id}" >}}
 Deletes existing review.
 
-- Params
-    - id
-- Headers
-    - reviewerID: number
+- Path params
+    - reviewerId: string
 {{< /details >}}
 
-{{< details "PATCH /review/{id}">}}
-Updates existing review.
+{{< details "GET /reviews/model/{computerModelNumber}" >}}
+Get reviews of the computer model with the given `computerModelNumber`.
 
-- Params
-    - id
-- Headers
-    - reviewerID: number
-- Body
-    - (optional) reviewText: string
-    - (optional) reviewScore: number
-{{< /details >}}
-
-{{< details "GET /reviews/{computerModelNumber}" >}}
-Get reviews of specified computer model.
-
-- Params
+- Path params
     - computerModelNumber
 
 ```sh
-curl 'https://computer-mag.joeyshi.xyz/reviews/A2179'
+curl 'https://computer-mag.joeyshi.xyz/review/model/A2338'
 [
     {
-        "reviewID": 128405987,
-        "reviewScore": 10,
-        "reviewText": "Superb",
-        "reviewDate": -61539667200000,
-        "reviewerName": "Mary Banks",
-        "yearsOfExperience": 3,
-        "reviewerID": 3
+        "uuid": "1a7c4b6f-40f0-47f7-98e1-40e2b4a06634",
+        "score": 85,
+        "textContent": "Awesome laptop!",
+        "creationDate": 1633910400000,
+        "reviewerName": "Victoria Higgins",
+        "yearsOfExperience": 1,
+        "reviewerId": "8e43a9f3-8dfb-4a96-9d91-5a6ea58f7440"
     },
     {
-        "reviewID": -885519634,
-        "reviewScore": 10,
-        "reviewText": "SUPER NICE YEAH",
-        "reviewDate": -61476508800000,
+        "uuid": "b61f79ef-99ea-43f2-a37f-725a62a242f5",
+        "score": 90,
+        "textContent": "I love how fast Photoshop runs on this machine!",
+        "creationDate": 1633651200000,
         "reviewerName": "Mary Banks",
         "yearsOfExperience": 3,
-        "reviewerID": 3
+        "reviewerId": "a4b1d28b-86b3-4f90-92c5-6c94f0b86c9c"
+    },
+    {
+        "uuid": "cf54b9c9-9407-4fe5-bc8c-845cfa4e7b24",
+        "score": 90,
+        "textContent": "This laptop is fast.",
+        "creationDate": 1633737600000,
+        "reviewerName": "Bob Dylan",
+        "yearsOfExperience": 4,
+        "reviewerId": "5721e880-35a5-4152-9075-ea01265f4d3b"
     }
 ]
 ```
 {{< /details >}}
 
-{{< details "GET /components">}}
-Searches components of `componentType` with a `componentModelNumber` containing the string `search`.
-Returns specified `attributes` of matching components.
+{{< details "GET /{componentType}">}}
+Returns a list of components of the given `componentType`.
 
-- Params
-    - contentType
-    - attributes
-    - search
+- Path params
+    - componentType: (cpu|gpu|ram)
 
 ```sh
-curl 'https://computer-mag.joeyshi.xyz/components?componentType=ram&attributes=componentModelNumber&attributes=memory&search=16'
+curl 'https://computer-mag.joeyshi.xyz/cpu'
 [
     {
-        "memory": 16,
-        "componentModelNumber": "CMK16GX4M2B3200C16"
+        "componentModelNumber": "BX8070811700K",
+        "brandName": "Intel Core",
+        "companyName": "Intel",
+        "description": "Intel CPU",
+        "clockSpeed": 3.6
     },
     {
-        "memory": 32,
-        "componentModelNumber": "CMK32GX4M2B3200C16"
+        "componentModelNumber": "BX8071512100F",
+        "brandName": "Intel Core",
+        "companyName": "Intel",
+        "description": "Intel CPU",
+        "clockSpeed": 3.3
     },
     {
-        "memory": 64,
-        "componentModelNumber": "CMK64GX4M2D3000C16"
+        "componentModelNumber": "BX8071512400",
+        "brandName": "Intel Core",
+        "companyName": "Intel",
+        "description": "Intel CPU",
+        "clockSpeed": 2.5
     },
     {
-        "memory": 16,
-        "componentModelNumber": "KSM24RS46MEI"
+        "componentModelNumber": "M1",
+        "brandName": "Apple Silicon",
+        "companyName": "Apple",
+        "description": "Apple CPU",
+        "clockSpeed": 0.0
+    },
+    {
+        "componentModelNumber": "M2",
+        "brandName": "Apple Silicon",
+        "companyName": "Apple",
+        "description": "Apple CPU",
+        "clockSpeed": 0.0
     }
 ]
 ```
 {{< /details >}}
 
 {{< details "GET /models" >}}
-Returns only the models reviewed by all verified reviewers if `onlyReviewedByAllVerified` is set to True.
-Otherwise, returns `attributes` of models with a 'brandName' containing the string `search`.
+Returns a list of computer models.
 
-If `onlyReviwedByAllVerified` is set to True, `attributes` and `search` must not be specified.
-
-If `onlyReviwedByAllVerified` is not specified or set to False, `attributes` is required and `search` is optional.
-
-- Params
-    - attributes xor onlyReviwedByAllVerified=True
-    - (optional) search (only allowed if onlyReviwedByAllVerified != True)
+- Query params
+    - search: string - filters for models containing the search string in their name
 
 ```sh
-curl 'https://computer-mag.joeyshi.xyz/models?attributes=brandName&attributes=listPrice&search=Surface'
+curl 'https://computer-mag.joeyshi.xyz/models?search=Think'
 [
     {
-        "brandName": "Surface Pro 8",
-        "listPrice": 1099
-    },
-    {
-        "brandName": "Microsoft Surface Studio",
-        "listPrice": 3949
-    }
-]
-
-curl 'https://computer-mag.joeyshi.xyz/models?onlyReviewedByAllVerified=True'
-[
-    {
-        "computerModelNumber": "A2179",
-        "brandName": "MacBook Air",
-        "listPrice": 1299.0
+        "computerModelNumber": "21CB00D1US",
+        "brandName": "ThinkPad",
+        "listPrice": 4399.0
     }
 ]
 ```
 {{< /details >}}
 
-{{< details "GET /models/avg-scores" >}}
-Returns average review scores of models.
+{{< details "GET /scores" >}}
+Returns aggregated review scores of models.
 
-Models must have at least `count` number of reviews, if defined.
-
-- Body
-    - onlyAboveAvg: boolean
-    - (optional) count: number
+- Query params
+    - aggregationFunctionType: (AVG|MIN|MAX)
+    - minimumNumberOfReviews: int
+    - shouldOnlyIncludeAboveAverage: boolean
 
 ```sh
-curl 'https://computer-mag.joeyshi.xyz/models/avg-scores'
+curl 'https://computer-mag.joeyshi.xyz/scores?aggregationFunctionType=AVG'
 [
     {
         "name": "AWAUR13-7143WHT-PUS",
+        "brand": "Aurora R13",
         "price": 1499.99,
-        "score": 93,
-        "scoreType": "AVG"
+        "score": 81
     },
     {
         "name": "A2179",
+        "brand": "MacBook Air",
         "price": 1299.0,
-        "score": 72,
-        "scoreType": "AVG"
+        "score": 78
     },
     {
-        "name": "A2438",
-        "price": 1599.99,
-        "score": 17,
-        "scoreType": "AVG"
-    }
-]
-```
-{{< /details >}}
-
-{{< details "GET /models/min-scores" >}}
-Returns minimum review scores of models.
-
-```sh
-curl 'https://computer-mag.joeyshi.xyz/models/min-scores'
-[
-    {
-        "name": "AWAUR13-7143WHT-PUS",
-        "price": 1499.99,
-        "score": 93,
-        "scoreType": "MIN"
-    },
-    {
-        "name": "A2179",
-        "price": 1299.0,
-        "score": 58,
-        "scoreType": "MIN"
-    },
-    {
-        "name": "A2338",
-        "price": 1699.0,
-        "score": 80,
-        "scoreType": "MIN"
+        "name": "AI2-00001",
+        "brand": "Microsoft Surface Studio",
+        "price": 3949.0,
+        "score": 69
     }
 ]
 ```

@@ -11,30 +11,27 @@ This post documents the troubleshooting steps I took for each system.
 
 ## Aspire One
 
-The important things to note about this system is that it has a 32-bit architecture and a i686 processor.
+The important things to note about this system is that it has a 32-bit architecture and an i686 processor.
 Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.
 
 During the installation process for Arch Linux and Debian,
-my network interface was not detected, which made it impossible
+my network interface was not detected, which made it annoying
 to discover available networks to connect to.
 This was because there were legacy firmware that did not come with these Linux installers.
 
 Luckily, Linux Mint does manage to be able to discover available networks
 during the live-USB installation process.
-Discovering wifi networks after installing mint showed no results,
+Discovering Wi-Fi networks after installing mint showed no results,
 so it was necessary to use a wired connection temporarily and
 install the necessary drivers for my network card.
 The following guide was useful in this process:
 [how to solve internet connection problems](https://easylinuxtipsproject.blogspot.com/p/internet.html#ID1.2).
-Note that this also solves the issues during the Arch Linux and Debian
-installation process as one could establish a wired ethernet connection
-and install any missing firmware.
 
 ## Lenovo
 
 This computer is much newer compared to the Aspire One I had.
 I first tried to install Ubuntu version 22.04 on the computer,
-but came across an `grub-install failed` error during installation.
+but came across a `grub-install failed` error during installation.
 
 This turns out to be a well-known bug.
 The solution I came across was to
