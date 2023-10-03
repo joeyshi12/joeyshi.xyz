@@ -1,5 +1,5 @@
 ---
-title: Installing Linux on Old Laptops
+title: Installing Linux on old laptops
 description: My troubleshooting steps for installing Linux on old laptops.
 date: 2023-07-10T23:14:41-07:00
 tags: ["Linux"]

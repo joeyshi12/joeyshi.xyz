@@ -20,7 +20,7 @@ $$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S
     </item>
     
     <item>
-      <title>Extending the Fibonacci sequence to the Real Domain</title>
+      <title>Extending the Fibonacci sequence to the real domain</title>
       <link>https://joeyshi.xyz/posts/extending_fibonacci/</link>
       <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
       

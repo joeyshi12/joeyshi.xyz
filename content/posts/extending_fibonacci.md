@@ -1,5 +1,5 @@
 ---
-title: Extending the Fibonacci sequence to the Real Domain
+title: Extending the Fibonacci sequence to the real domain
 description: A look into how the Fibonacci sequence can be extended to the real domain.
 date: 2023-01-07T22:58:20-08:00
 tags: ["Math", "Desmos"]

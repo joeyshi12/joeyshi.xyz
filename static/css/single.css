@@ -3,21 +3,40 @@ img {
     height: auto;
 }
 
-.breadcrumbs {
-    margin: 0.5rem 0;
-    padding: 1.2rem;
+.page-header {
     background: var(--bg-secondary);
     border-radius: 25px;
+    margin: 0.5rem 0;
+    padding: 1.2rem 2rem 1.6rem 2rem;
+}
+
+.page-header-footer {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.5rem;
+}
+
+.page-date {
+    margin-right: 1rem;
+}
+
+.page-tags {
+    margin: 0 0.1rem;
 }
 
 .parent-link {
     font-family: "M Plus Rounded 1c", serif;
 }
 
-.single-title {
+.page-title {
     display: inline-block;
     padding: 0;
     margin: 0;
+}
+
+.fa-caret-right {
+    padding: 0 0.2rem;
 }
 
 h2 {

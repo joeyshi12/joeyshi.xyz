@@ -10,12 +10,24 @@
 {{- end }}
 
 {{- define "main" }}
-    <div class="breadcrumbs">
-        {{- with .Parent }}
-        <a class="parent-link" href="{{ .Permalink }}">{{ .Title }}</a>
-        {{- end }}
-        <span><i class="fa-solid fa-caret-right"></i></span>
-        <h2 class="single-title">{{ .Title }}</h2>
+    <div class="page-header">
+        <div>
+            {{- with .Parent }}
+            <a class="parent-link" href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- end }}
+            <span><i class="fa-solid fa-caret-right"></i></span>
+            <h2 class="page-title">{{ .Title }}</h2>
+        </div>
+        <footer class="page-header-footer">
+            <span class="page-date">{{ .Date | time.Format ":date_long" }}</span>
+            {{- if isset .Params "tags" }}
+            <div>
+            {{- range .Params.tags }}
+                <a class="page-tags" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+            {{- end }}
+            </div>
+            {{- end }}
+        </footer>
     </div>
     <div class="content">
         {{- .Content }}
