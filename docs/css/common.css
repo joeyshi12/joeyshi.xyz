@@ -14,7 +14,7 @@
     --bg-button: #0179ad;
     --bg-button-hover: #00618b;
     --bg-code: #e2e6ea;
-    --border-color: #d0d7de;;
+    --border-color: #d0d7de;
     --link-color: #0969da;
 }
 
@@ -50,13 +50,18 @@ a:hover {
     text-decoration: underline;
 }
 
+p {
+    line-height: 24px;
+}
+
 p > code, li > code {
     color: var(--fg);
     background-color: var(--bg-code);
-    padding: .2em .4em;
+    padding: .1em .4em;
     border-radius: 6px;
     font-size: 85%;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    white-space: nowrap;
 }
 
 .navbar {
@@ -84,6 +89,10 @@ p > code, li > code {
     border-radius: 25px;
 }
 
+.nav-item:first-child {
+    margin-top: 1rem;
+}
+
 .nav-item .icon {
     font-size: 2rem;
     width: 3rem;
@@ -103,24 +112,28 @@ p > code, li > code {
 }
 
 .header {
-    display: flex;
-    justify-content: space-around;
     width: 100%;
     padding: 1rem 0;
-    margin: 0.5rem 0;
     background: var(--bg-secondary);
     border-radius: 25px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .header-text * {
     padding: 0;
     margin: 0;
+    white-space: nowrap;
 }
 
 .page-body {
     display: flex;
     flex-direction: column;
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 2rem 6rem 2rem;
     margin: 0 auto;
     max-width: 36em;
 }
@@ -142,10 +155,10 @@ section {
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 0.5rem 0;
+    margin-top: 1rem;
 }
 
-.section-title {
+h2 {
     font-family: "M Plus Rounded 1c", serif;
     margin: 0.5rem 0;
 }
@@ -193,7 +206,7 @@ section {
     justify-content: center;
 }
 
-.repo-card {
+.repo-cards li {
     border-color: var(--border-color);
     border-style: solid;
     border-width: 1px;
@@ -243,12 +256,16 @@ section {
     background: #b07219;
 }
 
+.fa-github-alt {
+    width: 1.2rem;
+}
+
 .blog-posts {
     margin: 0;
     padding: 0;
 }
 
-.blog-post {
+.blog-posts li {
     border-color: var(--border-color);
     border-style: solid;
     border-width: 1px;
@@ -275,10 +292,6 @@ section {
         width: available;
     }
 
-    .page-body {
-        padding-bottom: 4rem;
-    }
-
     .link-text {
         display: none;
     }
@@ -301,16 +314,6 @@ section {
 
     .nav-item:last-child {
         display: none;
-    }
-
-    .header {
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .profile-picture {
-        margin-left: 0;
-        margin-top: 1rem;
     }
 }
 
@@ -350,6 +353,7 @@ section {
         align-items: center;
         margin-top: auto;
         padding: 1rem 0;
+        margin-bottom: 1rem;
     }
 
     .nav-link:before {

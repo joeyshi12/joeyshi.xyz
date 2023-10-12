@@ -6,7 +6,6 @@ img {
 .page-header {
     background: var(--bg-secondary);
     border-radius: 25px;
-    margin: 0.5rem 0;
     padding: 1.2rem 2rem 1.6rem 2rem;
 }
 
@@ -39,17 +38,13 @@ img {
     padding: 0 0.2rem;
 }
 
-h2 {
-    font-family: "M Plus Rounded 1c", serif;
-    font-size: 1.2rem;
-}
-
 .content {
     margin: 1rem 0;
 }
 
-.content h2 {
+h2 {
     margin-top: 2.4rem;
+    font-size: 1.2rem;
 }
 
 table {
