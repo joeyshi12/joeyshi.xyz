@@ -122,6 +122,7 @@ p > code, li > code {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 0 1rem;
 }
 
 .header-text * {
