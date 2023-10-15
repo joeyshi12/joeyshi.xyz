@@ -2,6 +2,7 @@ baseURL = "https://joeyshi.xyz"
 languageCode = "en"
 title = "Joey Shi"
 publishDir = "docs"
+disableHugoGeneratorInject = true
 
 [params]
 author = "Joey Shi"

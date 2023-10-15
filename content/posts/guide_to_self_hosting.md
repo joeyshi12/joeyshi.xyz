@@ -86,7 +86,7 @@ we can simply add an A record whose value is the IP address of the host machine.
 **Be sure to use the correct WAN address, not your private IP address using this [service](https://whatismyipaddress.com/)**.
 Namecheap has a more detailed guide [here](https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/).
 It normally takes a few minutes before new records take effect.
-We can check if they're up by doing a DNS lookup from the command-line with `dig [YOUR_DOMAIN]`.
+We can check if the records are up by doing a DNS lookup from the command-line with `dig [YOUR_DOMAIN]`.
 
 Once you're able to look up your IP address using `dig`, then we can move onto
 port forwarding port 80 on your router to your host machine.
@@ -104,6 +104,7 @@ so the router's webpage should be accessible by entering its IP into the browser
 Once you log in to your router, you should look for wherever the port forwarding
 table is located and add an entry with the source HTTP port 80
 targeting the IP of your host machine with the port specified to the one your web server is running on.
+Run `hostname -I` on the host machine to find its local IP address.
 
 If all previous steps were done correctly,
 requests to your domain will be able to hit your web server now.
@@ -126,7 +127,7 @@ so your IP will be hidden from people visiting your website.
 
 Although this article omits some other details,
 like configuring your host machine's firewall
-and using Nginx as a reverse-proxy to serve multiple apps,
-there is enough detail here to get started with self-hosting your projects.
-I hope this encourages more people to get more involved with network technologies
-and learn more about the internet.
+and setting up Nginx, there is enough detail here to get started with self-hosting your projects.
+If you're interested in learning how to host other services,
+such as a cloud or VPN, you can visit Luke Smith's [landchad.net](https://landchad.net/) to learn more.
+I hope this article encourages more people to learn about the internet.

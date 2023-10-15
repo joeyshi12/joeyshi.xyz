@@ -115,7 +115,7 @@
         <li>NS record - Name server reference</li>
       </ol>
       <p>To have a domain name point to our host machine’s IP address, we first need to purchase a domain name from a DNS registrar. I personally use <a href="https://www.namecheap.com/">Namecheap</a>.</p>
-      <p>In the DNS settings of your chosen registrar, we can simply add an A record whose value is the IP address of the host machine. <strong>Be sure to use the correct WAN address, not your private IP address using this <a href="https://whatismyipaddress.com/">service</a></strong>. Namecheap has a more detailed guide <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/">here</a>. It normally takes a few minutes before new records take effect. We can check if they’re up by doing a DNS lookup from the command-line with <code>dig [YOUR_DOMAIN]</code>.</p>
+      <p>In the DNS settings of your chosen registrar, we can simply add an A record whose value is the IP address of the host machine. <strong>Be sure to use the correct WAN address, not your private IP address using this <a href="https://whatismyipaddress.com/">service</a></strong>. Namecheap has a more detailed guide <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/">here</a>. It normally takes a few minutes before new records take effect. We can check if the records are up by doing a DNS lookup from the command-line with <code>dig [YOUR_DOMAIN]</code>.</p>
       <p>Once you’re able to look up your IP address using <code>dig</code>, then we can move onto port forwarding port 80 on your router to your host machine. Find your gateway router IP by running <code>netstat -nr</code>.</p>
       <div class="highlight">
         <div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -139,14 +139,14 @@
           </table>
         </div>
       </div>
-      <p>In this case, my gateway router’s IP is <code>192.168.1.254</code>, so the router’s webpage should be accessible by entering its IP into the browser. Once you log in to your router, you should look for wherever the port forwarding table is located and add an entry with the source HTTP port 80 targeting the IP of your host machine with the port specified to the one your web server is running on.</p>
+      <p>In this case, my gateway router’s IP is <code>192.168.1.254</code>, so the router’s webpage should be accessible by entering its IP into the browser. Once you log in to your router, you should look for wherever the port forwarding table is located and add an entry with the source HTTP port 80 targeting the IP of your host machine with the port specified to the one your web server is running on. Run <code>hostname -I</code> on the host machine to find its local IP address.</p>
       <p>If all previous steps were done correctly, requests to your domain will be able to hit your web server now. You can test this in a browser or run <code>curl http://[YOUR_DOMAIN]</code> to check.</p>
       <h2 id="hiding-your-ip-address-with-cloudflare">Hiding your IP Address with Cloudflare</h2>
       <p>Before you start advertising your website, note that people will be able to look up your IP address by doing a DNS look up with your domain name. To resolve this issue, we will be using Cloudflare’s DNS proxy feature to hide our IP.</p>
       <p>A proxied record in Cloudflare is a record for which the requests with the associated domain name will go through Cloudflare first before reaching your host machine. From the outside, doing a DNS look up on a proxied record will return one of Cloudflare’s IP, so your IP will be hidden from people visiting your website.</p>
       <p><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9607/2210/how-to-set-up-dns-records-for-your-domain-in-cloudflare-account/">Here is a detailed guide for registering your DNS records under Cloudflare</a>.</p>
       <h2 id="conclusion">Conclusion</h2>
-      <p>Although this article omits some other details, like configuring your host machine’s firewall and using Nginx as a reverse-proxy to serve multiple apps, there is enough detail here to get started with self-hosting your projects. I hope this encourages more people to get more involved with network technologies and learn more about the internet.</p>
+      <p>Although this article omits some other details, like configuring your host machine’s firewall and setting up Nginx, there is enough detail here to get started with self-hosting your projects. If you’re interested in learning how to host other services, such as a cloud or VPN, you can visit Luke Smith’s <a href="https://landchad.net/">landchad.net</a> to learn more. I hope this article encourages more people to learn about the internet.</p>
     </div>
   </div>
 </body>
