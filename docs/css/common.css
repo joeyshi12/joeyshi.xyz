@@ -38,6 +38,7 @@ html body {
     color: var(--fg);
     text-rendering: optimizeLegibility;
     font-kerning: normal;
+    line-height: 1.4
 }
 
 a {
@@ -48,10 +49,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-p {
-    line-height: 24px;
 }
 
 p > code, li > code {
@@ -103,7 +100,7 @@ p > code, li > code {
     align-items: center;
     text-decoration: none;
     color: var(--fg);
-    padding: 1rem 0 1rem 2rem;
+    padding: .8rem 0 .8rem 2rem;
     border-radius: 25px;
 }
 
@@ -189,7 +186,7 @@ h2 {
     padding: 0 0 0 1rem;
 }
 
-.ext-link {
+.ext-links li {
     padding: 0.2rem;
     margin: 0;
 }

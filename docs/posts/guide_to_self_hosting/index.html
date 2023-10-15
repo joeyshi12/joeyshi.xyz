@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Guide to self-hosting</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Joey Shi">
+  <meta name="description" content="Software developer and enjoyer of all things math and Linux.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux.">
+  <meta name="image" property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta itemprop="name" content="Joey Shi">
+  <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux.">
+  <meta itemprop="image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta property="og:url" content="https://joeyshi.xyz">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joey Shi">
+  <meta property="og:description" content="Software developer and enjoyer of all things math and Linux.">
+  <meta property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Joey Shi">
+  <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux.">
+  <meta name="twitter:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/single.css">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  <div class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/" class="nav-link"><i class="fa-solid fa-house icon"></i> <span class="link-text">Home</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="/projects" class="nav-link"><i class="fa-solid fa-diagram-project icon"></i> <span class="link-text">Projects</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="/posts" class="nav-link"><i class="fa-solid fa-blog icon"></i> <span class="link-text">Posts</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="/tags" class="nav-link"><i class="fa-solid fa-tag icon"></i> <span class="link-text">Tags</span></a>
+      </li>
+      <li class="nav-item"><span>© 2023 Joey Shi</span></li>
+    </ul>
+  </div>
+  <div class="page-body">
+    <div class="page-header">
+      <div>
+        <a class="parent-link" href="https://joeyshi.xyz/posts/">Posts</a> <span><i class="fa-solid fa-caret-right"></i></span>
+        <h2 class="page-title">Guide to self-hosting</h2>
+      </div>
+      <footer class="page-header-footer">
+        <span class="page-date">October 2, 2023</span>
+        <div>
+          <a class="page-tags" href="/tags/software">#Software</a> <a class="page-tags" href="/tags/web">#Web</a>
+        </div>
+      </footer>
+    </div>
+    <div class="content">
+      <p>Self-hosting is a convenient skill to have for anyone. You can set up personal VPNs, personal cloud services, and more once you have some of the basics down for running your own servers. As a developer myself, I find they are useful for cheaply serving my web app projects to the internet.</p>
+      <h2 id="picking-a-host-machine">Picking a Host Machine</h2>
+      <p>We first choose a computer that we want to use as our server. In <a href="/posts/installing_linux">this post</a>, I go into some detail about my experience installing different Linux distros onto old hardware, but in most cases, I recommend installing <a href="https://ubuntu.com/download/server">Ubuntu server</a> as it is already configured to optimize idle power consumption.</p>
+      <p>Another easy solution for appropriate server hardware is to buy a <a href="https://www.raspberrypi.com/products/">Raspberry Pi</a>, which is a single-board basic personal computer that can be used to experiment with.</p>
+      <h2 id="running-the-web-application-in-docker">Running the Web Application in Docker</h2>
+      <p>Docker is a tool that provides OS-level virtualization in containers. We will use this to create lightweight containers to run a web server in a safe, isolated environment.</p>
+      <ol>
+        <li>Install Docker and Docker compose with <code>sudo apt install docker.io docker-compose</code></li>
+        <li>Run <code>systemctl status docker</code> to ensure Docker is running; otherwise run <code>sudo systemctl enable --now docker</code></li>
+        <li>Create a <code>docker-compose.yml</code> in the project folder that runs the app.</li>
+      </ol>
+      <p>The following <code>docker-compose.yml</code> example is used to run a Flask app project.</p>
+      <div class="highlight">
+        <div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+          <table style="border-spacing:0;padding:0;margin:0;border:0;">
+            <tr>
+              <td style="vertical-align:top;padding:0;margin:0;border:0;">
+                <pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">10
+</span></code></pre>
+              </td>
+              <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+                <pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#81a1c1">version</span><span style="color:#eceff4">:</span> <span style="color:#a3be8c">'3.3'</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">services</span><span style="color:#eceff4">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1">devtools</span><span style="color:#eceff4">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">image</span><span style="color:#eceff4">:</span> python:3.10
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">command</span><span style="color:#eceff4">:</span> sh -c "pip3 install -r requirements.txt &amp;& waitress-serve --port=8080 --call app:create_app"
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">working_dir</span><span style="color:#eceff4">:</span> /dist
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">volumes</span><span style="color:#eceff4">:</span>
+</span></span><span style="display:flex;"><span>      - ./:/dist
+</span></span><span style="display:flex;"><span>    <span style="color:#81a1c1">ports</span><span style="color:#eceff4">:</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#a3be8c">"80:8080"</span>
+</span></span></code></pre>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <p>This configuration pulls a Python3 Docker image from <a href="https://hub.docker.com/_/python">dockerhub</a> and exposes port 80 as the entry-point to the app which exposes port 8080 in the container. When executing <code>docker-compose up -d</code> in project folder, a docker container will be created and the command to install the Python dependencies listed in <code>requirements.txt</code> and serve the Flask app will be run.</p>
+      <p>Once the app is running in a container, test if you’re able to make requests to the app. In the above case, port 80 is exposed, so we can try to fetch the <code>index.html</code> page with <code>curl http://localhost</code> from the host machine. If this outputs a successful response, then the app is running properly. Otherwise, we can check the status of running containers with <code>docker ps</code> and check any logs that were printed with <code>docker logs [CONTAINER_ID]</code>. More information about the docker CLI can be found in <a href="https://docs.docker.com/get-started/docker_cheatsheet.pdf">this cheat sheet</a>.</p>
+      <h2 id="serving-to-the-internet">Serving to the Internet</h2>
+      <p>At this stage, it is possible to forward port 80 on the router and start accessing the webpage through WAN address like <code>http://245.29.147.0</code> (random IP address). But, this URL isn’t very human-readable, so we will go through the steps of setting up a domain name.</p>
+      <p>When a client/browser makes HTTP requests with a domain, such as <code>https://devtools.joeyshi.xyz</code>, it first must do a lookup to find the IP address associated with that domain name. DNS (Domain name system) is a distributed database implemented as a hierarchy of many name servers. The hierarchy can be thought as a search tree, where each node holds resource records.</p>
+      <p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--b9G6DenD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.imgur.com/xOdVIPZ.png" alt="DNS hierachy"></p>
+      <p>For our purposes, we will only care about 2 kinds of resource records:</p>
+      <ol>
+        <li>A record - IPv4 address</li>
+        <li>NS record - Name server reference</li>
+      </ol>
+      <p>To have a domain name point to our host machine’s IP address, we first need to purchase a domain name from a DNS registrar. I personally use <a href="https://www.namecheap.com/">Namecheap</a>.</p>
+      <p>In the DNS settings of your chosen registrar, we can simply add an A record whose value is the IP address of the host machine. <strong>Be sure to use the correct WAN address, not your private IP address using this <a href="https://whatismyipaddress.com/">service</a></strong>. Namecheap has a more detailed guide <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/">here</a>. It normally takes a few minutes before new records take effect. We can check if they’re up by doing a DNS lookup from the command-line with <code>dig [YOUR_DOMAIN]</code>.</p>
+      <p>Once you’re able to look up your IP address using <code>dig</code>, then we can move onto port forwarding port 80 on your router to your host machine. Find your gateway router IP by running <code>netstat -nr</code>.</p>
+      <div class="highlight">
+        <div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+          <table style="border-spacing:0;padding:0;margin:0;border:0;">
+            <tr>
+              <td style="vertical-align:top;padding:0;margin:0;border:0;">
+                <pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">4
+</span></code></pre>
+              </td>
+              <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+                <pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Kernel IP routing table
+</span></span><span style="display:flex;"><span>Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+</span></span><span style="display:flex;"><span>0.0.0.0         192.168.1.254   0.0.0.0         UG        <span style="color:#b48ead">0</span> <span style="color:#b48ead">0</span>          <span style="color:#b48ead">0</span> wlp4s0
+</span></span><span style="display:flex;"><span>192.168.1.0     0.0.0.0         255.255.255.0   U         <span style="color:#b48ead">0</span> <span style="color:#b48ead">0</span>          <span style="color:#b48ead">0</span> wlp4s0
+</span></span></code></pre>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <p>In this case, my gateway router’s IP is <code>192.168.1.254</code>, so the router’s webpage should be accessible by entering its IP into the browser. Once you log in to your router, you should look for wherever the port forwarding table is located and add an entry with the source HTTP port 80 targeting the IP of your host machine with the port specified to the one your web server is running on.</p>
+      <p>If all previous steps were done correctly, requests to your domain will be able to hit your web server now. You can test this in a browser or run <code>curl http://[YOUR_DOMAIN]</code> to check.</p>
+      <h2 id="hiding-your-ip-address-with-cloudflare">Hiding your IP Address with Cloudflare</h2>
+      <p>Before you start advertising your website, note that people will be able to look up your IP address by doing a DNS look up with your domain name. To resolve this issue, we will be using Cloudflare’s DNS proxy feature to hide our IP.</p>
+      <p>A proxied record in Cloudflare is a record for which the requests with the associated domain name will go through Cloudflare first before reaching your host machine. From the outside, doing a DNS look up on a proxied record will return one of Cloudflare’s IP, so your IP will be hidden from people visiting your website.</p>
+      <p><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9607/2210/how-to-set-up-dns-records-for-your-domain-in-cloudflare-account/">Here is a detailed guide for registering your DNS records under Cloudflare</a>.</p>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Although this article omits some other details, like configuring your host machine’s firewall and using Nginx as a reverse-proxy to serve multiple apps, there is enough detail here to get started with self-hosting your projects. I hope this encourages more people to get more involved with network technologies and learn more about the internet.</p>
+    </div>
+  </div>
+</body>
+</html>

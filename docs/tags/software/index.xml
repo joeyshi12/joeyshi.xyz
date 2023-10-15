@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Joey Shi</title>
-    <link>https://joeyshi.xyz/posts/</link>
-    <description>Recent content in Posts on Joey Shi</description>
+    <title>Software on Joey Shi</title>
+    <link>https://joeyshi.xyz/tags/software/</link>
+    <description>Recent content in Software on Joey Shi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/tags/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guide to self-hosting</title>
       <link>https://joeyshi.xyz/posts/guide_to_self_hosting/</link>
@@ -29,13 +29,26 @@ During the installation process for Arch Linux and Debian, my network interface 
     </item>
     
     <item>
-      <title>Extending the Fibonacci sequence to the real domain</title>
-      <link>https://joeyshi.xyz/posts/extending_fibonacci/</link>
-      <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
+      <title>Devtools</title>
+      <link>https://joeyshi.xyz/projects/devtools/</link>
+      <pubDate>Fri, 07 Jul 2023 19:19:43 -0700</pubDate>
       
-      <guid>https://joeyshi.xyz/posts/extending_fibonacci/</guid>
-      <description>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.
-Finding a closed formula To find a closed formula for this sequence, we can use the classic Characteristic Root Technique from discrete mathematics.</description>
+      <guid>https://joeyshi.xyz/projects/devtools/</guid>
+      <description>A collection of custom made tools for programming tasks or challenges I&amp;rsquo;ve encountered.
+Website Source code Webhook debugger The webhook debugger page lists the contents of requests captured from the /webhook/capture endpoint. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is also useful for inspecting request contents from webhook service providers, such as Discord or Github.
+JSON Schema Transcompiler This service is a wrapper for a Python library I wrote: jdtt.</description>
+    </item>
+    
+    <item>
+      <title>Differential Equation Solver</title>
+      <link>https://joeyshi.xyz/projects/diff_eq_solver/</link>
+      <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
+      
+      <guid>https://joeyshi.xyz/projects/diff_eq_solver/</guid>
+      <description>A desktop application that uses the finite difference method to solve differential equations.
+PyPI Page Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.
+Numerical algorithm for solving the heat equation We let $u(t, x)$ be the solution function for the differential equation defined by
+$$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\ \text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;amp;u(0, x) = f(x) \end{align} $$</description>
     </item>
     
   </channel>

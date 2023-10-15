@@ -2,7 +2,7 @@
 title: Differential Equation Solver
 description: A desktop application that uses the finite difference method to solve differential equations.
 date: 2023-07-02T10:49:38-07:00
-tags: ["Python", "Math"]
+tags: ["Software", "Math"]
 repoName: diff-eq-solver
 language: Python
 featured: true
