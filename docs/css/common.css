@@ -125,7 +125,6 @@ p > code, li > code {
 .header-text * {
     padding: 0;
     margin: 0;
-    white-space: nowrap;
 }
 
 .page-body {
