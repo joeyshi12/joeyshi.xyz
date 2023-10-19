@@ -85,10 +85,6 @@ p > code, li > code {
     border-radius: 25px;
 }
 
-.nav-item:first-child {
-    margin-top: 1rem;
-}
-
 .nav-item .icon {
     font-size: 2rem;
     width: 3rem;
@@ -343,6 +339,10 @@ h2 {
 }
 
 @media only screen and (min-width: 72rem) {
+    .nav-item:first-child {
+        margin-top: 1rem;
+    }
+
     .nav-item:last-child {
         display: flex;
         justify-content: center;
