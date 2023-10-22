@@ -15,11 +15,11 @@
 
 .list-item {
     padding: 1rem 0 2rem 0;
-    border-top: 1px solid #eaecef;
+    border-top: 1px solid var(--border-color);
 }
 
 .list-item:last-child {
-    border-bottom: 1px solid #eaecef;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .entry-description {
