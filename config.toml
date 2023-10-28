@@ -1,12 +1,12 @@
 baseURL = "https://joeyshi.xyz"
 languageCode = "en"
-title = "Joey Shi"
+title = "Joey Shi - Software Developer"
 publishDir = "docs"
 disableHugoGeneratorInject = true
 
 [params]
 author = "Joey Shi"
-description = "Software developer and enjoyer of all things math and Linux."
+description = "Software developer and enjoyer of all things math and Linux (I use Arch btw)."
 
 [markup]
   [markup.highlight]
