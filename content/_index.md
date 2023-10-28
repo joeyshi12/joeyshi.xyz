@@ -1,5 +1,5 @@
 ---
-title: "Joey Shi"
+title: "Joey Shi - Software Developer"
 ---
 
 Hello! I'm a software developer and BSc student majoring in Computer Science and Math at the University of British Columbia.

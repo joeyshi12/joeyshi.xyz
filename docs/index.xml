@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Joey Shi on Joey Shi - Software Developer</title>
+    <title>Joey Shi - Software Developer</title>
     <link>https://joeyshi.xyz/</link>
-    <description>Recent content in Joey Shi on Joey Shi - Software Developer</description>
+    <description>Recent content on Joey Shi - Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/index.xml" rel="self" type="application/rss+xml" />
