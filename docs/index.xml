@@ -74,15 +74,14 @@ $$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S
     </item>
     
     <item>
-      <title>Platform Party</title>
-      <link>https://joeyshi.xyz/projects/platform_party/</link>
+      <title>Joey&#39;s Games</title>
+      <link>https://joeyshi.xyz/projects/joey_games/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
       
-      <guid>https://joeyshi.xyz/projects/platform_party/</guid>
-      <description>Real-time multiplayer browser platformer made with p5.
-Game Website Source code This was primarily made using TypeScript and various browser APIs.
-Image processing The first API I leveraged was the canvas scripting API, which offered useful image processing functions. To start using this feature, I added a canvas element in my main HTML template file
-1 &amp;lt;canvas id=&amp;#34;game&amp;#34;&amp;gt;&amp;lt;/canvas&amp;gt; Then, I get the CanvasRenderingContext2D interface from this element in a separate script.</description>
+      <guid>https://joeyshi.xyz/projects/joey_games/</guid>
+      <description>A collection of web games I made and host.
+Game Website Platform Party - A real-time multiplayer 2D platformer. Snake - The classic snake game with a high-score board. Source code These games were made primarily using TypeScript and the HTML5 canvas API.
+Image processing The first API I leveraged was the canvas scripting API, which offered useful image processing functions. To start using this feature, I added a canvas element in my main HTML template file</description>
     </item>
     
     <item>

@@ -1,19 +1,21 @@
 ---
-title: Platform Party
-description: Real-time multiplayer browser platformer made with p5.
+title: Joey's Games
+description: A collection of web games made using the HTML5 canvas API.
 date: 2023-07-02T10:49:38-07:00
 tags: ["Web"]
-repoName: platform-party
+repoName: joeys-games
 language: TypeScript
 featured: true
 ---
 
-Real-time multiplayer browser platformer made with p5.
+A collection of web games I made and host.
 
-- [Game Website](https://platform-party.joeyshi.xyz)
-- [Source code](https://github.com/joeyshi12/platform-party)
+- [Game Website](https://play.joeyshi.xyz/)
+    - Platform Party - A real-time multiplayer 2D platformer.
+    - Snake - The classic snake game with a high-score board.
+- [Source code](https://github.com/joeyshi12/joeys-games)
 
-This was primarily made using TypeScript and various browser APIs.
+These games were made primarily using TypeScript and the HTML5 canvas API.
 
 ## Image processing
 
