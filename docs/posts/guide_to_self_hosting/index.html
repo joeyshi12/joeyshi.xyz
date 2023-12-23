@@ -56,18 +56,18 @@
       </footer>
     </div>
     <div class="content">
-      <p>Self-hosting is a convenient skill to have for anyone. You can set up personal VPNs, personal cloud services, and more once you have some of the basics down for running your own servers. As a developer myself, I find they are useful for cheaply serving my web app projects to the internet.</p>
-      <h2 id="picking-a-host-machine">Picking a Host Machine</h2>
-      <p>We first choose a computer that we want to use as our server. In <a href="/posts/installing_linux">this post</a>, I go into some detail about my experience installing different Linux distros onto old hardware, but in most cases, I recommend installing <a href="https://ubuntu.com/download/server">Ubuntu server</a> as it is already configured to optimize idle power consumption.</p>
-      <p>Another easy solution for appropriate server hardware is to buy a <a href="https://www.raspberrypi.com/products/">Raspberry Pi</a>, which is a single-board basic personal computer that can be used to experiment with.</p>
+      <p>Self-hosting is a convenient skill to have for anyone: it allows you set up personal VPNs, cloud services, and more. As a developer, I find they’re useful for cheaply serving my web app projects over the internet. I’ll be sharing my workflow for serving web applications in this post.</p>
+      <h2 id="setting-up-the-host-machine">Setting up the Host Machine</h2>
+      <p>We first choose our host machine: a computer that we want to use as our server. An easy choice to start off with is a <a href="https://www.raspberrypi.com/products/">Raspberry Pi</a>, which is a single-board basic personal computer.</p>
+      <p>Another option is to use any old unused hardware you have, such as laptops or desktops. This is a good way to avoid letting those devices become e-waste by repurposing them. I recommend installing a Linux disto, such as <a href="https://ubuntu.com/download/server">Ubuntu server</a> since it is lightweight. For sufficiently outdated hardware, there may be some troubleshooting needed to get a Linux distro working properly. I documented some troubles I had while installing Linux on 2 old laptops of mine in <a href="/posts/installing_linux">this post</a></p>
       <h2 id="running-the-web-application-in-docker">Running the Web Application in Docker</h2>
-      <p>Docker is a tool that provides OS-level virtualization in containers. We will use this to create lightweight containers to run a web server in a safe, isolated environment.</p>
+      <p>Docker is a tool that provides OS-level virtualization in containers. We use this to create lightweight containers for running web servers in a safe, isolated environment.</p>
       <ol>
         <li>Install Docker and Docker compose with <code>sudo apt install docker.io docker-compose</code></li>
         <li>Run <code>systemctl status docker</code> to ensure Docker is running; otherwise run <code>sudo systemctl enable --now docker</code></li>
         <li>Create a <code>docker-compose.yml</code> in the project folder that runs the app.</li>
       </ol>
-      <p>The following <code>docker-compose.yml</code> example is used to run a Flask app project.</p>
+      <p>The following <code>docker-compose.yml</code> example is used to run <a href="https://github.com/joeyshi12/devtools">a Flask app</a>. For practice, you can follow along with my procedure.</p>
       <div class="highlight">
         <div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
           <table style="border-spacing:0;padding:0;margin:0;border:0;">
@@ -102,20 +102,16 @@
           </table>
         </div>
       </div>
-      <p>This configuration pulls a Python3 Docker image from <a href="https://hub.docker.com/_/python">dockerhub</a> and exposes port 80 as the entry-point to the app which exposes port 8080 in the container. When executing <code>docker-compose up -d</code> in project folder, a docker container will be created and the command to install the Python dependencies listed in <code>requirements.txt</code> and serve the Flask app will be run.</p>
-      <p>Once the app is running in a container, test if you’re able to make requests to the app. In the above case, port 80 is exposed, so we can try to fetch the <code>index.html</code> page with <code>curl http://localhost</code> from the host machine. If this outputs a successful response, then the app is running properly. Otherwise, we can check the status of running containers with <code>docker ps</code> and check any logs that were printed with <code>docker logs [CONTAINER_ID]</code>. More information about the docker CLI can be found in <a href="https://docs.docker.com/get-started/docker_cheatsheet.pdf">this cheat sheet</a>.</p>
-      <h2 id="serving-to-the-internet">Serving to the Internet</h2>
-      <p>At this stage, it is possible to forward port 80 on the router and start accessing the webpage through WAN address like <code>http://245.29.147.0</code> (random IP address). But, this URL isn’t very human-readable, so we will go through the steps of setting up a domain name.</p>
-      <p>When a client/browser makes HTTP requests with a domain, such as <code>https://devtools.joeyshi.xyz</code>, it first must do a lookup to find the IP address associated with that domain name. DNS (Domain name system) is a distributed database implemented as a hierarchy of many name servers. The hierarchy can be thought as a search tree, where each node holds resource records.</p>
-      <p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--b9G6DenD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.imgur.com/xOdVIPZ.png" alt="DNS hierachy"></p>
-      <p>For our purposes, we will only care about 2 kinds of resource records:</p>
+      <p>The Flask app starts a web server on port 8080. This configuration pulls a Python3 Docker image from <a href="https://hub.docker.com/_/python">dockerhub</a> and forwards requests targeting port 80 on the host machine to port 8080 inside the container. When executing <code>docker-compose up -d</code> in project folder, a docker container will be created and the command to install the Python dependencies listed in <code>requirements.txt</code> and serve the Flask app will be run.</p>
+      <p>Once the app is running in a container, test if you’re able to make requests to the app. In our example, we can try <code>curl http://localhost</code> on the host machine to fetch the index page of the app. For more debugging information run <code>docker ps</code> to check the status of running containers and <code>docker logs &lt;container_id&gt;</code> to check logs within a container. More about the docker CLI can be found in <a href="https://docs.docker.com/get-started/docker_cheatsheet.pdf">this cheat sheet</a>.</p>
+      <h2 id="serving-over-the-internet">Serving over the Internet</h2>
+      <p>At this point, computers in your local network are able to access the web app. You can test this by doing the following:</p>
       <ol>
-        <li>A record - IPv4 address</li>
-        <li>NS record - Name server reference</li>
+        <li>Get the IPv4 address of your host machine by running <code>hostname -I</code>.</li>
+        <li>In another computer, enter <code>http://&lt;IPv4&gt;</code> into the browser.</li>
       </ol>
-      <p>To have a domain name point to our host machine’s IP address, we first need to purchase a domain name from a DNS registrar. I personally use <a href="https://www.namecheap.com/">Namecheap</a>.</p>
-      <p>In the DNS settings of your chosen registrar, we can simply add an A record whose value is the IP address of the host machine. <strong>Be sure to use the correct WAN address, not your private IP address using this <a href="https://whatismyipaddress.com/">service</a></strong>. Namecheap has a more detailed guide <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/">here</a>. It normally takes a few minutes before new records take effect. We can check if the records are up by doing a DNS lookup from the command-line with <code>dig [YOUR_DOMAIN]</code>.</p>
-      <p>Once you’re able to look up your IP address using <code>dig</code>, then we can move onto port forwarding port 80 on your router to your host machine. Find your gateway router IP by running <code>netstat -nr</code>.</p>
+      <p>If there aren’t any problems, then the index page for the app should have shown up. However, this would not work with any computers outside your network yet. For that, we need to port forward the app on the router.</p>
+      <p>To do this, access your router’s settings page from a browser. If you do not remember the URL of your gateway router, you can check with the following command:</p>
       <div class="highlight">
         <div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
           <table style="border-spacing:0;padding:0;margin:0;border:0;">
@@ -125,10 +121,14 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74">6
 </span></code></pre>
               </td>
               <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-                <pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Kernel IP routing table
+                <pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ netstat -nr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Kernel IP routing table
 </span></span><span style="display:flex;"><span>Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 </span></span><span style="display:flex;"><span>0.0.0.0         192.168.1.254   0.0.0.0         UG        <span style="color:#b48ead">0</span> <span style="color:#b48ead">0</span>          <span style="color:#b48ead">0</span> wlp4s0
 </span></span><span style="display:flex;"><span>192.168.1.0     0.0.0.0         255.255.255.0   U         <span style="color:#b48ead">0</span> <span style="color:#b48ead">0</span>          <span style="color:#b48ead">0</span> wlp4s0
@@ -138,14 +138,29 @@
           </table>
         </div>
       </div>
-      <p>In this case, my gateway router’s IP is <code>192.168.1.254</code>, so the router’s webpage should be accessible by entering its IP into the browser. Once you log in to your router, you should look for wherever the port forwarding table is located and add an entry with the source HTTP port 80 targeting the IP of your host machine with the port specified to the one your web server is running on. Run <code>hostname -I</code> on the host machine to find its local IP address.</p>
-      <p>If all previous steps were done correctly, requests to your domain will be able to hit your web server now. You can test this in a browser or run <code>curl http://[YOUR_DOMAIN]</code> to check.</p>
+      <p>In my case, it was <code>http://192.168.1.254</code>. Once you log in to your router, you should look for wherever the port forwarding table is located and add an entry with source HTTP port 80, destination port 80, and the IP of your host machine.</p>
+      <p>If all previous steps were done correctly, requests to your home’s <a href="https://en.wikipedia.org/wiki/Wide_area_network">WAN address</a> will reach the web app. Your WAN address should appear in the router’s settings page, but you can also check this online.</p>
+      <h2 id="setting-up-a-domain-name">Setting up a Domain Name</h2>
+      <p>At this stage, it is possible to access the web app from anywhere by entering your home’s WAN address into the browser, but there are 2 issues:</p>
+      <ol>
+        <li>Anyone who wants to use the app will know your home’s IP.</li>
+        <li>The URL for the app isn’t easily human-readable.</li>
+      </ol>
+      <p>We can start off by fixing the second point first by registering a domain name. When a client/browser makes HTTP requests with a domain, such as <code>https://devtools.joeyshi.xyz</code>, it first must do a lookup to find the IP address associated with that domain name. DNS (Domain name system) is a distributed database implemented as a hierarchy of many name servers. The hierarchy can be thought as a search tree, where each node holds resource records.</p>
+      <p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--b9G6DenD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.imgur.com/xOdVIPZ.png" alt="DNS hierachy"></p>
+      <p>For our purposes, we will only care about 2 kinds of resource records:</p>
+      <ol>
+        <li>A record - IPv4 address</li>
+        <li>NS record - Name server reference</li>
+      </ol>
+      <p>To have a domain name point to our host machine’s IP address, we need to purchase a domain name from a DNS registrar. I personally use <a href="https://www.namecheap.com/">Namecheap</a>.</p>
+      <p>In the DNS settings of your chosen registrar, we can simply add an A record whose value is your WAN address. Namecheap has a more detailed guide <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/">here</a>. It normally takes a few minutes before new records take effect. To check if the records are active, run <code>dig &lt;domain_name&gt;</code> to do a DNS lookup and try entering <code>http://&lt;domain_name&gt;</code> into the browser to do a full test to ensure everything previous is working correctly.</p>
       <h2 id="hiding-your-ip-address-with-cloudflare">Hiding your IP Address with Cloudflare</h2>
-      <p>Before you start advertising your website, note that people will be able to look up your IP address by doing a DNS look up with your domain name. To resolve this issue, we will be using Cloudflare’s DNS proxy feature to hide our IP.</p>
+      <p>Although having a domain name hides your IP address from the browser search bar, it is still very much exposed. Anyone can still do a DNS lookup on the domain to find it. To resolve this issue, we will be using Cloudflare’s DNS proxy feature to hide the IP.</p>
       <p>A proxied record in Cloudflare is a record for which the requests with the associated domain name will go through Cloudflare first before reaching your host machine. From the outside, doing a DNS look up on a proxied record will return one of Cloudflare’s IP, so your IP will be hidden from people visiting your website.</p>
       <p><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9607/2210/how-to-set-up-dns-records-for-your-domain-in-cloudflare-account/">Here is a detailed guide for registering your DNS records under Cloudflare</a>.</p>
-      <h2 id="conclusion">Conclusion</h2>
-      <p>Although this article omits some other details, like configuring your host machine’s firewall and setting up Nginx, there is enough detail here to get started with self-hosting your projects. If you’re interested in learning how to host other services, such as a cloud or VPN, you can visit Luke Smith’s <a href="https://landchad.net/">landchad.net</a> to learn more. I hope this article encourages more people to learn about the internet.</p>
+      <h2 id="remarks">Remarks</h2>
+      <p>Although this article omits some details, like setting up proper HTTPS, a firewall or reverse-proxy, there is enough to get started with self-hosting apps. If you’re interested in learning how to host other services, such as a cloud or VPN, Luke Smith’s <a href="https://landchad.net/">landchad.net</a> is a good resource. Feel free to explore and adapt these steps to your specific needs. Happy hosting!</p>
     </div>
   </div>
 </body>

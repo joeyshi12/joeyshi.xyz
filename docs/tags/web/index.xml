@@ -6,71 +6,49 @@
     <description>Recent content in Web on Joey Shi - Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate>
+    <atom:link href="https://joeyshi.xyz/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guide to self-hosting</title>
       <link>https://joeyshi.xyz/posts/guide_to_self_hosting/</link>
       <pubDate>Mon, 02 Oct 2023 23:29:29 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/posts/guide_to_self_hosting/</guid>
-      <description>Self-hosting is a convenient skill to have for anyone. You can set up personal VPNs, personal cloud services, and more once you have some of the basics down for running your own servers. As a developer myself, I find they are useful for cheaply serving my web app projects to the internet.
-Picking a Host Machine We first choose a computer that we want to use as our server. In this post, I go into some detail about my experience installing different Linux distros onto old hardware, but in most cases, I recommend installing Ubuntu server as it is already configured to optimize idle power consumption.</description>
+      <description>Self-hosting is a convenient skill to have for anyone: it allows you set up personal VPNs, cloud services, and more. As a developer, I find they&amp;rsquo;re useful for cheaply serving my web app projects over the internet. I&amp;rsquo;ll be sharing my workflow for serving web applications in this post.&#xA;Setting up the Host Machine We first choose our host machine: a computer that we want to use as our server. An easy choice to start off with is a Raspberry Pi, which is a single-board basic personal computer.</description>
     </item>
-    
     <item>
       <title>Devtools</title>
       <link>https://joeyshi.xyz/projects/devtools/</link>
       <pubDate>Fri, 07 Jul 2023 19:19:43 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/projects/devtools/</guid>
-      <description>A collection of custom made tools for programming tasks or challenges I&amp;rsquo;ve encountered.
-Website Source code Webhook debugger The webhook debugger page lists the contents of requests captured from the /webhook/capture endpoint. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is also useful for inspecting request contents from webhook service providers, such as Discord or Github.
-JSON Schema Transcompiler This service is a wrapper for a Python library I wrote: jdtt.</description>
+      <description>A collection of custom made tools for programming tasks or challenges I&amp;rsquo;ve encountered.&#xA;Website Source code Webhook debugger The webhook debugger page lists the contents of requests captured from the /webhook/capture endpoint. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is also useful for inspecting request contents from webhook service providers, such as Discord or Github.&#xA;JSON Schema Transcompiler This service is a wrapper for a Python library I wrote: jdtt.</description>
     </item>
-    
     <item>
       <title>ComputerMag</title>
       <link>https://joeyshi.xyz/projects/computer_mag/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/projects/computer_mag/</guid>
-      <description>Wiki for laptops and desktops with technical details and reviews. This was a group project done for a UBC computer science course: CPSC 304.
-Website ER Diagram This is a fullstack web application that was originally made with Java, MySQL, and vanilla HTML/CSS/JavaScript. The web server was implemented using Javalin.
-I later redesigned the frontend to use Angular and setup my Raspberry Pi to be able to run this application in a Docker container.</description>
+      <description>Wiki for laptops and desktops with technical details and reviews. This was a group project done for a UBC computer science course: CPSC 304.&#xA;Website ER Diagram This is a fullstack web application that was originally made with Java, MySQL, and vanilla HTML/CSS/JavaScript. The web server was implemented using Javalin.&#xA;I later redesigned the frontend to use Angular and setup my Raspberry Pi to be able to run this application in a Docker container.</description>
     </item>
-    
     <item>
       <title>Cool Wiki</title>
       <link>https://joeyshi.xyz/projects/cool_wiki/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/projects/cool_wiki/</guid>
-      <description>In my final year at UBC, I decided to typeset notes for some of my courses.
-Website Source code To make some of these notes publicly available, I used the following workflow to convert a collection of markdown notes into HTML pages using Pandoc.
-Organization 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 .</description>
+      <description>In my final year at UBC, I decided to typeset notes for some of my courses.&#xA;Website Source code To make some of these notes publicly available, I used the following workflow to convert a collection of markdown notes into HTML pages using Pandoc.&#xA;Organization 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 .</description>
     </item>
-    
     <item>
       <title>Joey&#39;s Games</title>
       <link>https://joeyshi.xyz/projects/joey_games/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/projects/joey_games/</guid>
-      <description>A collection of web games I made and host.
-Game Website Platform Party - A real-time multiplayer 2D platformer. Snake - The classic snake game with a high-score board. Source code These games were made primarily using TypeScript and the HTML5 canvas API.
-Image processing The first API I leveraged was the canvas scripting API, which offered useful image processing functions. To start using this feature, I added a canvas element in my main HTML template file</description>
+      <description>A collection of web games I made and host.&#xA;Game Website Platform Party - A real-time multiplayer 2D platformer. Snake - The classic snake game with a high-score board. Source code These games were made primarily using TypeScript and the HTML5 canvas API.&#xA;Image processing The first API I leveraged was the canvas scripting API, which offered useful image processing functions. To start using this feature, I added a canvas element in my main HTML template file</description>
     </item>
-    
     <item>
       <title>Visualizing Tech Salaries</title>
       <link>https://joeyshi.xyz/projects/visualizing_tech_salaries/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/projects/visualizing_tech_salaries/</guid>
-      <description>A visualization for understanding the distribution of salaries of workers in the tech industry. This project was something I worked on with a group while taking CPSC 447 at UBC.
-Visualization Write-up Source code Data Dictionary The following data was processed from Salaries for Jobs in Data Science and Tech:
-Attribute Type Cardinality/Range company Categorical 1631 title Categorical 15 basesalary Quantitative [0, 1659870] yearsofexperience Quantitative [0, 69] yearsatcompany Quantitative [0, 69] location Categorical 1050 This dataset consists of tech salary information from North America recorded in the time between January 1st, 2019 and September 9th, 2020.</description>
+      <description>A visualization for understanding the distribution of salaries of workers in the tech industry. This project was something I worked on with a group while taking CPSC 447 at UBC.&#xA;Visualization Write-up Source code Data Dictionary The following data was processed from Salaries for Jobs in Data Science and Tech (removed):&#xA;Attribute Type Cardinality/Range company Categorical 1631 title Categorical 15 basesalary Quantitative [0, 1659870] yearsofexperience Quantitative [0, 69] yearsatcompany Quantitative [0, 69] location Categorical 1050 This dataset consists of tech salary information from North America recorded in the time between January 1st, 2019 and September 9th, 2020.</description>
     </item>
-    
   </channel>
 </rss>

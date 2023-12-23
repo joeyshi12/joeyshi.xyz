@@ -17,7 +17,7 @@ This project was something I worked on with a group while taking CPSC 447 at UBC
 
 ## Data Dictionary
 
-The following data was processed from [Salaries for Jobs in Data Science and Tech](https://www.kaggle.com/datasets/jackogozaly/data-science-and-stem-salaries):
+The following data was processed from [Salaries for Jobs in Data Science and Tech](https://www.kaggle.com/datasets/jackogozaly/data-science-and-stem-salaries) (removed):
 
 | Attribute         | Type         | Cardinality/Range |
 |-------------------|--------------|-------------------|

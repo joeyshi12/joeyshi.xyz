@@ -6,50 +6,35 @@
     <description>Recent content in Software on Joey Shi - Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate>
+    <atom:link href="https://joeyshi.xyz/tags/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guide to self-hosting</title>
       <link>https://joeyshi.xyz/posts/guide_to_self_hosting/</link>
       <pubDate>Mon, 02 Oct 2023 23:29:29 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/posts/guide_to_self_hosting/</guid>
-      <description>Self-hosting is a convenient skill to have for anyone. You can set up personal VPNs, personal cloud services, and more once you have some of the basics down for running your own servers. As a developer myself, I find they are useful for cheaply serving my web app projects to the internet.
-Picking a Host Machine We first choose a computer that we want to use as our server. In this post, I go into some detail about my experience installing different Linux distros onto old hardware, but in most cases, I recommend installing Ubuntu server as it is already configured to optimize idle power consumption.</description>
+      <description>Self-hosting is a convenient skill to have for anyone: it allows you set up personal VPNs, cloud services, and more. As a developer, I find they&amp;rsquo;re useful for cheaply serving my web app projects over the internet. I&amp;rsquo;ll be sharing my workflow for serving web applications in this post.&#xA;Setting up the Host Machine We first choose our host machine: a computer that we want to use as our server. An easy choice to start off with is a Raspberry Pi, which is a single-board basic personal computer.</description>
     </item>
-    
     <item>
       <title>Installing Linux on old laptops</title>
       <link>https://joeyshi.xyz/posts/installing_linux/</link>
       <pubDate>Mon, 10 Jul 2023 23:14:41 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/posts/installing_linux/</guid>
-      <description>I spent the past few days attempting to convert an old Aspire One mini laptop and Lenovo laptop into usable Linux servers. This post documents the troubleshooting steps I took for each system.
-Aspire One The important things to note about this system is that it has a 32-bit architecture and an i686 processor. Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.
-During the installation process for Arch Linux and Debian, my network interface was not detected, which made it annoying to discover available networks to connect to.</description>
+      <description>I spent the past few days attempting to convert an old Aspire One mini laptop and Lenovo laptop into usable Linux servers. This post documents the troubleshooting steps I took for each system.&#xA;Aspire One The important things to note about this system is that it has a 32-bit architecture and an i686 processor. Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.&#xA;During the installation process for Arch Linux and Debian, my network interface was not detected, which made it annoying to discover available networks to connect to.</description>
     </item>
-    
     <item>
       <title>Devtools</title>
       <link>https://joeyshi.xyz/projects/devtools/</link>
       <pubDate>Fri, 07 Jul 2023 19:19:43 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/projects/devtools/</guid>
-      <description>A collection of custom made tools for programming tasks or challenges I&amp;rsquo;ve encountered.
-Website Source code Webhook debugger The webhook debugger page lists the contents of requests captured from the /webhook/capture endpoint. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is also useful for inspecting request contents from webhook service providers, such as Discord or Github.
-JSON Schema Transcompiler This service is a wrapper for a Python library I wrote: jdtt.</description>
+      <description>A collection of custom made tools for programming tasks or challenges I&amp;rsquo;ve encountered.&#xA;Website Source code Webhook debugger The webhook debugger page lists the contents of requests captured from the /webhook/capture endpoint. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is also useful for inspecting request contents from webhook service providers, such as Discord or Github.&#xA;JSON Schema Transcompiler This service is a wrapper for a Python library I wrote: jdtt.</description>
     </item>
-    
     <item>
       <title>Differential Equation Solver</title>
       <link>https://joeyshi.xyz/projects/diff_eq_solver/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/projects/diff_eq_solver/</guid>
-      <description>A desktop application that uses the finite difference method to solve differential equations.
-PyPI Page Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.
-Numerical algorithm for solving the heat equation We let $u(t, x)$ be the solution function for the differential equation defined by
-$$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\ \text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;amp;u(0, x) = f(x) \end{align} $$</description>
+      <description>A desktop application that uses the finite difference method to solve differential equations.&#xA;PyPI Page Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.&#xA;Numerical algorithm for solving the heat equation We let $u(t, x)$ be the solution function for the differential equation defined by&#xA;$$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\ \text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;amp;u(0, x) = f(x) \end{align} $$</description>
     </item>
-    
   </channel>
 </rss>

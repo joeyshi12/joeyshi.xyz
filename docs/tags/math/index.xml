@@ -6,28 +6,21 @@
     <description>Recent content in Math on Joey Shi - Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Jul 2023 10:49:38 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 10:49:38 -0700</lastBuildDate>
+    <atom:link href="https://joeyshi.xyz/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Differential Equation Solver</title>
       <link>https://joeyshi.xyz/projects/diff_eq_solver/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/projects/diff_eq_solver/</guid>
-      <description>A desktop application that uses the finite difference method to solve differential equations.
-PyPI Page Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.
-Numerical algorithm for solving the heat equation We let $u(t, x)$ be the solution function for the differential equation defined by
-$$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\ \text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;amp;u(0, x) = f(x) \end{align} $$</description>
+      <description>A desktop application that uses the finite difference method to solve differential equations.&#xA;PyPI Page Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.&#xA;Numerical algorithm for solving the heat equation We let $u(t, x)$ be the solution function for the differential equation defined by&#xA;$$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\ \text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;amp;u(0, x) = f(x) \end{align} $$</description>
     </item>
-    
     <item>
       <title>Extending the Fibonacci sequence to the real domain</title>
       <link>https://joeyshi.xyz/posts/extending_fibonacci/</link>
       <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
-      
       <guid>https://joeyshi.xyz/posts/extending_fibonacci/</guid>
-      <description>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.
-Finding a closed formula To find a closed formula for this sequence, we can use the classic Characteristic Root Technique from discrete mathematics.</description>
+      <description>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.&#xA;Finding a closed formula To find a closed formula for this sequence, we can use the classic Characteristic Root Technique from discrete mathematics.</description>
     </item>
-    
   </channel>
 </rss>

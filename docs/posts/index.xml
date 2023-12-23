@@ -6,37 +6,28 @@
     <description>Recent content in Posts on Joey Shi - Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate><atom:link href="https://joeyshi.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate>
+    <atom:link href="https://joeyshi.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guide to self-hosting</title>
       <link>https://joeyshi.xyz/posts/guide_to_self_hosting/</link>
       <pubDate>Mon, 02 Oct 2023 23:29:29 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/posts/guide_to_self_hosting/</guid>
-      <description>Self-hosting is a convenient skill to have for anyone. You can set up personal VPNs, personal cloud services, and more once you have some of the basics down for running your own servers. As a developer myself, I find they are useful for cheaply serving my web app projects to the internet.
-Picking a Host Machine We first choose a computer that we want to use as our server. In this post, I go into some detail about my experience installing different Linux distros onto old hardware, but in most cases, I recommend installing Ubuntu server as it is already configured to optimize idle power consumption.</description>
+      <description>Self-hosting is a convenient skill to have for anyone: it allows you set up personal VPNs, cloud services, and more. As a developer, I find they&amp;rsquo;re useful for cheaply serving my web app projects over the internet. I&amp;rsquo;ll be sharing my workflow for serving web applications in this post.&#xA;Setting up the Host Machine We first choose our host machine: a computer that we want to use as our server. An easy choice to start off with is a Raspberry Pi, which is a single-board basic personal computer.</description>
     </item>
-    
     <item>
       <title>Installing Linux on old laptops</title>
       <link>https://joeyshi.xyz/posts/installing_linux/</link>
       <pubDate>Mon, 10 Jul 2023 23:14:41 -0700</pubDate>
-      
       <guid>https://joeyshi.xyz/posts/installing_linux/</guid>
-      <description>I spent the past few days attempting to convert an old Aspire One mini laptop and Lenovo laptop into usable Linux servers. This post documents the troubleshooting steps I took for each system.
-Aspire One The important things to note about this system is that it has a 32-bit architecture and an i686 processor. Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.
-During the installation process for Arch Linux and Debian, my network interface was not detected, which made it annoying to discover available networks to connect to.</description>
+      <description>I spent the past few days attempting to convert an old Aspire One mini laptop and Lenovo laptop into usable Linux servers. This post documents the troubleshooting steps I took for each system.&#xA;Aspire One The important things to note about this system is that it has a 32-bit architecture and an i686 processor. Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.&#xA;During the installation process for Arch Linux and Debian, my network interface was not detected, which made it annoying to discover available networks to connect to.</description>
     </item>
-    
     <item>
       <title>Extending the Fibonacci sequence to the real domain</title>
       <link>https://joeyshi.xyz/posts/extending_fibonacci/</link>
       <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
-      
       <guid>https://joeyshi.xyz/posts/extending_fibonacci/</guid>
-      <description>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.
-Finding a closed formula To find a closed formula for this sequence, we can use the classic Characteristic Root Technique from discrete mathematics.</description>
+      <description>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.&#xA;Finding a closed formula To find a closed formula for this sequence, we can use the classic Characteristic Root Technique from discrete mathematics.</description>
     </item>
-    
   </channel>
 </rss>
