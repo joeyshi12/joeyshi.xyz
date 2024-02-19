@@ -6,8 +6,15 @@
     <description>Recent content on Joey Shi - Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Oct 2023 23:29:29 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 19 Feb 2024 12:49:16 -0800</lastBuildDate>
     <atom:link href="https://joeyshi.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Three.js Gallery</title>
+      <link>https://joeyshi.xyz/projects/threejs_gallery/</link>
+      <pubDate>Mon, 19 Feb 2024 12:49:16 -0800</pubDate>
+      <guid>https://joeyshi.xyz/projects/threejs_gallery/</guid>
+      <description>In the past week and a half, I&amp;rsquo;ve invested some time learning rigging and animation inside Blender. I&amp;rsquo;ve published some of the scenes I&amp;rsquo;ve worked on a separate website, where I used three.js to render everything.&#xA;Website Source code Custom emotes Lethal Company - Doug Walker meme I&amp;rsquo;ve uploaded a video render of this scene on Youtube here.</description>
+    </item>
     <item>
       <title>Guide to self-hosting</title>
       <link>https://joeyshi.xyz/posts/guide_to_self_hosting/</link>

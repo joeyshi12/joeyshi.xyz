@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://joeyshi.xyz/posts/guide_to_self_hosting/</loc>
-    <lastmod>2023-10-02T23:29:29-07:00</lastmod>
-  </url><url>
     <loc>https://joeyshi.xyz/</loc>
+    <lastmod>2024-02-19T12:49:16-08:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/projects/</loc>
+    <lastmod>2024-02-19T12:49:16-08:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/tags/</loc>
+    <lastmod>2024-02-19T12:49:16-08:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/projects/threejs_gallery/</loc>
+    <lastmod>2024-02-19T12:49:16-08:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/tags/web/</loc>
+    <lastmod>2024-02-19T12:49:16-08:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/posts/guide_to_self_hosting/</loc>
     <lastmod>2023-10-02T23:29:29-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/posts/</loc>
@@ -14,19 +26,10 @@
     <loc>https://joeyshi.xyz/tags/software/</loc>
     <lastmod>2023-10-02T23:29:29-07:00</lastmod>
   </url><url>
-    <loc>https://joeyshi.xyz/tags/</loc>
-    <lastmod>2023-10-02T23:29:29-07:00</lastmod>
-  </url><url>
-    <loc>https://joeyshi.xyz/tags/web/</loc>
-    <lastmod>2023-10-02T23:29:29-07:00</lastmod>
-  </url><url>
     <loc>https://joeyshi.xyz/posts/installing_linux/</loc>
     <lastmod>2023-07-10T23:14:41-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/projects/devtools/</loc>
-    <lastmod>2023-07-07T19:19:43-07:00</lastmod>
-  </url><url>
-    <loc>https://joeyshi.xyz/projects/</loc>
     <lastmod>2023-07-07T19:19:43-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/projects/computer_mag/</loc>
