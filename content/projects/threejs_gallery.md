@@ -10,15 +10,15 @@ I've invested some time learning rigging and animation inside Blender.
 I've published some of the scenes I've worked on a separate website,
 where I used three.js to render everything.
 
-- [Website](https://joeyshi.xyz/threejs-gallery)
+- [Website](https://gallery.joeyshi.xyz)
 - [Source code](https://github.com/joeyshi12/threejs-gallery)
 
 ## Custom emotes
 
-{{< iframe "https://joeyshi.xyz/threejs-gallery/custom_emotes" >}}
+{{< iframe "https://gallery.joeyshi.xyz/custom_emotes" >}}
 
 ## Lethal Company - Doug Walker meme
 
 I've uploaded a video render of this scene on Youtube [here](https://www.youtube.com/watch?v=pljVS-0kRZo).
 
-{{< iframe "https://joeyshi.xyz/threejs-gallery/lc_doug_walker" >}}
+{{< iframe "https://gallery.joeyshi.xyz/lc_doug_walker" >}}
