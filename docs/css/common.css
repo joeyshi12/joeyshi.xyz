@@ -2,7 +2,6 @@
     font-family: VarelaRound;
     src: url("/fonts/VarelaRound-Regular.ttf") format("truetype");
     font-style: normal;
-    font-display: swap;
 }
 
 :root {
