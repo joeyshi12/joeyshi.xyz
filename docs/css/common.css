@@ -1,6 +1,7 @@
 @font-face {
-    font-family: VarelaRound;
-    src: url("/fonts/VarelaRound-Regular.ttf") format("truetype");
+    font-family: 'M Plus Rounded 1c';
+    src: url('/fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -130,7 +131,7 @@ p > code, li > code {
 }
 
 .title {
-    font-family: VarelaRound;
+    font-family: "M Plus Rounded 1c", serif;
     font-size: 32px;
 }
 
@@ -150,7 +151,7 @@ section {
 }
 
 h2 {
-    font-family: VarelaRound;
+    font-family: "M Plus Rounded 1c", serif;
     margin: 0.5rem 0;
 }
 
