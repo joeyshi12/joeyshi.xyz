@@ -4,7 +4,7 @@
     <title>Joey Shi - Software Developer</title>
     <link>https://joeyshi.xyz/</link>
     <description>Recent content on Joey Shi - Software Developer</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 19 Feb 2024 12:49:16 -0800</lastBuildDate>
     <atom:link href="https://joeyshi.xyz/index.xml" rel="self" type="application/rss+xml" />
@@ -34,7 +34,7 @@
       <link>https://joeyshi.xyz/projects/devtools/</link>
       <pubDate>Fri, 07 Jul 2023 19:19:43 -0700</pubDate>
       <guid>https://joeyshi.xyz/projects/devtools/</guid>
-      <description>A collection of custom made tools for programming tasks or challenges I&amp;rsquo;ve encountered.&#xA;Website Source code Webhook debugger The webhook debugger page lists the contents of requests captured from the /webhook/capture endpoint. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is also useful for inspecting request contents from webhook service providers, such as Discord or Github.&#xA;JSON Schema Transcompiler This service is a wrapper for a Python library I wrote: jdtt.</description>
+      <description>A collection of custom made tools for programming tasks or challenges I&amp;rsquo;ve encountered.&#xA;Website Source code Webhook tester The webhook tester page allows users to capture requests sent to /webhook/&amp;lt;webhook_id&amp;gt;/capture and displays the contents. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is useful for inspecting request contents from webhook service providers, such as Discord or Github.&#xA;JSON Schema Transcompiler This service is a wrapper for a Python library I wrote: jdtt.</description>
     </item>
     <item>
       <title>ComputerMag</title>
