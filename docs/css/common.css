@@ -45,10 +45,9 @@ a {
     text-decoration: none;
     color: var(--link-color);
     font-weight: 500;
-}
-
-a:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 p > code, li > code {
