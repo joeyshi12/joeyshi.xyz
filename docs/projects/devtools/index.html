@@ -25,30 +25,30 @@
   <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-  <div class="navbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href="/" class="nav-link"><i class="fa-solid fa-house icon"></i> <span class="link-text">Home</span></a>
+  <nav>
+    <ul>
+      <li>
+        <a href="/"><i class="fa-solid fa-house"></i> <span>Home</span></a>
       </li>
-      <li class="nav-item">
-        <a href="/projects" class="nav-link"><i class="fa-solid fa-diagram-project icon"></i> <span class="link-text">Projects</span></a>
+      <li>
+        <a href="/projects"><i class="fa-solid fa-diagram-project"></i> <span>Projects</span></a>
       </li>
-      <li class="nav-item">
-        <a href="/posts" class="nav-link"><i class="fa-solid fa-blog icon"></i> <span class="link-text">Posts</span></a>
+      <li>
+        <a href="/posts"><i class="fa-solid fa-blog"></i> <span>Posts</span></a>
       </li>
-      <li class="nav-item">
-        <a href="/tags" class="nav-link"><i class="fa-solid fa-tag icon"></i> <span class="link-text">Tags</span></a>
+      <li>
+        <a href="/tags"><i class="fa-solid fa-tag"></i> <span>Tags</span></a>
       </li>
-      <li class="nav-item"><span>© 2023 Joey Shi</span></li>
+      <li><span>© 2023 Joey Shi</span></li>
     </ul>
-  </div>
+  </nav>
   <div class="page-body">
     <div class="page-header">
       <div>
         <a class="parent-link" href="https://joeyshi.xyz/projects/">Projects</a> <span><i class="fa-solid fa-caret-right"></i></span>
         <h2 class="page-title">Devtools</h2>
       </div>
-      <footer class="page-header-footer">
+      <footer>
         <span class="page-date">July 7, 2023</span>
         <div>
           <a class="page-tags" href="/tags/software">#Software</a> <a class="page-tags" href="/tags/web">#Web</a>
@@ -56,7 +56,7 @@
       </footer>
     </div>
     <div class="content">
-      <p>A collection of custom made tools for programming tasks or challenges I’ve encountered.</p>
+      <p>A collection of custom-made tools for programming tasks or challenges I’ve encountered.</p>
       <ul>
         <li>
           <a href="https://devtools.joeyshi.xyz">Website</a>
@@ -67,9 +67,11 @@
       </ul>
       <h2 id="webhook-tester">Webhook tester</h2>
       <p>The webhook tester page allows users to capture requests sent to <code>/webhook/&lt;webhook_id&gt;/capture</code> and displays the contents. This feature was inspired by a cross-site scripting CTF challenge I attempted. This tool is useful for inspecting request contents from webhook service providers, such as Discord or Github.</p>
-      <h2 id="json-schema-transcompiler">JSON Schema Transcompiler</h2>
+      <h2 id="dns-visualizer">DNS visualizer</h2>
+      <p>A DNS lookup visualization tool for tracing the search path for an iterative query.</p>
+      <h2 id="json-schema-transcompiler">JSON schema transcompiler</h2>
       <p>This service is a wrapper for a Python library I wrote: <a href="https://pypi.org/project/jdtt/">jdtt</a>. This feature was made to aid in tasks involving serializing the JSON payload from API requests to standard container classes for different programming languages.</p>
-      <h2 id="csv-visualizer">CSV Visualizer</h2>
+      <h2 id="csv-visualizer">CSV visualizer</h2>
       <p>The CSV visualizer allows users to generate 2D data visualizations from a given CSV and query written in a custom DSL I made: <a href="https://github.com/joeyshi12/pql-parser/blob/main/README.md">PQL</a>.</p>
     </div>
   </div>

@@ -15,10 +15,14 @@ where I used three.js to render everything.
 
 ## Custom emotes
 
-{{< iframe "https://gallery.joeyshi.xyz/custom_emotes" >}}
+{{< template >}}
+<iframe src="https://gallery.joeyshi.xyz/custom_emotes"></iframe>
+{{</ template >}}
 
 ## Lethal Company - Doug Walker meme
 
 I've uploaded a video render of this scene on Youtube [here](https://www.youtube.com/watch?v=pljVS-0kRZo).
 
-{{< iframe "https://gallery.joeyshi.xyz/lc_doug_walker" >}}
+{{< template >}}
+<iframe src="https://gallery.joeyshi.xyz/lc_doug_walker"></iframe>
+{{</ template >}}

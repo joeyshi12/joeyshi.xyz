@@ -1,5 +1,6 @@
 {{- define "styles" }}
     <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
 {{- end }}
 
 {{ define "main" }}
@@ -14,7 +15,7 @@
     </div>
     <section>
         <h2>About</h2>
-        <div class="about-content">
+        <div>
             {{- .Content }}
         </div>
         <div class="button-group">
@@ -25,15 +26,15 @@
         <h2>Where to find me</h2>
         <ul class="ext-links">
             <li>
-                <i class="fa-brands fa-github brand-icon"></i>
+                <i class="fa-brands fa-github"></i>
                 <a href="https://github.com/joeyshi12" target="_blank">@joeyshi12</a>
             </li>
             <li>
-                <i class="fa-brands fa-linkedin brand-icon"></i>
+                <i class="fa-brands fa-linkedin"></i>
                 <a href="https://linkedin.com/in/joeyshi12" target="_blank">@joeyshi12</a>
             </li>
             <li>
-                <i class="fa-solid fa-envelope brand-icon"></i>
+                <i class="fa-solid fa-envelope"></i>
                 <a href="mailto:root@joeyshi.xyz">@root@joeyshi.xyz</a>
             </li>
         </ul>
@@ -63,7 +64,7 @@
             <li>
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                 <p>{{ .Description }}</p>
-                <span class="blog-post-date">{{ .Date.Format "January 2, 2006" }}</span>
+                <span>{{ .Date.Format "January 2, 2006" }}</span>
             </li>
         {{- end }}
         </ul>

@@ -9,7 +9,7 @@ author = "Joey Shi"
 description = "Software developer and enjoyer of all things math and Linux (I use Arch btw)."
 
 [Taxonomies]
-  tag = "tags"
+tag = "tags"
 
 [markup]
   [markup.highlight]
