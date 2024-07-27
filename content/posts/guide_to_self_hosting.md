@@ -66,12 +66,12 @@ More about the docker CLI can be found in [this cheat sheet](https://docs.docker
 At this point, computers in your local network are able to access the web app.
 You can test this by doing the following:
 
-1. Get the IPv4 address of your host machine by running `hostname -I`.
+1. Get the IPv4 address of your host machine.
 2. In another computer, enter `http://<IPv4>` into the browser.
 
 If there aren't any problems, then the index page for the app should have shown up.
 However, this would not work with any computers outside your network yet.
-For that, we need to port forward the app on the router.
+For that, we need to port forward port 80 on your router to the app.
 
 To do this, access your router's settings page from a browser.
 If you do not remember the URL of your gateway router, you can check with the following command:
@@ -106,15 +106,13 @@ your home's WAN address into the browser, but there are 2 issues:
 We can start off by fixing the second point first by registering a domain name.
 When a client/browser makes HTTP requests with a domain, such as `https://devtools.joeyshi.xyz`,
 it first must do a lookup to find the IP address associated with that domain name.
-DNS (Domain name system) is a distributed database implemented as a hierarchy of many name servers.
-The hierarchy can be thought as a search tree, where each node holds resource records.
+
+DNS (Domain Name System) is a distributed database implemented as a hierarchy of many name servers.
+This can be thought as a search tree where each node holds records of
+IP addresses (A records) or references to other name servers (NS records).
+The list of DNS resource record types can be found in [this RFC for DNS](https://datatracker.ietf.org/doc/html/rfc1035).
 
 ![DNS hierachy](https://res.cloudinary.com/practicaldev/image/fetch/s--b9G6DenD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.imgur.com/xOdVIPZ.png)
-
-For our purposes, we will only care about 2 kinds of resource records:
-
-1. A record - IPv4 address
-2. NS record - Name server reference
 
 To have a domain name point to our host machine's IP address,
 we need to purchase a domain name from a DNS registrar.
@@ -129,8 +127,7 @@ to do a full test to ensure everything previous is working correctly.
 
 ## Hiding your IP Address with Cloudflare
 
-Although having a domain name hides your IP address from the browser search bar,
-it is still very much exposed.
+Although having a domain name hides your IP address from the browser search bar, it is still very much exposed.
 Anyone can still do a DNS lookup on the domain to find it.
 To resolve this issue, we will be using Cloudflare's DNS proxy feature to hide the IP.
 
@@ -143,8 +140,7 @@ so your IP will be hidden from people visiting your website.
 
 ## Remarks
 
-Although this article omits some details, like setting up proper HTTPS, a firewall or reverse-proxy,
-there is enough to get started with self-hosting apps.
-If you're interested in learning how to host other services,
-such as a cloud or VPN, Luke Smith's [landchad.net](https://landchad.net/) is a good resource.
+If you made it this far, you have successfully self-hosted an app at home.
+Improvements can be made from this point, such as setting up HTTPS, a firewall, and reverse-proxy.
+If you're interested about other services you can host at home, take a look at Luke Smith's [landchad.net](https://landchad.net/).
 Feel free to explore and adapt these steps to your specific needs. Happy hosting!

@@ -93,5 +93,5 @@ which also depicts the Fibonacci numbers and that's all that matters 🙂.
 The plot below depicts the case of $a_n = \frac{1}{2^{n + 1}}$ and $b_n = 0$.
 
 {{< template >}}
-<div id="calculator"></div>
+<div id="calculator" style="height: 500px"></div>
 {{</ template >}}

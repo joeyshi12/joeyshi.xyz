@@ -6,8 +6,15 @@
     <description>Recent content in Math on Joey Shi - Software Developer</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Jul 2023 10:49:38 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2024 23:30:29 -0700</lastBuildDate>
     <atom:link href="https://joeyshi.xyz/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Panning and zooming</title>
+      <link>https://joeyshi.xyz/posts/panning_and_zooming/</link>
+      <pubDate>Mon, 22 Jul 2024 23:30:29 -0700</pubDate>
+      <guid>https://joeyshi.xyz/posts/panning_and_zooming/</guid>
+      <description>This post will describe how panning and zooming can be implemented in an application.&#xA;Points can be described in world space or screen space. The world space is a linear basis that describes where objects in the world are positioned while the screen space is a basis that is used to describe points relative to the screen that the world is being drawn over.&#xA;When panning or zooming on the screen, a different translation and scale is being applied to the screen coordinates to determine how and what slice of the world should be drawn on the screen.</description>
+    </item>
     <item>
       <title>Differential Equation Solver</title>
       <link>https://joeyshi.xyz/projects/diff_eq_solver/</link>

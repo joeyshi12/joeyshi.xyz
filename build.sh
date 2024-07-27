@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Delete old build
+rm -rf ./docs
+
 # Generate build
 hugo
 

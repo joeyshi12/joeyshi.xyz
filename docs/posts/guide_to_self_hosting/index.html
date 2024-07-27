@@ -107,10 +107,10 @@
       <h2 id="serving-over-the-internet">Serving over the Internet</h2>
       <p>At this point, computers in your local network are able to access the web app. You can test this by doing the following:</p>
       <ol>
-        <li>Get the IPv4 address of your host machine by running <code>hostname -I</code>.</li>
+        <li>Get the IPv4 address of your host machine.</li>
         <li>In another computer, enter <code>http://&lt;IPv4&gt;</code> into the browser.</li>
       </ol>
-      <p>If there aren’t any problems, then the index page for the app should have shown up. However, this would not work with any computers outside your network yet. For that, we need to port forward the app on the router.</p>
+      <p>If there aren’t any problems, then the index page for the app should have shown up. However, this would not work with any computers outside your network yet. For that, we need to port forward port 80 on your router to the app.</p>
       <p>To do this, access your router’s settings page from a browser. If you do not remember the URL of your gateway router, you can check with the following command:</p>
       <div class="highlight">
         <div style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -146,13 +146,9 @@
         <li>Anyone who wants to use the app will know your home’s IP.</li>
         <li>The URL for the app isn’t easily human-readable.</li>
       </ol>
-      <p>We can start off by fixing the second point first by registering a domain name. When a client/browser makes HTTP requests with a domain, such as <code>https://devtools.joeyshi.xyz</code>, it first must do a lookup to find the IP address associated with that domain name. DNS (Domain name system) is a distributed database implemented as a hierarchy of many name servers. The hierarchy can be thought as a search tree, where each node holds resource records.</p>
+      <p>We can start off by fixing the second point first by registering a domain name. When a client/browser makes HTTP requests with a domain, such as <code>https://devtools.joeyshi.xyz</code>, it first must do a lookup to find the IP address associated with that domain name.</p>
+      <p>DNS (Domain Name System) is a distributed database implemented as a hierarchy of many name servers. This can be thought as a search tree where each node holds records of IP addresses (A records) or references to other name servers (NS records). The list of DNS resource record types can be found in <a href="https://datatracker.ietf.org/doc/html/rfc1035">this RFC for DNS</a>.</p>
       <p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--b9G6DenD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.imgur.com/xOdVIPZ.png" alt="DNS hierachy"></p>
-      <p>For our purposes, we will only care about 2 kinds of resource records:</p>
-      <ol>
-        <li>A record - IPv4 address</li>
-        <li>NS record - Name server reference</li>
-      </ol>
       <p>To have a domain name point to our host machine’s IP address, we need to purchase a domain name from a DNS registrar. I personally use <a href="https://www.namecheap.com/">Namecheap</a>.</p>
       <p>In the DNS settings of your chosen registrar, we can simply add an A record whose value is your WAN address. Namecheap has a more detailed guide <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/">here</a>. It normally takes a few minutes before new records take effect. To check if the records are active, run <code>dig &lt;domain_name&gt;</code> to do a DNS lookup and try entering <code>http://&lt;domain_name&gt;</code> into the browser to do a full test to ensure everything previous is working correctly.</p>
       <h2 id="hiding-your-ip-address-with-cloudflare">Hiding your IP Address with Cloudflare</h2>
@@ -160,7 +156,7 @@
       <p>A proxied record in Cloudflare is a record for which the requests with the associated domain name will go through Cloudflare first before reaching your host machine. From the outside, doing a DNS look up on a proxied record will return one of Cloudflare’s IP, so your IP will be hidden from people visiting your website.</p>
       <p><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9607/2210/how-to-set-up-dns-records-for-your-domain-in-cloudflare-account/">Here is a detailed guide for registering your DNS records under Cloudflare</a>.</p>
       <h2 id="remarks">Remarks</h2>
-      <p>Although this article omits some details, like setting up proper HTTPS, a firewall or reverse-proxy, there is enough to get started with self-hosting apps. If you’re interested in learning how to host other services, such as a cloud or VPN, Luke Smith’s <a href="https://landchad.net/">landchad.net</a> is a good resource. Feel free to explore and adapt these steps to your specific needs. Happy hosting!</p>
+      <p>If you made it this far, you have successfully self-hosted an app at home. Improvements can be made from this point, such as setting up HTTPS, a firewall, and reverse-proxy. If you’re interested about other services you can host at home, take a look at Luke Smith’s <a href="https://landchad.net/">landchad.net</a>. Feel free to explore and adapt these steps to your specific needs. Happy hosting!</p>
     </div>
   </div>
 </body>
