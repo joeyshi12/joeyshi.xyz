@@ -52,7 +52,7 @@ $$
 S_{2} = \\begin{bmatrix}
 \\Delta s \\cdot s_{1} & 0 & 0 \\\\
 0 & \\Delta s \\cdot s_{1} & 0 \\\\
-0 & 0 & 0
+0 & 0 & 1
 \\end{bmatrix}.
 $$
 
