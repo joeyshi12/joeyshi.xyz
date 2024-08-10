@@ -13,7 +13,7 @@
       <link>https://joeyshi.xyz/posts/panning_and_zooming/</link>
       <pubDate>Mon, 22 Jul 2024 23:30:29 -0700</pubDate>
       <guid>https://joeyshi.xyz/posts/panning_and_zooming/</guid>
-      <description>This post will describe how panning and zooming can be implemented in an application.&#xA;Points can be described in world space or screen space. The world space is a linear basis that describes where objects in the world are positioned while the screen space is a basis that is used to describe points relative to the screen that the world is being drawn over.&#xA;When panning or zooming on the screen, a different translation and scale is being applied to the screen coordinates to determine how and what slice of the world should be drawn on the screen.</description>
+      <description>This post goes over some of the mathematics involved in panning and zooming in graphical applications.&#xA;Points can be described in world space or view space. The world space is a linear basis that describes where objects positioned relative to the world while the view space is a basis that is used to describe points relative to the view that the user sees.&#xA;When panning or zooming in the view, a different translation and scale is being applied to view coordinates to determine what slice of the world should be drawn in the view.</description>
     </item>
     <item>
       <title>Three.js Gallery</title>

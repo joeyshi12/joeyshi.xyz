@@ -50,8 +50,7 @@ a {
     }
 }
 
-p > code, li > code {
-    color: var(--fg);
+code {
     background-color: var(--bg-code);
     padding: .1em .4em;
     border-radius: 6px;

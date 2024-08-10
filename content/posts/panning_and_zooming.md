@@ -1,22 +1,22 @@
 ---
 title: Panning and zooming
-description: Guide for how to implement panning and zooming in graphical applications.
+description: Guide to implementing panning and zooming in graphical applications.
 date: 2024-07-22T23:30:29-07:00
 tags: ["Software", "Math"]
 mathjax: true
 scripts: ["/js/panning_and_zooming.js"]
 ---
 
-This post will describe how panning and zooming can be implemented in an application.
+This post goes over some of the mathematics involved in panning and zooming in graphical applications.
 
-Points can be described in world space or screen space.
+Points can be described in world space or view space.
 The world space is a linear [basis](https://en.wikipedia.org/wiki/Basis_(linear_algebra))
-that describes where objects in the world are positioned while the screen space is a basis
-that is used to describe points relative to the screen that the world is being drawn over.
+that describes where objects positioned relative to the world while the view space is a basis
+that is used to describe points relative to the view that the user sees.
 
-When panning or zooming on the screen, a different translation and scale is being applied
-to the screen coordinates to determine how and what slice of the world should be drawn on the screen.
-Let $A_1 = T_{1}S_{1}$ be the change-of-basis matrix from the initial screen space to world space,
+When panning or zooming in the view, a different translation and scale is being applied
+to view coordinates to determine what slice of the world should be drawn in the view.
+Let $A_1 = T_{1}S_{1}$ be the change-of-basis matrix from the initial view space to world space,
 where $T_{1}, S_{1}$ is a translation matrix and scale matrix respectively.
 
 $$
@@ -36,16 +36,17 @@ $$
 
 ## Panning
 
-When clicking on the screen and dragging the mouse, the screen should be translated
-by the mouse's displacement from the initial mouse down position in screen space $\\pmatrix{\Delta x, \Delta y, 0}^T$.
-Then, the change-of-basis matrix from the new screen space to world space is
-$A_2 = (T_{1} + \\text{translate}(\\Delta x, \\Delta y))S_{1}$.
+In click-drag panning, mousing down in the view and dragging the mouse should translate the view
+in such a way that the mouse in world coordinates does not change.
+Let the mouse's displacement from the initial mouse down position in world space be $\\pmatrix{\Delta x, \Delta y, 0}^T$.
+Then, the change-of-basis matrix from the new view space to world space is
+$A_2 = (T_{1} - \\text{translate}(\\Delta x, \\Delta y))S_{1}$.
 
 ## Zooming
 
-When a user scrolls in the view, this should trigger a scale transformation
+In scroll zooming, when a user scrolls in the view, scale transformation is applied
 relative to the mouse position $m$ by some scaling factor $\\Delta s$.
-Let $A_{2} = T_{2}S_{2}$ be the change-of-basis matrix from the new screen space to the world space.
+Let $A_{2} = T_{2}S_{2}$ be the change-of-basis matrix from the new view space to the world space.
 Clearly, we have
 
 $$
@@ -57,7 +58,7 @@ S_{2} = \\begin{bmatrix}
 $$
 
 Since the scroll scale transformation is centered at $m = \\pmatrix{x_{m}, y_{m}, 1}^T$ (world space),
-the old screen space coordinates of the mouse position is equal to the new screen space coordinates
+the old view space coordinates of the mouse position is equal to the new view space coordinates
 of the mouse position. That is,
 
 $$
@@ -82,7 +83,10 @@ $$
 
 ## Demo
 
-Below is an SVG with panning and zooming interactions implemented using JavaScript event listeners.
+Below is an SVG with click-drag panning and scroll zooming interactions I implemented in JavaScript.
+The view to world matrix is set through the [`transform`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform)
+attribute inside an inner group element in the SVG and this attribute is updated by
+mouse event listener callback functions.
 
 - [Source code](https://github.com/joeyshi12/joeyshi.xyz/blob/main/static/js/panning_and_zooming.js)
 
