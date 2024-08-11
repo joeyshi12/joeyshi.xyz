@@ -50,7 +50,7 @@ a {
     }
 }
 
-code {
+p code {
     background-color: var(--bg-code);
     padding: .1em .4em;
     border-radius: 6px;
