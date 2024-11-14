@@ -1,29 +1,28 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>Panning and zooming</title>
-    <meta charset="utf-8"/>
-    <meta name="author" content="Joey Shi"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-    <meta name="image" property="og:image" content="http://localhost:1313/img/preview.jpg">
-    <meta itemprop="name" content="Joey Shi">
-    <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-    <meta itemprop="image" content="http://localhost:1313/img/preview.jpg">
-    <meta property="og:url" content="http://localhost:1313/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Joey Shi">
-    <meta property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-    <meta property="og:image" content="http://localhost:1313/img/preview.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Joey Shi">
-    <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-    <meta name="twitter:image" content="http://localhost:1313/img/preview.jpg">
-
-    <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/common.css"/>
-    <link rel="stylesheet" href="/css/single.css"/>
-    <script>
+<head>
+  <title>Panning and zooming</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Joey Shi">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+  <meta name="image" property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta itemprop="name" content="Joey Shi">
+  <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+  <meta itemprop="image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta property="og:url" content="https://joeyshi.xyz/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joey Shi">
+  <meta property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+  <meta property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Joey Shi">
+  <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+  <meta name="twitter:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/single.css">
+  <script>
         MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -35,146 +34,76 @@
                 skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
             }
         };
-    </script>
-    <script src="/libs/mathjax/3.2.2/tex-chtml-full.min.js" type="text/javascript"></script>
-    <link rel="icon" href="/favicon.ico">
+  </script>
+  <script src="/libs/mathjax/3.2.2/tex-chtml-full.min.js" type="text/javascript"></script>
+  <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="/projects">
-                    <i class="fa-solid fa-diagram-project"></i>
-                    <span>Projects</span>
-                </a>
-            </li>
-            <li>
-                <a href="/posts">
-                    <i class="fa-solid fa-blog"></i>
-                    <span>Posts</span>
-                </a>
-            </li>
-            <li>
-                <a href="/tags">
-                    <i class="fa-solid fa-tag"></i>
-                    <span>Tags</span>
-                </a>
-            </li>
-            <li>
-                <span>© 2023 Joey Shi</span>
-            </li>
-        </ul>
-    </nav>
-    <div class="page-body">
+  <nav>
+    <ul>
+      <li>
+        <a href="/"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+      </li>
+      <li>
+        <a href="/projects"><i class="fa-solid fa-diagram-project"></i> <span>Projects</span></a>
+      </li>
+      <li>
+        <a href="/posts"><i class="fa-solid fa-blog"></i> <span>Posts</span></a>
+      </li>
+      <li>
+        <a href="/tags"><i class="fa-solid fa-tag"></i> <span>Tags</span></a>
+      </li>
+      <li><span>© 2023 Joey Shi</span></li>
+    </ul>
+  </nav>
+  <div class="page-body">
     <div class="page-header">
+      <div>
+        <a class="parent-link" href="https://joeyshi.xyz/posts/">Posts</a> <span><i class="fa-solid fa-caret-right"></i></span>
+        <h2 class="page-title">Panning and zooming</h2>
+      </div>
+      <footer>
+        <span class="page-date">July 22, 2024</span>
         <div>
-            <a class="parent-link" href="http://localhost:1313/posts/">Posts</a>
-            <span><i class="fa-solid fa-caret-right"></i></span>
-            <h2 class="page-title">Panning and zooming</h2>
+          <a class="page-tags" href="/tags/software">#Software</a> <a class="page-tags" href="/tags/math">#Math</a>
         </div>
-        <footer>
-            <span class="page-date">July 22, 2024</span>
-            <div>
-                <a class="page-tags" href="/tags/software">#Software</a>
-                <a class="page-tags" href="/tags/math">#Math</a>
-            </div>
-        </footer>
+      </footer>
     </div>
-    <div class="content"><p>This post goes over some of the mathematics involved in panning and zooming in graphical applications.</p>
-<p>Points can be described in world space or view space.
-The world space is a linear <a href="https://en.wikipedia.org/wiki/Basis_(linear_algebra)">basis</a>
-that describes where objects positioned relative to the world while the view space is a basis
-that is used to describe points relative to the view that the user sees.</p>
-<p>When panning or zooming in the view, a different translation and scale is being applied
-to view coordinates to determine what slice of the world should be drawn in the view.
-Let $A_1 = T_{1}S_{1}$ be the change-of-basis matrix from the initial view space to world space,
-where $T_{1}, S_{1}$ is a translation matrix and scale matrix respectively.</p>
-<p>$$
-\begin{align}
-T_{1} &amp;= \begin{bmatrix}
-0 &amp; 0 &amp; x_{t_{1}} \\
-0 &amp; 0 &amp; y_{t_{1}} \\
-0 &amp; 0 &amp; 1
-\end{bmatrix}, &amp;
-S_{1} &amp;= \begin{bmatrix}
-s_{1} &amp; 0 &amp; 0 \\
-0 &amp; s_{1} &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{bmatrix}
-\end{align}
-$$</p>
-<h2 id="panning">Panning</h2>
-<p>In click-drag panning, mousing down in the view and dragging the mouse should translate the view
-in such a way that the mouse in world coordinates does not change.
-Let the mouse&rsquo;s displacement from the initial mouse down position in world space be $\pmatrix{\Delta x, \Delta y, 0}^T$.
-Then, the change-of-basis matrix from the new view space to world space is
-$A_2 = (T_{1} - \text{translate}(\Delta x, \Delta y))S_{1}$.</p>
-<h2 id="zooming">Zooming</h2>
-<p>In scroll zooming, when a user scrolls in the view, scale transformation is applied
-relative to the mouse position $m$ by some scaling factor $\Delta s$.
-Let $A_{2} = T_{2}S_{2}$ be the change-of-basis matrix from the new view space to the world space.
-Clearly, we have</p>
-<p>$$
-S_{2} = \begin{bmatrix}
-\Delta s \cdot s_{1} &amp; 0 &amp; 0 \\
-0 &amp; \Delta s \cdot s_{1} &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{bmatrix}.
-$$</p>
-<p>Since the scroll scale transformation is centered at $m = \pmatrix{x_{m}, y_{m}, 1}^T$ (world space),
-the old view space coordinates of the mouse position is equal to the new view space coordinates
-of the mouse position. That is,</p>
-<p>$$
-\begin{align}
-A_{1}^{-1}m &amp;= A_{2}^{-1}m \\
-(T_{1}S_{1})^{-1}m &amp;= (T_{2}S_{2})^{-1}m \\
-S_{1}^{-1}T_{1}^{-1}m &amp;= S_{2}^{-1}T_{2}^{-1}m \\
-\Rightarrow \frac{x_{m} - x_{t_{1}}}{s_{1}} &amp;= \frac{x_{m} - x_{t_{2}}}{\Delta s \cdot s_{1}} \\
-x_{t_2} &amp;= x_{t_1} - (x_{m} - x_{t_1})(\Delta s - 1)
-\end{align}
-$$</p>
-<p>Similarly, we can show $y_{t_2} = y_{t_1} - (y_{m} - y_{t_1})(\Delta s - 1)$. Thus,</p>
-<p>$$
-T_{2} = \begin{bmatrix}
-0 &amp; 0 &amp; x_{t_1} - (x_{m} - x_{t_1})(\Delta s - 1) \\
-0 &amp; 0 &amp; y_{t_1} - (y_{m} - y_{t_1})(\Delta s - 1) \\
-0 &amp; 0 &amp; 1
-\end{bmatrix}.
-$$</p>
-<h2 id="demo">Demo</h2>
-<p>Below is an SVG with click-drag panning and scroll zooming interactions I implemented in JavaScript.
-The view to world matrix is set through the <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform"><code>transform</code></a>
-attribute inside an inner group element in the SVG and this attribute is updated by
-mouse event listener callback functions.</p>
-<ul>
-<li><a href="https://github.com/joeyshi12/joeyshi.xyz/blob/main/static/js/panning_and_zooming.js">Source code</a></li>
-</ul>
-
-<svg width="100%" height="500" style="background: white">
-    <defs>
-        <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="black" stroke-width="1"/>
+    <div class="content">
+      <p>This post goes over some of the mathematics involved in panning and zooming in graphical applications.</p>
+      <p>Points can be described in world space or view space. The world space is a linear <a href="https://en.wikipedia.org/wiki/Basis_(linear_algebra)">basis</a> that describes where objects positioned relative to the world while the view space is a basis that is used to describe points relative to the view that the user sees.</p>
+      <p>When panning or zooming in the view, a different translation and scale is being applied to view coordinates to determine what slice of the world should be drawn in the view. Let $A_1 = T_{1}S_{1}$ be the change-of-basis matrix from the initial view space to world space, where $T_{1}, S_{1}$ is a translation matrix and scale matrix respectively.</p>
+      <p>$$ \begin{align} T_{1} &amp;= \begin{bmatrix} 0 & 0 & x_{t_{1}} \\ 0 & 0 & y_{t_{1}} \\ 0 & 0 & 1 \end{bmatrix}, & S_{1} &amp;= \begin{bmatrix} s_{1} & 0 & 0 \\ 0 & s_{1} & 0 \\ 0 & 0 & 1 \end{bmatrix} \end{align} $$</p>
+      <h2 id="panning">Panning</h2>
+      <p>In click-drag panning, mousing down in the view and dragging the mouse should translate the view in such a way that the mouse in world coordinates does not change. Let the mouse’s displacement from the initial mouse down position in world space be $\pmatrix{\Delta x, \Delta y, 0}^T$. Then, the change-of-basis matrix from the new view space to world space is $A_2 = (T_{1} - \text{translate}(\Delta x, \Delta y))S_{1}$.</p>
+      <h2 id="zooming">Zooming</h2>
+      <p>In scroll zooming, when a user scrolls in the view, scale transformation is applied relative to the mouse position $m$ by some scaling factor $\Delta s$. Let $A_{2} = T_{2}S_{2}$ be the change-of-basis matrix from the new view space to the world space. Clearly, we have</p>
+      <p>$$ S_{2} = \begin{bmatrix} \Delta s \cdot s_{1} & 0 & 0 \\ 0 & \Delta s \cdot s_{1} & 0 \\ 0 & 0 & 1 \end{bmatrix}. $$</p>
+      <p>Since the scroll scale transformation is centered at $m = \pmatrix{x_{m}, y_{m}, 1}^T$ (world space), the old view space coordinates of the mouse position is equal to the new view space coordinates of the mouse position. That is,</p>
+      <p>$$ \begin{align} A_{1}^{-1}m &amp;= A_{2}^{-1}m \\ (T_{1}S_{1})^{-1}m &amp;= (T_{2}S_{2})^{-1}m \\ S_{1}^{-1}T_{1}^{-1}m &amp;= S_{2}^{-1}T_{2}^{-1}m \\ \Rightarrow \frac{x_{m} - x_{t_{1}}}{s_{1}} &amp;= \frac{x_{m} - x_{t_{2}}}{\Delta s \cdot s_{1}} \\ x_{t_2} &amp;= x_{t_1} - (x_{m} - x_{t_1})(\Delta s - 1) \end{align} $$</p>
+      <p>Similarly, we can show $y_{t_2} = y_{t_1} - (y_{m} - y_{t_1})(\Delta s - 1)$. Thus,</p>
+      <p>$$ T_{2} = \begin{bmatrix} 0 & 0 & x_{t_1} - (x_{m} - x_{t_1})(\Delta s - 1) \\ 0 & 0 & y_{t_1} - (y_{m} - y_{t_1})(\Delta s - 1) \\ 0 & 0 & 1 \end{bmatrix}. $$</p>
+      <h2 id="demo">Demo</h2>
+      <p>Below is an SVG with click-drag panning and scroll zooming interactions I implemented in JavaScript. The view to world matrix is set through the <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform"><code>transform</code></a> attribute inside an inner group element in the SVG and this attribute is updated by mouse event listener callback functions.</p>
+      <ul>
+        <li>
+          <a href="https://github.com/joeyshi12/joeyshi.xyz/blob/main/static/js/panning_and_zooming.js">Source code</a>
+        </li>
+      </ul><svg width="100%" height="500" style="background: white">
+      <defs>
+        <pattern id="smallGrid" width="20" height="20" patternunits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="black" stroke-width="1"></path>
         </pattern>
-        <pattern id="grid" width="200" height="200" patternUnits="userSpaceOnUse">
-            <rect width="200" height="200" fill="url(#smallGrid)"/>
-            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="black" stroke-width="2"/>
+        <pattern id="grid" width="200" height="200" patternunits="userSpaceOnUse">
+          <rect width="200" height="200" fill="url(#smallGrid)"></rect>
+          <path d="M 200 0 L 0 0 0 200" fill="none" stroke="black" stroke-width="2"></path>
         </pattern>
-    </defs>
-    <g>
-        <rect width="401" height="401" fill="url(#grid)" />
-    </g>
-</svg>
-
-
-
+      </defs>
+      <g>
+        <rect width="401" height="401" fill="url(#grid)"></rect>
+      </g></svg>
     </div>
-    </div>
-    <script src="/js/panning_and_zooming.js"></script>
+  </div>
+  <script src="/js/panning_and_zooming.js"></script>
 </body>
 </html>

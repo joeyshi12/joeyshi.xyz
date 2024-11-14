@@ -2,61 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://joeyshi.xyz/</loc>
     <lastmod>2024-11-13T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/pc_builder/</loc>
+    <loc>https://joeyshi.xyz/projects/pc_builder/</loc>
     <lastmod>2024-11-13T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://joeyshi.xyz/projects/</loc>
     <lastmod>2024-11-13T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://joeyshi.xyz/tags/</loc>
     <lastmod>2024-11-13T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/web/</loc>
+    <loc>https://joeyshi.xyz/tags/web/</loc>
     <lastmod>2024-11-13T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/math/</loc>
+    <loc>https://joeyshi.xyz/tags/math/</loc>
     <lastmod>2024-07-22T23:30:29-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/panning_and_zooming/</loc>
+    <loc>https://joeyshi.xyz/posts/panning_and_zooming/</loc>
     <lastmod>2024-07-22T23:30:29-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://joeyshi.xyz/posts/</loc>
     <lastmod>2024-07-22T23:30:29-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/software/</loc>
+    <loc>https://joeyshi.xyz/tags/software/</loc>
     <lastmod>2024-07-22T23:30:29-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/threejs_gallery/</loc>
+    <loc>https://joeyshi.xyz/projects/threejs_gallery/</loc>
     <lastmod>2024-02-19T12:49:16-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/guide_to_self_hosting/</loc>
+    <loc>https://joeyshi.xyz/posts/guide_to_self_hosting/</loc>
     <lastmod>2023-10-02T23:29:29-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/installing_linux/</loc>
+    <loc>https://joeyshi.xyz/posts/installing_linux/</loc>
     <lastmod>2023-07-10T23:14:41-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/devtools/</loc>
+    <loc>https://joeyshi.xyz/projects/devtools/</loc>
     <lastmod>2023-07-07T19:19:43-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/cool_wiki/</loc>
+    <loc>https://joeyshi.xyz/projects/cool_wiki/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/diff_eq_solver/</loc>
+    <loc>https://joeyshi.xyz/projects/diff_eq_solver/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/joey_games/</loc>
+    <loc>https://joeyshi.xyz/projects/joey_games/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/school/</loc>
+    <loc>https://joeyshi.xyz/tags/school/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/visualizing_tech_salaries/</loc>
+    <loc>https://joeyshi.xyz/projects/visualizing_tech_salaries/</loc>
     <lastmod>2023-07-02T10:49:38-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/extending_fibonacci/</loc>
+    <loc>https://joeyshi.xyz/posts/extending_fibonacci/</loc>
     <lastmod>2023-01-07T22:58:20-08:00</lastmod>
   </url>
 </urlset>

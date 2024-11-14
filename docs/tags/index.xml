@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Joey Shi - Software Developer</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://joeyshi.xyz/tags/</link>
     <description>Recent content in Tags on Joey Shi - Software Developer</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 13 Nov 2024 10:49:38 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joeyshi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web</title>
-      <link>http://localhost:1313/tags/web/</link>
+      <link>https://joeyshi.xyz/tags/web/</link>
       <pubDate>Wed, 13 Nov 2024 10:49:38 -0700</pubDate>
-      <guid>http://localhost:1313/tags/web/</guid>
+      <guid>https://joeyshi.xyz/tags/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Math</title>
-      <link>http://localhost:1313/tags/math/</link>
+      <link>https://joeyshi.xyz/tags/math/</link>
       <pubDate>Mon, 22 Jul 2024 23:30:29 -0700</pubDate>
-      <guid>http://localhost:1313/tags/math/</guid>
+      <guid>https://joeyshi.xyz/tags/math/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>http://localhost:1313/tags/software/</link>
+      <link>https://joeyshi.xyz/tags/software/</link>
       <pubDate>Mon, 22 Jul 2024 23:30:29 -0700</pubDate>
-      <guid>http://localhost:1313/tags/software/</guid>
+      <guid>https://joeyshi.xyz/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>School</title>
-      <link>http://localhost:1313/tags/school/</link>
+      <link>https://joeyshi.xyz/tags/school/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      <guid>http://localhost:1313/tags/school/</guid>
+      <guid>https://joeyshi.xyz/tags/school/</guid>
       <description></description>
     </item>
   </channel>

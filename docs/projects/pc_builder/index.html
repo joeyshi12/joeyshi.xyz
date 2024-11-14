@@ -1,86 +1,69 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>PC Builder</title>
-    <meta charset="utf-8"/>
-    <meta name="author" content="Joey Shi"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-    <meta name="image" property="og:image" content="http://localhost:1313/img/preview.jpg">
-    <meta itemprop="name" content="Joey Shi">
-    <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-    <meta itemprop="image" content="http://localhost:1313/img/preview.jpg">
-    <meta property="og:url" content="http://localhost:1313/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Joey Shi">
-    <meta property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-    <meta property="og:image" content="http://localhost:1313/img/preview.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Joey Shi">
-    <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-    <meta name="twitter:image" content="http://localhost:1313/img/preview.jpg">
-
-    <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/common.css"/>
-    <link rel="stylesheet" href="/css/single.css"/>
-    <link rel="icon" href="/favicon.ico">
+<head>
+  <title>PC Builder</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Joey Shi">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+  <meta name="image" property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta itemprop="name" content="Joey Shi">
+  <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+  <meta itemprop="image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta property="og:url" content="https://joeyshi.xyz/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joey Shi">
+  <meta property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+  <meta property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Joey Shi">
+  <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+  <meta name="twitter:image" content="https://joeyshi.xyz/img/preview.jpg">
+  <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/single.css">
+  <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="/projects">
-                    <i class="fa-solid fa-diagram-project"></i>
-                    <span>Projects</span>
-                </a>
-            </li>
-            <li>
-                <a href="/posts">
-                    <i class="fa-solid fa-blog"></i>
-                    <span>Posts</span>
-                </a>
-            </li>
-            <li>
-                <a href="/tags">
-                    <i class="fa-solid fa-tag"></i>
-                    <span>Tags</span>
-                </a>
-            </li>
-            <li>
-                <span>© 2023 Joey Shi</span>
-            </li>
-        </ul>
-    </nav>
-    <div class="page-body">
+  <nav>
+    <ul>
+      <li>
+        <a href="/"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+      </li>
+      <li>
+        <a href="/projects"><i class="fa-solid fa-diagram-project"></i> <span>Projects</span></a>
+      </li>
+      <li>
+        <a href="/posts"><i class="fa-solid fa-blog"></i> <span>Posts</span></a>
+      </li>
+      <li>
+        <a href="/tags"><i class="fa-solid fa-tag"></i> <span>Tags</span></a>
+      </li>
+      <li><span>© 2023 Joey Shi</span></li>
+    </ul>
+  </nav>
+  <div class="page-body">
     <div class="page-header">
+      <div>
+        <a class="parent-link" href="https://joeyshi.xyz/projects/">Projects</a> <span><i class="fa-solid fa-caret-right"></i></span>
+        <h2 class="page-title">PC Builder</h2>
+      </div>
+      <footer>
+        <span class="page-date">November 13, 2024</span>
         <div>
-            <a class="parent-link" href="http://localhost:1313/projects/">Projects</a>
-            <span><i class="fa-solid fa-caret-right"></i></span>
-            <h2 class="page-title">PC Builder</h2>
+          <a class="page-tags" href="/tags/web">#Web</a>
         </div>
-        <footer>
-            <span class="page-date">November 13, 2024</span>
-            <div>
-                <a class="page-tags" href="/tags/web">#Web</a>
-            </div>
-        </footer>
+      </footer>
     </div>
-    <div class="content"><p>Website for browsing and putting together PC builds.</p>
-<ul>
-<li><a href="https://pc-builder.joeyshi.xyz/">Website</a></li>
-</ul>
-<p>This is a fullstack web application that was made using a
-<a href="https://javalin.io">Javalin</a> webserver, <a href="https://mariadb.org/">MariaDB</a> database, and <a href="https://angular.io/">Angular</a> frontend.
-The website is served by my Raspberry Pi at home.
-The Pi runs <a href="https://nginx.org/">Nginx</a> as a reverse proxy to forward requests to a docker container running the PC Builder webserver.</p>
-
+    <div class="content">
+      <p>Website for browsing and putting together PC builds.</p>
+      <ul>
+        <li>
+          <a href="https://pc-builder.joeyshi.xyz/">Website</a>
+        </li>
+      </ul>
+      <p>This is a fullstack web application that was made using a <a href="https://javalin.io">Javalin</a> webserver, <a href="https://mariadb.org/">MariaDB</a> database, and <a href="https://angular.io/">Angular</a> frontend. The website is served by my Raspberry Pi at home. The Pi runs <a href="https://nginx.org/">Nginx</a> as a reverse proxy to forward requests to a docker container running the PC Builder webserver.</p>
     </div>
-    </div>
+  </div>
 </body>
 </html>
