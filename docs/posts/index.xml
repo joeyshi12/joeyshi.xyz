@@ -16,6 +16,13 @@
       <description>This post will describe how panning and zooming can be implemented in an application.&#xA;Points can be described in world space or screen space. The world space is a linear basis that describes where objects in the world are positioned while the screen space is a basis that is used to describe points relative to the screen that the world is being drawn over.&#xA;When panning or zooming on the screen, a different translation and scale is being applied to the screen coordinates to determine how and what slice of the world should be drawn on the screen.</description>
     </item>
     <item>
+      <title>Dragon curve visualization</title>
+      <link>https://joeyshi.xyz/posts/dragon_curve_visualization/</link>
+      <pubDate>Wed, 26 Jun 2024 23:28:21 -0700</pubDate>
+      <guid>https://joeyshi.xyz/posts/dragon_curve_visualization/</guid>
+      <description>The dragon curve is awesome :).&#xA;Prev Next </description>
+    </item>
+    <item>
       <title>Guide to self-hosting</title>
       <link>https://joeyshi.xyz/posts/guide_to_self_hosting/</link>
       <pubDate>Mon, 02 Oct 2023 23:29:29 -0700</pubDate>
