@@ -1,28 +1,29 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <title>Differential Equation Solver</title>
-  <meta charset="utf-8">
-  <meta name="author" content="Joey Shi">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-  <meta name="image" property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
-  <meta itemprop="name" content="Joey Shi">
-  <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-  <meta itemprop="image" content="https://joeyshi.xyz/img/preview.jpg">
-  <meta property="og:url" content="https://joeyshi.xyz/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Joey Shi">
-  <meta property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-  <meta property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Joey Shi">
-  <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-  <meta name="twitter:image" content="https://joeyshi.xyz/img/preview.jpg">
-  <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/single.css">
-  <script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Differential Equation Solver</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Joey Shi"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+    <meta name="image" property="og:image" content="http://localhost:1313/img/preview.jpg">
+    <meta itemprop="name" content="Joey Shi">
+    <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+    <meta itemprop="image" content="http://localhost:1313/img/preview.jpg">
+    <meta property="og:url" content="http://localhost:1313/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Joey Shi">
+    <meta property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+    <meta property="og:image" content="http://localhost:1313/img/preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joey Shi">
+    <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+    <meta name="twitter:image" content="http://localhost:1313/img/preview.jpg">
+
+    <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/single.css"/>
+    <script>
         MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -34,69 +35,106 @@
                 skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
             }
         };
-  </script>
-  <script src="/libs/mathjax/3.2.2/tex-chtml-full.min.js" type="text/javascript"></script>
-  <link rel="icon" href="/favicon.ico">
+    </script>
+    <script src="/libs/mathjax/3.2.2/tex-chtml-full.min.js" type="text/javascript"></script>
+    <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li>
-        <a href="/"><i class="fa-solid fa-house"></i> <span>Home</span></a>
-      </li>
-      <li>
-        <a href="/projects"><i class="fa-solid fa-diagram-project"></i> <span>Projects</span></a>
-      </li>
-      <li>
-        <a href="/posts"><i class="fa-solid fa-blog"></i> <span>Posts</span></a>
-      </li>
-      <li>
-        <a href="/tags"><i class="fa-solid fa-tag"></i> <span>Tags</span></a>
-      </li>
-      <li><span>© 2023 Joey Shi</span></li>
-    </ul>
-  </nav>
-  <div class="page-body">
+    <nav>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="/projects">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="/posts">
+                    <i class="fa-solid fa-blog"></i>
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="fa-solid fa-tag"></i>
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <span>© 2023 Joey Shi</span>
+            </li>
+        </ul>
+    </nav>
+    <div class="page-body">
     <div class="page-header">
-      <div>
-        <a class="parent-link" href="https://joeyshi.xyz/projects/">Projects</a> <span><i class="fa-solid fa-caret-right"></i></span>
-        <h2 class="page-title">Differential Equation Solver</h2>
-      </div>
-      <footer>
-        <span class="page-date">July 2, 2023</span>
         <div>
-          <a class="page-tags" href="/tags/software">#Software</a> <a class="page-tags" href="/tags/math">#Math</a>
+            <a class="parent-link" href="http://localhost:1313/projects/">Projects</a>
+            <span><i class="fa-solid fa-caret-right"></i></span>
+            <h2 class="page-title">Differential Equation Solver</h2>
         </div>
-      </footer>
+        <footer>
+            <span class="page-date">July 2, 2023</span>
+            <div>
+                <a class="page-tags" href="/tags/software">#Software</a>
+                <a class="page-tags" href="/tags/math">#Math</a>
+            </div>
+        </footer>
     </div>
-    <div class="content">
-      <p>A desktop application that uses the finite difference method to solve differential equations.</p>
-      <ul>
-        <li>
-          <a href="https://pypi.org/project/diffeq-solver-tk/">PyPI Page</a>
-        </li>
-        <li>
-          <a href="https://github.com/joeyshi12/diff-eq-solver">Source code</a>
-        </li>
-      </ul>
-      <p>This application uses techniques from these <a href="https://personal.math.ubc.ca/~peirce/M257_316_2012_Lecture_8.pdf">lecture notes</a> to compute the solution of PDEs numerically.</p>
-      <h2 id="numerical-algorithm-for-solving-the-heat-equation">Numerical algorithm for solving the heat equation</h2>
-      <p>We let $u(t, x)$ be the solution function for the differential equation defined by</p>
-      <p>$$ \begin{align} \text{PDE}:\quad &amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &lt; x \leq L, 0 &lt; t \leq T \\ \text{BC}:\quad &amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;u(0, x) = f(x) \end{align} $$</p>
-      <p>Let $u[i][j] = u(i \Delta t, j \Delta x)$ for $i = 0$ to $i = K - 1$ and $j = 0$ to $j = N - 1$ for $\Delta t = T / (K - 1)$ and $\Delta x = L / (N - 1)$. For $\Delta t$ small enough, we can approximate $u_{t}(t, x)$ with the forward difference:</p>
-      <p>$$ u_{t}(t, x) = (u(t + \Delta t, x) - u(t, x)) / \Delta t $$</p>
-      <p>For $\Delta x$ small enough, we can approximate $u_{xx}(t, x)$ with the second order central difference:</p>
-      <p>$$ u_{xx}(t, x) = \frac{u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)}{(\Delta x)^2} $$</p>
-      <p>So after substituting and rearranging $u_{xx}$, $u_{t}$ in $u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, we get</p>
-      <p>$$ u(t + \Delta t, x) = u(t, x) + \frac{\alpha \Delta t}{(\Delta x)^2} (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) + S(t, x) \Delta t $$</p>
-      <p>Thus, we can compute all values of $u[i][j]$ with the following:</p>
-      <p>$$ u[i][j] = \begin{cases} u[i - 1, j] + \frac{\alpha \Delta t}{(\Delta x)^2} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &amp;\text{if } 0 &lt; i \leq K - 1, 0 &lt; j &lt; N - 1 \\ \Phi_1(i \Delta t), &amp;\text{if } j = N - 1 \\ u[i, N - 2] + \Phi_2(i \Delta t) \Delta t, &amp;\text{if } j = 0 \\ f(j \Delta x), &amp;\text{if } i = 0 \end{cases} $$</p>
-      <ul>
-        <li>
-          <a href="https://github.com/joeyshi12/diff-eq-solver/blob/main/src/diffeq_solver_tk/finite_difference.py">Implementation</a>
-        </li>
-      </ul>
+    <div class="content"><p>A desktop application that uses the finite difference method
+to solve differential equations.</p>
+<ul>
+<li><a href="https://pypi.org/project/diffeq-solver-tk/">PyPI Page</a></li>
+<li><a href="https://github.com/joeyshi12/diff-eq-solver">Source code</a></li>
+</ul>
+<p>This application uses techniques from these
+<a href="https://personal.math.ubc.ca/~peirce/M257_316_2012_Lecture_8.pdf">lecture notes</a>
+to compute the solution of PDEs numerically.</p>
+<h2 id="numerical-algorithm-for-solving-the-heat-equation">Numerical algorithm for solving the heat equation</h2>
+<p>We let $u(t, x)$ be the solution function for the differential equation defined by</p>
+<p>$$
+\begin{align}
+\text{PDE}:\quad &amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &lt; x \leq L, 0 &lt; t \leq T \\
+\text{BC}:\quad &amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\
+\text{IC}:\quad &amp;u(0, x) = f(x)
+\end{align}
+$$</p>
+<p>Let $u[i][j] = u(i \Delta t, j \Delta x)$ for $i = 0$ to $i = K - 1$
+and $j = 0$ to $j = N - 1$ for $\Delta t = T / (K - 1)$
+and $\Delta x = L / (N - 1)$.
+For $\Delta t$ small enough, we can approximate $u_{t}(t, x)$ with
+the forward difference:</p>
+<p>$$
+u_{t}(t, x) = (u(t + \Delta t, x) - u(t, x)) / \Delta t
+$$</p>
+<p>For $\Delta x$ small enough, we can approximate $u_{xx}(t, x)$ with the second order central difference:</p>
+<p>$$
+u_{xx}(t, x) = \frac{u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)}{(\Delta x)^2}
+$$</p>
+<p>So after substituting and rearranging $u_{xx}$, $u_{t}$ in
+$u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x)$, we get</p>
+<p>$$
+u(t + \Delta t, x) = u(t, x) + \frac{\alpha \Delta t}{(\Delta x)^2} (u(t, x + \Delta x) - 2 u(t, x) + u(t, x - \Delta x)) + S(t, x) \Delta t
+$$</p>
+<p>Thus, we can compute all values of $u[i][j]$ with the following:</p>
+<p>$$
+u[i][j] = \begin{cases}
+u[i - 1, j] + \frac{\alpha \Delta t}{(\Delta x)^2} (u[i - 1, j + 1] - 2 u[i - 1, j] + u[i - 1, j - 1]) + S(i \Delta t, j \Delta x) \Delta t, &amp;\text{if } 0 &lt; i \leq K - 1, 0 &lt; j &lt; N - 1 \\
+\Phi_1(i \Delta t), &amp;\text{if } j = N - 1 \\
+u[i, N - 2] + \Phi_2(i \Delta t) \Delta t, &amp;\text{if } j = 0 \\
+f(j \Delta x), &amp;\text{if } i = 0
+\end{cases}
+$$</p>
+<ul>
+<li><a href="https://github.com/joeyshi12/diff-eq-solver/blob/main/src/diffeq_solver_tk/finite_difference.py">Implementation</a></li>
+</ul>
+
     </div>
-  </div>
+    </div>
 </body>
 </html>

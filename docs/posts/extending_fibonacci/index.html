@@ -1,28 +1,29 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <title>Extending the Fibonacci sequence to the real domain</title>
-  <meta charset="utf-8">
-  <meta name="author" content="Joey Shi">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-  <meta name="image" property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
-  <meta itemprop="name" content="Joey Shi">
-  <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-  <meta itemprop="image" content="https://joeyshi.xyz/img/preview.jpg">
-  <meta property="og:url" content="https://joeyshi.xyz/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Joey Shi">
-  <meta property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-  <meta property="og:image" content="https://joeyshi.xyz/img/preview.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Joey Shi">
-  <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
-  <meta name="twitter:image" content="https://joeyshi.xyz/img/preview.jpg">
-  <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/single.css">
-  <script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Extending the Fibonacci sequence to the real domain</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Joey Shi"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+    <meta name="image" property="og:image" content="http://localhost:1313/img/preview.jpg">
+    <meta itemprop="name" content="Joey Shi">
+    <meta itemprop="description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+    <meta itemprop="image" content="http://localhost:1313/img/preview.jpg">
+    <meta property="og:url" content="http://localhost:1313/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Joey Shi">
+    <meta property="og:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+    <meta property="og:image" content="http://localhost:1313/img/preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joey Shi">
+    <meta name="twitter:description" content="Software developer and enjoyer of all things math and Linux (I use Arch btw).">
+    <meta name="twitter:image" content="http://localhost:1313/img/preview.jpg">
+
+    <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/single.css"/>
+    <script>
         MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -34,70 +35,124 @@
                 skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
             }
         };
-  </script>
-  <script src="/libs/mathjax/3.2.2/tex-chtml-full.min.js" type="text/javascript"></script>
-  <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-  <link rel="icon" href="/favicon.ico">
+    </script>
+    <script src="/libs/mathjax/3.2.2/tex-chtml-full.min.js" type="text/javascript"></script>
+    <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li>
-        <a href="/"><i class="fa-solid fa-house"></i> <span>Home</span></a>
-      </li>
-      <li>
-        <a href="/projects"><i class="fa-solid fa-diagram-project"></i> <span>Projects</span></a>
-      </li>
-      <li>
-        <a href="/posts"><i class="fa-solid fa-blog"></i> <span>Posts</span></a>
-      </li>
-      <li>
-        <a href="/tags"><i class="fa-solid fa-tag"></i> <span>Tags</span></a>
-      </li>
-      <li><span>© 2023 Joey Shi</span></li>
-    </ul>
-  </nav>
-  <div class="page-body">
+    <nav>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="/projects">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="/posts">
+                    <i class="fa-solid fa-blog"></i>
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="fa-solid fa-tag"></i>
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <span>© 2023 Joey Shi</span>
+            </li>
+        </ul>
+    </nav>
+    <div class="page-body">
     <div class="page-header">
-      <div>
-        <a class="parent-link" href="https://joeyshi.xyz/posts/">Posts</a> <span><i class="fa-solid fa-caret-right"></i></span>
-        <h2 class="page-title">Extending the Fibonacci sequence to the real domain</h2>
-      </div>
-      <footer>
-        <span class="page-date">January 7, 2023</span>
         <div>
-          <a class="page-tags" href="/tags/math">#Math</a>
+            <a class="parent-link" href="http://localhost:1313/posts/">Posts</a>
+            <span><i class="fa-solid fa-caret-right"></i></span>
+            <h2 class="page-title">Extending the Fibonacci sequence to the real domain</h2>
         </div>
-      </footer>
+        <footer>
+            <span class="page-date">January 7, 2023</span>
+            <div>
+                <a class="page-tags" href="/tags/math">#Math</a>
+            </div>
+        </footer>
     </div>
-    <div class="content">
-      <p>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.</p>
-      <h2 id="finding-a-closed-formula">Finding a closed formula</h2>
-      <p>To find a closed formula for this sequence, we can use the classic <a href="https://discrete.openmathbooks.org/dmoi3/sec_recurrence.html#Hke">Characteristic Root Technique</a> from discrete mathematics.</p>
-      <p>The characteristic polynomial for the Fibonacci sequence is given by $r^2 - r - 1 = 0$, so the roots of this quadratic are</p>
-      <p>$$ r_1, r_2 = \frac{1 \pm \sqrt{5}}{2} = \phi, -\frac{1}{\phi},\quad \phi = \frac{1 + \sqrt{5}}{2}. $$</p>
-      <p>The characteristic root technique tells us that the closed formula is of the form $f(n) = c_1 \phi^n + c_2 (-1/\phi)^n$. Plugging in the initial values, we get $0 = f(0) = c_1 + c_2$ and $1 = f(1) = c_1\phi - c_2/\phi$.</p>
-      <p>Solving this system gives us</p>
-      <p>\begin{align} c_1 &amp;= -c_2 = \frac{1}{\sqrt{5}} \\ f(n) &amp;= \frac{\phi^n - (-\frac{1}{\phi})^n}{\sqrt{5}} \end{align}</p>
-      <h2 id="extending-the-closed-formula-to-mathbbr">Extending the closed formula to $\mathbb{R}$</h2>
-      <p>From previous, we found 2 linearly independent solutions to the recursive equation $f(n+2) = f(n+1) + f(n)$:</p>
-      <p>$$ f_1(n) = \phi^{n},\quad f_2(n) = (-1/\phi)^{n}. $$</p>
-      <p>To extend the Fibonacci sequence to the real numbers, we will find solutions to the following system:</p>
-      <p>\begin{cases} f(x + 2) = f(x + 1) + f(x),\quad x\in\mathbb{R} \\ f(0) = 0,\quad f(1) = 1 \end{cases}</p>
-      <p>Let $x\in\mathbb{R}$. We proceed to express $f_2(x)$ in polar form.</p>
-      <p>\begin{align} f_2(x) &amp;= (-1/\phi)^{x} \\ &amp;= (e^{-\log(\phi) + (\pi + 2\pi n)i})^{x},\quad n\in\mathbb{Z} \\ &amp;= \phi^{-x}e^{i(1 + 2n)\pi x} \end{align}</p>
-      <p>This implies $g_n(x) = \phi^{-x}e^{i(1 + 2n)\pi x}$ are all linearly independent solutions. Thus, the general solution is of the form</p>
-      <p>$$ f(x) = c_1\phi^n + \phi^{-x}\sum_{n=0}^{\infty} a_n\cos((1 + 2n)\pi x) + b_n\sin((1 + 2n)\pi x) $$</p>
-      <p>Plugging in the initial conditions, we get</p>
-      <p>$$ c_1 = -\sum_{n=0}^{\infty} a_n = \frac{1}{\sqrt{5}}. $$</p>
-      <p>Thus, the solution is</p>
-      <p>$$ f(x) = \frac{\phi^n}{\sqrt{5}} - \frac{\phi^{-x}}{\sqrt{5}}\sum_{n=0}^{\infty} a_n\cos((1 + 2n)\pi x) + b_n\sin((1 + 2n)\pi x), $$</p>
-      <p>where $\sum_{n=0}^{\infty} a_n = 1$ and $\{b_n\}$ is arbitrary. Although this approach seemed novel initially, one could have also simply observed that any function of the form $h_1(x)\phi^{x} - h_2(x)\phi^{-x}$ with $h_1(n) = 1$ and $h_2(n) = (-1)^n$ for any integer $n$ also works. However, we arrived at a nice function that generates nice curves which also depicts the Fibonacci numbers and that’s all that matters 🙂.</p>
-      <h2 id="example">Example</h2>
-      <p>The plot below depicts the case of $a_n = \frac{1}{2^{n + 1}}$ and $b_n = 0$.</p>
-      <div id="calculator" style="height: 500px"></div>
+    <div class="content"><p>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$,
+where the following terms is defined by the sum of the 2 previous terms.
+Letting $f(n)$ denote the $n$-th term of the sequence,
+we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values
+$f(0) = 0$ and $f(1) = 1$.</p>
+<h2 id="finding-a-closed-formula">Finding a closed formula</h2>
+<p>To find a closed formula for this sequence,
+we can use the classic <a href="https://discrete.openmathbooks.org/dmoi3/sec_recurrence.html#Hke">Characteristic Root Technique</a> from discrete mathematics.</p>
+<p>The characteristic polynomial for the Fibonacci sequence is given by
+$r^2 - r - 1 = 0$, so the roots of this quadratic are</p>
+<p>$$
+r_1, r_2 = \frac{1 \pm \sqrt{5}}{2} = \phi, -\frac{1}{\phi},\quad \phi = \frac{1 + \sqrt{5}}{2}.
+$$</p>
+<p>The characteristic root technique tells us that the closed formula is of the form
+$f(n) = c_1 \phi^n + c_2 (-1/\phi)^n$.
+Plugging in the initial values, we get $0 = f(0) = c_1 + c_2$
+and $1 = f(1) = c_1\phi - c_2/\phi$.</p>
+<p>Solving this system gives us</p>
+<p>\begin{align}
+c_1 &amp;= -c_2 = \frac{1}{\sqrt{5}} \\
+f(n) &amp;= \frac{\phi^n - (-\frac{1}{\phi})^n}{\sqrt{5}}
+\end{align}</p>
+<h2 id="extending-the-closed-formula-to-mathbbr">Extending the closed formula to $\mathbb{R}$</h2>
+<p>From previous, we found 2 linearly independent solutions to the recursive equation $f(n+2) = f(n+1) + f(n)$:</p>
+<p>$$
+f_1(n) = \phi^{n},\quad f_2(n) = (-1/\phi)^{n}.
+$$</p>
+<p>To extend the Fibonacci sequence to the real numbers,
+we will find solutions to the following system:</p>
+<p>\begin{cases}
+f(x + 2) = f(x + 1) + f(x),\quad x\in\mathbb{R} \\
+f(0) = 0,\quad f(1) = 1
+\end{cases}</p>
+<p>Let $x\in\mathbb{R}$. We proceed to express $f_2(x)$ in polar form.</p>
+<p>\begin{align}
+f_2(x) &amp;= (-1/\phi)^{x} \\
+&amp;= (e^{-\log(\phi) + (\pi + 2\pi n)i})^{x},\quad n\in\mathbb{Z} \\
+&amp;= \phi^{-x}e^{i(1 + 2n)\pi x}
+\end{align}</p>
+<p>This implies $g_n(x) = \phi^{-x}e^{i(1 + 2n)\pi x}$ are all linearly independent solutions.
+Thus, the general solution is of the form</p>
+<p>$$
+f(x) = c_1\phi^n + \phi^{-x}\sum_{n=0}^{\infty} a_n\cos((1 + 2n)\pi x) + b_n\sin((1 + 2n)\pi x)
+$$</p>
+<p>Plugging in the initial conditions, we get</p>
+<p>$$
+c_1 = -\sum_{n=0}^{\infty} a_n = \frac{1}{\sqrt{5}}.
+$$</p>
+<p>Thus, the solution is</p>
+<p>$$
+f(x) = \frac{\phi^n}{\sqrt{5}} - \frac{\phi^{-x}}{\sqrt{5}}\sum_{n=0}^{\infty} a_n\cos((1 + 2n)\pi x) + b_n\sin((1 + 2n)\pi x),
+$$</p>
+<p>where $\sum_{n=0}^{\infty} a_n = 1$ and $\{b_n\}$ is arbitrary.
+Although this approach seemed novel initially,
+one could have also simply observed that any function of the form
+$h_1(x)\phi^{x} - h_2(x)\phi^{-x}$ with $h_1(n) = 1$ and $h_2(n) = (-1)^n$ for any integer $n$ also works.
+However, we arrived at a nice function that generates nice curves
+which also depicts the Fibonacci numbers and that&rsquo;s all that matters 🙂.</p>
+<h2 id="example">Example</h2>
+<p>The plot below depicts the case of $a_n = \frac{1}{2^{n + 1}}$ and $b_n = 0$.</p>
+
+<div id="calculator" style="height: 500px"></div>
+
+
+
     </div>
-  </div>
-  <script src="/js/extending_fibonacci.js"></script>
+    </div>
+    <script src="/js/extending_fibonacci.js"></script>
 </body>
 </html>

@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Math on Joey Shi - Software Developer</title>
-    <link>https://joeyshi.xyz/tags/math/</link>
+    <link>http://localhost:1313/tags/math/</link>
     <description>Recent content in Math on Joey Shi - Software Developer</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 22 Jul 2024 23:30:29 -0700</lastBuildDate>
-    <atom:link href="https://joeyshi.xyz/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Panning and zooming</title>
-      <link>https://joeyshi.xyz/posts/panning_and_zooming/</link>
+      <link>http://localhost:1313/posts/panning_and_zooming/</link>
       <pubDate>Mon, 22 Jul 2024 23:30:29 -0700</pubDate>
-      <guid>https://joeyshi.xyz/posts/panning_and_zooming/</guid>
-      <description>This post goes over some of the mathematics involved in panning and zooming in graphical applications.&#xA;Points can be described in world space or view space. The world space is a linear basis that describes where objects positioned relative to the world while the view space is a basis that is used to describe points relative to the view that the user sees.&#xA;When panning or zooming in the view, a different translation and scale is being applied to view coordinates to determine what slice of the world should be drawn in the view.</description>
+      <guid>http://localhost:1313/posts/panning_and_zooming/</guid>
+      <description>&lt;p&gt;This post goes over some of the mathematics involved in panning and zooming in graphical applications.&lt;/p&gt;&#xA;&lt;p&gt;Points can be described in world space or view space.&#xA;The world space is a linear &lt;a href=&#34;https://en.wikipedia.org/wiki/Basis_(linear_algebra)&#34;&gt;basis&lt;/a&gt;&#xA;that describes where objects positioned relative to the world while the view space is a basis&#xA;that is used to describe points relative to the view that the user sees.&lt;/p&gt;&#xA;&lt;p&gt;When panning or zooming in the view, a different translation and scale is being applied&#xA;to view coordinates to determine what slice of the world should be drawn in the view.&#xA;Let $A_1 = T_{1}S_{1}$ be the change-of-basis matrix from the initial view space to world space,&#xA;where $T_{1}, S_{1}$ is a translation matrix and scale matrix respectively.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Differential Equation Solver</title>
-      <link>https://joeyshi.xyz/projects/diff_eq_solver/</link>
+      <link>http://localhost:1313/projects/diff_eq_solver/</link>
       <pubDate>Sun, 02 Jul 2023 10:49:38 -0700</pubDate>
-      <guid>https://joeyshi.xyz/projects/diff_eq_solver/</guid>
-      <description>A desktop application that uses the finite difference method to solve differential equations.&#xA;PyPI Page Source code This application uses techniques from these lecture notes to compute the solution of PDEs numerically.&#xA;Numerical algorithm for solving the heat equation We let $u(t, x)$ be the solution function for the differential equation defined by&#xA;$$ \begin{align} \text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\ \text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\ \text{IC}:\quad &amp;amp;u(0, x) = f(x) \end{align} $$</description>
+      <guid>http://localhost:1313/projects/diff_eq_solver/</guid>
+      <description>&lt;p&gt;A desktop application that uses the finite difference method&#xA;to solve differential equations.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pypi.org/project/diffeq-solver-tk/&#34;&gt;PyPI Page&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/joeyshi12/diff-eq-solver&#34;&gt;Source code&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This application uses techniques from these&#xA;&lt;a href=&#34;https://personal.math.ubc.ca/~peirce/M257_316_2012_Lecture_8.pdf&#34;&gt;lecture notes&lt;/a&gt;&#xA;to compute the solution of PDEs numerically.&lt;/p&gt;&#xA;&lt;h2 id=&#34;numerical-algorithm-for-solving-the-heat-equation&#34;&gt;Numerical algorithm for solving the heat equation&lt;/h2&gt;&#xA;&lt;p&gt;We let $u(t, x)$ be the solution function for the differential equation defined by&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{align}&#xA;\text{PDE}:\quad &amp;amp;u_{t}(t, x) = \alpha u_{xx}(t, x) + S(t, x), 0 &amp;lt; x \leq L, 0 &amp;lt; t \leq T \\&#xA;\text{BC}:\quad &amp;amp;u(t, 0) = \Phi_1(t),\quad u_{t}(t, L) = \Phi_2(t) \\&#xA;\text{IC}:\quad &amp;amp;u(0, x) = f(x)&#xA;\end{align}&#xA;$$&lt;/p&gt;</description>
     </item>
     <item>
       <title>Extending the Fibonacci sequence to the real domain</title>
-      <link>https://joeyshi.xyz/posts/extending_fibonacci/</link>
+      <link>http://localhost:1313/posts/extending_fibonacci/</link>
       <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
-      <guid>https://joeyshi.xyz/posts/extending_fibonacci/</guid>
-      <description>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.&#xA;Finding a closed formula To find a closed formula for this sequence, we can use the classic Characteristic Root Technique from discrete mathematics.</description>
+      <guid>http://localhost:1313/posts/extending_fibonacci/</guid>
+      <description>&lt;p&gt;The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$,&#xA;where the following terms is defined by the sum of the 2 previous terms.&#xA;Letting $f(n)$ denote the $n$-th term of the sequence,&#xA;we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values&#xA;$f(0) = 0$ and $f(1) = 1$.&lt;/p&gt;&#xA;&lt;h2 id=&#34;finding-a-closed-formula&#34;&gt;Finding a closed formula&lt;/h2&gt;&#xA;&lt;p&gt;To find a closed formula for this sequence,&#xA;we can use the classic &lt;a href=&#34;https://discrete.openmathbooks.org/dmoi3/sec_recurrence.html#Hke&#34;&gt;Characteristic Root Technique&lt;/a&gt; from discrete mathematics.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
