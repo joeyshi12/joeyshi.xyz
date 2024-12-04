@@ -13,7 +13,7 @@
       <link>https://joeyshi.xyz/projects/pc_builder/</link>
       <pubDate>Wed, 13 Nov 2024 10:49:38 -0700</pubDate>
       <guid>https://joeyshi.xyz/projects/pc_builder/</guid>
-      <description>Website for browsing and putting together PC builds.&#xA;Website This is a fullstack web application that was made using a Javalin webserver, MariaDB database, and Angular frontend. The website is served by my Raspberry Pi at home. The Pi runs Nginx as a reverse proxy to forward requests to a docker container running the PC Builder webserver.</description>
+      <description>Website for browsing and putting together PC builds.&#xA;Website Test user credentials: User: pcbuilder Password: pcbuilder Source code This is a fullstack web application that was made using a Javalin webserver, MariaDB database, and Angular frontend. The website is served by my Raspberry Pi at home. The Pi runs Nginx as a reverse proxy to forward requests to a docker container running the PC Builder webserver.&#xA;API Reference PUT /users Updates the current logged in user.</description>
     </item>
     <item>
       <title>Three.js Gallery</title>

@@ -28,7 +28,7 @@ This service is a wrapper for a Python library I wrote: [jdtt](https://pypi.org/
 This feature was made to aid in tasks involving serializing the JSON payload from
 API requests to standard container classes for different programming languages.
 
-## CSV visualizer
+## PQL compiler
 
-The CSV visualizer allows users to generate 2D data visualizations from a given CSV and query
-written in a custom DSL I made: [PQL](https://github.com/joeyshi12/pql-parser/blob/main/README.md).
+An online compiler that can generate 2D plots from SQL-like queries and given CSV file.
+The query language used for describing plots is a custom DSL I made: [PQL](https://github.com/joeyshi12/pql-parser/blob/main/README.md).
