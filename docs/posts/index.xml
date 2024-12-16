@@ -13,28 +13,28 @@
       <link>https://joeyshi.xyz/posts/panning_and_zooming/</link>
       <pubDate>Mon, 22 Jul 2024 23:30:29 -0700</pubDate>
       <guid>https://joeyshi.xyz/posts/panning_and_zooming/</guid>
-      <description>This post goes over some of the mathematics involved in panning and zooming in graphical applications.&#xA;Points can be described in world space or view space. The world space is a linear basis that describes where objects positioned relative to the world while the view space is a basis that is used to describe points relative to the view that the user sees.&#xA;When panning or zooming in the view, a different translation and scale is being applied to view coordinates to determine what slice of the world should be drawn in the view.</description>
+      <description>&lt;p&gt;This post goes over some of the mathematics involved in panning and zooming in graphical applications.&lt;/p&gt;&#xA;&lt;p&gt;Points can be described in world space or view space.&#xA;The world space is a linear &lt;a href=&#34;https://en.wikipedia.org/wiki/Basis_(linear_algebra)&#34;&gt;basis&lt;/a&gt;&#xA;that describes where objects positioned relative to the world while the view space is a basis&#xA;that is used to describe points relative to the view that the user sees.&lt;/p&gt;&#xA;&lt;p&gt;When panning or zooming in the view, a different translation and scale is being applied&#xA;to view coordinates to determine what slice of the world should be drawn in the view.&#xA;Let $A_1 = T_{1}S_{1}$ be the change-of-basis matrix from the initial view space to world space,&#xA;where $T_{1}, S_{1}$ is a translation matrix and scale matrix respectively.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Guide to self-hosting</title>
       <link>https://joeyshi.xyz/posts/guide_to_self_hosting/</link>
       <pubDate>Mon, 02 Oct 2023 23:29:29 -0700</pubDate>
       <guid>https://joeyshi.xyz/posts/guide_to_self_hosting/</guid>
-      <description>Self-hosting is a convenient skill to have for anyone: it allows you set up personal VPNs, cloud services, and more. As a developer, I find they&amp;rsquo;re useful for cheaply serving my web app projects over the internet. I&amp;rsquo;ll be sharing my workflow for serving web applications in this post.&#xA;Setting up the Host Machine We first choose our host machine: a computer that we want to use as our server. An easy choice to start off with is a Raspberry Pi, which is a single-board basic personal computer.</description>
+      <description>&lt;p&gt;Self-hosting is a convenient skill to have for anyone:&#xA;it allows you set up personal VPNs, cloud services, and more.&#xA;As a developer, I find they&amp;rsquo;re useful for cheaply serving my web app projects over the internet.&#xA;I&amp;rsquo;ll be sharing my workflow for serving web applications in this post.&lt;/p&gt;&#xA;&lt;h2 id=&#34;setting-up-the-host-machine&#34;&gt;Setting up the Host Machine&lt;/h2&gt;&#xA;&lt;p&gt;We first choose our host machine: a computer that we want to use as our server.&#xA;An easy choice to start off with is a &lt;a href=&#34;https://www.raspberrypi.com/products/&#34;&gt;Raspberry Pi&lt;/a&gt;,&#xA;which is a single-board basic personal computer.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Installing Linux on old laptops</title>
       <link>https://joeyshi.xyz/posts/installing_linux/</link>
       <pubDate>Mon, 10 Jul 2023 23:14:41 -0700</pubDate>
       <guid>https://joeyshi.xyz/posts/installing_linux/</guid>
-      <description>I spent the past few days attempting to convert an old Aspire One mini laptop and Lenovo laptop into usable Linux servers. This post documents the troubleshooting steps I took for each system.&#xA;Aspire One The important things to note about this system is that it has a 32-bit architecture and an i686 processor. Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.&#xA;During the installation process for Arch Linux and Debian, my network interface was not detected, which made it annoying to discover available networks to connect to.</description>
+      <description>&lt;p&gt;I spent the past few days attempting to convert&#xA;an old Aspire One mini laptop and Lenovo laptop into usable Linux servers.&#xA;This post documents the troubleshooting steps I took for each system.&lt;/p&gt;&#xA;&lt;h2 id=&#34;aspire-one&#34;&gt;Aspire One&lt;/h2&gt;&#xA;&lt;p&gt;The important things to note about this system is that it has a 32-bit architecture and an i686 processor.&#xA;Some of the compatible distros I considered installing were Arch Linux, Debian, and Linux Mint.&lt;/p&gt;&#xA;&lt;p&gt;During the installation process for Arch Linux and Debian,&#xA;my network interface was not detected, which made it annoying&#xA;to discover available networks to connect to.&#xA;This was because there were legacy firmware that did not come with these Linux installers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Extending the Fibonacci sequence to the real domain</title>
       <link>https://joeyshi.xyz/posts/extending_fibonacci/</link>
       <pubDate>Sat, 07 Jan 2023 22:58:20 -0800</pubDate>
       <guid>https://joeyshi.xyz/posts/extending_fibonacci/</guid>
-      <description>The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$, where the following terms is defined by the sum of the 2 previous terms. Letting $f(n)$ denote the $n$-th term of the sequence, we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values $f(0) = 0$ and $f(1) = 1$.&#xA;Finding a closed formula To find a closed formula for this sequence, we can use the classic Characteristic Root Technique from discrete mathematics.</description>
+      <description>&lt;p&gt;The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$,&#xA;where the following terms is defined by the sum of the 2 previous terms.&#xA;Letting $f(n)$ denote the $n$-th term of the sequence,&#xA;we can write this as $f(n+2) = f(n+1) + f(n)$ with initial values&#xA;$f(0) = 0$ and $f(1) = 1$.&lt;/p&gt;&#xA;&lt;h2 id=&#34;finding-a-closed-formula&#34;&gt;Finding a closed formula&lt;/h2&gt;&#xA;&lt;p&gt;To find a closed formula for this sequence,&#xA;we can use the classic &lt;a href=&#34;https://discrete.openmathbooks.org/dmoi3/sec_recurrence.html#Hke&#34;&gt;Characteristic Root Technique&lt;/a&gt; from discrete mathematics.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
