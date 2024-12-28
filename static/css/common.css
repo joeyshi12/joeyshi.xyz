@@ -82,7 +82,7 @@ nav {
                 align-items: center;
                 text-decoration: none;
                 color: var(--fg);
-                padding: .8rem 0 .8rem 2rem;
+                padding: 1rem 1rem 1rem 2rem;
                 border-radius: 25px;
                 &:hover {
                     text-decoration: none;
@@ -220,6 +220,7 @@ h2 {
                 font-size: 2rem;
                 transition: 0.5s;
                 width: 1rem;
+                margin-top: -0.5rem; /* Adjust to align arrow */
                 opacity: 0;
             }
             &:hover:before {
