@@ -9,8 +9,6 @@ In my role, I helped drive many different projects,
 delivered impactful feature demos to the company, and mentored new developers.
 
 Outside of work, I enjoy tinkering with different kinds of software and learning new things.
-Most personal projects I invest my time in are motivated by the goals of
-learning a new piece of technology or exploring new use cases of familiar technology.
 You can find some of my works listed [here](/projects/).
 
 Feel free to connect! I'm always up for discussions about productivity tools,
