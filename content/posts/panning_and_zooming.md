@@ -40,7 +40,7 @@ In click-drag panning, mousing down in the view and dragging the mouse should tr
 in such a way that the mouse in world coordinates does not change.
 Let the mouse's displacement from the initial mouse down position in world space be $\\pmatrix{\Delta x, \Delta y, 0}^T$.
 Then, the change-of-basis matrix from the new view space to world space is
-$A_2 = (T_{1} - \\text{translate}(\\Delta x, \\Delta y))S_{1}$.
+$A_2 = (T_{1} + \\text{diag}(\\Delta x, \\Delta y, 0))S_{1}$.
 
 ## Zooming
 
