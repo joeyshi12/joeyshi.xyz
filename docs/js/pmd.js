@@ -2,7 +2,7 @@ const SCALE = 3;
 const CELL_LENGTH = 22;
 const MOVE_DIRECTIONS = [[1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1], [0, -1], [1, -1]];
 const canvas = document.createElement("canvas");
-canvas.style = "z-index: 1; position: absolute;left: 0;top: 0;pointer-events: none";
+canvas.style = "z-index: 1;position: absolute;left: 0;top: 0;pointer-events: none";
 document.body.appendChild(canvas);
 
 const context = canvas.getContext("2d");
@@ -137,12 +137,12 @@ class Pokemon {
     update() {
         this.actionTimer++;
         this.sprite.update();
-        if (this.actionTimer >= this.actionDuration) {
-            this.nextState();
-        }
-        if (this.sprite.isEndReached() && this.moveRepeats > 0) {
+        if (this.actionTimer >= this.actionDuration && this.moveRepeats > 0) {
             this.move();
             this.moveRepeats--;
+        }
+        if (this.actionTimer >= this.actionDuration) {
+            this.nextState();
         }
     }
 
