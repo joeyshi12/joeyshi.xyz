@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>Tags</title>
+  <title>Canvas Sprite Animation</title>
   <meta charset="utf-8">
   <meta name="author" content="Joey Shi">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
   <meta name="twitter:image" content="https://joeyshi.xyz/img/preview.jpg">
   <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/list.css">
+  <link rel="stylesheet" href="/css/single.css">
   <link rel="icon" href="/favicon.ico">
 </head>
 <body>
@@ -43,40 +43,36 @@
     </ul>
   </nav>
   <div class="page-body">
-    <div class="header">
-      <h2 class="title">Tags</h2>
+    <div class="page-header">
+      <div>
+        <a class="parent-link" href="https://joeyshi.xyz/projects/">Projects</a> <span><i class="fa-solid fa-caret-right"></i></span>
+        <h2 class="page-title">Canvas Sprite Animation</h2>
+      </div>
+      <footer>
+        <span class="page-date">May 8, 2025</span>
+        <div>
+          <a class="page-tags" href="/tags/web">#Web</a>
+        </div>
+      </footer>
     </div>
-    <p>Subscribe to my <i class="fa-solid fa-rss"></i> <a href="https://joeyshi.xyz/tags/index.xml">RSS feed</a> for updates!</p>
-    <ul class="listing">
-      <li class="list-item">
-        <a href="https://joeyshi.xyz/tags/web/">Web</a>
-        <p class="entry-description"></p>
-        <footer>
-          <span class="entry-date">May 8, 2025</span>
-        </footer>
-      </li>
-      <li class="list-item">
-        <a href="https://joeyshi.xyz/tags/math/">Math</a>
-        <p class="entry-description"></p>
-        <footer>
-          <span class="entry-date">July 22, 2024</span>
-        </footer>
-      </li>
-      <li class="list-item">
-        <a href="https://joeyshi.xyz/tags/software/">Software</a>
-        <p class="entry-description"></p>
-        <footer>
-          <span class="entry-date">July 22, 2024</span>
-        </footer>
-      </li>
-      <li class="list-item">
-        <a href="https://joeyshi.xyz/tags/school/">School</a>
-        <p class="entry-description"></p>
-        <footer>
-          <span class="entry-date">July 2, 2023</span>
-        </footer>
-      </li>
-    </ul>
+    <div class="content">
+      <p>I had some time off this week and decided the best way to spend that time was to start another random project. So, I implemented an animation system for Pokemon Mystery Dungeon sprites in vanilla JavaScript.</p>
+      <ul>
+        <li>
+          <a href="https://zorflendex.space">Website</a>
+        </li>
+        <li>
+          <a href="https://github.com/joeyshi12/zorflendex.space">Source code</a>
+        </li>
+        <li>
+          <a href="https://sprites.pmdcollab.org/#/">PMD collab sprites</a>
+        </li>
+      </ul>
+      <p>This was inspired by a friend’s suggestion to make the mii maker plaza, where you can view all your mii creations and drag them around the screen.</p>
+      <p><img src="https://i.pinimg.com/736x/f1/38/7f/f1387f11c1c166cebd9b1336769e9f2f.jpg" alt="Mii Plaza"></p>
+      <p>I ended up going with 2D Pokemon sprite animations since my group and I found it more aesthetic. I let some Pokemon loose on this page, but I’ve disabled interactions since their interactions conflict with other elements with transparent backgrounds. But, you can try out the drag-and-drop interaction at <a href="https://zorflendex.space">https://zorflendex.space</a>.</p>
+    </div>
   </div>
+  <script src="/js/pmd.js"></script>
 </body>
 </html>

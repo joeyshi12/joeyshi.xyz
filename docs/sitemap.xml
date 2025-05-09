@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://joeyshi.xyz/</loc>
-    <lastmod>2024-11-13T10:49:38-07:00</lastmod>
+    <loc>https://joeyshi.xyz/projects/canvas_sprite_animation/</loc>
+    <lastmod>2025-05-08T23:25:07-07:00</lastmod>
   </url><url>
-    <loc>https://joeyshi.xyz/projects/pc_builder/</loc>
-    <lastmod>2024-11-13T10:49:38-07:00</lastmod>
+    <loc>https://joeyshi.xyz/</loc>
+    <lastmod>2025-05-08T23:25:07-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/projects/</loc>
-    <lastmod>2024-11-13T10:49:38-07:00</lastmod>
+    <lastmod>2025-05-08T23:25:07-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/tags/</loc>
-    <lastmod>2024-11-13T10:49:38-07:00</lastmod>
+    <lastmod>2025-05-08T23:25:07-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/tags/web/</loc>
+    <lastmod>2025-05-08T23:25:07-07:00</lastmod>
+  </url><url>
+    <loc>https://joeyshi.xyz/projects/pc_builder/</loc>
     <lastmod>2024-11-13T10:49:38-07:00</lastmod>
   </url><url>
     <loc>https://joeyshi.xyz/tags/math/</loc>

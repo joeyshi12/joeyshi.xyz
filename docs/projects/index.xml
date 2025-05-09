@@ -6,8 +6,15 @@
     <description>Recent content in Projects on Joey Shi - Software Developer</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 Nov 2024 10:49:38 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 08 May 2025 23:25:07 -0700</lastBuildDate>
     <atom:link href="https://joeyshi.xyz/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Canvas Sprite Animation</title>
+      <link>https://joeyshi.xyz/projects/canvas_sprite_animation/</link>
+      <pubDate>Thu, 08 May 2025 23:25:07 -0700</pubDate>
+      <guid>https://joeyshi.xyz/projects/canvas_sprite_animation/</guid>
+      <description>&lt;p&gt;I had some time off this week and decided the best way to spend that&#xA;time was to start another random project.&#xA;So, I implemented an animation system for Pokemon Mystery Dungeon sprites in vanilla JavaScript.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://zorflendex.space&#34;&gt;Website&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/joeyshi12/zorflendex.space&#34;&gt;Source code&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://sprites.pmdcollab.org/#/&#34;&gt;PMD collab sprites&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This was inspired by a friend&amp;rsquo;s suggestion to make the mii maker plaza,&#xA;where you can view all your mii creations and drag them around the screen.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.pinimg.com/736x/f1/38/7f/f1387f11c1c166cebd9b1336769e9f2f.jpg&#34; alt=&#34;Mii Plaza&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>PC Builder</title>
       <link>https://joeyshi.xyz/projects/pc_builder/</link>
