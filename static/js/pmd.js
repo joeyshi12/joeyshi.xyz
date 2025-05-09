@@ -349,22 +349,21 @@ async function main() {
     }
 
     function update() {
-        context.save();
-        context.imageSmoothingEnabled = false;
-        context.scale(SCALE, SCALE);
-
         // Update
         for (let entity of entities) {
             entity.update();
         }
 
         // Render
+        context.save();
+        context.imageSmoothingEnabled = false;
+        context.scale(SCALE, SCALE);
         context.clearRect(0, 0, canvas.width, canvas.height);
         for (let entity of entities) {
             entity.render();
         }
-
         context.restore();
+
         requestAnimationFrame(update);
     }
 
