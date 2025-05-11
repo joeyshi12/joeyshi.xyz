@@ -163,17 +163,7 @@ class Pokemon {
 
         if (Math.random() < 0.5) {
             this.moveRepeats = 1 + Math.floor(Math.random() * 2); // 1 to 3 repeats
-            if (this.row <= 1) {
-                this.directionIndex = 0;
-            } else if (this.col <= 1) {
-                this.directionIndex = 2;
-            } else if (this.row >= maxRows - 1) {
-                this.directionIndex = 4;
-            } else if (this.col >= maxCols - 1) {
-                this.directionIndex = 6;
-            } else {
-                this.directionIndex = Math.floor(Math.random() * MOVE_DIRECTIONS.length);
-            }
+            this.directionIndex = Math.floor(Math.random() * MOVE_DIRECTIONS.length);
             this.move();
         } else {
             this.sprite.play("Idle");
@@ -183,6 +173,16 @@ class Pokemon {
     }
 
     move() {
+        if (this.row <= 0) {
+            this.directionIndex = 0;
+        } else if (this.col <= 0) {
+            this.directionIndex = 2;
+        } else if (this.row >= maxRows) {
+            this.directionIndex = 4;
+        } else if (this.col >= maxCols) {
+            this.directionIndex = 6;
+        }
+
         this.sprite.play("Walk");
         this.sprite.setRow(this.directionIndex);
         this.actionTimer = 0;
