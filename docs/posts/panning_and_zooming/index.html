@@ -69,7 +69,7 @@
         </div>
       </footer>
     </div>
-    <div class="content">
+    <article>
       <p>This post goes over some of the mathematics involved in panning and zooming in graphical applications.</p>
       <p>Points can be described in world space or view space. The world space is a linear <a href="https://en.wikipedia.org/wiki/Basis_(linear_algebra)">basis</a> that describes where objects positioned relative to the world while the view space is a basis that is used to describe points relative to the view that the user sees.</p>
       <p>When panning or zooming in the view, a different translation and scale is being applied to view coordinates to determine what slice of the world should be drawn in the view. Let $A_1 = T_{1}S_{1}$ be the change-of-basis matrix from the initial view space to world space, where $T_{1}, S_{1}$ is a translation matrix and scale matrix respectively.</p>
@@ -102,7 +102,7 @@
       <g>
         <rect width="401" height="401" fill="url(#grid)"></rect>
       </g></svg>
-    </div>
+    </article>
   </div>
   <script src="/js/panning_and_zooming.js"></script>
 </body>
