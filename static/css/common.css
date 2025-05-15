@@ -8,27 +8,28 @@
 :root {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: 16px;
-    --bg: #ffffff;
-    --fg: #000000;
-    --bg-secondary: #b7d9f7;
-    --bg-button: #0179ad;
-    --bg-button-hover: #00618b;
-    --bg-code: #e2e6ea;
-    --border-color: #d0d7de;
-    --link-color: #0969da;
+    --bg: rgb(255, 255, 255);
+    --fg: rgb(0, 0, 0);
+    --bg-secondary: rgb(183, 217, 247);
+    --bg-button: rgb(1, 121, 173);
+    --bg-button-hover: rgb(0, 97, 139);
+    --bg-code: rgb(226, 230, 234);
+    --border-color: rgb(208, 215, 222);
+    --link-color: rgb(9, 105, 218);
     --box-shadow-color: rgba(0, 0, 0, 0.5);
+    --box-shadow: 0 3px 4px var(--box-shadow-color);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #181a1b;
-        --fg: #e8e6e3;
-        --bg-secondary: #2f3234;
-        --bg-button: #01618a;
-        --bg-button-hover: #004e6f;
-        --bg-code: #26292b;
-        --border-color: #3b4043;
-        --link-color: #4ba8f8;
+        --bg: rgb(24, 26, 27);
+        --fg: rgb(232, 230, 227);
+        --bg-secondary: rgb(47, 50, 52);
+        --bg-button: rgb(1, 97, 138);
+        --bg-button-hover: rgb(0, 78, 111);
+        --bg-code: rgb(38, 41, 43);
+        --border-color: rgb(59, 64, 67);
+        --link-color: rgb(75, 168, 248);
     }
 }
 
@@ -100,7 +101,7 @@ nav {
 header {
     border-radius: 25px;
     background: var(--bg-secondary);
-    box-shadow: 4px 4px 2px var(--box-shadow-color);
+    box-shadow: var(--box-shadow);
 }
 
 main {
@@ -143,10 +144,13 @@ h2 {
     padding: 12px 25px;
     text-align: center;
     text-decoration: none;
-    box-shadow: 4px 4px 2px var(--box-shadow-color);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
     &:hover {
         background: var(--bg-button-hover);
         text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--box-shadow-color);
     }
 }
 
@@ -190,11 +194,11 @@ h2 {
         & ul {
             justify-content: center;
             & li {
+                box-shadow: var(--box-shadow);
                 &:last-child {
                     display: none;
                 }
                 & a {
-                    box-shadow: 4px 4px 2px var(--box-shadow-color);
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -213,6 +217,7 @@ h2 {
 
 @media only screen and (min-width: 72rem) {
     nav ul li {
+        box-shadow: var(--box-shadow);
         &:first-child {
             margin-top: 1rem;
         }
@@ -225,7 +230,6 @@ h2 {
             margin-bottom: 1rem;
         }
         & a {
-            box-shadow: 4px 4px 2px var(--box-shadow-color);
             &:before {
                 content: '»';
                 font-size: 2rem;
