@@ -8,6 +8,9 @@ header {
     & .parent-link {
         font-family: "M Plus Rounded 1c", serif;
     }
+    & i.fa-caret-right {
+        width: 0.8rem;
+    }
     & .page-title {
         display: inline-block;
         padding: 0;
