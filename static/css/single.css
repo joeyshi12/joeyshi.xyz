@@ -3,9 +3,7 @@ img {
     height: auto;
 }
 
-.page-header {
-    background: var(--bg-secondary);
-    border-radius: 25px;
+header {
     padding: 1.2rem 2rem 1.6rem 2rem;
     & .parent-link {
         font-family: "M Plus Rounded 1c", serif;

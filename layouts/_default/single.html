@@ -10,7 +10,7 @@
 {{- end }}
 
 {{- define "main" }}
-    <div class="page-header">
+    <header>
         <div>
             {{- with .Parent }}
             <a class="parent-link" href="{{ .Permalink }}">{{ .Title }}</a>
@@ -28,7 +28,7 @@
             </div>
             {{- end }}
         </footer>
-    </div>
+    </header>
     <article>
         {{- .Content }}
     </article>

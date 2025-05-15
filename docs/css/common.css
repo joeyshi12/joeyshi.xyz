@@ -16,6 +16,7 @@
     --bg-code: #e2e6ea;
     --border-color: #d0d7de;
     --link-color: #0969da;
+    --box-shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,7 +97,13 @@ nav {
     }
 }
 
-.page-body {
+header {
+    border-radius: 25px;
+    background: var(--bg-secondary);
+    box-shadow: 4px 4px 2px var(--box-shadow-color);
+}
+
+main {
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem 6rem 2rem;
@@ -136,6 +143,7 @@ h2 {
     padding: 12px 25px;
     text-align: center;
     text-decoration: none;
+    box-shadow: 4px 4px 2px var(--box-shadow-color);
     &:hover {
         background: var(--bg-button-hover);
         text-decoration: none;
@@ -186,6 +194,7 @@ h2 {
                     display: none;
                 }
                 & a {
+                    box-shadow: 4px 4px 2px var(--box-shadow-color);
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -216,6 +225,7 @@ h2 {
             margin-bottom: 1rem;
         }
         & a {
+            box-shadow: 4px 4px 2px var(--box-shadow-color);
             &:before {
                 content: '»';
                 font-size: 2rem;
