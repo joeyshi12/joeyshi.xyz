@@ -11,8 +11,9 @@
     --bg: rgb(255, 255, 255);
     --fg: rgb(0, 0, 0);
     --bg-secondary: rgb(183, 217, 247);
+    --bg-secondary-hover: rgb(163, 197, 227);
     --bg-button: rgb(1, 121, 173);
-    --bg-button-hover: rgb(0, 97, 139);
+    --bg-button-hover: rgb(3, 145, 205);
     --bg-code: rgb(226, 230, 234);
     --border-color: rgb(208, 215, 222);
     --link-color: rgb(9, 105, 218);
@@ -25,8 +26,9 @@
         --bg: rgb(24, 26, 27);
         --fg: rgb(232, 230, 227);
         --bg-secondary: rgb(47, 50, 52);
+        --bg-secondary-hover: rgb(60, 65, 68);
         --bg-button: rgb(1, 97, 138);
-        --bg-button-hover: rgb(0, 78, 111);
+        --bg-button-hover: rgb(2, 114, 163);
         --bg-code: rgb(38, 41, 43);
         --border-color: rgb(59, 64, 67);
         --link-color: rgb(75, 168, 248);
@@ -79,6 +81,9 @@ nav {
             width: 90%;
             background: var(--bg-secondary);
             border-radius: 25px;
+            &:hover {
+                background: var(--bg-secondary-hover);
+            }
             & a {
                 display: flex;
                 align-items: center;
