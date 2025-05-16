@@ -7,14 +7,20 @@ let mouseOverPosition = undefined;
 centerInner();
 
 svg.addEventListener("mousedown", (event) => {
-    mouseDownPosition = { x: event.clientX, y: event.clientY };
+    mouseDown(event.clientX, event.clientY);
+});
+
+svg.addEventListener("touchstart", (event) => {
+    mouseDown(event.touches[0].clientX, event.touches[0].clientY);
 });
 
 svg.addEventListener("mousemove", (event) => {
-    if (mouseDownPosition) {
-        mouseOverPosition = { x: event.clientX, y: event.clientY };
-        inner.setAttribute("transform", getTransform());
-    }
+    mouseMove(event.clientX, event.clientY);
+});
+
+svg.addEventListener("touchmove", (event) => {
+    event.preventDefault();
+    mouseMove(event.touches[0].clientX, event.touches[0].clientY);
 });
 
 svg.addEventListener("mouseup", () => {
@@ -22,6 +28,10 @@ svg.addEventListener("mouseup", () => {
 });
 
 svg.addEventListener("mouseleave", () => {
+    onMouseExit();
+});
+
+svg.addEventListener("touchend", () => {
     onMouseExit();
 });
 
@@ -41,6 +51,27 @@ svg.addEventListener("wheel", (event) => {
     scale *= scaleFactor;
     inner.setAttribute("transform", getTransform());
 });
+
+/**
+ * Handle mouse down.
+ * @param {number} x 
+ * @param {number} y 
+ */
+function mouseDown(x, y) {
+    mouseDownPosition = { x, y };
+}
+
+/**
+ * Handle mouse move.
+ * @param {number} x 
+ * @param {number} y 
+ */
+function mouseMove(x, y) {
+    if (mouseDownPosition) {
+        mouseOverPosition = { x, y };
+        inner.setAttribute("transform", getTransform());
+    }
+}
 
 function centerInner() {
     const svgRect = svg.getBoundingClientRect();
