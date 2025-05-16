@@ -1,7 +1,7 @@
 const SCALE = 3;
 const CELL_LENGTH = 22;
 const MOVE_DIRECTIONS = [[1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1], [0, -1], [1, -1]];
-const MIN_TIME_DELTA = 1000 / 60;
+const MIN_DELTA_TIME = 16;
 const canvas = document.createElement("canvas");
 canvas.style = "z-index: 1;position: absolute;left: 0;top: 0;pointer-events: none";
 document.body.appendChild(canvas);
@@ -355,8 +355,10 @@ async function main() {
      * @param {number} time 
      */
     function update(time) {
+        requestAnimationFrame(update);
         const delta = time - previousTime;
-        if (delta > MIN_TIME_DELTA) {
+
+        if (delta > MIN_DELTA_TIME) {
             // Update
             for (let entity of entities) {
                 entity.update();
@@ -374,7 +376,6 @@ async function main() {
 
             previousTime = time;
         }
-        requestAnimationFrame(update);
     }
 
     requestAnimationFrame(update);
