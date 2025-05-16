@@ -1,6 +1,7 @@
 const SCALE = 3;
 const CELL_LENGTH = 22;
 const MOVE_DIRECTIONS = [[1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1], [0, -1], [1, -1]];
+const MIN_TIME_DELTA = 1000 / 60;
 const canvas = document.createElement("canvas");
 canvas.style = "z-index: 1;position: absolute;left: 0;top: 0;pointer-events: none";
 document.body.appendChild(canvas);
@@ -338,6 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function main() {
     const pokemonNames = ["Gengar", "Misdreavus", "Litwick"];
     const animDataList = await Promise.all(pokemonNames.map(name => loadAnimation(name)));
+    let previousTime = 0;
 
     /** @type {Pokemon[]} */
     const entities = [];
@@ -348,22 +350,30 @@ async function main() {
         entities.push(new Pokemon(row, col, new AnimatedSprite(animData)));
     }
 
-    function update() {
-        // Update
-        for (let entity of entities) {
-            entity.update();
-        }
+    /**
+     * Handles canvas frame update
+     * @param {number} time 
+     */
+    function update(time) {
+        const delta = time - previousTime;
+        if (delta > MIN_TIME_DELTA) {
+            // Update
+            for (let entity of entities) {
+                entity.update();
+            }
 
-        // Render
-        context.save();
-        context.imageSmoothingEnabled = false;
-        context.scale(SCALE, SCALE);
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        for (let entity of entities) {
-            entity.render();
-        }
-        context.restore();
+            // Render
+            context.save();
+            context.imageSmoothingEnabled = false;
+            context.scale(SCALE, SCALE);
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            for (let entity of entities) {
+                entity.render();
+            }
+            context.restore();
 
+            previousTime = time;
+        }
         requestAnimationFrame(update);
     }
 
