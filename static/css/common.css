@@ -79,11 +79,8 @@ nav {
         & li {
             margin: 0.5rem 0;
             width: 90%;
-            background: var(--bg-secondary);
             border-radius: 25px;
-            &:hover {
-                background: var(--bg-secondary-hover);
-            }
+            background: var(--bg-secondary);
             & a {
                 display: flex;
                 align-items: center;
@@ -92,6 +89,7 @@ nav {
                 padding: 1rem 1rem 1rem 2rem;
                 border-radius: 25px;
                 &:hover {
+                    background: var(--bg-secondary-hover);
                     text-decoration: none;
                 }
             }
