@@ -3,6 +3,7 @@ languageCode = "en"
 title = "Joey Shi - Software Developer"
 publishDir = "public"
 disableHugoGeneratorInject = true
+enableRobotsTXT = true
 
 [params]
 author = "Joey Shi"
