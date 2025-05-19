@@ -81,14 +81,15 @@ nav {
             width: 90%;
             border-radius: 25px;
             background: var(--bg-secondary);
+            font-weight: 600;
             & a {
                 display: flex;
                 align-items: center;
                 text-decoration: none;
-                font-weight: 600;
                 color: var(--fg);
                 padding: 1rem 1rem 1rem 2rem;
                 border-radius: inherit;
+                font-weight: inherit;
                 &:hover {
                     background: var(--bg-secondary-hover);
                     text-decoration: none;
