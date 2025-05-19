@@ -6,7 +6,7 @@
 }
 
 :root {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
     font-size: 16px;
     --bg: rgb(255, 255, 255);
     --fg: rgb(0, 0, 0);
@@ -42,7 +42,7 @@ html body {
     color: var(--fg);
     text-rendering: optimizeLegibility;
     font-kerning: normal;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 a {
@@ -85,9 +85,10 @@ nav {
                 display: flex;
                 align-items: center;
                 text-decoration: none;
+                font-weight: 600;
                 color: var(--fg);
                 padding: 1rem 1rem 1rem 2rem;
-                border-radius: 25px;
+                border-radius: inherit;
                 &:hover {
                     background: var(--bg-secondary-hover);
                     text-decoration: none;
@@ -134,21 +135,23 @@ h2 {
     margin: 0.5rem 0;
 }
 
-.button-group {
+.btn-group {
     display: flex;
     justify-content: center;
     margin: 0.5rem;
 }
 
-.button {
+.btn {
     background: var(--bg-button);
     border-radius: 8px;
     color: white;
-    padding: 12px 25px;
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     box-shadow: var(--box-shadow);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+    white-space: nowrap;
+    font-weight: 600;
     &:hover {
         background: var(--bg-button-hover);
         text-decoration: none;
