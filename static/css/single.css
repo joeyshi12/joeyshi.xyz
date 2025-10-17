@@ -43,6 +43,18 @@ h2 {
     font-size: 1.2rem;
 }
 
+h3 {
+    font-family: "M Plus Rounded 1c", serif;
+    font-size: 1rem;
+}
+
+blockquote {
+    margin-left: 0;
+    padding: 0 15px;
+    color: var(--fg-secondary);
+    border-left: .25em solid var(--bg-secondary);
+}
+
 table {
     display: block;
     width: 100%;

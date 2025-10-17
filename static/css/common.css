@@ -9,8 +9,9 @@
     font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
     font-size: 16px;
     --bg: rgb(255, 255, 255);
-    --fg: rgb(0, 0, 0);
     --bg-secondary: rgb(183, 217, 247);
+    --fg: rgb(0, 0, 0);
+    --fg-secondary: rgb(40, 40, 40);
     --bg-secondary-hover: rgb(163, 197, 227);
     --bg-button: rgb(1, 121, 173);
     --bg-button-hover: rgb(3, 145, 205);
@@ -24,8 +25,9 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: rgb(24, 26, 27);
-        --fg: rgb(232, 230, 227);
         --bg-secondary: rgb(47, 50, 52);
+        --fg: rgb(232, 230, 227);
+        --fg-secondary: rgb(120, 120, 120);
         --bg-secondary-hover: rgb(60, 65, 68);
         --bg-button: rgb(1, 97, 138);
         --bg-button-hover: rgb(2, 114, 163);

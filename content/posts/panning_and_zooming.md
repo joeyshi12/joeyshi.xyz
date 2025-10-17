@@ -36,7 +36,7 @@ $$
 
 ## Panning
 
-In click-drag panning, mousing down in the view and dragging the mouse should translate the view
+In click-drag panning, clicking and dragging the mouse on the view should translate the view
 in such a way that the mouse in world coordinates does not change.
 Let the mouse's displacement from the initial mouse down position in world space be $\\pmatrix{\Delta x, \Delta y, 0}^T$.
 Then, the change-of-basis matrix from the new view space to world space is

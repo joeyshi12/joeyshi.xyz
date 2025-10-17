@@ -5,76 +5,81 @@ date: 2023-10-02T23:29:29-07:00
 tags: ["Software", "Web"]
 ---
 
-Self-hosting is a convenient skill to have for anyone:
+Self-hosting is a convenient skill for anyone:
 it allows you set up personal VPNs, cloud services, and more.
-As a developer, I find they're useful for cheaply serving my web app projects over the internet.
-I'll be sharing my workflow for serving web applications in this post.
+As a developer, I find it convenient to host my web app projects from the comfort of my home.
+So, I'll be sharing my workflow for serving web applications to
+demonstrate how to self-host a service.
 
-## Setting up the Host Machine
+## Setting up the host machine
 
-We first choose our host machine: a computer that we want to use as our server.
-An easy choice to start off with is a [Raspberry Pi](https://www.raspberrypi.com/products/),
+We first choose our host machine: the computer that we want to use as our server.
+One option is to start off with is a [Raspberry Pi](https://www.raspberrypi.com/products/),
 which is a single-board basic personal computer.
+Any old unused hardware, such as laptops or desktops are also perfectly suitable
+to be used as a server. This is a great way to repurpose old technology.
 
-Another option is to use any old unused hardware you have, such as laptops or desktops.
-This is a good way to avoid letting those devices become e-waste by repurposing them.
-I recommend installing a Linux disto, such as [Ubuntu server](https://ubuntu.com/download/server)
-since it is lightweight.
-For sufficiently outdated hardware, there may be some troubleshooting needed to get a Linux distro working properly.
-I documented some troubles I had while installing Linux on 2 old laptops of mine in [this post](/posts/installing_linux)
+Install a Linux distro on the host machine, such as [Arch Linux](https://archlinux.org/download/).
+Your distro of choice should ideally be minimal with few packages needing to be installed.
 
-## Running the Web Application in Docker
+## Running services through Docker
 
 Docker is a tool that provides OS-level virtualization in containers.
-We use this to create lightweight containers for running web servers in
-a safe, isolated environment.
+In this section, I'll demonstrate how to host your own Wordpress site locally.
 
-1. Install Docker and Docker compose with `sudo apt install docker.io docker-compose`
-2. Run `systemctl status docker` to ensure Docker is running; otherwise run `sudo systemctl enable --now docker`
-3. Create a `docker-compose.yml` in the project folder that runs the app.
-
-The following `docker-compose.yml` example is used to run [a Flask app](https://github.com/joeyshi12/devtools).
-For practice, you can follow along with my procedure.
+Install Docker and Docker compose packages and enable with `systemctl enable --now docker`.
+Create the following `docker-compose.yml` for running your own Wordpress site locally:
 
 ```yaml
-version: '3.3'
 services:
-  devtools:
-    image: python:3.10
-    command: sh -c "pip3 install -r requirements.txt && waitress-serve --port=8080 --call app:create_app"
-    working_dir: /dist
-    volumes:
-      - ./:/dist
+
+  wordpress:
+    image: wordpress
+    restart: always
     ports:
-      - "80:8080"
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - wordpress:/var/www/html
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: exampleuser
+      MYSQL_PASSWORD: examplepass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  wordpress:
+  db:
 ```
 
-The Flask app starts a web server on port 8080.
-This configuration pulls a Python3 Docker image from [dockerhub](https://hub.docker.com/_/python) and forwards
-requests targeting port 80 on the host machine to port 8080 inside the container.
-When executing `docker-compose up -d` in project folder, a docker container will be created
-and the command to install the Python dependencies listed in `requirements.txt` and serve the Flask app will be run.
+> Compose file from https://hub.docker.com/_/wordpress
 
-Once the app is running in a container, test if you're able to make requests to the app.
-In our example, we can try `curl http://localhost` on the host machine to fetch the index page of the app.
-For more debugging information run `docker ps` to check the status of running containers
-and `docker logs <container_id>` to check logs within a container.
-More about the docker CLI can be found in [this cheat sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf).
+Executing `docker-compose up -d` will create a container for the Wordpress site and
+a container for a MySQL database that will store data for Wordpress.
+Verify these containers are running with `docker ps`
+(See [Docker cheat sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf) for other commands).
+The Wordpress container is exposed on port 8080, so you'll be able to access the site on `http://localhost:8080`.
 
 ## Serving over the Internet 
 
-At this point, computers in your local network are able to access the web app.
-You can test this by doing the following:
+Other computers in your network should also be able to access the web app.
+Check the IPv4 address of your server with `ipconfig`.
+Then, from another machine, you should be able to access the site on `http://<IPv4>:8080`.
 
-1. Get the IPv4 address of your host machine.
-2. In another computer, enter `http://<IPv4>` into the browser.
-
-If there aren't any problems, then the index page for the app should have shown up.
-However, this would not work with any computers outside your network yet.
-For that, we need to port forward port 80 on your router to the app.
-
-To do this, access your router's settings page from a browser.
-If you do not remember the URL of your gateway router, you can check with the following command:
+To make this website accessible from outside your network,
+port forward port 80 on your router to port 8080 on the server from your router's settings page.
+If you do not remember the URL of your gateway router, you can check the IP of your gateway with
+the following command:
 
 ```sh
 $ netstat -nr
@@ -90,53 +95,34 @@ Once you log in to your router, you should look for wherever the port forwarding
 table is located and add an entry with source HTTP port 80, destination port 80,
 and the IP of your host machine.
 
-If all previous steps were done correctly,
-requests to your home's [WAN address](https://en.wikipedia.org/wiki/Wide_area_network) will reach the web app.
-Your WAN address should appear in the router's settings page,
-but you can also check this online.
+If all previous steps were done correctly, the website should be accessible publicly
+from `http://<WAN_IPv4>`, where `WAN_IPv4` is your [WAN address](https://en.wikipedia.org/wiki/Wide_area_network).
 
-## Setting up a Domain Name
+## Setting up a domain name
 
-At this stage, it is possible to access the web app from anywhere by entering
-your home's WAN address into the browser, but there are 2 issues:
+Normally websites are discovered by their domain name rather than a IP address,
+so this section will focus on how to get your own domain name and have it point to your website.
 
-1. Anyone who wants to use the app will know your home's IP.
-2. The URL for the app isn't easily human-readable.
-
-We can start off by fixing the second point first by registering a domain name.
-When a client/browser makes HTTP requests with a domain, such as `https://devtools.joeyshi.xyz`,
-it first must do a lookup to find the IP address associated with that domain name.
+### DNS background
 
 DNS (Domain Name System) is a distributed database implemented as a hierarchy of many name servers.
 This can be thought as a search tree where each node holds records of
 IP addresses (A records) or references to other name servers (NS records).
-The list of DNS resource record types can be found in [this RFC for DNS](https://datatracker.ietf.org/doc/html/rfc1035).
+To make sure requests to your domain resolves to your WAN address and reach your website,
+you need to create an A record that points to the IP address.
+For more information about DNS resource record types, read [the DNS RFC](https://datatracker.ietf.org/doc/html/rfc1035).
 
-![DNS hierachy](https://res.cloudinary.com/practicaldev/image/fetch/s--b9G6DenD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.imgur.com/xOdVIPZ.png)
+![DNS hierachy](https://www.hostnoc.com/wp-content/uploads/2024/01/DNS2.jpg)
 
-To have a domain name point to our host machine's IP address,
-we need to purchase a domain name from a DNS registrar.
-I personally use [Namecheap](https://www.namecheap.com/).
+### Creating DNS records
 
-In the DNS settings of your chosen registrar,
-we can simply add an A record whose value is your WAN address.
-Namecheap has a more detailed guide [here](https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/).
-It normally takes a few minutes before new records take effect.
-To check if the records are active, run `dig <domain_name>` to do a DNS lookup and try entering `http://<domain_name>` into the browser
-to do a full test to ensure everything previous is working correctly.
-
-## Hiding your IP Address with Cloudflare
-
-Although having a domain name hides your IP address from the browser search bar, it is still very much exposed.
-Anyone can still do a DNS lookup on the domain to find it.
-To resolve this issue, we will be using Cloudflare's DNS proxy feature to hide the IP.
-
-A proxied record in Cloudflare is a record for which the requests with the associated domain name
-will go through Cloudflare first before reaching your host machine.
-From the outside, doing a DNS look up on a proxied record will return one of Cloudflare's IP,
-so your IP will be hidden from people visiting your website.
-
-[Here is a detailed guide for registering your DNS records under Cloudflare](https://www.namecheap.com/support/knowledgebase/article.aspx/9607/2210/how-to-set-up-dns-records-for-your-domain-in-cloudflare-account/).
+To setup a domain name, you need to first purchase a domain from a registrar like [Cloudflare](https://www.cloudflare.com/).
+Once purchased, you'll want to find the DNS records table.
+Create an A record that points to your WAN IP. 
+It may take a few hours before changes to the DNS records table takes effect.
+You can verify that your record has been created by running `nslookup <domain_name`;
+if the command resolves to the expected IP, then you're set.
+You should now be able to access the website from `http://<domain_name>`!
 
 ## Remarks
 
