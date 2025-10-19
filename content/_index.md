@@ -1,5 +1,5 @@
 ---
-title: "Joey Shi - Software Developer"
+title: Joey Shi - Software Developer
 ---
 
 Hello 👋. I'm a professional full-stack developer @ [Visier](https://www.visier.com/).

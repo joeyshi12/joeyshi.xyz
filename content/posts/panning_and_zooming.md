@@ -2,9 +2,9 @@
 title: Panning and zooming
 description: Guide to implementing panning and zooming in graphical applications.
 date: 2024-07-22T23:30:29-07:00
-tags: ["Software", "Math"]
+tags: [Math, Software]
 mathjax: true
-scripts: ["/js/panning_and_zooming.js"]
+scripts: [/js/panning_and_zooming.js]
 ---
 
 This post goes over some of the mathematics involved in panning and zooming in graphical applications.

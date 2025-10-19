@@ -2,7 +2,7 @@
 title: Joey's Games
 description: A collection of web games made using the HTML5 canvas API.
 date: 2023-07-02T10:49:38-07:00
-tags: ["Web"]
+tags: [Web]
 repoName: joeys-games
 language: TypeScript
 featured: true

@@ -1,8 +1,8 @@
 ---
 title: Guide to self-hosting
-description: "Steps for how I configure and host servers at home."
+description: How to configure and host servers at home.
 date: 2023-10-02T23:29:29-07:00
-tags: ["Software", "Web"]
+tags: [Self-hosting]
 ---
 
 Self-hosting is a convenient skill for anyone:

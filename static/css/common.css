@@ -56,7 +56,7 @@ a {
     }
 }
 
-p code {
+p code, h2 code {
     background-color: var(--bg-code);
     padding: .1em .4em;
     border-radius: 6px;
