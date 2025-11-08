@@ -154,30 +154,110 @@ table td {
 
 details {
     margin: 1rem 0;
-    & > summary {
-        background-color: var(--bg-secondary);
-        cursor: pointer;
-        padding: .5rem 1rem;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        & > * {
-            display: inline;
-        }
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+details[open] {
+    box-shadow: var(--box-shadow);
+}
+
+details > summary {
+    background: var(--bg-secondary);
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+details > summary:hover {
+    background: var(--bg-secondary-hover);
+}
+
+/* Custom arrow icon */
+details > summary::marker,
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary::before {
+    content: '▶';
+    display: inline-block;
+    width: 1em;
+    transition: transform 0.2s ease;
+    color: var(--bg-button);
+    font-size: 0.875rem;
+}
+
+details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+/* Make nested elements inline with summary text */
+details > summary > * {
+    display: inline;
+    margin: 0;
+}
+
+/* Content area */
+details > div {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg);
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
     }
-    & > div {
-        border: 2px solid var(--bg-secondary);
-        margin-top: 0;
-        & > p {
-            padding: 0 0.5rem;
-        }
-        & > h3 {
-            padding: 0 0.5rem;
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+details > div > p {
+    margin: 0.5rem 0;
+}
+
+details > div > p:first-child {
+    margin-top: 0;
+}
+
+details > div > p:last-child {
+    margin-bottom: 0;
+}
+
+details > div > h3 {
+    margin: 1rem 0 0.5rem 0;
+}
+
+details > div > h3:first-child {
+    margin-top: 0;
+}
+
+/* Nested details */
+details details {
+    margin: 0.5rem 0;
+}
+
+details details > summary {
+    background: var(--bg-code);
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+}
+
+details details > div {
+    background: var(--bg);
 }
 
 iframe {
@@ -191,8 +271,3 @@ mjx-container[jax="CHTML"][display="true"] {
     overflow-x: auto;
     overflow-y: hidden;
 }
-
-.MathJax {
-    font-size: 0.1em;
-}
-
