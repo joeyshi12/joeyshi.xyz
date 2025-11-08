@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    padding: 0.5rem 2rem;
+}
+
+ul.tags {
+    margin: 0;
+    padding: 0;
+    & li {
+        display: inline-block;
+        margin: 10px;
+        font-weight: 500;
+        & a {
+            display: block;
+            padding: 3px 10px;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+            transition: transform .1s;
+            text-decoration: none;
+        }
+    }
+}

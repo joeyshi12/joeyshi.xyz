@@ -1,0 +1,25 @@
+{{- define "styles" }}
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/terms.css"/>
+{{- end }}
+
+{{- define "main" }}
+    <header>
+        <h2 class="title">{{ .Title }}</h2>
+    </header>
+    {{- with .OutputFormats.Get "rss" }}
+    <p>Subscribe to my <i class="fa-solid fa-rss"></i> <a href="{{ .Permalink }}">RSS feed</a> for updates!</p>
+    {{- end }}
+    <ul class="tags">
+        {{- $type := .Type }}
+        {{- range $key, $value := .Data.Terms.Alphabetical }}
+        {{- $name := .Name }}
+        {{- $count := .Count }}
+        {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+        </li>
+        {{- end }}
+        {{- end }}
+    </ul>
+{{- end }}
