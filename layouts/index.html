@@ -44,11 +44,11 @@
     <section>
         <h2>Projects</h2>
         <ul class="repo-cards">
-        {{- range where (where .Site.RegularPages "Section" "projects") "Params.featured" "=" true }}
+        {{- range first 4 (where .Site.RegularPages "Section" "projects") }}
             <li>
                 <div class="repo-header">
                     <i class="fa-brands fa-github-alt"></i>
-                    <a class="repo-link" href="{{ .Permalink }}">{{ .Params.repoName }}</a>
+                    <a class="repo-link" href="{{ .Permalink }}">{{ .Title }}</a>
                 </div>
                 <p>{{ .Description }}</p>
                 <div class="repo-language">

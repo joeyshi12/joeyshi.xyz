@@ -1,11 +1,11 @@
 ---
-title: PC Builder
+title: PC builder
 description: Website for browsing and putting together PC builds.
 date: 2024-11-13T10:49:38-07:00
-tags: [Web]
-repoName: pc-builder
+tags:
+  - web
+weight: 1
 language: Java
-featured: true
 ---
 
 Website for browsing and putting together PC builds.

@@ -31,9 +31,16 @@
     <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
     {{- block "styles" . }}
     {{- end }}
+    <script src="/js/copy_code.js"></script>
     {{- if .Params.mathjax }}
     <script>
         MathJax = {
+            chtml: {
+                scale: 0.9
+            },
+            svg: {
+                scale: 0.9
+            },
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
                 displayMath: [['$$','$$'], ['\\[', '\\]']],
@@ -80,15 +87,15 @@
                     <span>Tags</span>
                 </a>
             </li>
-            <li>
-                <span>© 2025 {{ .Site.Params.author }}</span>
-            </li>
         </ul>
     </nav>
     <main>
     {{- block "main" . }}
     {{- end }}
     </main>
+    <footer>
+        <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+    </footer>
     {{- block "scripts" . }}
     {{- end }}
 {{- end }}

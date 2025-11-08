@@ -34,18 +34,89 @@ header {
     padding: 0 0.2rem;
 }
 
-article {
-    margin: 1rem 0;
+pre {
+    background: var(--bg-code);
+    border-radius: 4px;
+    padding: 1rem;
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
+    position: relative;
 }
 
-h2 {
-    margin-top: 2.4rem;
-    font-size: 1.2rem;
+pre code {
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
 
-h3 {
-    font-family: "M Plus Rounded 1c", serif;
-    font-size: 1rem;
+.copy-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-button);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s, transform 0.1s;
+    box-shadow: var(--box-shadow);
+}
+
+pre:hover .copy-button {
+    opacity: 1;
+}
+
+.copy-button:hover {
+    background: var(--bg-button-hover);
+    transform: translateY(-1px);
+}
+
+.copy-button:active {
+    transform: translateY(0);
+}
+
+.copy-button.copied {
+    background: #22c55e;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+    border: 2px solid var(--bg-code);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-button);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) var(--bg-secondary);
+}
+
+code {
+    background-color: var(--bg-code);
+    padding: .1em .4em;
+    border-radius: 6px;
+    font-size: 85%;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
 }
 
 blockquote {
@@ -56,23 +127,29 @@ blockquote {
 }
 
 table {
-    display: block;
     width: 100%;
-    max-width: 100%;
-    overflow: auto;
     border-spacing: 0;
     border-collapse: collapse;
-    & th {
-        padding: 6px 13px;
-        border: 1px solid
-    }
-    & tr {
-        border-top: 1px solid;
-    }
-    & td {
-        padding: 6px 13px;
-        border: 1px solid;
-    }
+    margin: 1em 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+table th {
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    text-align: left;
+}
+
+table tr {
+    border-top: 1px solid var(--border-color);
+}
+
+table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
 }
 
 details {
@@ -109,14 +186,13 @@ iframe {
     height: 500px;
 }
 
-.highlight {
-    font-size: 14px;
-    overflow-x: auto;
-    background: #2e3440;
-}
-
 mjx-container[jax="CHTML"][display="true"] {
     padding: 1em 0;
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+.MathJax {
+    font-size: 0.1em;
+}
+

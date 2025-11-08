@@ -1,9 +1,11 @@
 ---
-title: Canvas Sprite Animation
+title: Canvas sprite animation
 description: Sprite animations implemented in vanilla JavaScript.
 date: 2025-05-08T23:25:07-07:00
-tags: [Web]
-scripts: [/js/pmd.js]
+tags:
+  - web
+scripts:
+  - /js/pmd.js
 ---
 
 I had some time off this week and decided the best way to spend that

@@ -14,16 +14,5 @@ tag = "tags"
 
 [markup]
   [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ''
-    hl_inline = false
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = true
-    noHl = false
-    style = 'nord'
-    tabWidth = 4
+    noClasses = false
+    codeFences = false

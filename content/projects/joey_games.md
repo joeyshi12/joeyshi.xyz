@@ -1,11 +1,11 @@
 ---
-title: Joey's Games
+title: Joey's games
 description: A collection of web games made using the HTML5 canvas API.
 date: 2023-07-02T10:49:38-07:00
-tags: [Web]
-repoName: joeys-games
+tags:
+  - web
+weight: 3
 language: TypeScript
-featured: true
 ---
 
 A collection of web games I made and host.

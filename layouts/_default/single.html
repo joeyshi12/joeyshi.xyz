@@ -10,26 +10,26 @@
 {{- end }}
 
 {{- define "main" }}
-    <header>
-        <div>
-            {{- with .Parent }}
-            <a class="parent-link" href="{{ .Permalink }}">{{ .Title }}</a>
-            {{- end }}
-            <span><i class="fa-solid fa-caret-right"></i></span>
-            <h2 class="page-title">{{ .Title }}</h2>
-        </div>
-        <footer>
-            <span class="page-date">{{ .Date | time.Format ":date_long" }}</span>
-            {{- if isset .Params "tags" }}
-            <div>
-            {{- range .Params.tags }}
-                <a class="page-tags" href="/tags/{{ . | urlize }}">#{{ . }}</a>
-            {{- end }}
-            </div>
-            {{- end }}
-        </footer>
-    </header>
     <article>
+        <header>
+            <div>
+                {{- with .Parent }}
+                <a class="parent-link" href="{{ .Permalink }}">{{ .Title }}</a>
+                {{- end }}
+                <span><i class="fa-solid fa-caret-right"></i></span>
+                <h2 class="page-title">{{ .Title }}</h2>
+            </div>
+            <footer>
+                <span class="page-date">{{ .Date | time.Format ":date_long" }}</span>
+                {{- if isset .Params "tags" }}
+                <div>
+                {{- range .Params.tags }}
+                    <a class="page-tags" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+                {{- end }}
+                </div>
+                {{- end }}
+            </footer>
+        </header>
         {{- .Content }}
     </article>
 {{- end }}

@@ -1,11 +1,12 @@
 ---
-title: Visualizing Tech Salaries
+title: Visualizing tech salaries
 description: Visualization for tech salaries in America made with d3
 date: 2023-07-02T10:49:38-07:00
-tags: [Web, School]
-repoName: tech-salaries-vis
+tags:
+  - web
+  - school
+weight: 4
 language: TypeScript
-featured: true
 ---
 
 A visualization for understanding the distribution of salaries of workers in the tech industry.

@@ -1,9 +1,9 @@
 ---
-title: Cool Wiki
+title: Cool wiki
 description: A collection of notes I've made publicly available while attending courses at UBC.
 date: 2023-07-02T10:49:38-07:00
-tags: [Web]
-repoName: cool-wiki
+tags:
+  - web
 language: HTML
 ---
 

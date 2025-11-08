@@ -2,8 +2,9 @@
 title: Devtools
 description: Custom tools made for software development purposes
 date: 2023-07-07T19:19:43-07:00
-tags: [Software, Web]
-repoName: devtools
+tags:
+  - software
+  - web
 language: HTML
 ---
 
