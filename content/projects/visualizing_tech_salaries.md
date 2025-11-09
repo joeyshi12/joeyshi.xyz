@@ -3,8 +3,8 @@ title: Visualizing tech salaries
 description: Visualization for tech salaries in America made with d3
 date: 2023-07-02T10:49:38-07:00
 tags:
+  - datavis
   - web
-  - school
 weight: 4
 language: TypeScript
 ---

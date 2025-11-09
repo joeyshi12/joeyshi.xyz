@@ -4,7 +4,6 @@ description: Guide to implementing panning and zooming in graphical applications
 date: 2024-07-22T23:30:29-07:00
 tags:
   - math
-  - software
 mathjax: true
 scripts:
   - /js/panning_and_zooming.js

@@ -3,7 +3,6 @@ title: Diff eq solver
 description: A desktop application that uses the finite difference method to solve differential equations.
 date: 2023-07-02T10:49:38-07:00
 tags:
-  - software
   - math
 weight: 2
 mathjax: true

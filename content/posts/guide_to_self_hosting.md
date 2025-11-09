@@ -3,7 +3,7 @@ title: Guide to self-hosting
 description: How to configure and host servers at home.
 date: 2023-10-02T23:29:29-07:00
 tags:
-  - self-hosting
+  - homelab
 ---
 
 Self-hosting is a convenient skill for anyone:

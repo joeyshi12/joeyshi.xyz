@@ -3,6 +3,7 @@ title: Three.js gallery
 description: A collection of 3d scenes made with Blender and three.js. 
 date: 2024-02-19T12:49:16-08:00
 tags:
+  - blender
   - web
 ---
 
