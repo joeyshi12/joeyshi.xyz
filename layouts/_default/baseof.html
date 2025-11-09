@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="/libs/font-awesome/6.5.2/css/all.min.css">
     {{- block "styles" . }}
     {{- end }}
-    <script src="/js/copy_code.js"></script>
     {{- if .Params.mathjax }}
     <script>
         MathJax = {
@@ -61,7 +60,7 @@
 </head>
 <body>
 {{- block "body" . }}
-    <nav>
+    <nav class="page-nav">
         <ul>
             <li>
                 <a href="/">
@@ -93,8 +92,8 @@
     {{- block "main" . }}
     {{- end }}
     </main>
-    <footer>
-        <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+    <footer class="page-footer">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
     </footer>
     {{- block "scripts" . }}
     {{- end }}

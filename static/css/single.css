@@ -5,25 +5,31 @@ img {
 
 header {
     padding: 1.2rem 2rem 1.6rem 2rem;
+
     & .parent-link {
         font-family: "M Plus Rounded 1c", serif;
     }
+
     & i.fa-caret-right {
         width: 0.8rem;
     }
+
     & .page-title {
         display: inline-block;
         padding: 0;
         margin: 0;
     }
+
     & footer {
         font-size: 0.8rem;
         display: flex;
         flex-direction: row;
         padding-top: 0.5rem;
+
         & .page-date {
             margin-right: 1rem;
         }
+
         & .page-tags {
             margin: 0 0.1rem;
         }
@@ -42,12 +48,12 @@ pre {
     white-space: pre;
     overflow-x: auto;
     position: relative;
-}
 
-pre code {
-    padding: 0;
-    border: 0;
-    background: transparent;
+    & code {
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
 }
 
 .copy-button {
@@ -65,23 +71,23 @@ pre code {
     opacity: 0;
     transition: opacity 0.2s, background 0.2s, transform 0.1s;
     box-shadow: var(--box-shadow);
+
+    &:hover {
+        background: var(--bg-button-hover);
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &.copied {
+        background: #22c55e;
+    }
 }
 
 pre:hover .copy-button {
     opacity: 1;
-}
-
-.copy-button:hover {
-    background: var(--bg-button-hover);
-    transform: translateY(-1px);
-}
-
-.copy-button:active {
-    transform: translateY(0);
-}
-
-.copy-button.copied {
-    background: #22c55e;
 }
 
 /* Scrollbar */
@@ -133,23 +139,23 @@ table {
     margin: 1em 0;
     border-radius: 4px;
     overflow: hidden;
-}
 
-table th {
-    padding: 0.75rem 1rem;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    font-weight: 600;
-    text-align: left;
-}
+    & th {
+        padding: 0.75rem 1rem;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        font-weight: 600;
+        text-align: left;
+    }
 
-table tr {
-    border-top: 1px solid var(--border-color);
-}
+    & tr {
+        border-top: 1px solid var(--border-color);
+    }
 
-table td {
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--border-color);
+    & td {
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border-color);
+    }
 }
 
 details {
@@ -158,60 +164,79 @@ details {
     border: 1px solid var(--border-color);
     overflow: hidden;
     transition: all 0.2s ease;
-}
 
-details[open] {
-    box-shadow: var(--box-shadow);
-}
+    &[open] {
+        box-shadow: var(--box-shadow);
 
-details > summary {
-    background: var(--bg-secondary);
-    cursor: pointer;
-    padding: 0.75rem 1rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background 0.2s ease;
-    user-select: none;
-    -webkit-user-select: none;
-}
+        > summary::before {
+            transform: rotate(90deg);
+        }
+    }
 
-details > summary:hover {
-    background: var(--bg-secondary-hover);
-}
+    > summary {
+        background: var(--bg-secondary);
+        cursor: pointer;
+        padding: 0.75rem 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: background 0.2s ease;
+        user-select: none;
+        -webkit-user-select: none;
 
-/* Custom arrow icon */
-details > summary::marker,
-details > summary::-webkit-details-marker {
-    display: none;
-}
+        &:hover {
+            background: var(--bg-secondary-hover);
+        }
 
-details > summary::before {
-    content: '▶';
-    display: inline-block;
-    width: 1em;
-    transition: transform 0.2s ease;
-    color: var(--bg-button);
-    font-size: 0.875rem;
-}
+        /* Custom arrow icon */
+        &::marker, &::-webkit-details-marker {
+            display: none;
+        }
 
-details[open] > summary::before {
-    transform: rotate(90deg);
-}
+        &::before {
+            content: '▶';
+            display: inline-block;
+            width: 1em;
+            transition: transform 0.2s ease;
+            color: var(--bg-button);
+            font-size: 0.875rem;
+        }
 
-/* Make nested elements inline with summary text */
-details > summary > * {
-    display: inline;
-    margin: 0;
-}
+        /* Make nested elements inline with summary text */
+        > * {
+            display: inline;
+            margin: 0;
+        }
+    }
 
-/* Content area */
-details > div {
-    padding: 1rem;
-    border-top: 1px solid var(--border-color);
-    background: var(--bg);
-    animation: slideDown 0.2s ease;
+    /* Content area */
+    > div {
+        padding: 1rem;
+        border-top: 1px solid var(--border-color);
+        background: var(--bg);
+        animation: slideDown 0.2s ease;
+
+        > p {
+            margin: 0.5rem 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        > h3 {
+            margin: 1rem 0 0.5rem 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 @keyframes slideDown {
@@ -223,41 +248,6 @@ details > div {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-details > div > p {
-    margin: 0.5rem 0;
-}
-
-details > div > p:first-child {
-    margin-top: 0;
-}
-
-details > div > p:last-child {
-    margin-bottom: 0;
-}
-
-details > div > h3 {
-    margin: 1rem 0 0.5rem 0;
-}
-
-details > div > h3:first-child {
-    margin-top: 0;
-}
-
-/* Nested details */
-details details {
-    margin: 0.5rem 0;
-}
-
-details details > summary {
-    background: var(--bg-code);
-    font-weight: 500;
-    padding: 0.5rem 0.75rem;
-}
-
-details details > div {
-    background: var(--bg);
 }
 
 iframe {

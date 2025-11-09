@@ -11,7 +11,7 @@
     <p>Subscribe to my <i class="fa-solid fa-rss"></i> <a href="{{ .Permalink }}">RSS feed</a> for updates!</p>
     {{- end }}
     <ul class="listing">
-    {{- range .Pages }}
+        {{- range .Pages }}
         <li class="list-item">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
             <p class="entry-description">{{ .Description }}</p>
@@ -19,13 +19,13 @@
                 <span class="entry-date">{{ .Date | time.Format ":date_long" }}</span>
                 {{- if isset .Params "tags" }}
                 <div>
-                {{- range .Params.tags }}
+                    {{- range .Params.tags }}
                     <a class="entry-tag" href="/tags/{{ . | urlize }}">#{{ . }}</a>
-                {{- end }}
+                    {{- end }}
                 </div>
                 {{- end }}
             </footer>
         </li>
-    {{- end }}
+        {{- end }}
     </ul>
 {{- end }}

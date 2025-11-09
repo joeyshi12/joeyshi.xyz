@@ -4,9 +4,10 @@
 {{- end }}
 
 {{- define "scripts" }}
-{{- range .Params.scripts }}
+    <script src="/js/copy_code.js"></script>
+    {{- range .Params.scripts }}
     <script src="{{ . }}"></script>
-{{- end }}
+    {{- end }}
 {{- end }}
 
 {{- define "main" }}
@@ -23,9 +24,9 @@
                 <span class="page-date">{{ .Date | time.Format ":date_long" }}</span>
                 {{- if isset .Params "tags" }}
                 <div>
-                {{- range .Params.tags }}
+                    {{- range .Params.tags }}
                     <a class="page-tags" href="/tags/{{ . | urlize }}">#{{ . }}</a>
-                {{- end }}
+                    {{- end }}
                 </div>
                 {{- end }}
             </footer>
