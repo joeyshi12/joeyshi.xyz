@@ -15,7 +15,6 @@ ul.tags {
             padding: 3px 10px;
             background: var(--bg-secondary);
             border-radius: 6px;
-            transition: transform .1s;
             text-decoration: none;
         }
     }
