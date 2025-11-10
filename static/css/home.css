@@ -48,7 +48,7 @@ ul.repo-cards {
     flex-wrap: wrap;
     justify-content: center;
 
-    & > li {
+    > li {
         border-color: var(--border-color);
         border-style: solid;
         border-width: 1px;
@@ -60,7 +60,7 @@ ul.repo-cards {
         display: flex;
         flex-direction: column;
 
-        & > .repo-header i {
+        > .repo-header i {
             font-size: 16px;
         }
 

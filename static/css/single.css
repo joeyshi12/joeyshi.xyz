@@ -44,9 +44,8 @@ pre {
     background: var(--bg-code);
     border-radius: 4px;
     padding: 1rem;
-    font-family: monospace;
-    white-space: pre;
     overflow-x: auto;
+    line-height: 1.2rem;
     position: relative;
 
     & code {
@@ -79,10 +78,6 @@ pre {
 
     &:active {
         transform: translateY(0);
-    }
-
-    &.copied {
-        background: #22c55e;
     }
 }
 
