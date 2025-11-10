@@ -8,7 +8,7 @@
         <h2 class="title">{{ .Title }}</h2>
     </header>
     {{- with .OutputFormats.Get "rss" }}
-    <p>Subscribe to my <i class="fa-solid fa-rss"></i> <a href="{{ .Permalink }}">RSS feed</a> for updates!</p>
+    <p>Subscribe to my <a href="{{ .Permalink }}">RSS feed</a> for updates!</p>
     {{- end }}
     <ul class="tags">
         {{- $type := .Type }}

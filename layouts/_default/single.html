@@ -23,9 +23,9 @@
             <footer>
                 <span class="page-date">{{ .Date | time.Format ":date_long" }}</span>
                 {{- if isset .Params "tags" }}
-                <div>
+                <div class="page-tags">
                     {{- range .Params.tags }}
-                    <a class="page-tags" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+                    <a href="/tags/{{ . | urlize }}">#{{ . }}</a>
                     {{- end }}
                 </div>
                 {{- end }}

@@ -30,7 +30,7 @@ header {
             margin-right: 1rem;
         }
 
-        & .page-tags {
+        & .page-tags > a {
             margin: 0 0.1rem;
         }
     }
