@@ -6,8 +6,6 @@
 }
 
 :root {
-    font-family: system-ui, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
-    font-size: 16px;
     --bg: #f5f5f5;
     --bg-secondary: #e8e8e8;
     --fg: #1a1a1a;
@@ -20,8 +18,13 @@
     --link-color: #1793d1;
     --bg-nav: rgba(255, 255, 255, 0.8);
     --nav-border-color: rgba(0, 0, 0, 0.1);
+
+    --border-radius-md: 0.375rem;
+    --border-radius-lg: 0.5rem;
     --box-shadow-color: rgba(0, 0, 0, 0.15);
     --box-shadow: 0 3px 4px var(--box-shadow-color);
+
+    font-family: system-ui, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,7 +65,7 @@ a {
 }
 
 header {
-    border-radius: 6px;
+    border-radius: var(--border-radius-lg);
     background: var(--bg-secondary);
     box-shadow: var(--box-shadow);
 }
@@ -103,7 +106,7 @@ h3 {
 
 .btn {
     background: var(--bg-button);
-    border-radius: 6px;
+    border-radius: var(--border-radius-md);
     color: white;
     padding: 10px 25px;
     text-align: center;
@@ -148,7 +151,7 @@ nav.page-nav {
 
         & li {
             margin: 0;
-            border-radius: 6px;
+            border-radius: var(--border-radius-md);
             background: transparent;
             font-weight: 600;
             transition: background 0.2s ease;
@@ -252,7 +255,7 @@ footer.page-footer {
         gap: 1rem;
 
         & li {
-            border-radius: 6px;
+            border-radius: var(--border-radius-md);
         }
     }
 }

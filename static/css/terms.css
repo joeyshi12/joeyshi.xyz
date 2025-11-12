@@ -16,7 +16,7 @@ ul.tags {
             display: block;
             padding: 3px 10px;
             background: var(--bg-secondary);
-            border-radius: 6px;
+            border-radius: var(--border-radius-md);
             text-decoration: none;
         }
     }
