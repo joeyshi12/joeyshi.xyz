@@ -21,6 +21,6 @@ html body {
 }
 
 .not-found-img {
-    border-radius: 16px;
+    border-radius: var(--border-radius-lg);
     width: 100%;
 }

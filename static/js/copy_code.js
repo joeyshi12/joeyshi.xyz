@@ -1,15 +1,15 @@
-const codeBlocks = document.querySelectorAll("pre");
+const codeBlocks = document.querySelectorAll(".highlight");
 
-codeBlocks.forEach((pre) => {
+codeBlocks.forEach((block) => {
     // Skip if it"s an inline code block or already has a button
-    if (pre.querySelector(".copy-button")) return;
+    if (block.querySelector(".copy-button")) return;
 
     const button = document.createElement("button");
     button.className = "copy-button";
     button.textContent = "Copy";
 
     button.addEventListener("click", async () => {
-        const code = pre.querySelector("code");
+        const code = block.querySelector("code");
         const text = code.textContent;
 
         try {
@@ -29,5 +29,5 @@ codeBlocks.forEach((pre) => {
         }
     });
 
-    pre.appendChild(button);
+    block.appendChild(button);
 });

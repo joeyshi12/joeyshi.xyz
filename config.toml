@@ -15,4 +15,4 @@ tag = "tags"
 [markup]
   [markup.highlight]
     noClasses = false
-    codeFences = false
+    codeFences = true

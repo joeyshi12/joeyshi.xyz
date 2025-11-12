@@ -41,18 +41,23 @@ header {
     padding: 0 0.2rem;
 }
 
-pre {
+.highlight {
+    position: relative;
     background: var(--bg-code);
     border-radius: var(--border-radius-md);
-    padding: 1rem;
-    overflow-x: auto;
-    line-height: 1.2rem;
-    position: relative;
 
-    & code {
-        padding: 0;
-        border: 0;
-        background: transparent;
+    & pre {
+        overflow-x: auto;
+        line-height: 1.2rem;
+        position: relative;
+        padding: 1rem;
+        border-radius: inherit;
+
+        & code {
+            padding: 0;
+            border: 0;
+            background: transparent;
+        }
     }
 }
 
@@ -82,7 +87,7 @@ pre {
     }
 }
 
-pre:hover .copy-button {
+.highlight:hover .copy-button {
     opacity: 1;
 }
 
