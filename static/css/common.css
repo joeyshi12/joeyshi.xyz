@@ -204,10 +204,6 @@ footer.page-footer {
 
 /* Mobile: bottom nav */
 @media only screen and (max-width: 768px) {
-    :target {
-      scroll-margin-top: 80px;
-    }
-
     nav.page-nav {
         top: auto;
         bottom: 0;
@@ -255,6 +251,10 @@ footer.page-footer {
 
 /* Medium screens and up: top nav.page-navigation */
 @media only screen and (min-width: 769px) {
+    :target {
+      scroll-margin-top: 80px;
+    }
+
     nav.page-nav ul {
         gap: 1rem;
 
