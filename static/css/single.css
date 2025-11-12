@@ -211,12 +211,17 @@ details {
         }
     }
 
+    /* Table of contents */
+    > nav {
+        border-top: 1px solid var(--border-color);
+        background: var(--bg);
+    }
+
     /* Content area */
     > div {
         padding: 1rem;
         border-top: 1px solid var(--border-color);
         background: var(--bg);
-        animation: slideDown 0.2s ease;
 
         > p {
             margin: 0.5rem 0;
@@ -237,17 +242,6 @@ details {
                 margin-top: 0;
             }
         }
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
