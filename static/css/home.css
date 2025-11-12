@@ -6,7 +6,7 @@ header {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
 
         & .header-text * {
             padding: 0;
