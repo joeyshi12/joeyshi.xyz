@@ -8,6 +8,7 @@ mathjax: true
 desmos: true
 scripts:
   - /js/extending_fibonacci.js
+toc: true
 ---
 
 The Fibonacci sequence can be written out as $0, 1, 1, 2, 3,\dots$,

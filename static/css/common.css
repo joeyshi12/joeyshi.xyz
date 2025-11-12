@@ -124,6 +124,10 @@ h3 {
     }
 }
 
+:target {
+  scroll-margin-top: 80px;
+}
+
 nav.page-nav {
     position: fixed;
     top: 0;

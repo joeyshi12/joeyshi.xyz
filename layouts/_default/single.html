@@ -31,6 +31,12 @@
                 {{- end }}
             </footer>
         </header>
+        {{- if .Param "toc" }}
+        <details>
+            <summary>Table of contents</summary>
+            {{- .TableOfContents }}
+        </details>
+        {{- end }}
         {{- .Content }}
     </article>
 {{- end }}

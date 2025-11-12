@@ -251,7 +251,7 @@ details {
     }
 }
 
-.dcg-container {
+svg, .dcg-container {
     border-radius: var(--border-radius-md);
 }
 

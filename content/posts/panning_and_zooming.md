@@ -7,6 +7,7 @@ tags:
 mathjax: true
 scripts:
   - /js/panning_and_zooming.js
+toc: true
 ---
 
 This post goes over some of the mathematics involved in panning and zooming in graphical applications.

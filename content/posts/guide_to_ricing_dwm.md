@@ -4,6 +4,7 @@ description: How to setup a nice desktop environment with tiled windows.
 date: 2025-10-17T18:37:29-07:00
 tags:
   - linux
+toc: true
 ---
 
 One of the main draws of Linux is the fact that you can customize your system however you want.
