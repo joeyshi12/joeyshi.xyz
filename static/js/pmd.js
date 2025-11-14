@@ -309,8 +309,8 @@ async function loadSprites(path, frameWidth, frameHeight) {
 }
 
 function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = document.documentElement.scrollWidth;
+    canvas.height = document.documentElement.scrollHeight;
     maxRows = Math.floor(canvas.height / (CELL_LENGTH * SCALE));
     maxCols = Math.floor(canvas.width / (CELL_LENGTH * SCALE));
 }
