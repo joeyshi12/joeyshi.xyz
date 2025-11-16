@@ -107,14 +107,14 @@ so this section will focus on how to get your own domain name and have it point 
 
 ### DNS background
 
+![DNS hierachy](/img/dns.webp)
+
 DNS (Domain Name System) is a distributed database implemented as a hierarchy of many name servers.
 This can be thought as a search tree where each node holds records of
 IP addresses (A records) or references to other name servers (NS records).
 To make sure requests to your domain resolves to your WAN address and reach your website,
 you need to create an A record that points to the IP address.
 For more information about DNS resource record types, read [the DNS RFC](https://datatracker.ietf.org/doc/html/rfc1035).
-
-![DNS hierachy](https://www.hostnoc.com/wp-content/uploads/2024/01/DNS2.jpg)
 
 ### Creating DNS records
 

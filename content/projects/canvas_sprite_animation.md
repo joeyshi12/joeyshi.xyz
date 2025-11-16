@@ -19,7 +19,7 @@ So, I implemented an animation system for Pokemon Mystery Dungeon sprites in van
 This was inspired by a friend's suggestion to make the mii maker plaza,
 where you can view all your mii creations and drag them around the screen.
 
-![Mii Plaza](https://i.pinimg.com/736x/f1/38/7f/f1387f11c1c166cebd9b1336769e9f2f.jpg)
+![Mii parade](/img/mii_parade.webp)
 
 I ended up going with 2D Pokemon sprite animations since my group and I found it more aesthetic.
 I let some Pokemon loose on this page, but I've disabled interactions since their interactions conflict with other elements with transparent backgrounds.

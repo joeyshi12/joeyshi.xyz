@@ -15,6 +15,8 @@ the suckless [dynamic window manager](https://dwm.suckless.org/) (dwm).
 
 ## About suckless and dwm
 
+![dwm desktop](/img/dwm_blue.webp)
+
 Suckless is a software community that produces software projects like
 dwm (window manager) and st (terminal).
 The common theme of these projects is that they are written in very few lines of C code.
@@ -83,8 +85,6 @@ Finally, create an `.xinitrc` file in your home directory and startup your deskt
 echo "exec dwm" > ~/.xinitrc
 startx
 ```
-
-![dwm desktop](https://dwm.suckless.org/screenshots/dwm-20100318s.png)
 
 ## Side tangent on window organization
 
