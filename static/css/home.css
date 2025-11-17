@@ -79,6 +79,10 @@ ul.repo-cards {
                     background: #2b7489;
                 }
 
+                &[lang="JavaScript"] {
+                    background: #f1e05a;
+                }
+
                 &[lang="HTML"] {
                     background: #e34c26;
                 }

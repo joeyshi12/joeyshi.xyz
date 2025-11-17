@@ -5,7 +5,6 @@ date: 2023-07-02T10:49:38-07:00
 tags:
   - gamedev
   - web
-weight: 3
 language: TypeScript
 ---
 

@@ -4,7 +4,7 @@ description: Website for browsing and putting together PC builds.
 date: 2024-11-13T10:49:38-07:00
 tags:
   - web
-weight: 1
+weight: 3
 language: Java
 ---
 
@@ -16,10 +16,10 @@ Website for browsing and putting together PC builds.
         - Password: pcbuilder
 - [Source code](https://github.com/joeyshi12/pc-builder)
 
-This is a fullstack web application that was made using a
+This is a fullstack web application made using a
 [Javalin](https://javalin.io) webserver, [MariaDB](https://mariadb.org/) database, and [Angular](https://angular.io/) frontend.
-The website is served by my Raspberry Pi at home.
-The Pi runs [Nginx](https://nginx.org/) as a reverse proxy to forward requests to a docker container running the PC Builder webserver.
+The PC builder webserver is running from my Raspberry Pi behind an [Nginx](https://nginx.org/) reverse proxy.
+Both are running in isolated docker containers.
 
 ## API Reference
 

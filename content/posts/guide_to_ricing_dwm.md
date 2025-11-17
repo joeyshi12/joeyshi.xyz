@@ -44,7 +44,7 @@ make
 ```
 
 Inside `~/.local/src/dwm/config.h`, update the command arguments for spawning
-your terminal and application launch.
+your terminal and application launcher.
 
 ```c
 static const char *roficmd[] = { "rofi", "-show", "drun", NULL };

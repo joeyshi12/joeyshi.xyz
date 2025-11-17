@@ -1,11 +1,13 @@
 ---
-title: Canvas sprite animation
-description: Sprite animations implemented in vanilla JavaScript.
+title: Animated Pokemon overlay
+description: A web page overlay with animated Pokemon sprites roaming around.
 date: 2025-05-08T23:25:07-07:00
 tags:
   - web
+weight: 1
 scripts:
   - /js/pmd.js
+language: JavaScript
 ---
 
 I had some time off this week and decided the best way to spend that
