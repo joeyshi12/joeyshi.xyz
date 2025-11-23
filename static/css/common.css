@@ -73,6 +73,11 @@ header {
 .title {
     font-family: "M Plus Rounded 1c", serif;
     font-size: 32px;
+
+    & a {
+        color: inherit;
+        font-size: 20px;
+    }
 }
 
 section {
@@ -190,16 +195,23 @@ main {
 }
 
 footer.page-footer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    gap: 1rem;
     margin-top: 4rem;
     color: var(--fg-secondary);
     font-size: 0.875rem;
     border-top: 1px solid var(--border-color);
 
-    * p {
+    & p {
         margin: 0;
     }
+}
+
+.badges-container a {
+    text-decoration: none;
 }
 
 /* Mobile: bottom nav */

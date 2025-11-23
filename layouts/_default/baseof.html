@@ -59,7 +59,7 @@
     <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-{{- block "body" . }}
+    {{- block "body" . }}
     <nav class="page-nav">
         <ul>
             <li>
@@ -93,10 +93,17 @@
     {{- end }}
     </main>
     <footer class="page-footer">
+        <div class="badges-container">
+            {{- range .Site.Data.badges }}
+            <a href="{{ .link }}">
+                <img src="/img/badges/{{ .badgeImage }}" alt="{{ .name }}" />
+            </a>
+            {{- end }}
+        </div>
         <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
     </footer>
     {{- block "scripts" . }}
     {{- end }}
-{{- end }}
+    {{- end }}
 </body>
 </html>

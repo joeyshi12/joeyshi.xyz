@@ -5,11 +5,13 @@
 
 {{- define "main" }}
     <header>
-        <h2 class="title">{{ humanize .Title }}</h2>
+        <h2 class="title">
+            {{ humanize .Title }}
+            {{- with .OutputFormats.Get "rss" }}
+            <a href="{{ .Permalink }}"><i class="fa-solid fa-rss"></i></a>
+            {{- end }}
+        </h2>
     </header>
-    {{- with .OutputFormats.Get "rss" }}
-    <p>Subscribe to my <a href="{{ .Permalink }}">RSS feed</a> for updates!</p>
-    {{- end }}
     <ul class="listing">
         {{- range .Pages }}
         <li class="list-item">

@@ -1,0 +1,47 @@
+[
+    {
+        "name": "archlinux",
+        "badgeImage": "archlinux.png",
+        "link": "https://archlinux.org/"
+    },
+    {
+        "name": "neovim",
+        "badgeImage": "neovim.png",
+        "link": "https://neovim.io/"
+    },
+    {
+        "name": "jetbrains",
+        "badgeImage": "jetbrains.png",
+        "link": "https://www.jetbrains.com/"
+    },
+    {
+        "name": "steam",
+        "badgeImage": "steam.gif",
+        "link": "https://store.steampowered.com/"
+    },
+    {
+        "name": "hugo",
+        "badgeImage": "hugo.png",
+        "link": "https://gohugo.io/"
+    },
+    {
+        "name": "docker",
+        "badgeImage": "docker.png",
+        "link": "https://www.docker.com/"
+    },
+    {
+        "name": "nginx",
+        "badgeImage": "nginx.png",
+        "link": "https://nginx.org/"
+    },
+    {
+        "name": "gitea",
+        "badgeImage": "gitea.png",
+        "link": "https://about.gitea.com/"
+    },
+    {
+        "name": "jellyfin",
+        "badgeImage": "jellyfin.png",
+        "link": "https://jellyfin.org/"
+    }
+]

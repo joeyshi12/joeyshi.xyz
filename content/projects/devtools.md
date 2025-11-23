@@ -10,7 +10,7 @@ language: HTML
 A collection of custom-made tools for programming tasks or challenges I've encountered.
 
 - [Website](https://devtools.joeyshi.xyz)
-- [Source code](https://github.com/joeyshi12/devtools)
+- [Source code](https://git.joeyshi.xyz/joey/devtools)
 
 ## Webhook tester
 

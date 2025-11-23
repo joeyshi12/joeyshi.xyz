@@ -7,10 +7,7 @@
     <header>
         <h2 class="title">{{ .Title }}</h2>
     </header>
-    {{- with .OutputFormats.Get "rss" }}
-    <p>Subscribe to my <a href="{{ .Permalink }}">RSS feed</a> for updates!</p>
-    {{- end }}
-    <ul class="tags">
+    <ul class="tags-container">
         {{- $type := .Type }}
         {{- range $key, $value := .Data.Terms.Alphabetical }}
         {{- $name := .Name }}
