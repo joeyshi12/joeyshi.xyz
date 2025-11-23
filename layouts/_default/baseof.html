@@ -93,13 +93,6 @@
     {{- end }}
     </main>
     <footer class="page-footer">
-        <div class="badges-container">
-            {{- range .Site.Data.badges }}
-            <a href="{{ .link }}">
-                <img src="/img/badges/{{ .badgeImage }}" alt="{{ .name }}" />
-            </a>
-            {{- end }}
-        </div>
         <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
     </footer>
     {{- block "scripts" . }}

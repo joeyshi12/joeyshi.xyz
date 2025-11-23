@@ -195,11 +195,8 @@ main {
 }
 
 footer.page-footer {
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    padding: 2rem;
-    gap: 1rem;
+    padding: 1.5rem;
     margin-top: 4rem;
     color: var(--fg-secondary);
     font-size: 0.875rem;
@@ -208,10 +205,6 @@ footer.page-footer {
     & p {
         margin: 0;
     }
-}
-
-.badges-container a {
-    text-decoration: none;
 }
 
 /* Mobile: bottom nav */
