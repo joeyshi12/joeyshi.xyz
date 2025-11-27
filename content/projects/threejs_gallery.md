@@ -1,6 +1,6 @@
 ---
-title: Three.js gallery 
-description: A collection of 3d scenes made with Blender and three.js. 
+title: Three.js gallery
+description: A collection of 3d scenes made with Blender and three.js.
 date: 2024-02-19T12:49:16-08:00
 tags:
   - blender
@@ -18,7 +18,7 @@ where I used three.js to render everything.
 ## Custom emotes
 
 {{< template >}}
-<iframe src="https://gallery.joeyshi.xyz/custom_emotes"></iframe>
+<iframe src="https://gallery.joeyshi.xyz/custom_emotes" height="500px"></iframe>
 {{</ template >}}
 
 ## Lethal Company - Doug Walker meme
@@ -26,5 +26,5 @@ where I used three.js to render everything.
 I've uploaded a video render of this scene on Youtube [here](https://www.youtube.com/watch?v=pljVS-0kRZo).
 
 {{< template >}}
-<iframe src="https://gallery.joeyshi.xyz/lc_doug_walker"></iframe>
+<iframe src="https://gallery.joeyshi.xyz/lc_doug_walker" height="500px"></iframe>
 {{</ template >}}

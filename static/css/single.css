@@ -262,7 +262,6 @@ iframe {
     border: none;
     border-radius: var(--border-radius-md);
     width: 100%;
-    height: 500px;
 }
 
 mjx-container[jax="CHTML"][display="true"] {
