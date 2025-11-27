@@ -1,7 +1,16 @@
-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius-md);
+article {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid;
+
+    & img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--border-radius-md);
+    }
+}
+
+.giscus {
+    margin-top: 1rem;
 }
 
 header {
