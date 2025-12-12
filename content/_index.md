@@ -2,14 +2,16 @@
 title: Joey Shi - Software Developer
 ---
 
-Hello 👋. I'm a professional full-stack developer @ [Visier](https://www.visier.com/).
+Hello 👋. I’m a professional full-stack software engineer @ Amazon.
 
-I work on interactive dataflow visualization libraries and various HCM data extractors.
-In my role, I helped drive many different projects,
-delivered impactful feature demos to the company, and mentored new developers.
+I focus on improving system reliability, application security, and developer efficiency.
+My recent work includes developing a first-responder AI agent for Amazon on-calls
+and fixing application security vulnerabilities during on-call.
 
-Outside of work, I enjoy tinkering with different kinds of software and learning new things.
-You can find some of my works listed [here](/projects/).
+Previously, I was a full-stack software developer at [Visier](https://www.visier.com/).
+I built interactive [dataflow visualizations](https://docs.visier.com/visier-people/Studio/data/data-flow-visualization.htm) to provide users a clear understanding of their data's journey
+and I developed [HCM data connectors](https://docs.visier.com/visier-people/Studio/data/data%20connectors/data-connectors.htm) to automate data onboarding.
+In this role, I delivered impactful feature demos and mentored new engineers.
 
-Feel free to connect! I'm always up for discussions about productivity tools,
-computer graphics, and Linux ricing (I use Arch and Neovim btw).
+Outside of work, I enjoy tinkering with different kinds of software and learning new things. You can find some of my works listed [here](/projects/).
+Feel free to connect! I’m always up for discussions about productivity tools, computer graphics, and Linux ricing (I use Arch and Neovim btw).
