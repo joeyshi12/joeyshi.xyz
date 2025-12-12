@@ -1,14 +1,14 @@
 ---
-title: Joey Shi - Software Developer
+title: Joey Shi - Software Engineer
 ---
 
-Hello 👋. I’m a professional full-stack software engineer @ Amazon.
+Hello 👋. I’m a professional software engineer @ Amazon.
 
 I focus on improving system reliability, application security, and developer efficiency.
 My recent work includes developing a first-responder AI agent for Amazon on-calls
 and fixing application security vulnerabilities during on-call.
 
-Previously, I was a full-stack software developer at [Visier](https://www.visier.com/).
+Previously, I was a full-stack software developer @ [Visier](https://www.visier.com/).
 I built interactive [dataflow visualizations](https://docs.visier.com/visier-people/Studio/data/data-flow-visualization.htm) to provide users a clear understanding of their data's journey
 and I developed [HCM data connectors](https://docs.visier.com/visier-people/Studio/data/data%20connectors/data-connectors.htm) to automate data onboarding.
 In this role, I delivered impactful feature demos and mentored new engineers.

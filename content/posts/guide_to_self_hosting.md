@@ -72,7 +72,7 @@ Verify these containers are running with `docker ps`
 (See [Docker cheat sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf) for other commands).
 The Wordpress container is exposed on port 8080, so you'll be able to access the site on `http://localhost:8080`.
 
-## Serving over the Internet 
+## Serving over the Internet
 
 Other computers in your network should also be able to access the web app.
 Check the IPv4 address of your server with `ipconfig`.
@@ -120,7 +120,7 @@ For more information about DNS resource record types, read [the DNS RFC](https:/
 
 To setup a domain name, you need to first purchase a domain from a registrar like [Cloudflare](https://www.cloudflare.com/).
 Once purchased, you'll want to find the DNS records table.
-Create an A record that points to your WAN IP. 
+Create an A record that points to your WAN IP.
 It may take a few hours before changes to the DNS records table takes effect.
 You can verify that your record has been created by running `nslookup <domain_name`;
 if the command resolves to the expected IP, then you're set.
