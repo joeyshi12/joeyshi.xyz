@@ -10,6 +10,20 @@ const context = canvas.getContext("2d");
 let maxRows = 10;
 let maxCols = 10;
 
+const observer = new ResizeObserver(entries => {
+    for (let entry of entries) {
+        const { width, height } = entry.contentRect;
+        if (canvas.width !== width || canvas.height !== height) {
+            canvas.width = document.documentElement.scrollWidth;
+            canvas.height = document.documentElement.scrollHeight;
+            maxRows = Math.floor(canvas.height / (CELL_LENGTH * SCALE));
+            maxCols = Math.floor(canvas.width / (CELL_LENGTH * SCALE));
+        }
+    }
+});
+
+observer.observe(document.documentElement);
+
 /**
  * @typedef AnimationData
  * @type {object}
@@ -56,7 +70,7 @@ class AnimatedSprite {
     }
 
     /**
-     * Updates current animation being played 
+     * Updates current animation being played
      * @param {string} animationId
      */
     play(animationId) {
@@ -271,7 +285,7 @@ async function loadAnimation(pokemonName) {
 
 /**
  * Loads spritesheet at the given path.
- * @param {string} path 
+ * @param {string} path
  * @returns {number} frameWidth
  * @returns {number} frameHeight
  * @returns {Promise<ImageBitmap[][]>}
@@ -308,17 +322,10 @@ async function loadSprites(path, frameWidth, frameHeight) {
     });
 }
 
-function resize() {
-    canvas.width = document.documentElement.scrollWidth;
-    canvas.height = document.documentElement.scrollHeight;
-    maxRows = Math.floor(canvas.height / (CELL_LENGTH * SCALE));
-    maxCols = Math.floor(canvas.width / (CELL_LENGTH * SCALE));
-}
-
 /**
  * Returns a Vector2D coordinate for a given grid index
- * @param {number} row 
- * @param {number} col 
+ * @param {number} row
+ * @param {number} col
  * @returns {Vector2D}
  */
 function toCoordinate(row, col) {
@@ -327,14 +334,6 @@ function toCoordinate(row, col) {
         y: (row + 0.5) * CELL_LENGTH
     };
 }
-
-window.addEventListener("resize", () => {
-    resize();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    resize();
-});
 
 async function main() {
     const pokemonNames = ["Gengar", "Misdreavus", "Litwick"];
@@ -352,7 +351,7 @@ async function main() {
 
     /**
      * Handles canvas frame update
-     * @param {number} time 
+     * @param {number} time
      */
     function update(time) {
         requestAnimationFrame(update);
