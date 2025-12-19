@@ -336,7 +336,7 @@ function toCoordinate(row, col) {
 }
 
 async function main() {
-    const pokemonNames = ["Gengar", "Misdreavus", "Litwick"];
+    const pokemonNames = ["Ivysaur", "Charizard", "Squirtle", "Pikachu"];
     const animDataList = await Promise.all(pokemonNames.map(name => loadAnimation(name)));
     let previousTime = 0;
 
