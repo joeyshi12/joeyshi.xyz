@@ -345,7 +345,7 @@ async function main() {
     for (let i = 0; i < 4; i++) {
         const row = Math.floor(Math.random() * maxRows);
         const col = Math.floor(Math.random() * maxCols);
-        const animData = animDataList[Math.floor(Math.random() * animDataList.length)];
+        const animData = animDataList[i];
         entities.push(new Pokemon(row, col, new AnimatedSprite(animData)));
     }
 
