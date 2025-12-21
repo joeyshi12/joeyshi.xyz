@@ -188,7 +188,7 @@ nav.page-nav {
 main {
     display: flex;
     flex-direction: column;
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 6rem 2rem 2rem 2rem;
     margin: 0 auto;
     max-width: 36em;
 }
