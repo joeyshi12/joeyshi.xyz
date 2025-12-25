@@ -93,7 +93,7 @@ mouse event listener callback functions.
 
 - [Source code](https://github.com/joeyshi12/joeyshi.xyz/blob/main/static/js/panning_and_zooming.js)
 
-{{< template >}}
+{{< html >}}
 <svg width="100%" height="500" style="background: white">
     <defs>
         <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -108,5 +108,5 @@ mouse event listener callback functions.
         <rect width="401" height="401" fill="url(#grid)" />
     </g>
 </svg>
-{{</ template >}}
+{{</ html >}}
 
