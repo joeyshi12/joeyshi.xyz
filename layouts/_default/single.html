@@ -13,12 +13,12 @@
                 <span><i class="fa-solid fa-caret-right"></i></span>
                 <h2 class="page-title">{{ .Title }}</h2>
             </div>
-            <footer>
-                <span class="page-date">{{ .Date | time.Format ":date_long" }}</span>
+            <footer class="post-footer">
+                <span class="entry-date">{{ .Date | time.Format ":date_long" }}</span>
                 {{- if isset .Params "tags" }}
-                <div class="page-tags">
+                <div>
                     {{- range .Params.tags }}
-                    <a href="/tags/{{ . | urlize }}">#{{ . }}</a>
+                    <a class="entry-tag" href="/tags/{{ . | urlize }}">#{{ . }}</a>
                     {{- end }}
                 </div>
                 {{- end }}

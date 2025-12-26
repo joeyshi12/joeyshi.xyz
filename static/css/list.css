@@ -18,23 +18,5 @@ ul.listing {
         &:last-child {
             border-bottom: 1px solid var(--border-color);
         }
-
-        & .entry-description {
-            font-size: 0.9rem;
-        }
-
-        & footer {
-            font-size: 0.8rem;
-            display: flex;
-            flex-direction: row;
-
-            & .entry-date {
-                margin-right: 1rem;
-            }
-
-            & .entry-tag {
-                margin: 0 0.1rem;
-            }
-        }
     }
 }

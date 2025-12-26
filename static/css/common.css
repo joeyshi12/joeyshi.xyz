@@ -109,22 +109,52 @@ h3 {
 }
 
 .btn {
-    background: var(--bg-button);
+    display: block;
     border-radius: var(--border-radius-md);
-    color: white;
-    padding: 10px 25px;
+    color: var(--fg);
     text-align: center;
     text-decoration: none;
     box-shadow: var(--box-shadow);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     white-space: nowrap;
-    font-weight: 600;
+    font-weight: 500;
+
+    &.btn-primary {
+        background: var(--bg-button);
+        padding: 10px 25px;
+
+        &:hover {
+            background: var(--bg-button-hover);
+        }
+    }
+
+    &.btn-secondary {
+        background: var(--bg-secondary);
+        padding: 3px 10px;
+    }
 
     &:hover {
-        background: var(--bg-button-hover);
         text-decoration: none;
         transform: translateY(-2px);
         box-shadow: 0 4px 8px var(--box-shadow-color);
+    }
+}
+
+.p2 {
+    font-size: 0.9rem;
+}
+
+.post-footer {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+
+    & .entry-date {
+        margin-right: 1rem;
+    }
+
+    & .entry-tag {
+        margin: 0 0.1rem;
     }
 }
 

@@ -16,8 +16,8 @@
         {{- range .Pages }}
         <li class="list-item">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
-            <p class="entry-description">{{ .Description }}</p>
-            <footer>
+            <p class="p2">{{ .Description }}</p>
+            <footer class="post-footer">
                 <span class="entry-date">{{ .Date | time.Format ":date_long" }}</span>
                 {{- if isset .Params "tags" }}
                 <div>

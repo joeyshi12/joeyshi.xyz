@@ -31,18 +31,7 @@ header {
     }
 
     & footer {
-        font-size: 0.8rem;
-        display: flex;
-        flex-direction: row;
         padding-top: 0.5rem;
-
-        & .page-date {
-            margin-right: 1rem;
-        }
-
-        & .page-tags > a {
-            margin: 0 0.1rem;
-        }
     }
 }
 

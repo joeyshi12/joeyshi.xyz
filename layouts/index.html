@@ -21,7 +21,7 @@
             {{- .Content }}
         </div>
         <div class="btn-group">
-            <a class="btn" target="_blank" href="/resume/resume.pdf">Resume</a>
+            <a class="btn btn-primary" target="_blank" href="/resume/resume.pdf">Resume</a>
         </div>
     </section>
     <section>
@@ -50,11 +50,13 @@
                     <i class="fa-brands fa-github-alt"></i>
                     <a class="repo-link" href="{{ .Permalink }}">{{ .Title }}</a>
                 </div>
-                <p>{{ .Description }}</p>
-                <div class="repo-language">
-                    <span class="repo-language-color" lang="{{ .Params.language }}"></span>
-                    <span>{{ .Params.language }}</span>
-                </div>
+                <p class="p2">{{ .Description }}</p>
+                <footer>
+                    <span>
+                        <span class="repo-language-color" lang="{{ .Params.language }}"></span>
+                        <span>{{ .Params.language }}</span>
+                    </span>
+                </footer>
             </li>
         {{- end }}
         </ul>
@@ -65,8 +67,17 @@
         {{- range first 4 (where .Site.RegularPages "Section" "posts") }}
             <li>
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
-                <p>{{ .Description }}</p>
-                <span>{{ .Date.Format "January 2, 2006" }}</span>
+                <p class="p2">{{ .Description }}</p>
+                <footer class="post-footer">
+                    <span class="entry-date">{{ .Date | time.Format ":date_long" }}</span>
+                    {{- if isset .Params "tags" }}
+                    <div>
+                        {{- range .Params.tags }}
+                        <a class="entry-tag" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+                        {{- end }}
+                    </div>
+                    {{- end }}
+                </footer>
             </li>
         {{- end }}
         </ul>
