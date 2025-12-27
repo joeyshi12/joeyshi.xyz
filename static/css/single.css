@@ -57,36 +57,20 @@ header {
             background: transparent;
         }
     }
-}
 
-.copy-button {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    background: var(--bg-button);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius-md);
-    cursor: pointer;
-    font-size: 0.875rem;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 0.2s, background 0.2s, transform 0.1s;
-    box-shadow: var(--box-shadow);
-
-    &:hover {
-        background: var(--bg-button-hover);
-        transform: translateY(-1px);
+    & .btn-primary.copy-button {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        opacity: 0;
+        transition: opacity 0.2s, background 0.2s, transform 0.1s;
     }
 
-    &:active {
-        transform: translateY(0);
+    &:hover .copy-button {
+        opacity: 1;
     }
-}
-
-.highlight:hover .copy-button {
-    opacity: 1;
 }
 
 /* Scrollbar */
@@ -107,7 +91,7 @@ header {
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background: var(--bg-button);
+    background: var(--bg-btn-primary);
 }
 
 /* Firefox */
@@ -198,7 +182,7 @@ details {
             display: inline-block;
             width: 1em;
             transition: transform 0.2s ease;
-            color: var(--bg-button);
+            color: var(--bg-btn-primary);
             font-size: 0.875rem;
         }
 

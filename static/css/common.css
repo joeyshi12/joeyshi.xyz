@@ -11,8 +11,9 @@
     --fg: #1a1a1a;
     --fg-secondary: #4a4a4a;
     --bg-secondary-hover: #d8d8d8;
-    --bg-button: #1793d1;
-    --bg-button-hover: #0f7ab8;
+    --fg-btn-primary: rgb(255, 255, 255);
+    --bg-btn-primary: #1793d1;
+    --bg-btn-primary-hover: #0f7ab8;
     --bg-code: #ebebeb;
     --border-color: #d0d0d0;
     --link-color: #1793d1;
@@ -34,8 +35,8 @@
         --fg: rgb(232, 230, 227);
         --fg-secondary: rgb(120, 120, 120);
         --bg-secondary-hover: rgb(60, 65, 68);
-        --bg-button: rgb(1, 97, 138);
-        --bg-button-hover: rgb(2, 114, 163);
+        --bg-btn-primary: rgb(1, 97, 138);
+        --bg-btn-primary-hover: rgb(2, 114, 163);
         --bg-code: rgb(38, 41, 43);
         --border-color: rgb(59, 64, 67);
         --link-color: rgb(75, 168, 248);
@@ -117,14 +118,17 @@ h3 {
     box-shadow: var(--box-shadow);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     white-space: nowrap;
-    font-weight: 500;
+    cursor: pointer;
+    border: none;
 
     &.btn-primary {
-        background: var(--bg-button);
+        color: var(--fg-btn-primary);
+        background: var(--bg-btn-primary);
         padding: 10px 25px;
+        font-weight: 600;
 
         &:hover {
-            background: var(--bg-button-hover);
+            background: var(--bg-btn-primary-hover);
         }
     }
 

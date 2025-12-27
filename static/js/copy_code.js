@@ -5,7 +5,7 @@ codeBlocks.forEach((block) => {
     if (block.querySelector(".copy-button")) return;
 
     const button = document.createElement("button");
-    button.className = "copy-button";
+    button.className = "btn btn-primary copy-button";
     button.textContent = "Copy";
 
     button.addEventListener("click", async () => {
@@ -15,7 +15,7 @@ codeBlocks.forEach((block) => {
         try {
             await navigator.clipboard.writeText(text);
             button.textContent = "Copied";
-            
+
             setTimeout(() => {
                 button.textContent = "Copy";
             }, 2000);
