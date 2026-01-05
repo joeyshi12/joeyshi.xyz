@@ -24,6 +24,6 @@ where you can view all your mii creations and drag them around the screen.
 ![Mii parade](/img/mii_parade.webp)
 
 I ended up going with 2D Pokemon sprite animations since my group and I found it more aesthetic.
-I let some Pokemon loose on this page, but I've disabled interactions since their interactions conflict with other elements with transparent backgrounds.
+I let some Pokemon loose on this page, but I've disabled interactions since their interactions conflict with other elements.
 But, you can try out the drag-and-drop interaction at https://zorflendex.space.
 
