@@ -13,7 +13,7 @@ A collection of web games I made and host.
 - [Game Website](https://play.joeyshi.xyz/)
     - Platform Party - A real-time multiplayer 2D platformer.
     - Snake - The classic snake game with a high-score board.
-- [Source code](https://git.joeyshi.xyz/joey/joeys-games)
+- [Source code](https://github.com/joeyshi12/joeys-games)
 
 These games were made primarily using TypeScript and the HTML5 canvas API.
 

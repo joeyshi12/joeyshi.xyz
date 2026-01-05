@@ -14,7 +14,7 @@ Website for browsing and putting together PC builds.
     - Test user credentials:
         - User: pcbuilder
         - Password: pcbuilder
-- [Source code](https://git.joeyshi.xyz/joey/pc-builder)
+- [Source code](https://github.com/joeyshi12/pc-builder)
 
 This is a fullstack web application made using a
 [Javalin](https://javalin.io) webserver, [MariaDB](https://mariadb.org/) database, and [Angular](https://angular.io/) frontend.
