@@ -65,4 +65,4 @@ f(j \Delta x), &\text{if } i = 0
 \end{cases}
 $$
 
-- [Implementation](https://github.com/joeyshi12/diff-eq-solver/blob/main/src/diffeq_solver_tk/finite_difference.py)
+- [Implementation](https://github.com/joeyshi12/diff-eq-solver/blob/main/src/diffeq_solver_tk/diffeq/_finite_difference.py#L46)
