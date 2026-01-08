@@ -11,42 +11,32 @@ language: TypeScript
 A collection of web games I made and host.
 
 - [Game Website](https://play.joeyshi.xyz/)
-    - Platform Party - A real-time multiplayer 2D platformer.
-    - Snake - The classic snake game with a high-score board.
 - [Source code](https://github.com/joeyshi12/joeys-games)
 
-These games were made primarily using TypeScript and the HTML5 canvas API.
+These games were made primarily using the HTML5 canvas API,
+which offers useful image processing functions that I use for drawing.
 
-## Image processing
+## Platform Party
 
-The first API I leveraged was the canvas scripting API, which offered useful image processing functions.
-To start using this feature, I added a canvas element in my main HTML template file
+A multiplayer browser platformer that I implemented using
+the previously mentioned canvas API and [socket.io](https://socket.io).
+I preprocess the spritesheet image by converting each sprite square in
+the image into an [`ImageBitmap`](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap)
+by calling [createImageBitmap](https://developer.mozilla.org/en-US/docs/Web/API/createImageBitmap).
+Then, I'm able to draw sprites by calling [`CanvasRenderingContext2D#drawImage`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)
+on the rendering context of the canvas element.
 
-```html
- <canvas id="game"></canvas>
-```
+Additionally, I implemented a map maker in the game that leverages
+the same mathematical concepts mentioned in
+[my post about panning and zooming](/posts/panning_and_zooming/).
 
-Then, I get the [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
-interface from this element in a separate script.
+- [Link to game](https://play.joeyshi.xyz/platform-party/)
 
-```javascript
- const ctx = document.getElementById("game").getContext("2d")
-```
+## Snake
 
-This interface contains useful methods, such as
+This is the classic arcade snake game implemented for the web.
+I added a leaderboard to make the game more fun and competitive.
+Both the web server and database is self-hosted.
+Check out [my post about self-hosting](/posts/guide_to_self_hosting/).
 
-```javascript
- drawImage(bitmap, x, y, width, height)
-```
-
-which I use to draw sprites on the screen.
-This method requires the image in the form of a image bitmap
-and to do that, we can use [createImageBitmap](https://developer.mozilla.org/en-US/docs/Web/API/createImageBitmap),
-which returns a `Promise<ImageBitmap>`.
-
-```javascript
-createImageBitmap(image)
-createImageBitmap(image, options)
-createImageBitmap(image, sx, sy, sw, sh)
-createImageBitmap(image, sx, sy, sw, sh, options)
-```
+- [Link to game](https://play.joeyshi.xyz/snake/)
