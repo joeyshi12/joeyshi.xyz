@@ -22,7 +22,7 @@ A multiplayer browser platformer that I implemented using
 the previously mentioned canvas API and [socket.io](https://socket.io).
 I preprocess the spritesheet image by converting each sprite square in
 the image into an [`ImageBitmap`](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap)
-by calling [createImageBitmap](https://developer.mozilla.org/en-US/docs/Web/API/createImageBitmap).
+by calling [`createImageBitmap`](https://developer.mozilla.org/en-US/docs/Web/API/createImageBitmap).
 Then, I'm able to draw sprites by calling [`CanvasRenderingContext2D#drawImage`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)
 on the rendering context of the canvas element.
 
