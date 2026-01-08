@@ -30,13 +30,9 @@ Additionally, I implemented a map maker in the game that leverages
 the same mathematical concepts mentioned in
 [my post about panning and zooming](/posts/panning_and_zooming/).
 
-- [Link to game](https://play.joeyshi.xyz/platform-party/)
-
 ## Snake
 
 This is the classic arcade snake game implemented for the web.
 I added a leaderboard to make the game more fun and competitive.
 Both the web server and database is self-hosted.
 Check out [my post about self-hosting](/posts/guide_to_self_hosting/).
-
-- [Link to game](https://play.joeyshi.xyz/snake/)
