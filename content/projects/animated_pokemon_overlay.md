@@ -14,7 +14,7 @@ I had some time off this week and decided the best way to spend that
 time was to start another random project.
 So, I implemented an animation system for Pokemon Mystery Dungeon sprites in vanilla JavaScript.
 
-- [Website](https://zorflendex.space)
+- [Website](https://pmd.joeyshi.xyz)
 - [Source code](https://github.com/joeyshi12/joeyshi.xyz/blob/main/static/js/pmd.js)
 - [PMD collab sprites](https://sprites.pmdcollab.org/#/)
 
@@ -29,5 +29,5 @@ where you can view all your mii creations and drag them around the screen.
 
 I ended up going with 2D Pokemon sprite animations since my group and I found it more aesthetic.
 I let some Pokemon loose on this page, but I've disabled interactions since their interactions conflict with other elements.
-But, you can try out the drag-and-drop interaction at https://zorflendex.space.
+But, you can try out the drag-and-drop interaction at https://pmd.joeyshi.xyz.
 
