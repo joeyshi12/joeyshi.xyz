@@ -18,9 +18,9 @@ So, I implemented an animation system for Pokemon Mystery Dungeon sprites in van
 - [Source code](https://github.com/joeyshi12/joeyshi.xyz/blob/main/static/js/pmd.js)
 - [PMD collab sprites](https://sprites.pmdcollab.org/#/)
 
-I would normally use TypeScript for client-side projects,
+I would normally use TypeScript for web projects,
 but I wanted to try using [JSDoc](https://jsdoc.app/about-getting-started) for static typing.
-It also felt good not needing to setup another build system with npm.
+It also felt good not needing to setup another build system with webpack.
 
 This was inspired by a friend's suggestion to make the mii maker plaza,
 where you can view all your mii creations and drag them around the screen.
