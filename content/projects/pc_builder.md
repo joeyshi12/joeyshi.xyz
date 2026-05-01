@@ -10,17 +10,12 @@ language: Java
 
 Website for browsing and putting together PC builds.
 
-- [Website](https://pc-builder.joeyshi.xyz/)
-    - Test user: pcbuilder
-    - Password: pcbuilder
 - [Source code](https://github.com/joeyshi12/pc-builder)
 
 This is a fullstack web application made using a
 [Javalin](https://javalin.io) webserver, [MariaDB](https://mariadb.org/) database, and [Angular](https://angular.io/) frontend.
-Both the PC builder webserver and database server is self-hosted and
-running behind a [Caddy](https://caddyserver.com/) reverse proxy.
-All these programs are run within Docker containers.
-Check out [my post about self-hosting](/posts/guide_to_self_hosting/) if you're also interested in running a homelab.
+The docker image for this application is published on the Github page.
+Check out [my post about self-hosting](/posts/guide_to_self_hosting/) if you're interested in hosting it yourself.
 
 ## API Reference
 
