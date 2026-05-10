@@ -4,7 +4,6 @@ let translation = { x: 0, y: 0 };
 let scale = 1;
 let mouseDownPosition = undefined;
 let mouseOverPosition = undefined;
-let pinch = undefined;
 centerInner();
 
 svg.addEventListener("mousedown", (event) => {
@@ -12,13 +11,7 @@ svg.addEventListener("mousedown", (event) => {
 });
 
 svg.addEventListener("touchstart", (event) => {
-    event.preventDefault();
-    if (event.touches.length === 1) {
-        mouseDown(event.touches[0].clientX, event.touches[0].clientY);
-    } else if (event.touches.length === 2) {
-        onMouseExit();
-        pinch = pinchInfo(event.touches[0], event.touches[1]);
-    }
+    mouseDown(event.touches[0].clientX, event.touches[0].clientY);
 });
 
 svg.addEventListener("mousemove", (event) => {
@@ -27,13 +20,7 @@ svg.addEventListener("mousemove", (event) => {
 
 svg.addEventListener("touchmove", (event) => {
     event.preventDefault();
-    if (event.touches.length === 1) {
-        mouseMove(event.touches[0].clientX, event.touches[0].clientY);
-    } else if (event.touches.length === 2 && pinch) {
-        const current = pinchInfo(event.touches[0], event.touches[1]);
-        applyPinchDelta(pinch, current);
-        pinch = current;
-    }
+    mouseMove(event.touches[0].clientX, event.touches[0].clientY);
 });
 
 svg.addEventListener("mouseup", () => {
@@ -44,14 +31,8 @@ svg.addEventListener("mouseleave", () => {
     onMouseExit();
 });
 
-svg.addEventListener("touchend", (event) => {
-    if (event.touches.length === 0) {
-        onMouseExit();
-        pinch = undefined;
-    } else if (event.touches.length === 1 && pinch) {
-        pinch = undefined;
-        mouseDown(event.touches[0].clientX, event.touches[0].clientY);
-    }
+svg.addEventListener("touchend", () => {
+    onMouseExit();
 });
 
 svg.addEventListener("wheel", (event) => {
@@ -120,25 +101,4 @@ function getTranslation() {
         y += mouseOverPosition.y - mouseDownPosition.y;
     }
     return { x, y };
-}
-
-function pinchInfo(t1, t2) {
-    return {
-        dist: Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY),
-        midX: (t1.clientX + t2.clientX) / 2,
-        midY: (t1.clientY + t2.clientY) / 2,
-    };
-}
-
-function applyPinchDelta(prev, curr) {
-    const svgRect = svg.getBoundingClientRect();
-    const prevMidX = prev.midX - svgRect.x;
-    const prevMidY = prev.midY - svgRect.y;
-    const currMidX = curr.midX - svgRect.x;
-    const currMidY = curr.midY - svgRect.y;
-    const scaleFactor = curr.dist / prev.dist;
-    translation.x = scaleFactor * (translation.x - prevMidX) + currMidX;
-    translation.y = scaleFactor * (translation.y - prevMidY) + currMidY;
-    scale *= scaleFactor;
-    inner.setAttribute("transform", getTransform());
 }
