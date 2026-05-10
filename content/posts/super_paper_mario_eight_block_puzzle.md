@@ -29,7 +29,7 @@ At this point I thought: this would be a good Leetcode question.
 ## Problem
 
 Given a `block_transitions` list like the one above, what is the shortest hit sequence
-that would transform a given state `start` to an end state `end`.
+that would transform a given state `start` to an end state `end`?
 A hit sequence is a list of indices for `block_transitions` that determines the order
 in which we hit the blocks.
 
