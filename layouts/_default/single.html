@@ -1,6 +1,9 @@
 {{- define "styles" }}
     <link rel="stylesheet" href="/css/common.css"/>
     <link rel="stylesheet" href="/css/single.css"/>
+    {{- range .Params.styles }}
+    <link rel="stylesheet" href="{{ . }}"/>
+    {{- end }}
 {{- end }}
 
 {{- define "main" }}
@@ -59,7 +62,7 @@
     <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     {{- end }}
     {{- range .Params.scripts }}
-    <script src="{{ . }}"></script>
+    <script type="module" src="{{ . }}"></script>
     {{- end }}
     <script src="https://giscus.app/client.js"
             data-repo="joeyshi12/joeyshi.xyz"

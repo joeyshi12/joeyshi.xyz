@@ -2,6 +2,10 @@
 title: "Super Paper Mario Eight Block Puzzle"
 description: A fun coding challenge inspired by Super Paper Mario Wii.
 date: 2026-05-10T00:47:58-07:00
+scripts:
+  - /js/super_paper_mario_eight_block_puzzle.js
+styles:
+  - /css/super_paper_mario_eight_block_puzzle.css
 ---
 
 I recently started playing through Super Paper Mario Wii.
@@ -23,6 +27,27 @@ block_transitions[5] = 0b00011111
 block_transitions[6] = 0b01100111
 block_transitions[7] = 0b11010101
 ```
+
+Try it yourself below. Use <kbd>A</kbd> / <kbd>D</kbd> to move
+and <kbd>W</kbd> to jump. Hit a block from below to toggle it.
+
+{{< html >}}
+<div class="block-puzzle">
+    <canvas id="block-puzzle-canvas" width="640" height="260" aria-label="Super Paper Mario eight block puzzle mini-game"></canvas>
+    <div class="block-puzzle-toolbar">
+        <div class="block-puzzle-status">
+            <span>State: <code id="block-puzzle-state">00000000</code></span>
+            <span>Hits: <code id="block-puzzle-hits">0</code></span>
+        </div>
+        <button id="block-puzzle-reset" type="button">Reset</button>
+    </div>
+    <div class="block-puzzle-touch" aria-hidden="true">
+        <button type="button" data-key="KeyA" aria-label="Move left">◀</button>
+        <button type="button" data-key="KeyW" aria-label="Jump">Jump</button>
+        <button type="button" data-key="KeyD" aria-label="Move right">▶</button>
+    </div>
+</div>
+{{</ html >}}
 
 At this point I thought: this would be a good Leetcode question.
 
