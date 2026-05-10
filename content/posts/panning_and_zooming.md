@@ -94,7 +94,7 @@ mouse event listener callback functions.
 - [Source code](https://github.com/joeyshi12/joeyshi.xyz/blob/main/static/js/panning_and_zooming.js)
 
 {{< html >}}
-<svg width="100%" height="500" style="background: white">
+<svg width="100%" height="500" style="background: white; touch-action: none">
     <defs>
         <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
             <path d="M 20 0 L 0 0 0 20" fill="none" stroke="black" stroke-width="1"/>
