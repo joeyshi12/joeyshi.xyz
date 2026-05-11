@@ -32,6 +32,11 @@ const MOVE_SPEED = 3.2;
 const JUMP_VELOCITY = -11.5;
 const GRAVITY = 0.48;
 
+// Physics constants above are tuned against a ~16.67 ms step. Multiply dt by
+// this factor to convert elapsed ms into step units so the sim runs at
+// the same speed regardless of display refresh rate.
+const TIME_SCALE = 60 / 1000;
+
 const SPRITES_SRC = "/img/smbsprites/mario_smb.png";
 const TILES_SRC = "/img/smbsprites/tiles_smb.png";
 
@@ -128,6 +133,7 @@ function loadImage(src) {
 function update(dt) {
     const m = game.mario;
     const keys = game.keys;
+    const step = dt * TIME_SCALE;
 
     let ax = 0;
     if (keys.has("KeyA")) ax -= 1;
@@ -142,9 +148,9 @@ function update(dt) {
     }
     game.prevJumpHeld = jumpHeld;
 
-    m.vy += GRAVITY;
+    m.vy += GRAVITY * step;
 
-    m.x += m.vx;
+    m.x += m.vx * step;
     if (m.x < 0) m.x = 0;
     if (m.x + MARIO_WIDTH > WIDTH) m.x = WIDTH - MARIO_WIDTH;
     for (let i = 0; i < BLOCK_COUNT; i++) {
@@ -164,7 +170,7 @@ function update(dt) {
         }
     }
 
-    m.y += m.vy;
+    m.y += m.vy * step;
     m.grounded = false;
 
     if (m.y + MARIO_HEIGHT >= GROUND_Y) {
