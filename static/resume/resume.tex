@@ -129,40 +129,33 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Visier Inc.}{April 2023 -- Present}
-      {Software Developer II}{Vancouver, BC}
+      {Amazon}{May 2025 -- Present}
+      {Software Development Engineer}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Wrote data connector modules in Scala to pull HR data from third party systems, such as Oracle DBMS and AWS Aurora.}
-        \resumeItem{Talked directly with customers to identify requirements for integrating our product into their business processes.}
-        \resumeItem{Built data flow graph visualization libraries in TypeScript and Angular UI components to simplify ETL pipeline configuration.}
-        \resumeItem{Wrote detailed sets of technical documentation in Confluence for features I contributed to.}
-        \resumeItem{Maintained and monitored critical AWS Scala microservices to ensure high availability and reliability.}
+        \resumeItem{On a team building internal developer tools and AI agents used by engineers across Amazon.}
+        \resumeItem{Re-architected an internal Slack knowledge gateway from sync to async with a dispatcher Lambda and SQS, cutting acknowledgement latency to ~0.5s and eliminating timeout errors.}
+        \resumeItem{Scaled an internal diagnostic CLI into a team-wide operations platform with multi-service/multi-region config, SSH log fetching, CloudWatch alarm integration, and stuck-thread detection.}
+        \resumeItem{Integrated enterprise SSO into an internal API across beta, gamma, and prod using AWS CDK (Route 53, API Gateway custom domains), and authored the SOP teammates use to add auth to their endpoints.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {University of British Columbia}{Sep 2022 -- Apr 2023}
-      {Teaching Assistant}{Vancouver, BC}
+      {Visier Inc.}{April 2023 -- May 2025}
+      {Software Developer II}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Taught and facilitated the tutorial sessions for the CPSC 317 computer networking course.}
-        \resumeItem{Implemented randomized PrarieLearn exam questions in Python and HTML for CPSC 317.}
-    \resumeItemListEnd
+        \resumeItem{On the data ingestion team for an HR analytics SaaS platform serving enterprise customers.}
+        \resumeItem{Implemented and owned Scala data connectors for MySQL, BambooHR, Oracle Fusion, Medallia, Greenhouse, Redshift, and Snowflake; rapid delivery of the MySQL connector unblocked a new customer contract.}
+        \resumeItem{Added limit/offset pagination to the MySQL connector, fixing gateway timeouts on customers with very large source tables.}
+        \resumeItem{Built data flow graph visualization libraries in TypeScript and Angular to simplify ETL pipeline configuration.}
+        \resumeItem{Owned on-call rotation for all connectors I shipped, diagnosing and resolving customer-impacting ingestion failures in production.}
+      \resumeItemListEnd
 
     \resumeSubheading
       {Vital Mechanics Research}{May 2022 -- Oct 2022}
       {Software Developer}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Researched topics in geometry processing and CAD software for 3D clothing simulation.}
-        \resumeItem{Developed a Python CLI tool for extracting garment geometry and stitch information from glTF and DXF files for clothing.}
+        \resumeItem{At a research lab building 3D clothing simulation software for the apparel industry.}
+        \resumeItem{Developed a Python CLI tool for extracting garment geometry and stitch information from glTF and DXF files for 3D clothing simulation.}
         \resumeItem{Implemented mathematical optimization algorithms to model garment edges as B\'ezier curves and approximate stitch point positions along the garment.}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {University of British Columbia}{Jul 2020 -- Dec 2020}
-      {WeBWorK Content Developer}{Vancouver, BC}
-      \resumeItemListStart
-        \resumeItem{Implemented randomized WeBWorK questions in Perl for first-year calculus homework assignments and exams.}
-        \resumeItem{Worked through multiple question set iterations with professors to estimate and adjust exam difficulty.}
-        \resumeItem{Developed a proof of concept for embedding interactive graphs into questions by leveraging the Desmos JavaScript API.}
     \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -173,29 +166,24 @@
     \vspace{-5pt}
     \resumeSubHeadingListStart
       \resumeProjectHeading
+          {\href{https://github.com/joeyshi12/diff-eq-solver}{\textbf{Differential Equation Solver}} $|$ \emph{Python \textperiodcentered{} Matplotlib \textperiodcentered{} Tkinter}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented finite difference algorithms to solve ordinary and partial differential equations, with a Tkinter GUI and animated Matplotlib plots for visualizing solutions.}
+            \resumeItem{Built a CI/CD pipeline with PyTest, Tox, and GitHub Actions, and published the application on the Python Package Index.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      \resumeProjectHeading
           {\href{https://joeyshi.xyz/projects/pc\_builder/}{\textbf{PC Builder Website}} $|$ \emph{Java \textperiodcentered{} Angular \textperiodcentered{} MySQL \textperiodcentered{} Docker}}{}
           \resumeItemListStart
-            \resumeItem{Implemented a full-stack web application for browsing PC builds and picking PC components.}
-            \resumeItem{Designed an SQL database schema and REST API to support a variety of CRUD operations.}
-            \resumeItem{Wrote build scripts and docker-compose files to streamline the deployment process.}
-            \resumeItem{Setup hosting for the application on a Linux server running Nginx at home.}
+            \resumeItem{Built a full-stack web app for browsing PC builds and picking components, with a Java REST API, MySQL schema, and Angular frontend.}
+            \resumeItem{Wrote docker-compose deployment scripts and self-hosted the app on a Linux server behind a Caddy reverse proxy.}
           \resumeItemListEnd
           \vspace{-13pt}
       \resumeProjectHeading
           {\href{https://joeyshi.xyz/projects/joey\_games/}{\textbf{Multiplayer Browser Platformer}} $|$ \emph{TypeScript \textperiodcentered{} Node.js \textperiodcentered{} Socket.IO}}{}
           \resumeItemListStart
-            \resumeItem{Built a real-time multiplayer browser platformer using the Canvas 2D rendering context API.}
-            \resumeItem{Designed a backend web socket API to update and broadcast player data across multiple clients.}
-            \resumeItem{Implemented player movement scripts, sprite animation, game physics, map rendering, and collision logic.}
-          \resumeItemListEnd
-          \vspace{-13pt}
-      \resumeProjectHeading
-          {\href{https://github.com/joeyshi12/diff-eq-solver}{\textbf{Differential Equation Solver}} $|$ \emph{Python \textperiodcentered{} Matplotlib \textperiodcentered{} Tkinter}}{}
-          \resumeItemListStart
-            \resumeItem{Implemented efficient finite difference algorithms to solve ordinary and partial differential equations.}
-            \resumeItem{Designed a graphical user interface in Tkinter and added animated plots for visualizing the generated solutions.}
-            \resumeItem{Built a CI/CD pipeline with PyTest, Tox, and Github Actions.}
-            \resumeItem{Published the application on the Python Package Index.}
+            \resumeItem{Built a real-time multiplayer browser platformer using the Canvas 2D API, with a WebSocket backend that broadcasts player state across clients.}
+            \resumeItem{Implemented player movement, sprite animation, game physics, map rendering, and collision logic from scratch.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 \vspace{-15pt}
@@ -218,9 +206,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python \textperiodcentered{} Golang \textperiodcentered{} Scala \textperiodcentered{} Java \textperiodcentered{} TypeScript \textperiodcentered{} JavaScript \textperiodcentered{} HTML5 \textperiodcentered{} CSS3 \textperiodcentered{} C/C++ \textperiodcentered{} SQL} \\
-     \textbf{Frameworks/Libraries}{: Angular \textperiodcentered{} React \textperiodcentered{} Node.js \textperiodcentered{} D3.js \textperiodcentered{} Flask \textperiodcentered{} Pandas \textperiodcentered{} Pytest \textperiodcentered{} Javalin \textperiodcentered{} ScalaTest} \\
-     \textbf{Tools/Technologies}{: Visual Studio \textperiodcentered{} PowerShell \textperiodcentered{} Cloudflare \textperiodcentered{} AWS \textperiodcentered{} Docker \textperiodcentered{} Git \textperiodcentered{} Arch Linux \textperiodcentered{} Neovim \textperiodcentered{} Zsh \textperiodcentered{} tmux} \\
+     \textbf{Languages}{: Python \textperiodcentered{} Golang \textperiodcentered{} Scala \textperiodcentered{} Java \textperiodcentered{} TypeScript \textperiodcentered{} JavaScript \textperiodcentered{} HTML5 \textperiodcentered{} CSS3 \textperiodcentered{} C/C++ \textperiodcentered{} SQL \textperiodcentered{} Zsh} \\
+     \textbf{Frameworks/Libraries}{: Angular \textperiodcentered{} React \textperiodcentered{} Node.js \textperiodcentered{} D3.js \textperiodcentered{} Flask \textperiodcentered{} Pandas \textperiodcentered{} Pytest \textperiodcentered{} Javalin \textperiodcentered{} ScalaTest \textperiodcentered{} AWS CDK} \\
+     \textbf{Tools/Technologies}{: AWS \textperiodcentered{} Lambda \textperiodcentered{} SQS \textperiodcentered{} DynamoDB \textperiodcentered{} CloudWatch \textperiodcentered{} Cloudflare \textperiodcentered{} Docker \textperiodcentered{} Git \textperiodcentered{} Arch Linux \textperiodcentered{} Neovim \textperiodcentered{} tmux} \\
     }}
  \end{itemize}
 \end{document}
