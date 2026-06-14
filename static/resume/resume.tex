@@ -17,7 +17,6 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
@@ -29,19 +28,18 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -66,8 +64,8 @@
 }
 
 \newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
+  \item\small{
+    {#1 #2 #3 #4 \vspace{-2pt}}
   }
 }
 
@@ -80,21 +78,21 @@
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+  \item
     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeScholarshipHeading}[2]{
-    \item
+  \item
     \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
     \end{tabular*}
@@ -110,19 +108,17 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-
-
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    {\Huge \scshape Joey Shi} \\ \vspace{1pt}
-    \small
-    \href{https://joeyshi.xyz}{\raisebox{-0.1\height}\faUser\ \underline{joeyshi.xyz}} ~
-    \href{mailto:root@joeyshi.xyz}{\raisebox{-0.2\height}\faEnvelope\  \underline{root@joeyshi.xyz}} ~
-    \href{https://linkedin.com/in/joeyshi12/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/joeyshi12}}  ~
-    \href{https://github.com/joeyshi12}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/joeyshi12}}
-    \vspace{-8pt}
+  {\Huge \scshape Joey Shi} \\ \vspace{1pt}
+  \small
+  \href{https://joeyshi.xyz}{\underline{joeyshi.xyz}} ~
+  \href{mailto:root@joeyshi.xyz}{\underline{root@joeyshi.xyz}} ~
+  \href{https://linkedin.com/in/joeyshi12/}{\underline{linkedin.com/in/joeyshi12}} ~
+  \href{https://github.com/joeyshi12}{\underline{github.com/joeyshi12}}
+  \vspace{-4pt}
 \end{center}
 
 %-----------EXPERIENCE-----------
@@ -132,60 +128,58 @@
       {Amazon}{May 2025 -- Present}
       {Software Development Engineer}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{On a team building internal developer tools and AI agents used by engineers across Amazon.}
+        \resumeItem{On a team building developer tools and AI agents used by engineers across Amazon.}
         \resumeItem{Re-architected an internal Slack knowledge gateway from sync to async with a dispatcher Lambda and SQS, cutting acknowledgement latency to ~0.5s and eliminating timeout errors.}
-        \resumeItem{Scaled an internal diagnostic CLI into a team-wide operations platform with multi-service/multi-region config, SSH log fetching, CloudWatch alarm integration, and stuck-thread detection.}
-        \resumeItem{Integrated enterprise SSO into an internal API across beta, gamma, and prod using AWS CDK (Route 53, API Gateway custom domains), and authored the SOP teammates use to add auth to their endpoints.}
+        \resumeItem{Scaled an internal diagnostic CLI into a team-wide operations platform with multi-service/region config, SSH log fetching, CloudWatch alarm integration, and stuck-thread detection.}
+        \resumeItem{Integrated enterprise SSO into an internal API across beta, gamma, and prod using AWS CDK, and authored the SOP teammates use to add auth to their endpoints.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Visier Inc.}{April 2023 -- May 2025}
       {Software Developer II}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{On the data ingestion team for an HR analytics SaaS platform serving enterprise customers.}
-        \resumeItem{Implemented and owned Scala data connectors for MySQL, BambooHR, Oracle Fusion, Medallia, Greenhouse, Redshift, and Snowflake; rapid delivery of the MySQL connector unblocked a new customer contract.}
+        \resumeItem{On the data ingestion team for an HR analytics SaaS platform, implemented and owned Scala data connectors for MySQL, BambooHR, Oracle Fusion, Medallia, Greenhouse, Redshift, and Snowflake; rapid delivery of the MySQL connector unblocked a new customer contract.}
         \resumeItem{Added limit/offset pagination to the MySQL connector, fixing gateway timeouts on customers with very large source tables.}
         \resumeItem{Built data flow graph visualization libraries in TypeScript and Angular to simplify ETL pipeline configuration.}
-        \resumeItem{Owned on-call rotation for all connectors I shipped, diagnosing and resolving customer-impacting ingestion failures in production.}
+        \resumeItem{Owned the on-call rotation for all connectors I shipped, resolving customer-impacting ingestion failures in production.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Vital Mechanics Research}{May 2022 -- Oct 2022}
       {Software Developer}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{At a research lab building 3D clothing simulation software for the apparel industry.}
-        \resumeItem{Developed a Python CLI tool for extracting garment geometry and stitch information from glTF and DXF files for 3D clothing simulation.}
+        \resumeItem{At a research lab building 3D clothing simulation software, developed a Python CLI tool for extracting garment geometry and stitch information from glTF and DXF files.}
         \resumeItem{Implemented mathematical optimization algorithms to model garment edges as B\'ezier curves and approximate stitch point positions along the garment.}
-    \resumeItemListEnd
-
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 \vspace{-16pt}
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\href{https://github.com/joeyshi12/diff-eq-solver}{\textbf{Differential Equation Solver}} $|$ \emph{Python \textperiodcentered{} Matplotlib \textperiodcentered{} Tkinter}}{}
-          \resumeItemListStart
-            \resumeItem{Implemented finite difference algorithms to solve ordinary and partial differential equations, with a Tkinter GUI and animated Matplotlib plots for visualizing solutions.}
-            \resumeItem{Built a CI/CD pipeline with PyTest, Tox, and GitHub Actions, and published the application on the Python Package Index.}
-          \resumeItemListEnd
-          \vspace{-13pt}
-      \resumeProjectHeading
-          {\href{https://joeyshi.xyz/projects/pc\_builder/}{\textbf{PC Builder Website}} $|$ \emph{Java \textperiodcentered{} Angular \textperiodcentered{} MySQL \textperiodcentered{} Docker}}{}
-          \resumeItemListStart
-            \resumeItem{Built a full-stack web app for browsing PC builds and picking components, with a Java REST API, MySQL schema, and Angular frontend.}
-            \resumeItem{Wrote docker-compose deployment scripts and self-hosted the app on a Linux server behind a Caddy reverse proxy.}
-          \resumeItemListEnd
-          \vspace{-13pt}
-      \resumeProjectHeading
-          {\href{https://joeyshi.xyz/projects/joey\_games/}{\textbf{Multiplayer Browser Platformer}} $|$ \emph{TypeScript \textperiodcentered{} Node.js \textperiodcentered{} Socket.IO}}{}
-          \resumeItemListStart
-            \resumeItem{Built a real-time multiplayer browser platformer using the Canvas 2D API, with a WebSocket backend that broadcasts player state across clients.}
-            \resumeItem{Implemented player movement, sprite animation, game physics, map rendering, and collision logic from scratch.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+  \vspace{-5pt}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://karet.joeyshi.xyz/}{\textbf{Karet Analytics Platform}} $|$ \emph{Rust \textperiodcentered{} Axum \textperiodcentered{} Polars \textperiodcentered{} Next.js \textperiodcentered{} React \textperiodcentered{} S3 \textperiodcentered{} Docker}}{}
+      \resumeItemListStart
+        \resumeItem{Built an open-source analytics platform from three services: a Next.js/React UI, a stateless data processing server, and an S3-compatible object store, persisting all state as objects in S3.}
+        \resumeItem{Engineered a JSON-AST expression language evaluated row-by-row to ingest CSVs into Parquet partitioned by year and month, with dashboard panels, layouts, and aggregations defined entirely as JSON config.}
+        \resumeItem{Wired S3 upload events to a debounced, idempotent runner so new files auto-trigger ETL jobs, and secured single-admin login with scrypt hashing.}
+      \resumeItemListEnd
+      \vspace{-13pt}
+    \resumeProjectHeading
+      {\href{https://github.com/joeyshi12/diff-eq-solver}{\textbf{Differential Equation Solver}} $|$ \emph{Python \textperiodcentered{} Matplotlib \textperiodcentered{} Tkinter}}{}
+      \resumeItemListStart
+        \resumeItem{Implemented finite difference algorithms to solve ordinary and partial differential equations, with a Tkinter GUI and animated Matplotlib plots for visualizing solutions.}
+        \resumeItem{Built a CI/CD pipeline with PyTest, Tox, and GitHub Actions, and published the application on the Python Package Index.}
+      \resumeItemListEnd
+      \vspace{-13pt}
+    \resumeProjectHeading
+      {\href{https://devtools.joeyshi.xyz/}{\textbf{Developer Tools Suite}} $|$ \emph{Python \textperiodcentered{} Flask \textperiodcentered{} TypeScript \textperiodcentered{} Docker \textperiodcentered{} Caddy}}{}
+      \resumeItemListStart
+        \resumeItem{Built and self-host a suite of web-based developer tools behind a Caddy reverse proxy, including a webhook request inspector and a DNS resolver that traces iterative queries from the root servers down the nameserver hierarchy.}
+        \resumeItem{Designed PQL, a SQL-like query language with an EBNF grammar and recursive-descent parser that compiles tabular data into 2D plots, and a JSON-to-data-model transpiler targeting Python, TypeScript, Java, Scala, and Proto3; published both to npm and PyPI.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 \vspace{-15pt}
 
 %-----------EDUCATION-----------
@@ -199,15 +193,16 @@
         \resumeItem{Received the Stanley M. Grant Scholarship in Mathematics (2021) and Trek Excellence Scholarship (2020).}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
- \vspace{-16pt}
+\vspace{-16pt}
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python \textperiodcentered{} Rust \textperiodcentered{} Scala \textperiodcentered{} Java \textperiodcentered{} TypeScript \textperiodcentered{} JavaScript \textperiodcentered{} HTML5 \textperiodcentered{} CSS3 \textperiodcentered{} C/C++ \textperiodcentered{} SQL \textperiodcentered{} Zsh} \\
-     \textbf{Frameworks/Libraries}{: Angular \textperiodcentered{} React \textperiodcentered{} Node.js \textperiodcentered{} D3.js \textperiodcentered{} Flask \textperiodcentered{} Pandas \textperiodcentered{} Pytest \textperiodcentered{} Javalin \textperiodcentered{} ScalaTest \textperiodcentered{} AWS CDK} \\
-     \textbf{Tools/Technologies}{: Lambda \textperiodcentered{} SQS \textperiodcentered{} DynamoDB \textperiodcentered{} CloudWatch \textperiodcentered{} Cloudflare \textperiodcentered{} Docker \textperiodcentered{} Git \textperiodcentered{} Arch Linux \textperiodcentered{} Neovim \textperiodcentered{} tmux} \\
+      \textbf{Languages}{: Python \textperiodcentered{} Rust \textperiodcentered{} Scala \textperiodcentered{} Java \textperiodcentered{} TypeScript \textperiodcentered{} JavaScript \textperiodcentered{} Proto3 \textperiodcentered{} HTML5 \textperiodcentered{} CSS3 \textperiodcentered{} C/C++ \textperiodcentered{} SQL \textperiodcentered{} Zsh} \\
+      \textbf{Frameworks/Libraries}{: Angular \textperiodcentered{} React \textperiodcentered{} Next.js \textperiodcentered{} Node.js \textperiodcentered{} Axum \textperiodcentered{} D3.js \textperiodcentered{} Flask \textperiodcentered{} Pandas \textperiodcentered{} Polars \textperiodcentered{} Pytest \textperiodcentered{} AWS CDK} \\
+      \textbf{Tools/Technologies}{: S3 \textperiodcentered{} Lambda \textperiodcentered{} SQS \textperiodcentered{} DynamoDB \textperiodcentered{} CloudWatch \textperiodcentered{} Parquet \textperiodcentered{} Docker \textperiodcentered{} Git \textperiodcentered{} Arch Linux \textperiodcentered{} Neovim} \\
     }}
- \end{itemize}
+  \end{itemize}
+
 \end{document}
