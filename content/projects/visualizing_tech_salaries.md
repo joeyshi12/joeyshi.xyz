@@ -12,7 +12,7 @@ language: TypeScript
 A visualization for understanding the distribution of salaries of workers in the tech industry.
 This project was something I worked on with a group while taking CPSC 447 at UBC.
 
-- [Visualization](https://tech-salaries.joeyshi.xyz/)
+- [Visualization](https://tech-salaries-vis.pages.dev)
 - [Source code](https://github.com/joeyshi12/tech-salaries-vis/)
 
 ## Data Dictionary
