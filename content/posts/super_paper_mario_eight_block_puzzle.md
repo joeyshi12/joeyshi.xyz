@@ -28,8 +28,8 @@ block_transitions[6] = 0b01100111
 block_transitions[7] = 0b11010101
 ```
 
-Try it yourself below. Use <kbd>A</kbd> / <kbd>D</kbd> to move
-and <kbd>W</kbd> to jump. Hit a block from below to toggle it.
+Try it yourself below. Use `A / D` to move
+and `W` to jump. Hit a block from below to toggle it.
 
 {{< html >}}
 <div class="block-puzzle">

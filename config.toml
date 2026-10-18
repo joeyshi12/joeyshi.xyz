@@ -1,5 +1,5 @@
 baseURL = "https://joeyshi.xyz/"
-languageCode = "en"
+locale = "en"
 title = "Joey Shi - Software Engineer"
 publishDir = "public"
 disableHugoGeneratorInject = true
